@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6869106727264498696
+--- !u!1 &6059466880108057076
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,44 +8,38 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6869106727264498710}
-  - component: {fileID: 6869106727264498697}
+  - component: {fileID: 6059466880108056587}
+  - component: {fileID: 6059466880108056586}
   m_Layer: 0
-  m_Name: Gestionnaire
+  m_Name: SpawnPointPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6869106727264498710
+--- !u!4 &6059466880108056587
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6869106727264498696}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.047436, y: -0.10000006, z: 23.30014}
+  m_GameObject: {fileID: 6059466880108057076}
+  m_LocalRotation: {x: 0, y: 0.7020967, z: 0, w: -0.7120817}
+  m_LocalPosition: {x: 17.076748, y: 12.775, z: 12.200423}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6869106727264498697
+--- !u!114 &6059466880108056586
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6869106727264498696}
+  m_GameObject: {fileID: 6059466880108057076}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cd492d21863c2e4b946687d7a23ee8f, type: 3}
+  m_Script: {fileID: 11500000, guid: 7ca040f7e97e55b448f03f71a8294d5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabsPlayer: {fileID: 802273919599641455, guid: 8b95e52bd63a3f842a4f483764829299,
-    type: 3}
-  playerList: []
-  spawnPointPlayer: {fileID: 6059466880108056587, guid: 4ce1ad0919d0ece4d95d35763273bed6,
-    type: 3}
-  timer: 0

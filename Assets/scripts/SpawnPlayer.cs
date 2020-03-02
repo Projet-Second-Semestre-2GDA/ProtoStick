@@ -55,7 +55,7 @@ public class SpawnPlayer : MonoBehaviour
                 rbPlayer.useGravity = false;
                 rbPlayer.constraints = RigidbodyConstraints.FreezeAll;
             }
-            playerList.Add(Instantiate(prefabsPlayer, spawnPointPlayer.position, Quaternion.identity));
+            playerList.Add(Instantiate(prefabsPlayer, spawnPointPlayer.position, spawnPointPlayer.rotation));
             playerList[playerList.Count - 1].GetComponent<Movement>().enabled = true;
             playerList[playerList.Count - 1] = playerList[playerList.Count - 1];
             rbPlayer = playerList[playerList.Count - 1].GetComponent<Rigidbody>();

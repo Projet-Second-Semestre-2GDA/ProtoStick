@@ -106,7 +106,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f0bf4b0bc1e98d409c403220b47cba9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPointPlayer: {fileID: 0}
+  spawnPointPlayer: {fileID: 6059466880108057076, guid: 4ce1ad0919d0ece4d95d35763273bed6,
+    type: 3}
 --- !u!1 &5399311740109258786
 GameObject:
   m_ObjectHideFlags: 0

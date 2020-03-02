@@ -12,7 +12,8 @@ public class SetSpawnPoint : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            spawnPointPlayer.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+            spawnPointPlayer.transform.position = transform.position;
+            spawnPointPlayer.transform.rotation = transform.rotation;
         }
     }
 
