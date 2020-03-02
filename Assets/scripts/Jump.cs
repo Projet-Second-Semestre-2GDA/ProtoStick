@@ -6,7 +6,7 @@ public class Jump : MonoBehaviour
 {
 
     [Range(1, 10)]
-    public float jumpVelocity;
+    public float jumpVelocity = 1;
 
     private bool isGrounded;
 
@@ -26,9 +26,11 @@ public class Jump : MonoBehaviour
 
     private void OnCollisionStay(Collision collision)
     {
-
-        isGrounded = true;
-
+        Debug.Log("I'm collising with " + collision.collider.tag);
+        if (collision.collider.CompareTag("Ground")|| collision.collider.CompareTag("Player"))
+        {
+            isGrounded = true;
+        }
     }
 
 }

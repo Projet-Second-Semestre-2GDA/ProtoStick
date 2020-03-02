@@ -2,79 +2,63 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnPlayer : PlayerArray
+public class SpawnPlayer : MonoBehaviour
 {
+
+    [SerializeField] private GameObject prefabsPlayer;
+    [HideInInspector]public List<GameObject> playerList;
     
-    public GameObject player;
-    public GameObject spawnPointPlayer;
+    //private GameObject playerList[playerList.Count - 1];
+    public Transform spawnPointPlayer;
 
     //timer
     public float timer;
     private float timerSave;
 
-    private Rigidbody rb;
+    private Rigidbody rbPlayer;
 
     private bool rbDesactivation = false;
-    private bool activationScript = true;
+    //private bool activationScript = true;
 
     private void Start()
     {
-        playerList = new GameObject[nombreTableau];
+        playerList = new List<GameObject>();
+        SpawnPlayerMethod(false);
 
-        timerSave = timer;
-
-        rb = GetComponent<Rigidbody>();
-
-        GetComponent<Movement>().enabled = true;
     }
 
     private void Update()
     {
         timer -= Time.deltaTime;
 
-
-
-
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-
-            for (int i = 0; i < nombreTableau; i++)
-            {
-                SpawnPlayerMethod(i);
-
-            }
-
-
-
-            /* - freeze le rigidbody en position et rotation du controler actuel
-             * - faire spawn un autre avatar 
-             * - transposer le contrôle du joueur sur le nouvel avatar
-             */
-
+            SpawnPlayerMethod();
         }
-
-        if (rbDesactivation)
-        {
-            rb.useGravity = false;
-            rb.constraints = RigidbodyConstraints.FreezeAll;
-        }
-
-        
-
     }
 
-    private void SpawnPlayerMethod(int i)
+    private void SpawnPlayerMethod(bool aPlayerIsInScene = true)
     {
-        if (timer < 0)
+        if (timer <= 0)
         {
-            rbDesactivation = true;
-
-            GetComponent<Movement>().enabled = false;
-
-            activationScript = false;
-
-            playerList[i] = Instantiate(player, spawnPointPlayer.transform.position, Quaternion.identity);
-
+            if (aPlayerIsInScene)
+            {
+                Movement movement = playerList[playerList.Count - 1].GetComponent<Movement>();
+                if (movement != null)
+                {
+                    movement.DisableScript();
+                }
+                else
+                {
+                    Debug.LogError(playerList[playerList.Count - 1].name + " do not have a script Movement");
+                }
+                rbPlayer.useGravity = false;
+                rbPlayer.constraints = RigidbodyConstraints.FreezeAll;
+            }
+            playerList.Add(Instantiate(prefabsPlayer, spawnPointPlayer.position, Quaternion.identity));
+            playerList[playerList.Count - 1].GetComponent<Movement>().enabled = true;
+            playerList[playerList.Count - 1] = playerList[playerList.Count - 1];
+            rbPlayer = playerList[playerList.Count - 1].GetComponent<Rigidbody>();
             timer = timerSave;
         }
     }

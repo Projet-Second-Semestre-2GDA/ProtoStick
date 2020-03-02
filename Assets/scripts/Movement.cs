@@ -20,6 +20,11 @@ public class Movement : MonoBehaviour
         
 
     }
+    public void DisableScript()
+    {
+        this.GetComponentInChildren<Camera>().gameObject.SetActive(false);
+        this.GetComponent<Movement>().enabled = false;
+    }
 
 
 
