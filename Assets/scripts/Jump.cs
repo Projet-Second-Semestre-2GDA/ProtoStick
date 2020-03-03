@@ -8,7 +8,7 @@ public class Jump : MonoBehaviour
     [Range(1, 10)]
     public float jumpVelocity = 1;
 
-    private bool isGrounded;
+    [SerializeField]public bool isGrounded;
 
     private void Update()
     {
