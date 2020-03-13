@@ -6,8 +6,9 @@ public class BumpTrick : MonoBehaviour
 {
 
     public float bumpForce;
-    public float explosionRadius; 
-    public GameObject player;
+    public float explosionRadius;
+    //public GameObject player;
+    //public GameObject toit;
 
 
     private void Update()
@@ -17,7 +18,7 @@ public class BumpTrick : MonoBehaviour
 
 
 
-    public void OnColliderEnter (Collision collision)
+    private void OnCollisionEnter (Collision collision)
     {
 
         /*player.GetComponent<Rigidbody>().AddExplosionForce(bumpForce, transform.position, explosionRadius);
@@ -25,9 +26,9 @@ public class BumpTrick : MonoBehaviour
 
         Debug.Log(collision.collider.name + "bump");
 
-        if (collision.gameObject == player)
+        if (collision.gameObject.CompareTag("Player"))
         {
-            player.GetComponent<Rigidbody>().AddExplosionForce(bumpForce, transform.position, explosionRadius, 1);
+            collision.collider.GetComponentInParent<Rigidbody>().AddExplosionForce(bumpForce, transform.position, explosionRadius, 1);
             Debug.Log("bump");
             
         }
