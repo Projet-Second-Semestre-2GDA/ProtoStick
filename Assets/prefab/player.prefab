@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5461206388881069972}
   - component: {fileID: 7693042373447387321}
   - component: {fileID: 3789091545927585181}
+  - component: {fileID: 7659934110265938377}
   m_Layer: 8
   m_Name: player
   m_TagString: Player
@@ -51,7 +52,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba613b0a557d0944eb43cee18c7ef4d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpVelocity: 6.43
+  jumpVelocity: 6.93
+  isGrounded: 0
 --- !u!114 &3967642073236559566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65,7 +67,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedRotation: 100
-  speedDeplacement: 5
+  speedDeplacement: 3
 --- !u!54 &5461206388881069972
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -107,6 +109,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPointPlayer: {fileID: 6059466880108057076, guid: 4ce1ad0919d0ece4d95d35763273bed6,
+    type: 3}
+--- !u!114 &7659934110265938377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 802273919599641455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be9de308dc33ae547ac9f31b9c8fd7ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoint: {fileID: 6059466880108057076, guid: 4ce1ad0919d0ece4d95d35763273bed6,
     type: 3}
 --- !u!1 &5399311740109258786
 GameObject:
@@ -301,6 +317,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3171382827250581857}
   - component: {fileID: 8242306240778731617}
+  - component: {fileID: 7756882020345664548}
   m_Layer: 8
   m_Name: collider
   m_TagString: Player
@@ -335,3 +352,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7756882020345664548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7524777083988542036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8daa6210d54e4148a0e9320f952de24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bumpForce: 10
+  explosionRadius: 0
+  player: {fileID: 802273919599641455}
