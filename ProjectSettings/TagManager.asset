@@ -5,8 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
-  - Joueur
   - Gestionnaire
+  - SpawnPoint
   layers:
   - Default
   - TransparentFX

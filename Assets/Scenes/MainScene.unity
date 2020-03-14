@@ -814,6 +814,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &818200245 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6059466880108056587, guid: 4ce1ad0919d0ece4d95d35763273bed6,
+    type: 3}
+  m_PrefabInstance: {fileID: 6059466878602615563}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1019395705
 GameObject:
   m_ObjectHideFlags: 0
@@ -1501,6 +1507,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6059466880108056585, guid: 4ce1ad0919d0ece4d95d35763273bed6, type: 3}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 4ce1ad0919d0ece4d95d35763273bed6, type: 3}
 --- !u!1001 &6869106728644400902
 PrefabInstance:
@@ -1514,6 +1521,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gestionnaire
       objectReference: {fileID: 0}
+    - target: {fileID: 6869106727264498697, guid: ba22cf436d6a9b948bae3c722b590293,
+        type: 3}
+      propertyPath: spawnPointPlayer
+      value: 
+      objectReference: {fileID: 818200245}
     - target: {fileID: 6869106727264498710, guid: ba22cf436d6a9b948bae3c722b590293,
         type: 3}
       propertyPath: m_LocalPosition.x

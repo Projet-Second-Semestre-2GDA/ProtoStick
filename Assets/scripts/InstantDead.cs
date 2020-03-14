@@ -5,7 +5,12 @@ using UnityEngine;
 public class InstantDead : MonoBehaviour
 {
 
-    public GameObject spawnPoint;
+    private GameObject spawnPoint;
+
+    private void Start()
+    {
+        spawnPoint = GameObject.FindGameObjectWithTag("SpawnPoint");
+    }
 
     private void Update()
     {
@@ -15,7 +20,9 @@ public class InstantDead : MonoBehaviour
         {
             List<GameObject> playerList = GameObject.FindGameObjectWithTag("Gestionnaire").GetComponent<SpawnPlayer>().playerList;
 
-            playerList[playerList.Count - 1].transform.position = new Vector3(spawnPoint.transform.position.x, spawnPoint.transform.position.y, spawnPoint.transform.position.z);
+            playerList[playerList.Count - 1].transform.position = spawnPoint.transform.position;
+            playerList[playerList.Count - 1].transform.rotation = spawnPoint.transform.rotation;
+
         }
     }
 

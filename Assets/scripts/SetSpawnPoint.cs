@@ -5,9 +5,12 @@ using UnityEngine;
 public class SetSpawnPoint : MonoBehaviour
 {
 
-    public GameObject spawnPointPlayer;
+    private GameObject spawnPointPlayer;
 
-
+    private void Start()
+    {
+        spawnPointPlayer = GameObject.FindGameObjectWithTag("SpawnPoint");
+    }
     private void Update()
     {
         if (Input.GetKey(KeyCode.LeftShift))

@@ -9,7 +9,7 @@ public class SpawnPlayer : MonoBehaviour
     [HideInInspector]public List<GameObject> playerList;
     
     //private GameObject playerList[playerList.Count - 1];
-    public Transform spawnPointPlayer;
+    private Transform spawnPointPlayer;
 
     //timer
     public float timer;
@@ -22,6 +22,7 @@ public class SpawnPlayer : MonoBehaviour
 
     private void Start()
     {
+        spawnPointPlayer = GameObject.FindGameObjectWithTag("SpawnPoint").transform;
         playerList = new List<GameObject>();
         SpawnPlayerMethod(false);
 

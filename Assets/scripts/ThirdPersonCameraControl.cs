@@ -4,17 +4,19 @@ using UnityEngine;
 
 public class ThirdPersonCameraControl : MonoBehaviour
 {
-    float rotationSpeed = 1;
     public Transform Target, Player;
     float mouseX, mouseY;
 
     [HideInInspector]
     public Transform Obstruction;
-    float zoomSpeed = 2f;
+
+    [SerializeField, Range(1f, 10f)] private float rotationSpeed = 1;
+    [SerializeField,Range(1f,10f)] private float zoomSpeed = 3f;
     float distanceFromTarget;
     
     void Start()
     {
+        mouseX = transform.rotation.eulerAngles.y;
         Obstruction = Target;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
