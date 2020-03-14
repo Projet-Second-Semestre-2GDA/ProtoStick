@@ -24,13 +24,14 @@ public class BumpTrick : MonoBehaviour
         /*player.GetComponent<Rigidbody>().AddExplosionForce(bumpForce, transform.position, explosionRadius);
         Debug.Log("bump");*/
 
-        Debug.Log(collision.collider.name + "bump");
+        //Debug.Log(collision.collider.name + "bump");
 
         if (collision.gameObject.CompareTag("Player"))
         {
-            collision.collider.GetComponentInParent<Rigidbody>().AddExplosionForce(bumpForce, transform.position, explosionRadius, 1);
-            Debug.Log("bump");
-            
+            var otherRb = collision.collider.GetComponentInParent<Rigidbody>();
+            otherRb.velocity = new Vector3(otherRb.velocity.x, bumpForce, otherRb.velocity.y);
+            //Debug.Log("bump");
+
         }
     }
 
