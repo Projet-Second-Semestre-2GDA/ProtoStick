@@ -5,32 +5,62 @@ using UnityEngine;
 public class Jump : MonoBehaviour
 {
 
-    [Range(1, 10)]
-    public float jumpVelocity = 1;
+    //[Range(1, 10)]
+    [SerializeField]private float jumpVelocity = 1;
 
-    [SerializeField]public bool isGrounded;
+    [SerializeField] private int numberOfJump = 2;
+
+    [SerializeField] bool firstJumpStable = true;
+
+    private bool isGrounded;
+
+    private int jumpDone = 0;
 
     private void Update()
     {
 
-        if (isGrounded)
+        if (Input.GetButtonDown("Jump"))
         {
-            if (Input.GetButtonDown("Jump"))
+            if (jumpDone == 0)
             {
+                ++jumpDone;
                 isGrounded = false;
                 GetComponent<Rigidbody>().velocity = Vector3.up * jumpVelocity;
-                
             }
+            else if (jumpDone < numberOfJump)
+            {
+                ++jumpDone;
+                isGrounded = false;
+                GetComponent<Rigidbody>().velocity = Vector3.up * jumpVelocity;
+            }
+
+            
         }
+        
     }
 
-    private void OnCollisionStay(Collision collision)
+    private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("I'm collising with " + collision.collider.tag);
+        //Debug.Log("I'm collising with " + collision.collider.tag);
         if (collision.collider.CompareTag("Ground")|| collision.collider.CompareTag("Player"))
         {
             isGrounded = true;
+            jumpDone = 0;
         }
+    }
+    private void OnCollisionExit(Collision collision)
+    {
+        //Debug.Log("I'm collising with " + collision.collider.tag);
+        if (collision.collider.CompareTag("Ground") || collision.collider.CompareTag("Player"))
+        {
+            isGrounded = false;
+            
+        }
+    }
+
+    public bool PlayerIsGrounded()
+    {
+        return (isGrounded || ((firstJumpStable) ? jumpDone <= 1 : jumpDone <= 0));
     }
 
 }

@@ -20,23 +20,43 @@ public class Movement : MonoBehaviour
 
         float h = Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw("Vertical");
-        //var direction = new Vector3(0f, 0f, v * speedDeplacement * Time.deltaTime);
-        //transform.Translate(direction);
+
+
         var velocity = rb.velocity;
-        Debug.Log(v.ToString() + jump.isGrounded.ToString());
-        if (Mathf.Abs(v) > 0.1f)
+
+        if (Mathf.Abs(v) > 0.01f || Mathf.Abs(h) > 0.01f)
         {
-            velocity = velocity + v * speedDeplacement * transform.forward;
+            var velocity2 = new Vector3();
+            velocity2 +=  v * speedDeplacement * transform.forward;
+            velocity2 += h * speedDeplacement * transform.right;
+            velocity2 = velocity2.magnitude > speedDeplacement ? velocity2.normalized * speedDeplacement : velocity2;
+            if (jump.PlayerIsGrounded())
+            {
+                velocity.x = velocity2.x;
+                velocity.z = velocity2.z;
+            }
+            else
+            {
+                velocity2.x += velocity.x;
+                velocity2.z += velocity.z;
+
+                if (velocity2.magnitude > speedDeplacement)
+                {
+                    velocity2 = velocity2.normalized * speedDeplacement;
+                }
+
+                velocity.x = velocity2.x;
+                velocity.z = velocity2.z;
+            }
+            
         }
-        else if(jump.isGrounded){
+        else if(jump.PlayerIsGrounded()){
             velocity.x = 0;
             velocity.z = 0;
         }
         
         
         rb.velocity = velocity;
-
-        transform.Rotate(0f, h * speedRotation * Time.deltaTime, 0f);
         
 
     }
