@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{4445e7f6-d955-4091-9318-1091f308dd16}">
+		<property name="assetPath">
+			<value>retour_spawn_avant-mixage.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.1538548752834468</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{e579ccfe-ed38-4b72-b609-9edebfefcf05}</destination>
+		</relationship>
+	</object>
+</objects>
