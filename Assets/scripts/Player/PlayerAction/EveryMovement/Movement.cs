@@ -51,7 +51,7 @@ public class Movement : MonoBehaviour
             }
             
         }
-        else if(jump.PlayerIsGrounded()){
+        else if(jump.PlayerIsGrounded() && Physics.OverlapSphere(transform.position,0.7f).Length <2){
             velocity.x = 0;
             velocity.z = 0;
         }
