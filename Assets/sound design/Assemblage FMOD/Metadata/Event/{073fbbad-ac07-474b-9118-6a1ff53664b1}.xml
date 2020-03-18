@@ -5,7 +5,7 @@
 			<value>double_saut</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{4de7e0ae-4f98-42fd-b48b-35be3e469ba8}</destination>
@@ -30,6 +30,9 @@
 		</relationship>
 		<relationship name="timeline">
 			<destination>{7f3ad2ef-7f35-4c04-9172-c33dcf6d2cec}</destination>
+		</relationship>
+		<relationship name="banks">
+			<destination>{1491bbb6-f3c9-456e-9f74-f28dc9f18a3e}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixer" id="{2bf8fa4c-3442-4bd4-ac4a-ec7de314eb3c}">
@@ -124,6 +127,7 @@
 	<object class="MixerBusEffectChain" id="{711ecaab-1c42-41c6-ac68-046a2befa1a8}">
 		<relationship name="effects">
 			<destination>{7b1e73aa-b1ac-4aa6-95f7-e6fda03d95c4}</destination>
+			<destination>{c7e6a062-7f4d-40b1-9f3b-6076efc6b048}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{97de6d77-ec33-4205-9fdb-738ed0d92828}" />
@@ -144,6 +148,17 @@
 	</object>
 	<object class="MixerBusPanner" id="{adafa171-3114-4080-b49f-548eea067dc2}" />
 	<object class="MixerBusFader" id="{7b1e73aa-b1ac-4aa6-95f7-e6fda03d95c4}" />
+	<object class="SpatialiserEffect" id="{c7e6a062-7f4d-40b1-9f3b-6076efc6b048}">
+		<property name="distanceRolloffType">
+			<value>1</value>
+		</property>
+		<property name="minimumDistance">
+			<value>7.20000029</value>
+		</property>
+		<property name="maximumDistance">
+			<value>15</value>
+		</property>
+	</object>
 	<object class="AutomationCurve" id="{64870117-1233-44b2-b5c0-1d269176a9a2}">
 		<relationship name="parameter">
 			<destination>{7f3ad2ef-7f35-4c04-9172-c33dcf6d2cec}</destination>

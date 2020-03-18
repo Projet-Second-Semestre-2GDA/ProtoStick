@@ -5,7 +5,7 @@
 			<value>saut_bumper</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{4de7e0ae-4f98-42fd-b48b-35be3e469ba8}</destination>
@@ -30,6 +30,9 @@
 		</relationship>
 		<relationship name="timeline">
 			<destination>{1571cc7c-f907-4a78-8ace-31e8f45c222c}</destination>
+		</relationship>
+		<relationship name="banks">
+			<destination>{1491bbb6-f3c9-456e-9f74-f28dc9f18a3e}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixer" id="{1f8728bc-796e-4660-ba18-ae311d40fd68}">
@@ -97,6 +100,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{31a4be27-c719-40df-a36b-4d3c76882e13}">
+		<property name="volume">
+			<value>-5</value>
+		</property>
 		<property name="name">
 			<value>Audio 1</value>
 		</property>
@@ -113,6 +119,7 @@
 	<object class="MixerBusEffectChain" id="{309b9de7-034d-4dca-a15e-d94baee9db11}">
 		<relationship name="effects">
 			<destination>{6f7bd731-29ed-47c4-ad4f-77518f129b34}</destination>
+			<destination>{1954b82b-22ff-4f68-97b9-c4e2efa67096}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{a4209fd4-e137-45db-9b7d-05f427aef7f5}" />
@@ -125,6 +132,14 @@
 	</object>
 	<object class="MixerBusPanner" id="{77ba4264-54db-4c80-bf72-c501e58a68af}" />
 	<object class="MixerBusFader" id="{6f7bd731-29ed-47c4-ad4f-77518f129b34}" />
+	<object class="SpatialiserEffect" id="{1954b82b-22ff-4f68-97b9-c4e2efa67096}">
+		<property name="distanceRolloffType">
+			<value>3</value>
+		</property>
+		<property name="minimumDistance">
+			<value>1.80000007</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{35612f04-3a5b-41e7-a3bb-a123820e973f}" />
 	<object class="SFXReverbEffect" id="{a9e47aa7-d608-4bd1-ab38-fe96d8876400}">
 		<property name="decayTime">

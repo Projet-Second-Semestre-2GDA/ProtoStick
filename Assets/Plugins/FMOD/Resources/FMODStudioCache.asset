@@ -1,0 +1,209 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8336511483210665252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: D:/gitHub/ripository/ProtoStick/Assets/sound design/Assemblage FMOD/Build/Desktop/Master.strings.bank
+  SubDir: 
+  lastModified: 637201587155258055
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 996
+  Exists: 1
+--- !u!114 &-6340931701024359857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/DA placeholder/personnage/chute_avatar
+  m_EditorClassIdentifier: 
+  Path: event:/DA placeholder/personnage/chute_avatar
+  guid: eab61753b656864f915b1c7ab76fe2e7
+  Banks:
+  - {fileID: 1848643005735161515}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1745
+--- !u!114 &-4027328660929523503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/DA placeholder/personnage/premier_saut
+  m_EditorClassIdentifier: 
+  Path: event:/DA placeholder/personnage/premier_saut
+  guid: 2fa6a1d917e58e46850602fb7554c1a0
+  Banks:
+  - {fileID: 1848643005735161515}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 7.2000003
+  MaxDistance: 15
+  Length: 500
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: -8336511483210665252}
+  - {fileID: 1848643005735161515}
+  EditorEvents:
+  - {fileID: -4027328660929523503}
+  - {fileID: 6308415972350629624}
+  - {fileID: 8216017561397440450}
+  - {fileID: 7835061960988741702}
+  - {fileID: 4510579497891306019}
+  - {fileID: -6340931701024359857}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: 1848643005735161515}
+  StringsBanks:
+  - {fileID: -8336511483210665252}
+  stringsBankWriteTime: 637201587155258055
+  cacheVersion: 3
+--- !u!114 &1848643005735161515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: D:/gitHub/ripository/ProtoStick/Assets/sound design/Assemblage FMOD/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637201587155227830
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 50848
+  Exists: 1
+--- !u!114 &4510579497891306019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/DA placeholder/personnage/saut_bumper
+  m_EditorClassIdentifier: 
+  Path: event:/DA placeholder/personnage/saut_bumper
+  guid: d0cc3a51db6dd341b4fafb53507f5d97
+  Banks:
+  - {fileID: 1848643005735161515}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1.8000001
+  MaxDistance: 20
+  Length: 564
+--- !u!114 &6308415972350629624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/DA placeholder/personnage/retour_spawn
+  m_EditorClassIdentifier: 
+  Path: event:/DA placeholder/personnage/retour_spawn
+  guid: 7d75630b5b35e4469d606b69fdd05966
+  Banks:
+  - {fileID: 1848643005735161515}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 489
+--- !u!114 &7835061960988741702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/DA placeholder/personnage/double_saut
+  m_EditorClassIdentifier: 
+  Path: event:/DA placeholder/personnage/double_saut
+  guid: adbb3f0707ac4b4791186a1ff53664b1
+  Banks:
+  - {fileID: 1848643005735161515}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 7.2000003
+  MaxDistance: 15
+  Length: 500
+--- !u!114 &8216017561397440450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/DA placeholder/personnage/instanciation_bumper
+  m_EditorClassIdentifier: 
+  Path: event:/DA placeholder/personnage/instanciation_bumper
+  guid: 926aa91430f55f498f35d3249d48167d
+  Banks:
+  - {fileID: 1848643005735161515}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 596

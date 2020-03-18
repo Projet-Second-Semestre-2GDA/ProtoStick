@@ -34,6 +34,7 @@ public class SpawnPlayer : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             SpawnPlayerMethod();
+            FMODUnity.RuntimeManager.PlayOneShot("event:/DA placeholder/personnage/instanciation_bumper");
         }
     }
 

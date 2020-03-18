@@ -16,12 +16,14 @@ public class InstantDead : MonoBehaviour
     {
         
 
-        if (Input.GetKey(KeyCode.J))
+        if (Input.GetKeyUp(KeyCode.J))
         {
             List<GameObject> playerList = GameObject.FindGameObjectWithTag("Gestionnaire").GetComponent<SpawnPlayer>().playerList;
 
             playerList[playerList.Count - 1].transform.position = spawnPoint.transform.position;
             playerList[playerList.Count - 1].transform.rotation = spawnPoint.transform.rotation;
+            FMODUnity.RuntimeManager.PlayOneShot("event:/DA placeholder/personnage/retour_spawn");
+            
 
         }
     }

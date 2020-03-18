@@ -18,5 +18,6 @@ public class BumpTrick : PlayerEffect
         var velocity = otherRb.velocity;
         velocity = new Vector3(velocity.x, bumpForce, velocity.y);
         otherRb.velocity = velocity;
+        FMODUnity.RuntimeManager.PlayOneShot("event:/DA placeholder/personnage/saut_bumper", transform.position);
     }
 }

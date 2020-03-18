@@ -26,12 +26,14 @@ public class Jump : MonoBehaviour
                 ++jumpDone;
                 isGrounded = false;
                 GetComponent<Rigidbody>().velocity = Vector3.up * jumpVelocity;
+                FMODUnity.RuntimeManager.PlayOneShot("event:/DA placeholder/personnage/premier_saut", transform.position);
             }
             else if (jumpDone < numberOfJump)
             {
                 ++jumpDone;
                 isGrounded = false;
                 GetComponent<Rigidbody>().velocity = Vector3.up * jumpVelocity;
+                FMODUnity.RuntimeManager.PlayOneShot("event:/DA placeholder/personnage/double_saut", transform.position);
             }
 
             
