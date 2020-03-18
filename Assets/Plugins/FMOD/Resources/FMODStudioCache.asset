@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: D:/gitHub/ripository/ProtoStick/Assets/sound design/Assemblage FMOD/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637201587155258055
+  lastModified: 637201716393509952
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 996
+    Value: 1052
   Exists: 1
 --- !u!114 &-6340931701024359857
 MonoBehaviour:
@@ -39,7 +39,8 @@ MonoBehaviour:
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
-  Parameters: []
+  Parameters:
+  - {fileID: 7205624883285413299}
   MinDistance: 0
   MaxDistance: 0
   Length: 1745
@@ -93,7 +94,7 @@ MonoBehaviour:
   - {fileID: 1848643005735161515}
   StringsBanks:
   - {fileID: -8336511483210665252}
-  stringsBankWriteTime: 637201587155258055
+  stringsBankWriteTime: 637201716393509952
   cacheVersion: 3
 --- !u!114 &1848643005735161515
 MonoBehaviour:
@@ -109,11 +110,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: D:/gitHub/ripository/ProtoStick/Assets/sound design/Assemblage FMOD/Build/Desktop/Master.bank
   SubDir: 
-  lastModified: 637201587155227830
+  lastModified: 637201716393490013
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 50848
+    Value: 51392
   Exists: 1
 --- !u!114 &4510579497891306019
 MonoBehaviour:
@@ -161,6 +162,23 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 489
+--- !u!114 &7205624883285413299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/chute_avatar/vitesseDeChute
+  m_EditorClassIdentifier: 
+  Name: vitesseDeChute
+  Min: 9.81
+  Max: 200
+  Default: 9.81
+  Exists: 1
 --- !u!114 &7835061960988741702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,9 +219,9 @@ MonoBehaviour:
   Banks:
   - {fileID: 1848643005735161515}
   IsStream: 0
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 0
+  MaxDistance: 0
   Length: 596
