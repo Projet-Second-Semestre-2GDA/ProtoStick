@@ -24,6 +24,7 @@ public class EffectAttaching : MonoBehaviour
         var trans = transform;
         var actualPosition = trans.position;
         
+        trans.LookAt(actualPosition + Vector3.up);
         //Debug.Log("Je fais des trucs");
         
         for (int i = 0; i < directionOrdre.Length; i++)
