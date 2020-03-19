@@ -544,6 +544,7 @@ MonoBehaviour:
   obstruction: {fileID: 0}
   rotationSpeed: 3.47
   zoomSpeed: 2
+  showObstruct: 1
 --- !u!1 &7524777083988542036
 GameObject:
   m_ObjectHideFlags: 0
@@ -554,7 +555,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3171382827250581857}
   - component: {fileID: 8242306240778731617}
-  - component: {fileID: 7756882020345664548}
   m_Layer: 8
   m_Name: collider
   m_TagString: Player
@@ -589,21 +589,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.8, y: 1.8, z: 0.8}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7756882020345664548
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7524777083988542036}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8daa6210d54e4148a0e9320f952de24, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canWork: 0
-  bumpForce: 10
-  treeshold: 10
 --- !u!1001 &4552862297444586033
 PrefabInstance:
   m_ObjectHideFlags: 0

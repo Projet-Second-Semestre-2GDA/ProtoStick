@@ -14,6 +14,8 @@ public class ThirdPersonCameraControl : MonoBehaviour
     [SerializeField, Range(1f, 10f)] private float rotationSpeed = 1;
     [SerializeField,Range(1f,10f)] private float zoomSpeed = 3f;
     float distanceFromTarget;
+
+    [SerializeField] private bool showObstruct = true;
     
     void Start()
     {
@@ -27,7 +29,10 @@ public class ThirdPersonCameraControl : MonoBehaviour
     private void LateUpdate()
     {
         CamControl();
-        ViewObstructed();
+        if (!showObstruct)
+        {
+            ViewObstructed();
+        }
     }
     
 
