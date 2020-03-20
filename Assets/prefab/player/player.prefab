@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 1521426552997744118}
   - component: {fileID: 4111039021087859853}
   - component: {fileID: -7199865018616968158}
+  - component: {fileID: -7319208995232812739}
   m_Layer: 8
   m_Name: player
   m_TagString: Player
@@ -169,8 +170,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b8d71d126bd7874eaf39c82fdf47bf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  addedGravity: 0.732
-  frictionMultiplicator: 1
 --- !u!114 &4111039021087859853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202,6 +201,20 @@ MonoBehaviour:
   secondObject:
   - {fileID: 851476279798886121}
   - {fileID: 5140530517150459158}
+--- !u!114 &-7319208995232812739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 802273919599641455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cfef7eaf264b5e4a8266c32bd76aa4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  treesholdAutorized: 0.5
+  distanceMax: 4.13
 --- !u!1 &2242789433371026184
 GameObject:
   m_ObjectHideFlags: 0
@@ -543,7 +556,7 @@ MonoBehaviour:
   obstruction: {fileID: 0}
   rotationSpeed: 3.47
   zoomSpeed: 2
-  showObstruct: 1
+  showObsacleInView: 1
   angleBorn: {x: -90, y: 70.50727}
 --- !u!1 &7524777083988542036
 GameObject:

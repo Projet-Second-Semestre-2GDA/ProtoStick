@@ -108,12 +108,18 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="Ball" t="Include">
+            <e p="PickableObject.cs" t="Include" />
+          </e>
           <e p="BumperAction" t="Include">
             <e p="BumpTrick.cs" t="Include" />
             <e p="EffectAttaching.cs" t="Include" />
             <e p="PlayerEffect.cs" t="Include" />
           </e>
           <e p="Player" t="Include">
+            <e p="InteractionBall" t="Include">
+              <e p="ControlObject.cs" t="Include" />
+            </e>
             <e p="ModifiedGravity.cs" t="Include" />
             <e p="PlayerAction" t="Include">
               <e p="Camera" t="Include">

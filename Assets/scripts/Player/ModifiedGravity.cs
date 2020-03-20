@@ -5,7 +5,7 @@ using Sirenix.OdinInspector;
 public class ModifiedGravity : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField,PropertyRange(0,1)] private float addedGravity = 1f;
+    [SerializeField,PropertyRange(0,1)] private float addedGravity = 0.732f;
     [SerializeField,PropertyRange(0.9f,1)] private float frictionMultiplicator = 1f;
 
     Vector3 previousPosition;

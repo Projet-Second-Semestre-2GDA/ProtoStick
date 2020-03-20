@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ThirdPersonCameraControl : MonoBehaviour
 {
-    [SerializeField] private Transform target, player;
+    [SerializeField] public Transform target, player;
     float mouseX, mouseY;
 
     [HideInInspector]
