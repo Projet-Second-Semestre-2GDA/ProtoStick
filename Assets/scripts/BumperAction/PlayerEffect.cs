@@ -12,7 +12,7 @@ public class PlayerEffect : MonoBehaviour
     
     protected void OnCollisionEnter(Collision collision)
     {
-        if (!collision.gameObject.CompareTag("Player") || !canWork) return;
+        if (!collision.gameObject.CompareTag("Ball") || !collision.gameObject.CompareTag("Player") || !canWork) return;
         Effect(collision.collider.gameObject);
     }
 

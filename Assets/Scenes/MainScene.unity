@@ -9582,6 +9582,16 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5070247805507772441, guid: f1c92f06a90f5be42a6c7d6d4febe316,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 6980448492597643061, guid: f1c92f06a90f5be42a6c7d6d4febe316,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1c92f06a90f5be42a6c7d6d4febe316, type: 3}
 --- !u!1001 &4241700156710502743

@@ -78,7 +78,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpVelocity: 6.93
   numberOfJump: 2
-  firstJumpStable: 0
+  firstJumpStable: 1
 --- !u!114 &1626836616618359891
 MonoBehaviour:
   m_ObjectHideFlags: 0
