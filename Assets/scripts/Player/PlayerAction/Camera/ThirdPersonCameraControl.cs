@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 public class ThirdPersonCameraControl : MonoBehaviour
 {
-    [SerializeField] private Transform target, player;
+    [SerializeField] public Transform target, player;
     float mouseX, mouseY;
 
     [HideInInspector]
@@ -15,7 +16,9 @@ public class ThirdPersonCameraControl : MonoBehaviour
     [SerializeField,Range(1f,10f)] private float zoomSpeed = 3f;
     float distanceFromTarget;
 
-    [SerializeField] private bool showObstruct = true;
+    [SerializeField] private bool showObsacleInView = true;
+
+    [SerializeField, MinMaxSlider(-90f,90f,true)] private Vector2 angleBorn = new Vector2(-90f,60f);
     
     void Start()
     {
@@ -29,7 +32,7 @@ public class ThirdPersonCameraControl : MonoBehaviour
     private void LateUpdate()
     {
         CamControl();
-        if (!showObstruct)
+        if (!showObsacleInView)
         {
             ViewObstructed();
         }
@@ -40,7 +43,7 @@ public class ThirdPersonCameraControl : MonoBehaviour
     {
         mouseX += Input.GetAxis("Mouse X") * rotationSpeed;
         mouseY -= Input.GetAxis("Mouse Y") * rotationSpeed;
-        mouseY = Mathf.Clamp(mouseY, -35, 60);
+        mouseY = Mathf.Clamp(mouseY, angleBorn.x, angleBorn.y);
 
         transform.LookAt(target);
 
@@ -71,7 +74,7 @@ public class ThirdPersonCameraControl : MonoBehaviour
 
         if (Physics.Raycast(transform.position, target.position - transform.position, out hit, distanceFromTarget))
         {
-            if (hit.collider.gameObject.tag != "Player")
+            if (!hit.collider.gameObject.CompareTag("Player"))
             {
                 obstruction = hit.transform;
                 obstruction.gameObject.GetComponent<MeshRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.ShadowsOnly;
@@ -81,7 +84,7 @@ public class ThirdPersonCameraControl : MonoBehaviour
                     objectInvisible.Add(obstruction.gameObject);
                 }
 
-                if (Vector3.Distance(obstruction.position, transform.position) >= 3f && Vector3.Distance(transform.position, target.position) >= 1.5f)
+                if (Vector3.Distance(obstruction.position, transform.position) >= distanceFromTarget/2 && Vector3.Distance(transform.position, target.position) >= distanceFromTarget/4)
                     transform.Translate(Vector3.forward * zoomSpeed * Time.deltaTime);
             }
             else
