@@ -139,6 +139,7 @@
                 <e p="ReloadScene.cs" t="Include" />
               </e>
             </e>
+            <e p="PlayerNumber.cs" t="Include" />
           </e>
         </e>
         <e p="sound design" t="Include">
