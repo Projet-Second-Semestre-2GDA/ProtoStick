@@ -67,7 +67,7 @@ public class UPS : MonoBehaviour
                     actualsUPSPlayer[i] /= refreshTime;
                 }
 
-                UPSAffichagePlayer[i].text = "La vitesse du joueur " + (i + 1) + " est de " + actualsUPSPlayer[i] + " UPS.     ";
+                UPSAffichagePlayer[i].text = "La vitesse du joueur " + (i + 1) + " est de " + ((actualsUPSPlayer[i]<0.5f)?0:actualsUPSPlayer[i]) + " UPS.     ";
                 previousPositionPlayer[i].Clear();
                 actualsUPSPlayer[i] = 0;
             }
