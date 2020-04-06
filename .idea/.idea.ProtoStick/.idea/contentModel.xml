@@ -108,6 +108,9 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="Autre" t="Include">
+            <e p="UPS.cs" t="Include" />
+          </e>
           <e p="Ball" t="Include">
             <e p="PickableObject.cs" t="Include" />
           </e>

@@ -71,22 +71,22 @@ public class ControlObject : MonoBehaviour
         ball = anObject;
     }
 
-    private void OnDrawGizmos()
-    {
-        rayCamera = new Ray(camera.position,camera.forward);
-        RaycastHit hit;
-        
-
-        if (Physics.SphereCast(rayCamera,treesholdAutorized,out hit,distanceMax))
-        {
-            var position = camera.position;
-            Gizmos.DrawLine(position,hit.point);
-
-        }
-        else
-        {
-            var position = camera.position;
-            Gizmos.DrawLine(position, position + camera.forward * distanceMax );
-        }
-    }
+    // private void OnDrawGizmos()
+    // {
+    //     rayCamera = new Ray(camera.position,camera.forward);
+    //     RaycastHit hit;
+    //     
+    //
+    //     if (Physics.SphereCast(rayCamera,treesholdAutorized,out hit,distanceMax))
+    //     {
+    //         var position = camera.position;
+    //         Gizmos.DrawLine(position,hit.point);
+    //
+    //     }
+    //     else
+    //     {
+    //         var position = camera.position;
+    //         Gizmos.DrawLine(position, position + camera.forward * distanceMax );
+    //     }
+    // }
 }
