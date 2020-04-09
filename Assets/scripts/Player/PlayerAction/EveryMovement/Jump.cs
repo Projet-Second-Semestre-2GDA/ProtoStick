@@ -26,10 +26,10 @@ public class Jump : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(name + "a pour input" + "Jump" + playerNumber.playerNumber);
+        // Debug.Log(name + "a pour input" + "Jump" + playerNumber.playerNumber);
         if (Input.GetButtonDown("Jump" + playerNumber.playerNumber))
         {
-            Debug.Log("Jump" + playerNumber.playerNumber);
+            // Debug.Log("Jump" + playerNumber.playerNumber);
             if (jumpDone == 0)
             {
                 ++jumpDone;

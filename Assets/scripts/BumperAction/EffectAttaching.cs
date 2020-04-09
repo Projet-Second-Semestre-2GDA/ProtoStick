@@ -8,13 +8,13 @@ public class EffectAttaching : MonoBehaviour
 {
     [SerializeField, PropertyRange(0, 2)] private float sizeChecker = 1f;
     private FixedJoint joint;
-
-    Vector3[] directionOrdre = new Vector3[6]
-        {Vector3.down, Vector3.forward, Vector3.right, Vector3.back, Vector3.left, Vector3.up};
+    private Vector3[] hauteurOrdre = {Vector3.zero,Vector3.down,Vector3.up};
+    private Vector3[] directionOrdre = {Vector3.forward, Vector3.right, Vector3.back, Vector3.left, (Vector3.forward + Vector3.right).normalized, (Vector3.right + Vector3.back).normalized, (Vector3.back + Vector3.left).normalized, (Vector3.left + Vector3.forward).normalized};
     
     private Vector3 lookAt = Vector3.down;
     private void Start()
     {
+        Attach();
     }
 
     public void Attach()
@@ -26,30 +26,22 @@ public class EffectAttaching : MonoBehaviour
         
         trans.LookAt(actualPosition + Vector3.up);
         //Debug.Log("Je fais des trucs");
-        
-        for (int i = 0; i < directionOrdre.Length; i++)
+        bool test = HasTouchSomething(actualPosition, Vector3.down, trans);
+        if (!test)
         {
-            var directionCheck = directionOrdre[i];
-            //Debug.Log("direction check : " + directionCheck);
-            if (Physics.Raycast(actualPosition,directionCheck,out hit,sizeChecker))
+            for (int j = 0; j < hauteurOrdre.Length; j++)
             {
-                //Debug.Log("elle a réussi !");
-                var direction = actualPosition - hit.point;
-                direction = direction.normalized;
-                //Debug.Log("La direction obtenu du calcul est : " + direction);
-                trans.position = hit.point + direction * (0.4f/3);
-                lookAt =actualPosition + direction;
-                trans.LookAt(lookAt);
-                
-                
-                //Debug.Log("La position est donc : " + trans.position);
-                //Debug.Log("La rotation est donc : " + direction);
-                break;
-                
+                if (j == hauteurOrdre.Length -1)test = HasTouchSomething(actualPosition, Vector3.up, trans);
+                if (test) break;
+                for (int i = 0; i < directionOrdre.Length; i++)
+                {
+                    var directionCheck = (directionOrdre[i] + hauteurOrdre[j]).normalized;
+                    //Debug.Log("direction check : " + directionCheck);
+                    test = HasTouchSomething(actualPosition, directionCheck, trans); 
+                    if(test)break;
+                }
             }
         }
-
-
 
         // var rbs = listRb.allRigidbody;
         // if (rbs.Count >0)
@@ -89,6 +81,25 @@ public class EffectAttaching : MonoBehaviour
         //     joint.connectedBody = hits[indexLowerPoint].rigidbody;
         // }
         //
+    }
+
+    private bool HasTouchSomething(Vector3 actualPosition, Vector3 directionCheck, Transform trans)
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(actualPosition, directionCheck, out hit, sizeChecker))
+        {
+            //Debug.Log("elle a réussi !");
+            var direction = actualPosition - hit.point;
+            direction = direction.normalized;
+            Debug.Log("La direction obtenu du calcul est : " + direction);
+            trans.position = hit.point + direction * (0.4f / 3);
+            lookAt = actualPosition + direction;
+            trans.LookAt(lookAt);
+
+            return true;
+        }
+
+        return false;
     }
 
     private void OnDrawGizmosSelected()
