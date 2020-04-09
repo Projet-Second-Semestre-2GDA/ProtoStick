@@ -13,6 +13,7 @@ public class PlayerNumber : MonoBehaviour
     {
         SetPlayerNumber();
     }
+    
 
     private void SetPlayerNumber()
     {

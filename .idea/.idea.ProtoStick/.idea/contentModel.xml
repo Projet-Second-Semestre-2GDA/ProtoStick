@@ -123,6 +123,7 @@
             <e p="InteractionBall" t="Include">
               <e p="ControlObject.cs" t="Include" />
             </e>
+            <e p="ModeUnPlayer.cs" t="Include" />
             <e p="ModifiedGravity.cs" t="Include" />
             <e p="PlayerAction" t="Include">
               <e p="Camera" t="Include">
