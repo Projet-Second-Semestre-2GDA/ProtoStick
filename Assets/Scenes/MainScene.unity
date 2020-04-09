@@ -486,9 +486,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
+  m_HorizontalAxis: MovementHorizontal1
+  m_VerticalAxis: MovementVertical1
+  m_SubmitButton: Jump1
   m_CancelButton: Cancel
   m_InputActionsPerSecond: 10
   m_RepeatDelay: 0.5
@@ -533,6 +533,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bumper (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6027455104298331706, guid: e78ced3cce39377489e09d756d949010,
+        type: 3}
+      propertyPath: bumpForce
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 6287753611849498506, guid: e78ced3cce39377489e09d756d949010,
         type: 3}

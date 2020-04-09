@@ -50,7 +50,7 @@ public class SpawnPlayer : MonoBehaviour
             rbPlayer.useGravity = false;
             rbPlayer.constraints = RigidbodyConstraints.FreezeAll;
             lastPlayerMovement.DisableScript();
-            lastEffect.canWork = true;
+            // lastEffect.canWork = true;
             var attach = lastPlayer.GetComponent<EffectAttaching>();
             attach.Attach();
             lastPlayer.GetComponent<ChangeAsset>().ChangeAssetSelected();
@@ -63,8 +63,8 @@ public class SpawnPlayer : MonoBehaviour
         lastPlayerMovement = lastPlayer.GetComponent<Movement>();
         rbPlayer = lastPlayerMovement.GetComponent<Rigidbody>();
         lastEffect = lastPlayer.GetComponent<PlayerEffect>();
-        lastEffect.canWork = false;
-        Debug.Log("l'effet du " + lastPlayer.name + " est " + lastEffect.canWork);
+        // lastEffect.canWork = false;
+        // Debug.Log("l'effet du " + lastPlayer.name + " est " + lastEffect.canWork);
         
         added++;
     }

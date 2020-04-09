@@ -1,10 +1,13 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
+using Debug = UnityEngine.Debug;
 
 public class Jump : MonoBehaviour
 {
-
+    private PlayerNumber playerNumber;
     //[Range(1, 10)]
     [SerializeField]private float jumpVelocity = 1;
 
@@ -16,11 +19,17 @@ public class Jump : MonoBehaviour
 
     private int jumpDone = 0;
 
+    private void Start()
+    {
+        playerNumber = GetComponent<PlayerNumber>();
+    }
+
     private void Update()
     {
-
-        if (Input.GetButtonDown("Jump"))
+        Debug.Log(name + "a pour input" + "Jump" + playerNumber.playerNumber);
+        if (Input.GetButtonDown("Jump" + playerNumber.playerNumber))
         {
+            Debug.Log("Jump" + playerNumber.playerNumber);
             if (jumpDone == 0)
             {
                 ++jumpDone;

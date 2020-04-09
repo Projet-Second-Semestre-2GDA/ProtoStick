@@ -24,7 +24,7 @@ public class BumpTrick : PlayerEffect
         var otherRb = playerWhoTouch.GetComponentInParent<Rigidbody>();
         var velocity = otherRb.velocity;
         
-        var force = transform.forward * bumpForce;
+        var force = transform.up * bumpForce;
         Debug.Log("La force est : " + force);
         var otherValue = new float[] {force.x,force.y,force.z};
         var values = new float[] {velocity.x,velocity.y,velocity.z};

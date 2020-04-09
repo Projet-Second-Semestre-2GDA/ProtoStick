@@ -5,9 +5,10 @@ using UnityEngine;
 
 public class ThirdPersonCameraControl : MonoBehaviour
 {
+    [SerializeField, Range(0, 1)] private float sensitivity = 0.8f;
     [SerializeField] public Transform target, player;
     float mouseX, mouseY;
-
+    private PlayerNumber playerNumber;
     [HideInInspector]
     [SerializeField] private Transform obstruction;
     private List<GameObject> objectInvisible = new List<GameObject>();
@@ -22,11 +23,13 @@ public class ThirdPersonCameraControl : MonoBehaviour
     
     void Start()
     {
+        
         mouseX = transform.rotation.eulerAngles.y;
         obstruction = target;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         distanceFromTarget = Vector3.Distance(target.position, transform.position);
+        playerNumber = player.GetComponent<PlayerNumber>();
     }
 
     private void LateUpdate()
@@ -41,8 +44,8 @@ public class ThirdPersonCameraControl : MonoBehaviour
 
     void CamControl()
     {
-        mouseX += Input.GetAxis("Mouse X") * rotationSpeed;
-        mouseY -= Input.GetAxis("Mouse Y") * rotationSpeed;
+        mouseX += (Input.GetAxis("CameraHorizontal" + playerNumber.playerNumber)*sensitivity) * rotationSpeed;
+        mouseY -= (Input.GetAxis("CameraVertical" + playerNumber.playerNumber)*sensitivity) * rotationSpeed;
         mouseY = Mathf.Clamp(mouseY, angleBorn.x, angleBorn.y);
 
         transform.LookAt(target);
