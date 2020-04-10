@@ -8,8 +8,8 @@ public class BumpTrick : PlayerEffect
 {
     [SerializeField, PropertyRange(0, 100)] private  float bumpForce;
 
-    [SerializeField, PropertyRange(0, 50)]
-    private float treeshold = 10;
+    // [SerializeField, PropertyRange(0, 50)]
+    // private float treeshold = 10;
 
 
     private Vector3 velocityGiven = Vector3.zero;

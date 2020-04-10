@@ -10,12 +10,12 @@ public class PlayerEffect : MonoBehaviour
         Debug.Log(this.name + " do " + effect);
     } 
     
-    protected void OnCollisionEnter(Collision collision)
+    protected void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Collision with " + collision.gameObject.tag);
-        if (collision.gameObject.CompareTag("Player"))
+        Debug.Log("Collision with " + other.gameObject.tag);
+        if (other.gameObject.CompareTag("Player"))
         {
-            Effect(collision.collider.attachedRigidbody.gameObject);
+            Effect(other.attachedRigidbody.gameObject);
         }
     }
 

@@ -9,6 +9,7 @@ TagManager:
   - SpawnPoint
   - Bullet
   - Ball
+  - Bumper
   layers:
   - Default
   - TransparentFX

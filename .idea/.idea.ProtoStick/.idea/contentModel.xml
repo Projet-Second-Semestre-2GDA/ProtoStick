@@ -109,6 +109,7 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="Autre" t="Include">
+            <e p="HelpOrientation.cs" t="Include" />
             <e p="UPS.cs" t="Include" />
           </e>
           <e p="Ball" t="Include">
@@ -118,6 +119,7 @@
             <e p="BumpTrick.cs" t="Include" />
             <e p="EffectAttaching.cs" t="Include" />
             <e p="PlayerEffect.cs" t="Include" />
+            <e p="RotateBumper.cs" t="Include" />
           </e>
           <e p="Player" t="Include">
             <e p="InteractionBall" t="Include">
