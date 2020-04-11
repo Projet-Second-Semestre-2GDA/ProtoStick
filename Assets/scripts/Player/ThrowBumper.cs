@@ -8,22 +8,26 @@ using Debug = UnityEngine.Debug;
 public class ThrowBumper : MonoBehaviour
 {
     [SerializeField] private GameObject bumper;
+    [SerializeField, Range(0, 5)] private float timerBeforeNewShoot = 2;
+    private float nextTime;
     private PlayerNumber playerNumber;
     private Camera cam;
     private string inputName;
     private bool alreadyDid = false;
     private Ray ray;
+    
     private void Start()
     {
         playerNumber = GetComponent<PlayerNumber>();
         inputName = "Shoot" + playerNumber.playerNumber;
         cam = GetComponentInChildren<Camera>();
+        nextTime = Time.time;
     }
 
     private void Update()
     {
         // Debug.Log(inputName + " = " +Input.GetAxis(inputName));
-        if (Input.GetAxis(inputName) >0.1f && !alreadyDid)
+        if (Input.GetAxis(inputName) >0.1f && !alreadyDid && Time.time >= nextTime)
         {
             
             alreadyDid = true;
@@ -57,6 +61,12 @@ public class ThrowBumper : MonoBehaviour
                     var bumperTemp = Instantiate(bumper, bumperPosition, Quaternion.identity);
                     bumperTemp.GetComponent<RotateBumper>().SetPoints(points);
                 }
+                else if(hit.collider.CompareTag("Bumper"))
+                {
+                    Destroy(hit.collider.gameObject);
+                }
+
+                nextTime = Time.time + timerBeforeNewShoot;
             }
         }
 
