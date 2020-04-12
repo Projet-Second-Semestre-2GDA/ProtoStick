@@ -149,6 +149,9 @@
             <e p="PlayerNumber.cs" t="Include" />
             <e p="ThrowBumper.cs" t="Include" />
           </e>
+          <e p="Ralentisseur" t="Include">
+            <e p="Ralentisseur.cs" t="Include" />
+          </e>
         </e>
         <e p="sound design" t="Include">
           <e p="Assemblage FMOD" t="Include">

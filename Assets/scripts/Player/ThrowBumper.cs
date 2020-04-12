@@ -9,6 +9,7 @@ public class ThrowBumper : MonoBehaviour
 {
     [SerializeField] private GameObject bumper;
     [SerializeField, Range(0, 5)] private float timerBeforeNewShoot = 2;
+    [SerializeField] Material[] materiauxBumper = new Material[2];
     private float nextTime;
     private PlayerNumber playerNumber;
     private Camera cam;
@@ -59,6 +60,10 @@ public class ThrowBumper : MonoBehaviour
 
                     var bumperPosition = hit.point;
                     var bumperTemp = Instantiate(bumper, bumperPosition, Quaternion.identity);
+                    foreach (var render in bumperTemp.GetComponentsInChildren<Renderer>())
+                    {
+                        render.material = materiauxBumper[playerNumber.playerIndex];
+                    }
                     bumperTemp.GetComponent<RotateBumper>().SetPoints(points);
                 }
                 else if(hit.collider.CompareTag("Bumper"))

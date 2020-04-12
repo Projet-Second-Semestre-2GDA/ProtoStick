@@ -70,7 +70,9 @@ public class Movement : MonoBehaviour
             var trans = transform;
             var temp = trans.forward * (v * (speedDeplacement/reduc) * accelerator);
             temp += trans.right * (h * (speedDeplacement/reduc) * accelerator);
-            temp = (temp.magnitude > (speedDeplacement/reduc) * accelerator) ? temp.normalized * speedDeplacement : temp;
+            temp = (temp.magnitude > (speedDeplacement /reduc) * accelerator)
+                ? temp.normalized * speedDeplacement
+                : temp;
             
             
             velocity += temp;
