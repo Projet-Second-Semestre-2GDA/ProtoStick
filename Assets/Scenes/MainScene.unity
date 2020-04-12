@@ -524,7 +524,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameObjectsADesactiver:
   - {fileID: 2026286901}
-  - {fileID: 0}
   playerOne: {fileID: 1569633637}
   modeUnJoueur: 0
 --- !u!1001 &2447094195170841421

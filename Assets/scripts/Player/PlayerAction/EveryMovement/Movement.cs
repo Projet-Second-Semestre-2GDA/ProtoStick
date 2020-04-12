@@ -78,9 +78,10 @@ public class Movement : MonoBehaviour
             }
         }
 
-        var vitesse = velocity.magnitude;
         velocity = Vector3.MoveTowards(velocity, Vector3.zero, ((/*jump.PlayerIsGrounded() &&*/ overlapSomething)?reducteurTerrestre:reducteurAerien) * speedDeplacement);
-
+        
+        //var vitesse = velocity.magnitude;
+        //
         // if (vitesse > speedDeplacementMax)
         // {
         //     velocity = Vector3.MoveTowards(velocity, Vector3.zero, ((/*jump.PlayerIsGrounded() &&*/ overlapSomething)?reducteurTerrestre:reducteurAerien) * speedDeplacement);
