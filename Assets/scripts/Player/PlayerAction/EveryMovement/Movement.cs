@@ -8,10 +8,14 @@ public class Movement : MonoBehaviour
     private PlayerNumber playerNumber;
     Rigidbody rb;
     Jump jump;
-    public float speedRotation = 2;
-    public float speedDeplacement = 5;
-    [SerializeField, PropertyRange(0, 1)] private float timeForChange = 1f;
+    public float speedRotation = 100;
+    public float speedDeplacement = 30;
+    public float speedDeplacementMax = 50;
 
+    [SerializeField, PropertyRange(0, 1)] private float timeForChange = 1f;
+    [SerializeField, Range(0, 1)] private float reducteurTerrestre, reducteurAerien;
+
+    private float canMove = 0;
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -21,50 +25,83 @@ public class Movement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        float h = Input.GetAxis("MovementHorizontal" + playerNumber.playerNumber);
-        float v = Input.GetAxis("MovementVertical" + playerNumber.playerNumber);
+        float h = Input.GetAxisRaw("MovementHorizontal" + playerNumber.playerNumber);
+        float v = Input.GetAxisRaw("MovementVertical" + playerNumber.playerNumber);
 
-
-        Moove(v, h);
+        if (Time.time > canMove)
+        {
+            Moove(v, h);
+        }
     }
 
     private void Moove(float v, float h)
     {
         var velocity = rb.velocity;
+        float y = velocity.y;
         float deltaTime = Time.fixedDeltaTime;
-
+        
+        
+        // var velocity = velocity;
+        velocity.y = 0;
+        // if (velocity.magnitude > speedDeplacement)
+        // {
+        //     velocity -= velocity.normalized * speedDeplacement;
+        // }
+        
         if (Mathf.Abs(v) > 0.01f || Mathf.Abs(h) > 0.01f)
         {
-            var velocity2 = new Vector3();
-            velocity2 += v * speedDeplacement * transform.forward;
-            velocity2 += h * speedDeplacement * transform.right;
-            velocity2 = velocity2.magnitude > speedDeplacement ? velocity2.normalized * speedDeplacement : velocity2;
-            if (jump.PlayerIsGrounded())
+            var trans = transform;
+            var temp = trans.forward * (v * speedDeplacement);
+            temp += trans.right * (h * speedDeplacement);
+            temp = (temp.magnitude > speedDeplacement) ? temp.normalized * speedDeplacement : temp;
+            
+            
+            velocity += temp;
+            if ((velocity.magnitude > speedDeplacement))
             {
-                velocity.x = velocity2.x;
-                velocity.z = velocity2.z;
-            }
-            else
-            {
-                velocity2.x = velocity.x +
-                              (velocity2.x * (deltaTime / ((timeForChange <= deltaTime) ? deltaTime : timeForChange)));
-                velocity2.z = velocity.z +
-                              (velocity2.z * (deltaTime / ((timeForChange <= deltaTime) ? deltaTime : timeForChange)));
-
-                velocity2 = velocity2.normalized * speedDeplacement;
-
-
-                velocity.x = velocity2.x;
-                velocity.z = velocity2.z;
+                velocity -= velocity.normalized * ((velocity.magnitude - speedDeplacement > speedDeplacement)
+                    ? speedDeplacement
+                    : speedDeplacement - (velocity.magnitude - speedDeplacement));
+                
             }
         }
-        else if (jump.PlayerIsGrounded() && Physics.OverlapSphere(transform.position, 0.7f).Length < 2)
+        /*if (jump.PlayerIsGrounded() && Physics.OverlapSphere(transform.position, 0.7f).Length < 2)*/
+        
+        bool overlapSomething = false;
+        var test = Physics.OverlapSphere(transform.position, 0.7f);
+        for (int i = 0; i < test.Length; i++)
         {
-            velocity.x = 0;
-            velocity.z = 0;
+            if (!test[i].CompareTag("Player"))
+            {
+                overlapSomething = true;
+                break;
+            }
         }
 
+        var vitesse = velocity.magnitude;
+        velocity = Vector3.MoveTowards(velocity, Vector3.zero, ((/*jump.PlayerIsGrounded() &&*/ overlapSomething)?reducteurTerrestre:reducteurAerien) * speedDeplacement);
 
+        // if (vitesse > speedDeplacementMax)
+        // {
+        //     velocity = Vector3.MoveTowards(velocity, Vector3.zero, ((/*jump.PlayerIsGrounded() &&*/ overlapSomething)?reducteurTerrestre:reducteurAerien) * speedDeplacement);
+        // }
+        // else if(vitesse >speedDeplacement)
+        // {
+        //     velocity = Vector3.MoveTowards(velocity, Vector3.zero, ((/*jump.PlayerIsGrounded() &&*/ overlapSomething)?reducteurTerrestre:reducteurAerien) * (speedDeplacement/2));
+        // }
+        // else if (vitesse < 10)
+        // {
+        //     velocity = Vector3.MoveTowards(velocity, Vector3.zero, ((/*jump.PlayerIsGrounded() &&*/ overlapSomething)?reducteurTerrestre:reducteurAerien) * (speedDeplacement*2));
+        // }
+        // else
+        // {
+        //     velocity = Vector3.MoveTowards(velocity, Vector3.zero, ((/*jump.PlayerIsGrounded() &&*/ overlapSomething)?reducteurTerrestre:reducteurAerien) * (speedDeplacement/4));
+        // }
+        
+        // velocity = (velocity - velocity.normalized *0.5f* speedDeplacement).normalized ;
+        
+
+        velocity.y = y;
         rb.velocity = velocity;
     }
 
@@ -74,6 +111,9 @@ public class Movement : MonoBehaviour
         this.enabled = false;
     }
 
-
+    public void DisableMovement(float time)
+    {
+        canMove = Time.time + time;
+    }
 
 }

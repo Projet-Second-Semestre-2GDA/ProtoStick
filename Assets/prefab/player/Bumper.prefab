@@ -47,8 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8daa6210d54e4148a0e9320f952de24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bumpForce: 20
-  treeshold: 10
+  bumpForce: 35
 --- !u!136 &8038283260959276299
 CapsuleCollider:
   m_ObjectHideFlags: 0

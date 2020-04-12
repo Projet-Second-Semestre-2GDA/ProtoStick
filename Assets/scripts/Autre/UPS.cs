@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.OdinInspector;
@@ -6,73 +7,67 @@ using UnityEngine.UI;
 
 public class UPS : MonoBehaviour
 {
-    [SerializeField] private float refreshTime = 0.5f;
-    [SerializeField] private Text[] UPSAffichagePlayer = new Text[2];
+    [SerializeField,Range(0,1)] private float refreshTime = 0.5f;
+    [SerializeField] private Text UPSAffichagePlayer;
     
     private float nextTimer = -1;
     
-    [SerializeField] private GameObject[] players = new GameObject[2];
+    // [SerializeField] private GameObject[] players = new GameObject[2];
 
-    private System.Collections.Generic.List<Vector3>[] previousPositionPlayer = new System.Collections.Generic.List<Vector3>[2];
-    private float[] actualsUPSPlayer = new float[2];
-    
+    private List<Vector3> previousPositionPlayer = new List<Vector3>();
+    private float actualsUPSPlayer = 0;
+
+    private float playerNumber;
+
+    private float timePass;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        // var playersFounds = GameObject.FindGameObjectsWithTag("Player");
-        //
-        // if (playersFounds.Length > 2)
-        // {
-        //     Debug.LogError("Il y a plus de 2 objet, " + playersFounds.Length + " exactement");
-        // }
-        // // players.Initialize();
-        // players = new GameObject[playersFounds.Length];
-        //
-        //
-        // players[playersFounds[0].GetComponent<PlayerNumber>().playerIndex] = playersFounds[0];
-        // players[playersFounds[1].GetComponent<PlayerNumber>().playerIndex] = playersFounds[1];
-        
-        for (int i = 0; i < 2; i++)
-        {
-            previousPositionPlayer[i] = new List<Vector3>();
-        }
-
+        previousPositionPlayer = new List<Vector3>();
         nextTimer = Time.time + refreshTime;
+        timePass = 0;
+    }
+
+    private void Start()
+    {
+        playerNumber = GetComponent<PlayerNumber>().playerNumber;
     }
 
     // Update is called once per frame
     void Update()
     {
-        for (int i = 0; i < 2; i++)
-        {
-            previousPositionPlayer[i].Add(players[i].transform.position);
-        }
+        previousPositionPlayer.Add(transform.position);
+        timePass += Time.deltaTime;
         if (Time.time >= nextTimer)
         {
-            for (int i = 0; i < 2; i++)
-            {
-                actualsUPSPlayer[i] = 0;
-                var distance = new List<float>();
-                if (previousPositionPlayer[i].Count > 0)
-                {
-                    for (int j = 1; j < previousPositionPlayer[i].Count; j++)
-                    {
-                        distance.Add(Vector3.Distance(previousPositionPlayer[i][j], previousPositionPlayer[i][j - 1] ));
-                    }
-
-                    for (int j = 0; j < distance.Count; j++)
-                    {
-                        actualsUPSPlayer[i] += distance[j];
-                    }
-                    actualsUPSPlayer[i] /= refreshTime;
-                }
-
-                UPSAffichagePlayer[i].text = "La vitesse du joueur " + (i + 1) + " est de " + ((actualsUPSPlayer[i]<0.5f)?0:actualsUPSPlayer[i]) + " UPS.     ";
-                previousPositionPlayer[i].Clear();
-                actualsUPSPlayer[i] = 0;
-            }
-            
-            nextTimer = Time.time + refreshTime;
+            ActualizeSpeed();
         }
+    }
+
+    private void ActualizeSpeed()
+    {
+        actualsUPSPlayer = 0;
+        var distance = new List<float>();
+        if (previousPositionPlayer.Count > 0)
+        {
+            for (int j = 1; j < previousPositionPlayer.Count; j++)
+            {
+                distance.Add(Vector3.Distance(previousPositionPlayer[j], previousPositionPlayer[j - 1]));
+            }
+
+            for (int j = 0; j < distance.Count; j++)
+            {
+                actualsUPSPlayer += distance[j];
+            }
+
+            actualsUPSPlayer /= timePass;
+        }
+
+        UPSAffichagePlayer.text = "La vitesse du joueur " + playerNumber + " est de " +
+                                  ((actualsUPSPlayer < 0.5f) ? 0 : actualsUPSPlayer) + " UPS.     ";
+        previousPositionPlayer.Clear();
+        actualsUPSPlayer = 0;
+        nextTimer = Time.time + refreshTime;
+        timePass = 0;
     }
 }

@@ -43,6 +43,7 @@ public class BumpTrick : PlayerEffect
         velocity = (velocity.magnitude > bumpForce) ? velocity.normalized * bumpForce : velocity;
         Debug.Log("Ca vélocité est maintenant : " + velocity);
         velocityGiven = velocity;
+        playerWhoTouch.GetComponent<Movement>().DisableMovement(0.25f);
         otherRb.velocity = velocity;
         FMODUnity.RuntimeManager.PlayOneShot("event:/DA placeholder/personnage/saut_bumper", transform.position);
         
