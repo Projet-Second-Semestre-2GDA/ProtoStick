@@ -94,6 +94,8 @@ MonoBehaviour:
   timeForChange: 0.247
   reducteurTerrestre: 0.5
   reducteurAerien: 0.1
+  timeToSpeedMax: 1
+  diviseurAcceleration: {x: 0.5, y: 1}
 --- !u!114 &7693042373447387321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -699,7 +701,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5399311740109258786}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
