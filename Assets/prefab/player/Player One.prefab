@@ -827,7 +827,7 @@ MonoBehaviour:
   rotationSpeed: 3.47
   zoomSpeed: 2
   showObsacleInView: 1
-  angleBorn: {x: -90, y: 70.50727}
+  angleBorn: {x: -90, y: 90}
 --- !u!1 &5771481620655565666
 GameObject:
   m_ObjectHideFlags: 0
