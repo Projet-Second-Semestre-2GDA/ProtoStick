@@ -7,6 +7,7 @@ using UnityEngine;
 public class BumpTrick : PlayerEffect
 {
     [SerializeField, PropertyRange(0, 100)] private  float bumpForce;
+    [SerializeField, Range(1, 5)] private float multiplicationPriority = 2;
 
     // [SerializeField, PropertyRange(0, 50)]
     // private float treeshold = 10;
@@ -30,11 +31,16 @@ public class BumpTrick : PlayerEffect
         var values = new float[] {velocity.x,velocity.y,velocity.z};
         for (int i = 0; i < values.Length; i++)
         {
-            if ((otherValue[i] > 0 && values[i] < 0 )|| (otherValue[i] < 0 && values[i] > 0))
+            if (Math.Abs(otherValue[i]) > 1)
             {
-                values[i] = -values[i];
+                // ReSharper disable once CompareOfFloatsByEqualityOperator
+                if (Mathf.Sign(otherValue[i]) != Mathf.Sign(values[i]))
+                {
+                    values[i] = -values[i];
+                }
+                values[i] += otherValue[i]*multiplicationPriority;
             }
-            values[i] += otherValue[i];
+            
             
         }
         

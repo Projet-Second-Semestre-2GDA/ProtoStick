@@ -39,7 +39,7 @@ public class ThrowBumper : MonoBehaviour
 
             if (Physics.Raycast(ray,out hit))
             {
-                if (!hit.collider.CompareTag("Player") && !hit.collider.CompareTag("Bumper") )
+                if (!hit.collider.CompareTag("Player") && !hit.collider.CompareTag("Bumper") && !hit.collider.CompareTag("NoBumper") )
                 {
                     RaycastHit[] hits = new RaycastHit[3];
                     Vector3[] points = new Vector3[3];

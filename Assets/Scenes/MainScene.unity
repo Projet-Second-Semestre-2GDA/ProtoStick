@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 160611353}
   m_Layer: 0
   m_Name: Ralentisseur
-  m_TagString: Untagged
+  m_TagString: NoBumper
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -510,7 +510,7 @@ GameObject:
   - component: {fileID: 1174600697}
   m_Layer: 0
   m_Name: Ralentisseur (1)
-  m_TagString: Untagged
+  m_TagString: NoBumper
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -806,6 +806,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3972015253069071686, guid: f1c92f06a90f5be42a6c7d6d4febe316,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5070247805507772441, guid: f1c92f06a90f5be42a6c7d6d4febe316,
         type: 3}

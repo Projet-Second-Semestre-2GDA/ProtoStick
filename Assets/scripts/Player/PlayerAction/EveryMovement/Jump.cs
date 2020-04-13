@@ -15,12 +15,26 @@ public class Jump : MonoBehaviour
 
     [SerializeField] bool firstJumpStable = true;
 
+    private Rigidbody rb;
+    private ModifiedGravity modifiedGravity;
+    
     private bool isGrounded;
 
     private int jumpDone = 0;
 
+    private float actualHeight = -1;
+    private float futurHeight = -1;
+    private bool forceJump = false;
+    
+    
+    private float nextCheck = 0;
+    private float timeBetweenCheck = 0.4f;
+    private float heightPreviousCheck = 0;
+
     private void Start()
     {
+        rb = GetComponent<Rigidbody>();
+        modifiedGravity = GetComponent<ModifiedGravity>();
         playerNumber = GetComponent<PlayerNumber>();
     }
 
@@ -29,27 +43,64 @@ public class Jump : MonoBehaviour
         // Debug.Log(name + "a pour input" + "Jump" + playerNumber.playerNumber);
         if (Input.GetButtonDown("Jump" + playerNumber.playerNumber))
         {
+            // DoJump();
             // Debug.Log("Jump" + playerNumber.playerNumber);
             if (jumpDone == 0)
             {
                 ++jumpDone;
                 isGrounded = false;
-                GetComponent<Rigidbody>().velocity = Vector3.up * jumpVelocity;
+                // SetVelocityY(jumpVelocity);
+                DoJump();
                 FMODUnity.RuntimeManager.PlayOneShot("event:/DA placeholder/personnage/premier_saut", transform.position);
             }
             else if (jumpDone < numberOfJump)
             {
                 ++jumpDone;
                 isGrounded = false;
-                GetComponent<Rigidbody>().velocity = Vector3.up * jumpVelocity;
+                DoJump();
+                // SetVelocityY(jumpVelocity);
                 FMODUnity.RuntimeManager.PlayOneShot("event:/DA placeholder/personnage/double_saut", transform.position);
             }
 
             
         }
+
+        if (forceJump)
+        {
+            SetVelocityY(jumpVelocity);
+            var actualY = transform.position.y;
+            bool forceStop = false;
+            if (Time.time > nextCheck)
+            {
+                SetNextCheck(timeBetweenCheck);
+                forceStop = (actualY - heightPreviousCheck) < 0.2f;
+                heightPreviousCheck = actualY;
+            }
+            actualHeight = actualY;
+            if (actualHeight >futurHeight || forceStop)
+            {
+                forceJump = false;
+                SetVelocityY(jumpVelocity/2);
+                modifiedGravity.ForceGoDown();
+            }
+        }
         
     }
 
+    private void DoJump(float height = 2)
+    {
+        actualHeight = transform.position.y;
+        heightPreviousCheck = actualHeight;
+        futurHeight = actualHeight + height;
+        forceJump = true;
+        SetNextCheck(timeBetweenCheck);
+    }
+
+    private void SetNextCheck(float time)
+    {
+        nextCheck = Time.time + time;
+    }
+    
     private void OnCollisionEnter(Collision collision)
     {
         //Debug.Log("I'm collising with " + collision.collider.tag);
@@ -69,6 +120,13 @@ public class Jump : MonoBehaviour
         }
     }
 
+    private void SetVelocityY(float y)
+    {
+        var velocity = rb.velocity; 
+        velocity.y = y;
+        rb.velocity = velocity;
+    }
+    
     public bool PlayerIsGrounded()
     {
         return (isGrounded || ((firstJumpStable) ? jumpDone <= 1 : jumpDone <= 0));

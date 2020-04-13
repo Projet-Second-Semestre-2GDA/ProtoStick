@@ -11,6 +11,8 @@ public class ModifiedGravity : MonoBehaviour
     Vector3 previousPosition;
     Vector3 thisPosition;
     Rigidbody rigidbody;
+
+    private bool ForceGravity = false;
     void Awake()
     {
         rigidbody = GetComponent<Rigidbody>();
@@ -24,9 +26,16 @@ public class ModifiedGravity : MonoBehaviour
 
         if (thisPosition.y < previousPosition.y)
         {
+            ForceGravity = false;
             AccelerationVerticale();
             FrictionDeLAir();
         }
+        else if (ForceGravity)
+        {
+            AccelerationVerticale();
+            FrictionDeLAir();
+        }
+        
         previousPosition = thisPosition;
     }
 
@@ -44,4 +53,10 @@ public class ModifiedGravity : MonoBehaviour
         velocity.y = 0;
         rigidbody.velocity -= velocity * (1 - frictionMultiplicator);
     }
+
+    public void ForceGoDown()
+    {
+        
+    }
+    
 }
