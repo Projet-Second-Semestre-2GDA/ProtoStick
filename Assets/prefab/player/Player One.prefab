@@ -176,8 +176,8 @@ MonoBehaviour:
   bumper: {fileID: 3818499470033779928, guid: e78ced3cce39377489e09d756d949010, type: 3}
   timerBeforeNewShoot: 2
   materiauxBumper:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 2100000, guid: ebde088c0ac11424587641f685f2bd7c, type: 2}
+  - {fileID: 2100000, guid: 0b2ff8ead2d127e4e8c1faa0c00f2a5b, type: 2}
 --- !u!114 &-9216142943879235815
 MonoBehaviour:
   m_ObjectHideFlags: 0
