@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
 using Sirenix.OdinInspector;
+using UnityEngine.PlayerLoop;
 using Debug = UnityEngine.Debug;
 
 public class Movement : MonoBehaviour
@@ -32,6 +33,9 @@ public class Movement : MonoBehaviour
     private float accelerator = 0;
     private float timePass = 0;
     
+    //DowngradeSpeed
+    private float speedDown = 15;
+    private float restart = 0;
     
     //UpgrdeSpeed
     private bool isUpgrade = false;
@@ -55,14 +59,20 @@ public class Movement : MonoBehaviour
 
         if (Time.time > canMove)
         {
+            reduc = -1;
             Moove(v, h,Time.fixedDeltaTime);
+        }
+        
+        if (Time.time < restart)
+        {
+            rb.velocity = rb.velocity.normalized * speedDown;
         }
     }
 
     private void Update()
     {
-        Debug.Log("upgradeMultiplicator = " +upgradeMultiplicator);
-        Debug.Log("globalUpgradeMultiplicator = " +globalUpgradeMultiplicator);
+        // Debug.Log("upgradeMultiplicator = " +upgradeMultiplicator);
+        // Debug.Log("globalUpgradeMultiplicator = " +globalUpgradeMultiplicator);
 
         //Back the speed to the normal
         if (isUpgrade && Time.time > timeStopUpgrade)
@@ -86,6 +96,9 @@ public class Movement : MonoBehaviour
                 isUpgrade = false;
             }
         }
+        
+        
+        
     }
 
     private void Moove(float v, float h, float deltaTime)
@@ -107,19 +120,25 @@ public class Movement : MonoBehaviour
         if (Mathf.Abs(v) > 0.01f || Mathf.Abs(h) > 0.01f)
         {
             var trans = transform;
-            var temp = trans.forward * (v * (speedDeplacement/reduc) * accelerator);
-            temp += trans.right * (h * (speedDeplacement/reduc) * accelerator);
-            temp = (temp.magnitude > (speedDeplacement /reduc) * accelerator)
-                ? temp.normalized * speedDeplacement
+            
+            var realSpeed = speedDeplacement;
+            
+            Debug.Log("reduc = " + reduc);
+            Debug.Log("SpeedDeplacement = " + speedDeplacement);
+            Debug.Log("realSpeed = " + realSpeed);
+            var temp = trans.forward * (v * (realSpeed) * accelerator);
+            temp += trans.right * (h * (realSpeed) * accelerator);
+            temp = (temp.magnitude > (realSpeed) * accelerator)
+                ? temp.normalized * realSpeed
                 : temp;
             
             
             velocity += temp;
-            if ((velocity.magnitude > speedDeplacement))
+            if ((velocity.magnitude > realSpeed))
             {
-                velocity -= velocity.normalized * ((velocity.magnitude - speedDeplacement > speedDeplacement)
-                    ? speedDeplacement
-                    : speedDeplacement - (velocity.magnitude - speedDeplacement));
+                velocity -= velocity.normalized * ((velocity.magnitude - (realSpeed) > realSpeed)
+                    ? realSpeed
+                    : realSpeed - (velocity.magnitude - realSpeed));
                 
             }
         }else
@@ -157,15 +176,15 @@ public class Movement : MonoBehaviour
         canMove = Time.time + time;
     }
 
-    public void ReductionSpeed(float divider)
+    public void ReductionSpeed(float vitesseImposee ,float duration)
     {
-        // throw new NotImplementedException();
-        reduc = divider;
+        rb.velocity = rb.velocity.normalized * vitesseImposee;
+        restart = Time.time + duration;
+        speedDown = vitesseImposee;
     }
 
     public void StopReduc()
     {
-        // throw new NotImplementedException();
         reduc = 1;
     }
 

@@ -137,6 +137,7 @@
               <e p="ContextualAction" t="Include">
                 <e p="ChangeAsset.cs" t="Include" />
                 <e p="InstantDead.cs" t="Include" />
+                <e p="Ralentisseur.cs" t="Include" />
                 <e p="RecolteObject.cs" t="Include" />
                 <e p="SetSpawnPoint.cs" t="Include" />
                 <e p="SpawnPlayer.cs" t="Include" />
@@ -151,9 +152,6 @@
             </e>
             <e p="PlayerNumber.cs" t="Include" />
             <e p="ThrowBumper.cs" t="Include" />
-          </e>
-          <e p="Ralentisseur" t="Include">
-            <e p="Ralentisseur.cs" t="Include" />
           </e>
         </e>
         <e p="sound design" t="Include">
