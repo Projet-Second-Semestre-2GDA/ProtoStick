@@ -6,8 +6,14 @@ using UnityEngine;
 
 public class BumpTrick : PlayerEffect
 {
+    [Title("Bump Properties")]
     [SerializeField, PropertyRange(0, 100)] private  float bumpForce;
     [SerializeField, Range(1, 5)] private float multiplicationPriority = 2;
+
+    [Title("Speed Player Modification")] 
+    [SerializeField,Range(1,10)] private float speedMultiplicator = 1.5f;
+    [SerializeField,Range(0,10)] private float speedMultiplicatorDuration = 2f;
+    
 
     // [SerializeField, PropertyRange(0, 50)]
     // private float treeshold = 10;
@@ -24,7 +30,7 @@ public class BumpTrick : PlayerEffect
         base.Effect(playerWhoTouch);
         var otherRb = playerWhoTouch.GetComponentInParent<Rigidbody>();
         var velocity = otherRb.velocity;
-        
+        playerWhoTouch.GetComponent<Movement>().UpgradeSpeed(speedMultiplicator,speedMultiplicatorDuration);
         var force = transform.forward * bumpForce;
         Debug.Log("La force est : " + force);
         var otherValue = new float[] {force.x,force.y,force.z};

@@ -30,6 +30,11 @@ public class Movement : MonoBehaviour
     private float timePass = 0;
     
     
+    //UpgrdeSpeed
+    private bool isUpgrade = false;
+    private float timeStopUpgrade = 0;
+    private float upgradeMultiplicator = 1;
+    
     private float canMove = 0;
     private void Start()
     {
@@ -46,6 +51,17 @@ public class Movement : MonoBehaviour
         if (Time.time > canMove)
         {
             Moove(v, h,Time.fixedDeltaTime);
+        }
+    }
+
+    private void Update()
+    {
+        //Back the speed to the normal
+        if (isUpgrade && Time.time > timeStopUpgrade)
+        {
+            speedDeplacement /= upgradeMultiplicator;
+            speedDeplacementMax /= upgradeMultiplicator;
+            isUpgrade = false;
         }
     }
 
@@ -101,28 +117,6 @@ public class Movement : MonoBehaviour
         }
 
         velocity = Vector3.MoveTowards(velocity, Vector3.zero, ((/*jump.PlayerIsGrounded() &&*/ overlapSomething)?reducteurTerrestre:reducteurAerien) * speedDeplacement);
-        
-        //var vitesse = velocity.magnitude;
-        //
-        // if (vitesse > speedDeplacementMax)
-        // {
-        //     velocity = Vector3.MoveTowards(velocity, Vector3.zero, ((/*jump.PlayerIsGrounded() &&*/ overlapSomething)?reducteurTerrestre:reducteurAerien) * speedDeplacement);
-        // }
-        // else if(vitesse >speedDeplacement)
-        // {
-        //     velocity = Vector3.MoveTowards(velocity, Vector3.zero, ((/*jump.PlayerIsGrounded() &&*/ overlapSomething)?reducteurTerrestre:reducteurAerien) * (speedDeplacement/2));
-        // }
-        // else if (vitesse < 10)
-        // {
-        //     velocity = Vector3.MoveTowards(velocity, Vector3.zero, ((/*jump.PlayerIsGrounded() &&*/ overlapSomething)?reducteurTerrestre:reducteurAerien) * (speedDeplacement*2));
-        // }
-        // else
-        // {
-        //     velocity = Vector3.MoveTowards(velocity, Vector3.zero, ((/*jump.PlayerIsGrounded() &&*/ overlapSomething)?reducteurTerrestre:reducteurAerien) * (speedDeplacement/4));
-        // }
-        
-        // velocity = (velocity - velocity.normalized *0.5f* speedDeplacement).normalized ;
-        
 
         velocity.y = y;
         rb.velocity = velocity;
@@ -150,6 +144,17 @@ public class Movement : MonoBehaviour
     {
         // throw new NotImplementedException();
         reduc = 1;
+    }
+
+    public void UpgradeSpeed(float multiplicator, float duration)
+    {
+        //Set Variable
+        isUpgrade = true;
+        timeStopUpgrade = Time.time + duration;
+        upgradeMultiplicator = multiplicator;
+        //UpgradeSpeed
+        speedDeplacement *= multiplicator;
+        speedDeplacementMax *= multiplicator;
     }
 
 }

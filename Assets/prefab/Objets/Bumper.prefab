@@ -49,6 +49,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bumpForce: 20.8
   multiplicationPriority: 1.5
+  speedMultiplicator: 1.5
+  speedMultiplicatorDuration: 2
 --- !u!136 &8038283260959276299
 CapsuleCollider:
   m_ObjectHideFlags: 0
