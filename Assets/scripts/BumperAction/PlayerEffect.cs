@@ -18,6 +18,15 @@ public class PlayerEffect : MonoBehaviour
             Effect(other.attachedRigidbody.gameObject);
         }
     }
+    protected void OnCollisionEnter(Collision col)
+    {
+        Collider other = col.collider;
+        Debug.Log("Collision with " + other.gameObject.tag);
+        if (other.gameObject.CompareTag("Player"))
+        {
+            Effect(other.attachedRigidbody.gameObject);
+        }
+    }
 
 
 }

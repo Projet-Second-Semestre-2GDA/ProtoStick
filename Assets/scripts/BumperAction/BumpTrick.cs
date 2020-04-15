@@ -53,7 +53,7 @@ public class BumpTrick : PlayerEffect
         velocity = new Vector3(values[0],values[1],values[2]);
 
         velocity = (velocity.magnitude > bumpForce) ? velocity.normalized * bumpForce : velocity;
-        Debug.Log("Ca vélocité est maintenant : " + velocity);
+        // Debug.Log("Ca vélocité est maintenant : " + velocity);
         velocityGiven = velocity;
         playerWhoTouch.GetComponent<Movement>().DisableMovement(0.25f);
         otherRb.velocity = velocity;

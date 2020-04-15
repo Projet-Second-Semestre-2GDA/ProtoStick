@@ -104,7 +104,7 @@ public class Jump : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         //Debug.Log("I'm collising with " + collision.collider.tag);
-        if (collision.collider.CompareTag("Ground")|| collision.collider.CompareTag("Player"))
+        if (collision.collider.CompareTag("Ground")|| collision.collider.CompareTag("Player")|| collision.collider.CompareTag("Bumper"))
         {
             isGrounded = true;
             jumpDone = 0;
@@ -113,10 +113,9 @@ public class Jump : MonoBehaviour
     private void OnCollisionExit(Collision collision)
     {
         //Debug.Log("I'm collising with " + collision.collider.tag);
-        if (collision.collider.CompareTag("Ground") || collision.collider.CompareTag("Player"))
+        if (collision.collider.CompareTag("Ground") || collision.collider.CompareTag("Player")|| collision.collider.CompareTag("Bumper"))
         {
             isGrounded = false;
-            
         }
     }
 

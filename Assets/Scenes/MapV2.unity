@@ -2586,6 +2586,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player Two
       objectReference: {fileID: 0}
+    - target: {fileID: 5487105126608302974, guid: 7f0ea0bd2b811a740a6b1b0309726ef3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6366466204425507544, guid: 7f0ea0bd2b811a740a6b1b0309726ef3,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -3741,7 +3746,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1278490328}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d928ee8a9c5d9be45a45439fef0a0aed, type: 3}
   m_Name: 
@@ -3750,7 +3755,7 @@ MonoBehaviour:
   - {fileID: 1277968095}
   playerOne: {fileID: 159676910}
   UpRef: {fileID: 139033076}
-  modeUnJoueur: 1
+  modeUnJoueur: 0
 --- !u!4 &1278490330
 Transform:
   m_ObjectHideFlags: 0
