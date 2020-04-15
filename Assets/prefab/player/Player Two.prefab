@@ -47,11 +47,21 @@ PrefabInstance:
       propertyPath: m_LocalRotation.w
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2260272252328452809, guid: 8b95e52bd63a3f842a4f483764829299,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2516376216932702915, guid: 8b95e52bd63a3f842a4f483764829299,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 0b2ff8ead2d127e4e8c1faa0c00f2a5b, type: 2}
+    - target: {fileID: 5191214037542734623, guid: 8b95e52bd63a3f842a4f483764829299,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -540
+      objectReference: {fileID: 0}
     - target: {fileID: 7291736996946027350, guid: 8b95e52bd63a3f842a4f483764829299,
         type: 3}
       propertyPath: m_NormalizedViewPortRect.y

@@ -11,6 +11,7 @@ TagManager:
   - Ball
   - Bumper
   - NoBumper
+  - Recoltable
   layers:
   - Default
   - TransparentFX
@@ -21,7 +22,7 @@ TagManager:
   - 
   - 
   - Player
-  - 
+  - Recoltable
   - 
   - 
   - 

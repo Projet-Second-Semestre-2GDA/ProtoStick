@@ -110,7 +110,9 @@
         <e p="Scripts" t="Include">
           <e p="Autre" t="Include">
             <e p="HelpOrientation.cs" t="Include" />
+            <e p="Recoltable.cs" t="Include" />
             <e p="TimerShower.cs" t="Include" />
+            <e p="UpRefScript.cs" t="Include" />
             <e p="UPS.cs" t="Include" />
           </e>
           <e p="Ball" t="Include">
@@ -135,6 +137,7 @@
               <e p="ContextualAction" t="Include">
                 <e p="ChangeAsset.cs" t="Include" />
                 <e p="InstantDead.cs" t="Include" />
+                <e p="RecolteObject.cs" t="Include" />
                 <e p="SetSpawnPoint.cs" t="Include" />
                 <e p="SpawnPlayer.cs" t="Include" />
               </e>
@@ -152,9 +155,6 @@
           <e p="Ralentisseur" t="Include">
             <e p="Ralentisseur.cs" t="Include" />
           </e>
-        </e>
-        <e p="Shader" t="Include">
-          <e p="Water.shader" t="Include" />
         </e>
         <e p="sound design" t="Include">
           <e p="Assemblage FMOD" t="Include">
