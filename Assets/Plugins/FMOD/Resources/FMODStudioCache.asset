@@ -1,5 +1,26 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9090899903139392636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: C:/Users/Utilisateur/Documents/GitHub/ProtoStick/Assets/sound design/Assemblage
+    FMOD/Build/Desktop/Master.strings.bank
+  SubDir: 
+  lastModified: 637202210330112715
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 1052
+  Exists: 1
 --- !u!114 &-8336511483210665252
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62,6 +83,27 @@ MonoBehaviour:
   - Name: Desktop
     Value: 51392
   Exists: 1
+--- !u!114 &-6517446311743389897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: C:/Users/Utilisateur/Documents/GitHub/ProtoStick/Assets/sound design/Assemblage
+    FMOD/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637202210330112715
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 51392
+  Exists: 1
 --- !u!114 &-6340931701024359857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77,12 +119,13 @@ MonoBehaviour:
   Path: event:/DA placeholder/personnage/chute_avatar
   guid: eab61753b656864f915b1c7ab76fe2e7
   Banks:
-  - {fileID: 3954886037646127827}
+  - {fileID: 8008430209676961606}
+  - {fileID: -6517446311743389897}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -716807882816346150}
+  - {fileID: -3318629694957669116}
   MinDistance: 0
   MaxDistance: 0
   Length: 1745
@@ -139,7 +182,8 @@ MonoBehaviour:
   Path: event:/DA placeholder/personnage/premier_saut
   guid: 2fa6a1d917e58e46850602fb7554c1a0
   Banks:
-  - {fileID: 3954886037646127827}
+  - {fileID: 8008430209676961606}
+  - {fileID: -6517446311743389897}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -168,6 +212,40 @@ MonoBehaviour:
   - Name: Desktop
     Value: 51392
   Exists: 1
+--- !u!114 &-3318629694957669116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/chute_avatar/vitesseDeChute
+  m_EditorClassIdentifier: 
+  Name: vitesseDeChute
+  Min: 9.81
+  Max: 200
+  Default: 9.81
+  Exists: 1
+--- !u!114 &-2925983463874614170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/chute_avatar/vitesseDeChute
+  m_EditorClassIdentifier: 
+  Name: vitesseDeChute
+  Min: 9.81
+  Max: 200
+  Default: 9.81
+  Exists: 0
 --- !u!114 &-2059670705735510593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -236,8 +314,8 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: -5330903864252940538}
-  - {fileID: 3954886037646127827}
+  - {fileID: 5674295879427064096}
+  - {fileID: -6517446311743389897}
   EditorEvents:
   - {fileID: -4027328660929523503}
   - {fileID: 6308415972350629624}
@@ -247,10 +325,10 @@ MonoBehaviour:
   - {fileID: -6340931701024359857}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 3954886037646127827}
+  - {fileID: -6517446311743389897}
   StringsBanks:
-  - {fileID: -5330903864252940538}
-  stringsBankWriteTime: 637201771145343330
+  - {fileID: 5674295879427064096}
+  stringsBankWriteTime: 637202210330112715
   cacheVersion: 3
 --- !u!114 &1255114094359108553
 MonoBehaviour:
@@ -388,7 +466,8 @@ MonoBehaviour:
   Path: event:/DA placeholder/personnage/saut_bumper
   guid: d0cc3a51db6dd341b4fafb53507f5d97
   Banks:
-  - {fileID: 3954886037646127827}
+  - {fileID: 8008430209676961606}
+  - {fileID: -6517446311743389897}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -417,6 +496,27 @@ MonoBehaviour:
   - Name: Desktop
     Value: 51392
   Exists: 1
+--- !u!114 &5674295879427064096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: C:/Users/Utilisateur/Documents/GitHub/ProtoStick/Assets/sound design/Assemblage
+    FMOD/Build/Desktop/Master.strings.bank
+  SubDir: 
+  lastModified: 637202210330112715
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 1052
+  Exists: 1
 --- !u!114 &6308415972350629624
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -432,7 +532,8 @@ MonoBehaviour:
   Path: event:/DA placeholder/personnage/retour_spawn
   guid: 7d75630b5b35e4469d606b69fdd05966
   Banks:
-  - {fileID: 3954886037646127827}
+  - {fileID: 8008430209676961606}
+  - {fileID: -6517446311743389897}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -489,7 +590,8 @@ MonoBehaviour:
   Path: event:/DA placeholder/personnage/double_saut
   guid: adbb3f0707ac4b4791186a1ff53664b1
   Banks:
-  - {fileID: 3954886037646127827}
+  - {fileID: 8008430209676961606}
+  - {fileID: -6517446311743389897}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -497,6 +599,27 @@ MonoBehaviour:
   MinDistance: 7.2000003
   MaxDistance: 15
   Length: 500
+--- !u!114 &8008430209676961606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: C:/Users/Utilisateur/Documents/GitHub/ProtoStick/Assets/sound design/Assemblage
+    FMOD/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637202210330112715
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 51392
+  Exists: 1
 --- !u!114 &8216017561397440450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -512,7 +635,8 @@ MonoBehaviour:
   Path: event:/DA placeholder/personnage/instanciation_bumper
   guid: 926aa91430f55f498f35d3249d48167d
   Banks:
-  - {fileID: 3954886037646127827}
+  - {fileID: 8008430209676961606}
+  - {fileID: -6517446311743389897}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
