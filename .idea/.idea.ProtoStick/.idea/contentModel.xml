@@ -153,6 +153,9 @@
             <e p="Ralentisseur.cs" t="Include" />
           </e>
         </e>
+        <e p="Shader" t="Include">
+          <e p="Water.shader" t="Include" />
+        </e>
         <e p="sound design" t="Include">
           <e p="Assemblage FMOD" t="Include">
             <e p="Metadata" t="Include">
