@@ -35,11 +35,16 @@ public class Ending : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
-        if (other.attachedRigidbody.CompareTag("Player") && !raceIsOver)
+        if (other.attachedRigidbody.CompareTag("Player") )
         {
-            raceIsOver = true;
-            winnerName = other.attachedRigidbody.gameObject.name;
-            SetWin(winnerName);
+            var obj = other.attachedRigidbody.gameObject;
+            if (!raceIsOver)
+            {
+                raceIsOver = true;
+                winnerName = obj.name;
+                SetWin(winnerName);
+            }
+            obj.GetComponent<TimerShower>().StopChrono();
         }
     }
 }
