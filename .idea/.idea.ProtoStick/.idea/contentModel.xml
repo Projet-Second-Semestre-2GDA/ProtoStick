@@ -109,6 +109,7 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="Autre" t="Include">
+            <e p="Beginning.cs" t="Include" />
             <e p="Ending.cs" t="Include" />
             <e p="HelpOrientation.cs" t="Include" />
             <e p="Recoltable.cs" t="Include" />
@@ -124,6 +125,10 @@
             <e p="EffectAttaching.cs" t="Include" />
             <e p="PlayerEffect.cs" t="Include" />
             <e p="RotateBumper.cs" t="Include" />
+          </e>
+          <e p="GameMenu" t="Include">
+            <e p="GestionMenu.cs" t="Include" />
+            <e p="PlayerOptionChoose.cs" t="Include" />
           </e>
           <e p="Player" t="Include">
             <e p="InteractionBall" t="Include">

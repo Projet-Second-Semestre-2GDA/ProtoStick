@@ -23,6 +23,8 @@ public class ThrowBumper : MonoBehaviour
     private string inputName;
     private bool alreadyDid = false;
     private Ray ray;
+
+    private bool activitee = false;
     
     private void Start()
     {
@@ -37,7 +39,7 @@ public class ThrowBumper : MonoBehaviour
     private void Update()
     {
         // Debug.Log(inputName + " = " +Input.GetAxis(inputName));
-        if (Input.GetAxis(inputName) >0.1f && !alreadyDid)
+        if (Input.GetAxis(inputName) >0.1f && !alreadyDid && activitee)
         {
             
             alreadyDid = true;
@@ -105,5 +107,10 @@ public class ThrowBumper : MonoBehaviour
         
         Gizmos.DrawRay(ray);
         
+    }
+
+    public void SetThrowBumper(bool isActive)
+    {
+        activitee = isActive;
     }
 }

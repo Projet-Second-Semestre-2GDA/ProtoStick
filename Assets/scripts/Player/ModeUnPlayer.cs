@@ -4,6 +4,11 @@ using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
+public enum PlayerMode
+{
+    OnePlayer,
+    TwoPlayer
+}
 public class ModeUnPlayer : MonoBehaviour
 {
     [Title("Player Two Component")]
@@ -20,6 +25,8 @@ public class ModeUnPlayer : MonoBehaviour
     private void Start()
     {
         cameraAModifier = playerOne.GetComponentInChildren<Camera>();
+        
+        SetMode(PlayerOptionChoose.ModeDeJoueur);
     }
 
     private void Update()
@@ -54,4 +61,22 @@ public class ModeUnPlayer : MonoBehaviour
         pos.y = Y;
         UpRef.sizeDelta = pos;
     }
+
+    public void SetMode(PlayerMode playerMode)
+    {
+        switch (playerMode)
+        {
+            case PlayerMode.OnePlayer:
+                modeUnJoueur = true;
+                break;
+            case PlayerMode.TwoPlayer:
+                modeUnJoueur = false;
+                break;
+            default:
+                modeUnJoueur = false;
+                break;
+                    
+        }
+    }
+    
 }
