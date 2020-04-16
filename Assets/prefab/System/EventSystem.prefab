@@ -59,10 +59,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_HorizontalAxis: CameraHorizontal1
-  m_VerticalAxis: CameraVertical1
-  m_SubmitButton: Shoot1
+  m_HorizontalAxis: MovementHorizontal1
+  m_VerticalAxis: MovementVertical1
+  m_SubmitButton: Jump1
   m_CancelButton: Cancel
   m_InputActionsPerSecond: 10
   m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
+  m_ForceModuleActive: 1

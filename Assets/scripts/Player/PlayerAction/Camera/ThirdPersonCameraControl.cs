@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -20,7 +21,14 @@ public class ThirdPersonCameraControl : MonoBehaviour
     [SerializeField] private bool showObsacleInView = true;
 
     [SerializeField, MinMaxSlider(-90f,90f,true)] private Vector2 angleBorn = new Vector2(-90f,60f);
-    
+
+    private bool active = true;
+
+    private void Awake()
+    {
+        active = true;
+    }
+
     void Start()
     {
         
@@ -34,11 +42,15 @@ public class ThirdPersonCameraControl : MonoBehaviour
 
     private void LateUpdate()
     {
-        CamControl();
-        if (!showObsacleInView)
+        if (active)
         {
-            ViewObstructed();
+            CamControl();
+            if (!showObsacleInView)
+            {
+                ViewObstructed();
+            }
         }
+        
     }
     
 
@@ -96,6 +108,21 @@ public class ThirdPersonCameraControl : MonoBehaviour
                 if (Vector3.Distance(transform.position, target.position) < distanceFromTarget)
                     transform.Translate(Vector3.back * zoomSpeed * Time.deltaTime);
             }
+        }
+    }
+
+    public void SetCamera(bool isActive)
+    {
+        active = isActive;
+        if (isActive)
+        {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+        else
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
         }
     }
 }

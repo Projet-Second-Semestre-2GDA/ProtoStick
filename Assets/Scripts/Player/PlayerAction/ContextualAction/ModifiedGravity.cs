@@ -13,8 +13,12 @@ public class ModifiedGravity : MonoBehaviour
     Rigidbody rigidbody;
 
     private bool ForceGravity = false;
+
+    private bool active = true;
+    
     void Awake()
     {
+        active = true;
         rigidbody = GetComponent<Rigidbody>();
         previousPosition = transform.position;
     }
@@ -22,21 +26,25 @@ public class ModifiedGravity : MonoBehaviour
     // Update is called once per frame
     private void FixedUpdate()
     {
-        thisPosition = transform.position;
+        if (active)
+        {
+            thisPosition = transform.position;
 
-        if (thisPosition.y < previousPosition.y)
-        {
-            ForceGravity = false;
-            AccelerationVerticale();
-            FrictionDeLAir();
-        }
-        else if (ForceGravity)
-        {
-            AccelerationVerticale();
-            FrictionDeLAir();
-        }
+            if (thisPosition.y < previousPosition.y)
+            {
+                ForceGravity = false;
+                AccelerationVerticale();
+                FrictionDeLAir();
+            }
+            else if (ForceGravity)
+            {
+                AccelerationVerticale();
+                FrictionDeLAir();
+            }
         
-        previousPosition = thisPosition;
+            previousPosition = thisPosition;
+        }
+
     }
 
     private void AccelerationVerticale()
@@ -56,7 +64,12 @@ public class ModifiedGravity : MonoBehaviour
 
     public void ForceGoDown()
     {
-        
+        ForceGravity = true;
+    }
+
+    public void SetModifiedGravity(bool isActive)
+    {
+        active = isActive;
     }
     
 }

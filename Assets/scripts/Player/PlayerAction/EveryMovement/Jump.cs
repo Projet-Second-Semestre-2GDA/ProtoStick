@@ -2,6 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
+using FMOD;
+using UnityEditorInternal;
 using UnityEngine;
 using Debug = UnityEngine.Debug;
 
@@ -31,6 +33,16 @@ public class Jump : MonoBehaviour
     private float timeBetweenCheck = 0.4f;
     private float heightPreviousCheck = 0;
 
+
+    private bool active = true;
+    private bool hasToActive = false;
+    private float realActive;
+
+    private void Awake()
+    {
+        active = true;
+    }
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -40,51 +52,63 @@ public class Jump : MonoBehaviour
 
     private void Update()
     {
-        // Debug.Log(name + "a pour input" + "Jump" + playerNumber.playerNumber);
-        if (Input.GetButtonDown("Jump" + playerNumber.playerNumber))
+        if (active)
         {
-            // DoJump();
-            // Debug.Log("Jump" + playerNumber.playerNumber);
-            if (jumpDone == 0)
+            // Debug.Log(name + "a pour input" + "Jump" + playerNumber.playerNumber);
+            if (Input.GetButtonDown("Jump" + playerNumber.playerNumber))
             {
-                ++jumpDone;
-                isGrounded = false;
-                // SetVelocityY(jumpVelocity);
-                DoJump();
-                FMODUnity.RuntimeManager.PlayOneShot("event:/DA placeholder/personnage/premier_saut", transform.position);
+                // DoJump();
+                // Debug.Log("Jump" + playerNumber.playerNumber);
+                if (jumpDone == 0)
+                {
+                    ++jumpDone;
+                    isGrounded = false;
+                    // SetVelocityY(jumpVelocity);
+                    DoJump();
+                    FMODUnity.RuntimeManager.PlayOneShot("event:/DA placeholder/personnage/premier_saut", transform.position);
+                }
+                else if (jumpDone < numberOfJump)
+                {
+                    ++jumpDone;
+                    isGrounded = false;
+                    DoJump();
+                    // SetVelocityY(jumpVelocity);
+                    FMODUnity.RuntimeManager.PlayOneShot("event:/DA placeholder/personnage/double_saut", transform.position);
+                }
+    
+                
             }
-            else if (jumpDone < numberOfJump)
+    
+            if (forceJump)
             {
-                ++jumpDone;
-                isGrounded = false;
-                DoJump();
-                // SetVelocityY(jumpVelocity);
-                FMODUnity.RuntimeManager.PlayOneShot("event:/DA placeholder/personnage/double_saut", transform.position);
+                SetVelocityY(jumpVelocity);
+                var actualY = transform.position.y;
+                bool forceStop = false;
+                if (Time.time > nextCheck)
+                {
+                    SetNextCheck(timeBetweenCheck);
+                    forceStop = (actualY - heightPreviousCheck) < 0.2f;
+                    heightPreviousCheck = actualY;
+                }
+                actualHeight = actualY;
+                if (actualHeight >futurHeight || forceStop)
+                {
+                    forceJump = false;
+                    SetVelocityY(jumpVelocity/2);
+                    modifiedGravity.ForceGoDown();
+                }
             }
-
-            
         }
 
-        if (forceJump)
+        if (hasToActive)
         {
-            SetVelocityY(jumpVelocity);
-            var actualY = transform.position.y;
-            bool forceStop = false;
-            if (Time.time > nextCheck)
-            {
-                SetNextCheck(timeBetweenCheck);
-                forceStop = (actualY - heightPreviousCheck) < 0.2f;
-                heightPreviousCheck = actualY;
-            }
-            actualHeight = actualY;
-            if (actualHeight >futurHeight || forceStop)
-            {
-                forceJump = false;
-                SetVelocityY(jumpVelocity/2);
-                modifiedGravity.ForceGoDown();
-            }
+            active = true;
+            hasToActive = false;
+            // if (Time.time > realActive)
+            // {
+            //     
+            // }
         }
-        
     }
 
     private void DoJump(float height = 2)
@@ -129,6 +153,20 @@ public class Jump : MonoBehaviour
     public bool PlayerIsGrounded()
     {
         return (isGrounded || ((firstJumpStable) ? jumpDone <= 1 : jumpDone <= 0));
+    }
+
+    public void SetThrowJump(bool isActive)
+    {
+        if (!active && isActive)
+        {
+            hasToActive = true;
+            // realActive = Time.time + 0.2f;
+        }
+        else
+        {
+            hasToActive = false;
+            active = isActive;
+        }
     }
 
 }

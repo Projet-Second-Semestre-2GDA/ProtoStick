@@ -11,6 +11,7 @@ public class Ending : MonoBehaviour
     private string winnerName;
 
     private GameObject canvas;
+    
     private Text text;
     
     void Awake()
@@ -28,7 +29,7 @@ public class Ending : MonoBehaviour
 
     private void SetWin(string name)
     {
-        Debug.LogWarning("Le winner est " + name);
+        Debug.LogWarning("The winner est " + name);
         canvas.SetActive(true);
         text.text = "The Winner is\n" + name;
     }
