@@ -109,6 +109,7 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="Autre" t="Include">
+            <e p="Ending.cs" t="Include" />
             <e p="HelpOrientation.cs" t="Include" />
             <e p="Recoltable.cs" t="Include" />
             <e p="TimerShower.cs" t="Include" />
