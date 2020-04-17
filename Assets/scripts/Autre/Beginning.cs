@@ -19,6 +19,7 @@ public class Beginning : MonoBehaviour
         {
             players[i].GetComponent<Movement>().DisableMovement(((listApperanceOnBegining.Count - 1)*timeBetweenBegining) + 0.5f);
             players[i].GetComponent<TimerShower>().StopChrono();
+            
             players[i].GetComponent<ThrowBumper>().SetThrowBumper(false);
 
         }

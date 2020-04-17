@@ -1273,11 +1273,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3586865538133237816, guid: 8b95e52bd63a3f842a4f483764829299,
-        type: 3}
-      propertyPath: volumeTrigger
-      value: 
-      objectReference: {fileID: 262057578}
     - target: {fileID: 3967642073236559566, guid: 8b95e52bd63a3f842a4f483764829299,
         type: 3}
       propertyPath: speedDeplacement
@@ -1749,12 +1744,6 @@ Transform:
 --- !u!1 &262057577 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 726325250287077268, guid: 7f0ea0bd2b811a740a6b1b0309726ef3,
-    type: 3}
-  m_PrefabInstance: {fileID: 846577821}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &262057578 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4436857565663780826, guid: 7f0ea0bd2b811a740a6b1b0309726ef3,
     type: 3}
   m_PrefabInstance: {fileID: 846577821}
   m_PrefabAsset: {fileID: 0}

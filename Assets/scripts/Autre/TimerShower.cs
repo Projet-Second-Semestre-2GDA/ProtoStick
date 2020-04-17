@@ -14,7 +14,7 @@ public class TimerShower : MonoBehaviour
 
     private void Start()
     {
-        StartChrono();
+        //StartChrono();
     }
 
     private void Update()

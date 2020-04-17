@@ -12,7 +12,9 @@ public class Movement : MonoBehaviour
     private PlayerNumber playerNumber;
     Rigidbody rb;
     Jump jump;
-    [Title("Variable de vitesse")]
+
+    [Title("Variable de vitesse")] [SerializeField]
+    private AnimationCurve speedBehavior;
     public float speedDeplacement = 30;
 
     [Title("Variable liée au mécanique de vitesse")] 
@@ -54,9 +56,12 @@ public class Movement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        float h = Input.GetAxisRaw("MovementHorizontal" + playerNumber.playerNumber);
-        float v = Input.GetAxisRaw("MovementVertical" + playerNumber.playerNumber);
+        float oldH = Input.GetAxisRaw("MovementHorizontal" + playerNumber.playerNumber);
+        float oldV = Input.GetAxisRaw("MovementVertical" + playerNumber.playerNumber);
 
+        var h = speedBehavior.Evaluate(Mathf.Abs(oldH)) * Mathf.Sign(oldH);
+        var v = speedBehavior.Evaluate(Mathf.Abs(oldV)) * Mathf.Sign(oldV);
+        
         if (Time.time > canMove)
         {
             reduc = -1;
@@ -77,24 +82,27 @@ public class Movement : MonoBehaviour
         //Back the speed to the normal
         if (isUpgrade && Time.time > timeStopUpgrade)
         {
-            speedDeplacement /= upgradeMultiplicator;
-            // speedDeplacementMax /= upgradeMultiplicator;
-            globalUpgradeMultiplicator -= upgradeMultiplicator;
-            if (globalUpgradeMultiplicator > 1)
-            {
-                if (designDivider <1)
-                {
-                    designDivider = globalUpgradeMultiplicator / 3;
-                }
-                upgradeMultiplicator = designDivider;
-                timeStopUpgrade = Time.time + durationUpgradeDefault;
-            }
-            else
-            {
-                globalUpgradeMultiplicator = 1;
-                upgradeMultiplicator = 1;
-                isUpgrade = false;
-            }
+            globalUpgradeMultiplicator = 1;
+            isUpgrade = false;
+
+            // // speedDeplacement /= upgradeMultiplicator;
+            // // speedDeplacementMax /= upgradeMultiplicator;
+            // globalUpgradeMultiplicator -= upgradeMultiplicator;
+            // if (globalUpgradeMultiplicator > 1)
+            // {
+            //     if (designDivider <1)
+            //     {
+            //         designDivider = globalUpgradeMultiplicator / 3;
+            //     }
+            //     upgradeMultiplicator = designDivider;
+            //     timeStopUpgrade = Time.time + durationUpgradeDefault;
+            // }
+            // else
+            // {
+            //     globalUpgradeMultiplicator = 1;
+            //     upgradeMultiplicator = 1;
+            //     isUpgrade = false;
+            // }
         }
         
         
@@ -121,7 +129,7 @@ public class Movement : MonoBehaviour
         {
             var trans = transform;
             
-            var realSpeed = speedDeplacement;
+            var realSpeed = speedDeplacement * globalUpgradeMultiplicator;
             
             Debug.Log("reduc = " + reduc);
             Debug.Log("SpeedDeplacement = " + speedDeplacement);
@@ -193,27 +201,29 @@ public class Movement : MonoBehaviour
         //Set Variable
         isUpgrade = true;
         timeStopUpgrade = Time.time + duration;
-        upgradeMultiplicator = multiplicator;
-        globalUpgradeMultiplicator *= multiplicator;
-        if (globalUpgradeMultiplicator > upgradeMax)
-        {
-            if (globalUpgradeMultiplicator - multiplicator < upgradeMax)
-            {
-                upgradeMultiplicator = upgradeMax / globalUpgradeMultiplicator;
-                globalUpgradeMultiplicator /= multiplicator;
-                globalUpgradeMultiplicator *= upgradeMultiplicator;
-            }
-            else
-            {
-                upgradeMultiplicator = 1;
-                globalUpgradeMultiplicator /= multiplicator;
-            }
-
-        }
+        // upgradeMultiplicator = multiplicator;
+        // globalUpgradeMultiplicator *= multiplicator;
+        globalUpgradeMultiplicator += multiplicator;
+        globalUpgradeMultiplicator = Mathf.Clamp(globalUpgradeMultiplicator, 1, upgradeMax);
+        // if (globalUpgradeMultiplicator > upgradeMax)
+        // {
+        //     if (globalUpgradeMultiplicator - multiplicator < upgradeMax)
+        //     {
+        //         upgradeMultiplicator = upgradeMax / globalUpgradeMultiplicator;
+        //         globalUpgradeMultiplicator /= multiplicator;
+        //         globalUpgradeMultiplicator *= upgradeMultiplicator;
+        //     }
+        //     else
+        //     {
+        //         upgradeMultiplicator = 1;
+        //         globalUpgradeMultiplicator /= multiplicator;
+        //     }
+        //
+        // }
         
         designDivider = -1;
         //UpgradeSpeed
-        speedDeplacement *= upgradeMultiplicator;
+        // speedDeplacement *= upgradeMultiplicator;
         // speedDeplacementMax *= upgradeMultiplicator;
         
 

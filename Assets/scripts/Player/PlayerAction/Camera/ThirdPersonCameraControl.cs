@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class ThirdPersonCameraControl : MonoBehaviour
 {
+    [SerializeField] private AnimationCurve curve;
     [SerializeField, Range(0, 1)] private float sensitivity = 0.8f;
     [SerializeField] public Transform target, player;
     float mouseX, mouseY;
@@ -56,8 +57,12 @@ public class ThirdPersonCameraControl : MonoBehaviour
 
     void CamControl()
     {
-        mouseX += (Input.GetAxis("CameraHorizontal" + playerNumber.playerNumber)*sensitivity) * rotationSpeed;
-        mouseY -= (Input.GetAxis("CameraVertical" + playerNumber.playerNumber)*sensitivity) * rotationSpeed;
+        var h = Input.GetAxis("CameraHorizontal" + playerNumber.playerNumber);
+        var v = Input.GetAxis("CameraVertical" + playerNumber.playerNumber);
+        var realH = curve.Evaluate(Mathf.Abs(h)) * Mathf.Sign(h);
+        var realV = curve.Evaluate(Mathf.Abs(v)) * Mathf.Sign(v);
+        mouseX += (realH*sensitivity) * rotationSpeed;
+        mouseY -= (realV*sensitivity) * rotationSpeed;
         mouseY = Mathf.Clamp(mouseY, angleBorn.x, angleBorn.y);
 
         transform.LookAt(target);

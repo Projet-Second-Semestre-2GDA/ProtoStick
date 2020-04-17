@@ -95,7 +95,7 @@ public class Jump : MonoBehaviour
                 {
                     forceJump = false;
                     SetVelocityY(jumpVelocity/2);
-                    modifiedGravity.ForceGoDown();
+                    // modifiedGravity.ForceGoDown();
                 }
             }
         }

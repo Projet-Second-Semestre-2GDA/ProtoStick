@@ -89,13 +89,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fb3f1c38ba253e41a5aac5eaec8536c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speedBehavior:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   speedDeplacement: 30
   reducteurTerrestre: 0.5
   reducteurAerien: 0.1
   timeToSpeedMax: 1
   diviseurAcceleration: {x: 0.5, y: 1}
-  upgradeMax: 10
-  durationUpgradeDefault: 2
+  upgradeMax: 5
+  durationUpgradeDefault: 1
 --- !u!114 &7693042373447387321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -981,7 +1005,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 103a6e21c9cb91f4abaa0981e30ebd0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensitivity: 0.873
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  sensitivity: 0.8
   target: {fileID: 3069138023356224403}
   player: {fileID: 2101401817797215672}
   obstruction: {fileID: 0}
