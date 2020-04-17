@@ -14,6 +14,7 @@ public class ThrowBumper : MonoBehaviour
     [Title("BumperCharacteristique")]
     [SerializeField, Range(0, 5)] private float timerBeforeNewShootThrow = 2;
     [SerializeField, Range(0, 5)] private float timerBeforeNewShootRemove = 2;
+    [SerializeField] private float distanceMaxTir = 180f;
 
     private float nextTimeThrow;
     private float nextTimeRemove;
@@ -48,7 +49,7 @@ public class ThrowBumper : MonoBehaviour
             ray= new Ray(pos, trans.forward);
             RaycastHit hit;
 
-            if (Physics.Raycast(ray,out hit))
+            if (Physics.Raycast(ray,out hit,distanceMaxTir))
             {
                 if (!hit.collider.CompareTag("Player") && !hit.collider.CompareTag("Bumper") && !hit.collider.CompareTag("NoBumper") )
                 {
