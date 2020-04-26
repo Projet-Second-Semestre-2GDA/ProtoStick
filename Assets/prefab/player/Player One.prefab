@@ -202,8 +202,9 @@ MonoBehaviour:
   materiauxBumper:
   - {fileID: 2100000, guid: ebde088c0ac11424587641f685f2bd7c, type: 2}
   - {fileID: 2100000, guid: 0b2ff8ead2d127e4e8c1faa0c00f2a5b, type: 2}
-  timerBeforeNewShootThrow: 2
-  timerBeforeNewShootRemove: 2
+  timerBeforeNewShootThrow: 1.5
+  timerBeforeNewShootRemove: 1.5
+  distanceMaxTir: 180
 --- !u!114 &-9216142943879235815
 MonoBehaviour:
   m_ObjectHideFlags: 0
