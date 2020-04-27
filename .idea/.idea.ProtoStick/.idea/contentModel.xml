@@ -138,9 +138,11 @@
         <e p="Scripts" t="Include">
           <e p="Autre" t="Include">
             <e p="Beginning.cs" t="Include" />
+            <e p="BumperDestroyBehavior.cs" t="Include" />
             <e p="Ending.cs" t="Include" />
             <e p="HelpOrientation.cs" t="Include" />
             <e p="Recoltable.cs" t="Include" />
+            <e p="RocketBehavior.cs" t="Include" />
             <e p="TimerShower.cs" t="Include" />
             <e p="UpRefScript.cs" t="Include" />
             <e p="UPS.cs" t="Include" />
@@ -170,6 +172,7 @@
                 <e p="SetSpawnPoint.cs" t="Include" />
                 <e p="SpawnPlayer.cs" t="Include" />
                 <e p="ThrowBumper.cs" t="Include" />
+                <e p="ThrowRocket.cs" t="Include" />
               </e>
               <e p="EveryMovement" t="Include">
                 <e p="Jump.cs" t="Include" />

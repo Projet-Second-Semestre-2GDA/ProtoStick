@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6287753611849498506}
   - component: {fileID: 6027455104298331706}
-  - component: {fileID: 8038283260959276299}
   - component: {fileID: -5519447773436580886}
+  - component: {fileID: 6484790322904253899}
+  - component: {fileID: 3119496313791162191}
   m_Layer: 0
   m_Name: Bumper
   m_TagString: Bumper
@@ -51,20 +52,6 @@ MonoBehaviour:
   multiplicationPriority: 1.5
   speedMultiplicator: 1.5
   speedMultiplicatorDuration: 2
---- !u!136 &8038283260959276299
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3818499470033779928}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 1.54
-  m_Direction: 0
-  m_Center: {x: 0.03357649, y: -0.0038592021, z: 0.19}
 --- !u!114 &-5519447773436580886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77,6 +64,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5be9d3ce7f05524f97f15ac16a3f946, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6484790322904253899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3818499470033779928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b30f270ffeaa0f14bab10abc34e7a6c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!135 &3119496313791162191
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3818499470033779928}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.6
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &192310151120912621
 PrefabInstance:
   m_ObjectHideFlags: 0

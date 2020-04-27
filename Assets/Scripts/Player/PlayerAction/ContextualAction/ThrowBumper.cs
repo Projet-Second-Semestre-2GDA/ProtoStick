@@ -12,8 +12,8 @@ public class ThrowBumper : MonoBehaviour
     [SerializeField] private GameObject bumperPrefab;
     [SerializeField] Material[] materiauxBumper = new Material[2];
     [Title("BumperCharacteristique")]
-    [SerializeField, Range(0, 5)] private float timerBeforeNewShootThrow = 2;
-    [SerializeField, Range(0, 5)] private float timerBeforeNewShootRemove = 2;
+    [SerializeField, Range(0, 5)] private float timerBeforeNewShoot = 2;
+    // [SerializeField, Range(0, 5)] private float timerBeforeNewShootRemove = 2;
     [SerializeField] private float distanceMaxTir = 180f;
 
     private float nextTimeThrow;
@@ -30,7 +30,7 @@ public class ThrowBumper : MonoBehaviour
     private void Start()
     {
         playerNumber = GetComponent<PlayerNumber>();
-        inputName = "Shoot" + playerNumber.playerNumber;
+        inputName = "ShootBumper" + playerNumber.playerNumber;
         cam = GetComponentInChildren<Camera>();
         nextTimeThrow = Time.time;
         nextTimeRemove = Time.time;
@@ -80,18 +80,18 @@ public class ThrowBumper : MonoBehaviour
                         }
                         bumperTemp.GetComponent<RotateBumper>().SetPoints(points);
                         
-                        nextTimeThrow = Time.time + timerBeforeNewShootThrow;
+                        nextTimeThrow = Time.time + timerBeforeNewShoot;
                     }
                     
                 }
-                else if(hit.collider.CompareTag("Bumper"))
-                {
-                    if (Time.time > nextTimeRemove)
-                    {
-                        Destroy(hit.collider.gameObject);
-                        nextTimeRemove = Time.time + timerBeforeNewShootRemove;
-                    }
-                }
+                // else if(hit.collider.CompareTag("Bumper"))
+                // {
+                //     if (Time.time > nextTimeRemove)
+                //     {
+                //         Destroy(hit.collider.gameObject);
+                //         nextTimeRemove = Time.time + timerBeforeNewShootRemove;
+                //     }
+                // }
 
             }
         }
