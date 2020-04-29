@@ -20,7 +20,7 @@ public class Beginning : MonoBehaviour
             players[i].GetComponent<Movement>().DisableMovement(((listApperanceOnBegining.Count - 1)*timeBetweenBegining) + 0.5f);
             players[i].GetComponent<TimerShower>().StopChrono();
             
-            players[i].GetComponent<ThrowBumper>().SetThrowBumper(false);
+            players[i].GetComponent<TirsClicGauche>().SetThrowBumper(false);
 
         }
 
@@ -57,7 +57,7 @@ public class Beginning : MonoBehaviour
                 {
                     // players[i].GetComponent<Movement>().DisableMovement(4.2f);
                     players[i].GetComponent<TimerShower>().StartChrono();
-                    players[i].GetComponent<ThrowBumper>().SetThrowBumper(true);
+                    players[i].GetComponent<TirsClicGauche>().SetThrowBumper(true);
                 }
 
                 hasBegin = true;

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\ianpo\.Rider2019.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\ianpo\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_ProtoStick.-1813663269.00" t="ExcludeRecursive" />
+    <e p="C:\Users\ianpo\AppData\local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\ianpo\AppData\local\JetBrains\Rider2020.1\resharper-host\local\Transient\ReSharperHost\v201\SolutionCaches\_ProtoStick.-1813663269.00" t="ExcludeRecursive" />
     <e p="C:\Users\ianpo\Documents\GitHub\ProtoStick" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
@@ -141,6 +141,11 @@
             <e p="BumperDestroyBehavior.cs" t="Include" />
             <e p="Ending.cs" t="Include" />
             <e p="HelpOrientation.cs" t="Include" />
+            <e p="Obstacles" t="Include">
+              <e p="DoubleDoor.cs" t="Include" />
+              <e p="LaMortNoire.cs" t="Include" />
+              <e p="TouchButton.cs" t="Include" />
+            </e>
             <e p="Recoltable.cs" t="Include" />
             <e p="RocketBehavior.cs" t="Include" />
             <e p="TimerShower.cs" t="Include" />
@@ -171,8 +176,8 @@
                 <e p="RecolteObject.cs" t="Include" />
                 <e p="SetSpawnPoint.cs" t="Include" />
                 <e p="SpawnPlayer.cs" t="Include" />
-                <e p="ThrowBumper.cs" t="Include" />
                 <e p="ThrowRocket.cs" t="Include" />
+                <e p="TirsClicGauche.cs" t="Include" />
               </e>
               <e p="EveryMovement" t="Include">
                 <e p="Jump.cs" t="Include" />

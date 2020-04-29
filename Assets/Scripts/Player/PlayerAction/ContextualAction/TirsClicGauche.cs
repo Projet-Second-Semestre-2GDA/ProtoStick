@@ -4,9 +4,10 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Debug = UnityEngine.Debug;
 
-public class ThrowBumper : MonoBehaviour
+public class TirsClicGauche : MonoBehaviour
 {
     [Title("Bumper Component")]
     [SerializeField] private GameObject bumperPrefab;
@@ -16,6 +17,11 @@ public class ThrowBumper : MonoBehaviour
     // [SerializeField, Range(0, 5)] private float timerBeforeNewShootRemove = 2;
     [SerializeField] private float distanceMaxTir = 180f;
 
+    [Title("Ouvrage de porte")] 
+    [SerializeField, Range(0, 2)] private float durationBewteenOpeningDoors = 0.5f;
+
+    private float nextTimeOpenDoor;
+    
     private float nextTimeThrow;
     private float nextTimeRemove;
 
@@ -34,12 +40,12 @@ public class ThrowBumper : MonoBehaviour
         cam = GetComponentInChildren<Camera>();
         nextTimeThrow = Time.time;
         nextTimeRemove = Time.time;
-
+        nextTimeOpenDoor = Time.time;
     }
 
     private void Update()
     {
-        // Debug.Log(inputName + " = " +Input.GetAxis(inputName));
+        // c'est pas le plus visible du monde mais au moins je fais qu'un seul raycast ! (puis trois de plus pour placer le bumper mais chut ça)
         if (Input.GetAxis(inputName) >0.1f && !alreadyDid && activitee)
         {
             
@@ -51,7 +57,7 @@ public class ThrowBumper : MonoBehaviour
 
             if (Physics.Raycast(ray,out hit,distanceMaxTir))
             {
-                if (!hit.collider.CompareTag("Player") && !hit.collider.CompareTag("Bumper") && !hit.collider.CompareTag("NoBumper") )
+                if (!hit.collider.CompareTag("Player") && !hit.collider.CompareTag("Bumper") && !hit.collider.CompareTag("NoBumper") && !hit.collider.CompareTag("Button"))
                 {
                     if (Time.time >= nextTimeThrow)
                     {
@@ -84,14 +90,14 @@ public class ThrowBumper : MonoBehaviour
                     }
                     
                 }
-                // else if(hit.collider.CompareTag("Bumper"))
-                // {
-                //     if (Time.time > nextTimeRemove)
-                //     {
-                //         Destroy(hit.collider.gameObject);
-                //         nextTimeRemove = Time.time + timerBeforeNewShootRemove;
-                //     }
-                // }
+                else if(hit.collider.CompareTag("Button"))
+                {
+                    if (Time.time > nextTimeOpenDoor)
+                    {
+                        hit.collider.GetComponent<TouchButton>().Touch();
+                        nextTimeOpenDoor = Time.time + durationBewteenOpeningDoors;
+                    }
+                }
 
             }
         }

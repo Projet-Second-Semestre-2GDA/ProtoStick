@@ -70,7 +70,7 @@ public class MenuPause : MonoBehaviour
                 rb.angularVelocity = Vector3.zero;
                 rb.useGravity = false;
                 players[i].GetComponent<Movement>().DisableMovement(Mathf.Infinity);
-                players[i].GetComponent<ThrowBumper>().SetThrowBumper(false);
+                players[i].GetComponent<TirsClicGauche>().SetThrowBumper(false);
                 players[i].GetComponent<Jump>().SetThrowJump(false);
                 players[i].GetComponent<ModifiedGravity>().SetModifiedGravity(false);
                 players[i].GetComponent<TimerShower>().StopChrono();
@@ -92,7 +92,7 @@ public class MenuPause : MonoBehaviour
                 rb.angularVelocity = angularVelocity[i];
                 rb.useGravity = true;
                 players[i].GetComponent<Movement>().DisableMovement(-1);
-                players[i].GetComponent<ThrowBumper>().SetThrowBumper(true);
+                players[i].GetComponent<TirsClicGauche>().SetThrowBumper(true);
                 players[i].GetComponent<Jump>().SetThrowJump(true);
                 players[i].GetComponent<ModifiedGravity>().SetModifiedGravity(true);
                 players[i].GetComponent<TimerShower>().ResumeChrono();

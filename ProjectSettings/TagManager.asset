@@ -12,6 +12,7 @@ TagManager:
   - Bumper
   - NoBumper
   - Recoltable
+  - Button
   layers:
   - Default
   - TransparentFX
