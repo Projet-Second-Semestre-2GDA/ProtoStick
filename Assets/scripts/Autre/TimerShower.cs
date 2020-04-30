@@ -37,7 +37,7 @@ public class TimerShower : MonoBehaviour
     public void ResumeChrono(float timeResume = -1)
     {
         canUpdate = true;
-        timer = (timeResume < 0) ? 0 : timeResume;
+        timer = (timeResume < 0) ? timer : timeResume;
     }
 
     public void StopChrono()
@@ -48,5 +48,10 @@ public class TimerShower : MonoBehaviour
     private void UpdateChrono(float timeAdd)
     {
         timer += timeAdd;
+    }
+
+    public float GetTimer()
+    {
+        return timer;
     }
 }
