@@ -15,6 +15,7 @@ public class MenuPause : MonoBehaviour
     [SerializeField] private List<GameObject> players;
     [SerializeField] private EventSystem eventSystem;
     [SerializeField] private GameObject gameObjectToSelect;
+    [SerializeField] private String urlFeedback = "https://forms.gle/pSeSzSjDvmm3j1eX8";
     private List<Vector3> velocity;
     private List<Vector3> angularVelocity;
 
@@ -54,6 +55,11 @@ public class MenuPause : MonoBehaviour
     public void ReturnToMenu()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+    }
+    
+    public void SendFeedback()
+    {
+        Application.OpenURL(urlFeedback);
     }
     private void DisablePlayer()
     {
@@ -103,3 +109,5 @@ public class MenuPause : MonoBehaviour
         angularVelocity.Clear();
     }
 }
+
+
