@@ -125,7 +125,7 @@ public class Movement : MonoBehaviour
         {
             timePass = 0;
         }
-        /*if (jump.PlayerIsGrounded() && Physics.OverlapSphere(transform.position, 0.7f).Length < 2)*/
+        /*if (jump.IsPlayerOnJump() && Physics.OverlapSphere(transform.position, 0.7f).Length < 2)*/
         
         bool overlapSomething = false;
         var test = Physics.OverlapSphere(transform.position, 0.7f);

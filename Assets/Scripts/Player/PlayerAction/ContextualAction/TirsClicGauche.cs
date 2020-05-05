@@ -54,8 +54,8 @@ public class TirsClicGauche : MonoBehaviour
             var pos = trans.position;
             ray= new Ray(pos, trans.forward);
             RaycastHit hit;
-
-            if (Physics.Raycast(ray,out hit,distanceMaxTir))
+            int layerMask =~ LayerMask.GetMask(LayerMask.LayerToName(gameObject.layer));
+            if (Physics.Raycast(ray,out hit,distanceMaxTir,layerMask))
             {
                 if (!hit.collider.CompareTag("Player") && !hit.collider.CompareTag("Bumper") && !hit.collider.CompareTag("NoBumper") && !hit.collider.CompareTag("Button"))
                 {

@@ -182,6 +182,7 @@
               <e p="EveryMovement" t="Include">
                 <e p="Jump.cs" t="Include" />
                 <e p="Movement.cs" t="Include" />
+                <e p="SetGrounded.cs" t="Include" />
               </e>
               <e p="SceneAction" t="Include">
                 <e p="ReloadScene.cs" t="Include" />

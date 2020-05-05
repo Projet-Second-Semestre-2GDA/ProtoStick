@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using FMOD;
+using Unity.Collections;
 // using UnityEditorInternal;
 using UnityEngine;
 using Debug = UnityEngine.Debug;
@@ -20,7 +21,7 @@ public class Jump : MonoBehaviour
     private Rigidbody rb;
     private ModifiedGravity modifiedGravity;
 
-    public bool isGrounded;
+    [SerializeField,ReadOnly] public bool isGrounded;
     private int jumpDone = 0;
 
     private float actualHeight = -1;
@@ -127,18 +128,17 @@ public class Jump : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         //Debug.Log("I'm collising with " + collision.collider.tag);
-        if (collision.collider.CompareTag("Ground")|| collision.collider.CompareTag("Player")|| collision.collider.CompareTag("Bumper"))
+        if (collision.collider.CompareTag("Bumper"))
         {
-            isGrounded = true;
-            jumpDone = 0;
+            PlayerIsGround();
         }
     }
     private void OnCollisionExit(Collision collision)
     {
         //Debug.Log("I'm collising with " + collision.collider.tag);
-        if (collision.collider.CompareTag("Ground") || collision.collider.CompareTag("Player")|| collision.collider.CompareTag("Bumper"))
+        if (collision.collider.CompareTag("Bumper"))
         {
-            isGrounded = false;
+            PlayerIsNotGround();
         }
     }
 
@@ -149,7 +149,7 @@ public class Jump : MonoBehaviour
         rb.velocity = velocity;
     }
     
-    public bool PlayerIsGrounded()
+    public bool IsPlayerOnJump()
     {
         return (isGrounded || ((firstJumpStable) ? jumpDone <= 1 : jumpDone <= 0));
     }
@@ -166,6 +166,17 @@ public class Jump : MonoBehaviour
             hasToActive = false;
             active = isActive;
         }
+    }
+
+    public void PlayerIsGround()
+    {
+        isGrounded = true;
+        jumpDone = 0;
+    }
+
+    public void PlayerIsNotGround()
+    {
+        isGrounded = false;
     }
 
 }
