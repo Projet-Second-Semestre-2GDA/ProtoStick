@@ -27,7 +27,7 @@ public class Movement : MonoBehaviour
 
     [Title("Variable liées aux bumper")]
     [SerializeField] private float upgradeMax = 10; 
-    [SerializeField] private float durationUpgradeDefault = 2f;
+    // [SerializeField] private float durationUpgradeDefault = 2f;
     // [Title("Variable liée à l'influence sur la vitesse")] 
     // [SerializeField] private float speedReductor = 2;
 
@@ -47,6 +47,9 @@ public class Movement : MonoBehaviour
     private float designDivider = -1;
     
     private float canMove = 0;
+    
+    //Check if ground
+    
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -76,37 +79,13 @@ public class Movement : MonoBehaviour
 
     private void Update()
     {
-        // Debug.Log("upgradeMultiplicator = " +upgradeMultiplicator);
-        // Debug.Log("globalUpgradeMultiplicator = " +globalUpgradeMultiplicator);
 
-        //Back the speed to the normal
-        if (isUpgrade && Time.time > timeStopUpgrade)
+        if (isUpgrade && jump.isGrounded && Time.time >= timeStopUpgrade)
         {
+            Debug.Log("J'ai reset ton multiplicateur connard !");
             globalUpgradeMultiplicator = 1;
             isUpgrade = false;
-
-            // // speedDeplacement /= upgradeMultiplicator;
-            // // speedDeplacementMax /= upgradeMultiplicator;
-            // globalUpgradeMultiplicator -= upgradeMultiplicator;
-            // if (globalUpgradeMultiplicator > 1)
-            // {
-            //     if (designDivider <1)
-            //     {
-            //         designDivider = globalUpgradeMultiplicator / 3;
-            //     }
-            //     upgradeMultiplicator = designDivider;
-            //     timeStopUpgrade = Time.time + durationUpgradeDefault;
-            // }
-            // else
-            // {
-            //     globalUpgradeMultiplicator = 1;
-            //     upgradeMultiplicator = 1;
-            //     isUpgrade = false;
-            // }
         }
-        
-        
-        
     }
 
     private void Moove(float v, float h, float deltaTime)
@@ -114,16 +93,10 @@ public class Movement : MonoBehaviour
         var velocity = rb.velocity;
         float y = velocity.y;
         
-        
         timePass += deltaTime;
         accelerator = Mathf.Lerp(diviseurAcceleration.x, diviseurAcceleration.y, Mathf.Clamp(timePass / timeToSpeedMax, 0, 1));
         
-        // var velocity = velocity;
         velocity.y = 0;
-        // if (velocity.magnitude > speedDeplacement)
-        // {
-        //     velocity -= velocity.normalized * speedDeplacement;
-        // }
         
         if (Mathf.Abs(v) > 0.01f || Mathf.Abs(h) > 0.01f)
         {
@@ -147,7 +120,6 @@ public class Movement : MonoBehaviour
                 velocity -= velocity.normalized * ((velocity.magnitude - (realSpeed) > realSpeed)
                     ? realSpeed
                     : realSpeed - (velocity.magnitude - realSpeed));
-                
             }
         }else
         {
@@ -166,7 +138,7 @@ public class Movement : MonoBehaviour
             }
         }
 
-        velocity = Vector3.MoveTowards(velocity, Vector3.zero, ((/*jump.PlayerIsGrounded() &&*/ overlapSomething)?reducteurTerrestre:reducteurAerien) * speedDeplacement);
+        velocity = Vector3.MoveTowards(velocity, Vector3.zero, ((overlapSomething)?reducteurTerrestre:reducteurAerien) * speedDeplacement);
 
         velocity.y = y;
         rb.velocity = velocity;
@@ -196,13 +168,11 @@ public class Movement : MonoBehaviour
         reduc = 1;
     }
 
-    public void UpgradeSpeed(float multiplicator, float duration)
+    public void UpgradeSpeed(float multiplicator)
     {
         //Set Variable
         isUpgrade = true;
-        timeStopUpgrade = Time.time + duration;
-        // upgradeMultiplicator = multiplicator;
-        // globalUpgradeMultiplicator *= multiplicator;
+        timeStopUpgrade = Time.time + 0.2f;
         globalUpgradeMultiplicator += multiplicator;
         globalUpgradeMultiplicator = Mathf.Clamp(globalUpgradeMultiplicator, 1, upgradeMax);
         // if (globalUpgradeMultiplicator > upgradeMax)
@@ -222,11 +192,6 @@ public class Movement : MonoBehaviour
         // }
         
         designDivider = -1;
-        //UpgradeSpeed
-        // speedDeplacement *= upgradeMultiplicator;
-        // speedDeplacementMax *= upgradeMultiplicator;
-        
-
     }
 
 }

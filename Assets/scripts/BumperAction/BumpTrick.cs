@@ -13,7 +13,7 @@ public class BumpTrick : PlayerEffect
 
     [Title("Speed Player Modification")] 
     [SerializeField,Range(1,10)] private float speedMultiplicator = 1.5f;
-    [SerializeField,Range(0,10)] private float speedMultiplicatorDuration = 2f;
+    // [SerializeField,Range(0,10)] private float speedMultiplicatorDuration = 2f;
     
 
     // [SerializeField, PropertyRange(0, 50)]
@@ -31,7 +31,7 @@ public class BumpTrick : PlayerEffect
         base.Effect(playerWhoTouch);
         var otherRb = playerWhoTouch.GetComponentInParent<Rigidbody>();
         var velocity = otherRb.velocity;
-        playerWhoTouch.GetComponent<Movement>().UpgradeSpeed(speedMultiplicator,speedMultiplicatorDuration);
+        playerWhoTouch.GetComponent<Movement>().UpgradeSpeed(speedMultiplicator);
         var force = transform.forward * bumpForce;
         Debug.Log("La force est : " + force);
         var otherValue = new float[] {force.x,force.y,force.z};
@@ -47,8 +47,6 @@ public class BumpTrick : PlayerEffect
                 }
                 values[i] += otherValue[i]*multiplicationPriority;
             }
-            
-            
         }
         
         velocity = new Vector3(values[0],values[1],values[2]);

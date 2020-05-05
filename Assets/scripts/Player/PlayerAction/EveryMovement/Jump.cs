@@ -19,9 +19,8 @@ public class Jump : MonoBehaviour
 
     private Rigidbody rb;
     private ModifiedGravity modifiedGravity;
-    
-    private bool isGrounded;
 
+    public bool isGrounded;
     private int jumpDone = 0;
 
     private float actualHeight = -1;
