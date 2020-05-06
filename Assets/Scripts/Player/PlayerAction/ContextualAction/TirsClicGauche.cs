@@ -54,8 +54,8 @@ public class TirsClicGauche : MonoBehaviour
             var pos = trans.position;
             ray= new Ray(pos, trans.forward);
             RaycastHit hit;
-            int layerMask =~ LayerMask.GetMask(LayerMask.LayerToName(gameObject.layer));
-            if (Physics.Raycast(ray,out hit,distanceMaxTir,layerMask))
+            int aLayerMask =~ LayerMask.GetMask(new string[]{LayerMask.LayerToName(gameObject.layer),"Recoltable"});
+            if (Physics.Raycast(ray,out hit,distanceMaxTir,aLayerMask))
             {
                 if (!hit.collider.CompareTag("Player") && !hit.collider.CompareTag("Bumper") && !hit.collider.CompareTag("NoBumper") && !hit.collider.CompareTag("Button"))
                 {
@@ -73,7 +73,7 @@ public class TirsClicGauche : MonoBehaviour
                         
                         for (int i = 0; i < points.Length; i++)
                         {
-                            Physics.Raycast(rays[i], out hits[i]);
+                            Physics.Raycast(rays[i], out hits[i],Mathf.Infinity,aLayerMask);
                             points[i] = hits[i].point;
                             Debug.Log(points[i]);
                         }

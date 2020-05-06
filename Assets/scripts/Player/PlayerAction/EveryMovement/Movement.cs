@@ -68,7 +68,7 @@ public class Movement : MonoBehaviour
         if (Time.time > canMove)
         {
             reduc = -1;
-            Moove(v, h,Time.fixedDeltaTime);
+            Moove(v, h,Time.fixedDeltaTime,oldV,oldH);
         }
         
         if (Time.time < restart)
@@ -88,7 +88,7 @@ public class Movement : MonoBehaviour
         }
     }
 
-    private void Moove(float v, float h, float deltaTime)
+    private void Moove(float v, float h, float deltaTime, float oldV,float oldH)
     {
         var velocity = rb.velocity;
         float y = velocity.y;
@@ -98,7 +98,7 @@ public class Movement : MonoBehaviour
         
         velocity.y = 0;
         
-        if (Mathf.Abs(v) > 0.01f || Mathf.Abs(h) > 0.01f)
+        if (Mathf.Abs(oldV) > 0.01f || Mathf.Abs(oldH) > 0.01f)
         {
             var trans = transform;
             
