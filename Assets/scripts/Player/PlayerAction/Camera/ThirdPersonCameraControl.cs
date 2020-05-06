@@ -6,8 +6,9 @@ using UnityEngine;
 
 public class ThirdPersonCameraControl : MonoBehaviour
 {
+    private string sensibilityKey = "Sensibilitee";
     [SerializeField] private AnimationCurve curve;
-    [SerializeField, Range(0, 1)] private float sensitivity = 0.8f;
+    [SerializeField, Unity.Collections.ReadOnly] private float sensitivity;
     [SerializeField] public Transform target, player;
     float mouseX, mouseY;
     private PlayerNumber playerNumber;
@@ -28,6 +29,10 @@ public class ThirdPersonCameraControl : MonoBehaviour
     private void Awake()
     {
         active = true;
+        
+        if (!PlayerPrefs.HasKey(sensibilityKey))PlayerPrefs.SetFloat(sensibilityKey,0.8f);
+        sensitivity = PlayerPrefs.GetFloat(sensibilityKey);
+        Debug.Log("La sensisibilité est de " + PlayerPrefs.GetFloat(sensibilityKey));
     }
 
     void Start()
