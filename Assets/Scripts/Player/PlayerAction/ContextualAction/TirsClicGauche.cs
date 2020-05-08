@@ -80,6 +80,10 @@ public class TirsClicGauche : MonoBehaviour
     
                         var bumperPosition = hit.point;
                         var bumperTemp = Instantiate(bumperPrefab, bumperPosition, Quaternion.identity);
+
+                        //feedback FMOD
+                        //FMODUnity.RuntimeManager.PlayOneShot("event:/DA glitch/Bumper/ambiant_bumper", transform.position);
+
                         foreach (var render in bumperTemp.GetComponentsInChildren<Renderer>())
                         {
                             render.material = materiauxBumper[playerNumber.playerIndex];

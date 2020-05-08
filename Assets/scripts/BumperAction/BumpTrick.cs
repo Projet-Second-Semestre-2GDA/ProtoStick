@@ -56,7 +56,7 @@ public class BumpTrick : PlayerEffect
         velocityGiven = velocity;
         playerWhoTouch.GetComponent<Movement>().DisableMovement(0.25f);
         otherRb.velocity = velocity;
-        FMODUnity.RuntimeManager.PlayOneShot("event:/DA placeholder/personnage/saut_bumper", transform.position);
+        FMODUnity.RuntimeManager.PlayOneShot("event:/DA glitch/Bumper/propulsion_bumper", transform.position);
         
         
     }

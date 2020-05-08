@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{4bb3fc31-8817-4db0-9ff1-22587fe0e7d3}">
+		<property name="assetPath">
+			<value>synth_rubber_alien_note_courte.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>3.0969387755102042</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{e579ccfe-ed38-4b72-b609-9edebfefcf05}</destination>
+		</relationship>
+	</object>
+</objects>
