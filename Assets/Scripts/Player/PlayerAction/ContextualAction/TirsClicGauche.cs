@@ -90,14 +90,14 @@ public class TirsClicGauche : MonoBehaviour
                     }
                     
                 }
-                else if(hit.collider.CompareTag("Button"))
-                {
-                    if (Time.time > nextTimeOpenDoor)
-                    {
-                        hit.collider.GetComponent<TouchButton>().Touch();
-                        nextTimeOpenDoor = Time.time + durationBewteenOpeningDoors;
-                    }
-                }
+                // else if(hit.collider.CompareTag("Button"))
+                // {
+                //     if (Time.time > nextTimeOpenDoor)
+                //     {
+                //         hit.collider.GetComponent<TouchButton>().Activate();
+                //         nextTimeOpenDoor = Time.time + durationBewteenOpeningDoors;
+                //     }
+                // }
 
             }
         }

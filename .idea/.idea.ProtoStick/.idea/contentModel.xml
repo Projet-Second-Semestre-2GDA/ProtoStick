@@ -76,6 +76,56 @@
               </e>
             </e>
           </e>
+          <e p="ProBuilder" t="Include">
+            <e p="Samples" t="Include">
+              <e p="ProBuilder" t="Include">
+                <e p="4.2.3" t="Include">
+                  <e p="Editor Examples" t="Include">
+                    <e p="ClearUnusedAttributes.cs" t="Include" />
+                    <e p="CreateShadowObject.cs" t="Include" />
+                    <e p="CustomAction.cs" t="Include" />
+                    <e p="EditorCallbackViewer.cs" t="Include" />
+                    <e p="RenameNewObjects.cs" t="Include" />
+                    <e p="SetCustomUnwrapParams.cs" t="Include" />
+                    <e p="Unity.ProBuilder.Examples.Editor.asmdef" t="Include" />
+                  </e>
+                  <e p="Runtime Examples" t="Include">
+                    <e p="Convert Mesh to Editable" t="Include">
+                      <e p="MakePrimitiveEditable.cs" t="Include" />
+                    </e>
+                    <e p="Icosphere FFT" t="Include">
+                      <e p="Readme.txt" t="Include" />
+                      <e p="Scripts" t="Include">
+                        <e p="CameraControls.cs" t="Include" />
+                        <e p="IcoBumpin.cs" t="Include" />
+                      </e>
+                    </e>
+                    <e p="Misc" t="Include">
+                      <e p="CreatePolyShape.cs" t="Include" />
+                      <e p="HueCube.cs" t="Include" />
+                    </e>
+                    <e p="Procedural Mesh" t="Include">
+                      <e p="ExtrudeRandomEdges.cs" t="Include" />
+                    </e>
+                    <e p="Runtime Editing" t="Include">
+                      <e p="Scripts" t="Include">
+                        <e p="CameraMotion.cs" t="Include" />
+                        <e p="Handles.cs" t="Include" />
+                        <e p="MeshEditor.cs" t="Include" />
+                        <e p="Selection.cs" t="Include" />
+                        <e p="SimpleGrid.cs" t="Include" />
+                        <e p="Utility.cs" t="Include" />
+                      </e>
+                    </e>
+                    <e p="Unity.ProBuilder.Examples.asmdef" t="Include" />
+                    <e p="Vertex Colors" t="Include">
+                      <e p="HighlightNearestFace.cs" t="Include" />
+                    </e>
+                  </e>
+                </e>
+              </e>
+            </e>
+          </e>
           <e p="Sirenix" t="Include">
             <e p="Assemblies" t="Include">
               <e p="link.xml" t="Include" />
@@ -143,6 +193,7 @@
             <e p="HelpOrientation.cs" t="Include" />
             <e p="Obstacles" t="Include">
               <e p="DoubleDoor.cs" t="Include" />
+              <e p="Interactible.cs" t="Include" />
               <e p="LaMortNoire.cs" t="Include" />
               <e p="TouchButton.cs" t="Include" />
             </e>
@@ -275,6 +326,8 @@
       <e p="Sirenix.OdinInspector.CompatibilityLayer.csproj" t="IncludeRecursive" />
       <e p="Sirenix.OdinInspector.CompatibilityLayer.Editor.csproj" t="IncludeRecursive" />
       <e p="Temp\bin" t="ExcludeRecursive" />
+      <e p="Unity.ProBuilder.Examples.csproj" t="IncludeRecursive" />
+      <e p="Unity.ProBuilder.Examples.Editor.csproj" t="IncludeRecursive" />
     </e>
   </component>
 </project>

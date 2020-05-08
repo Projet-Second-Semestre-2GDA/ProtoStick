@@ -3,11 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TouchButton : MonoBehaviour
+public class TouchButton : Interactible
 {
     private DoubleDoor doubleDoor;
 
-    public void Touch()
+    public override void Activate()
     {
         if (doubleDoor == null)
             throw new NullReferenceException(

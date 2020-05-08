@@ -56,6 +56,7 @@ public class RocketBehavior : MonoBehaviour
 
         foreach (var col in collidersInExplosion)
         {
+            
             if (col.CompareTag("Bumper"))
             {
                 var test = col.gameObject.GetComponent<BumperDestroyBehavior>();
@@ -66,6 +67,14 @@ public class RocketBehavior : MonoBehaviour
                 Vector3 direction = col.transform.position - explosionPoint;
                 float force = Mathf.Lerp(minMaxExplosionForce.x, minMaxExplosionForce.y, direction.magnitude / explosionRadius);
                 col.attachedRigidbody.AddForce(direction.normalized * force,ForceMode.VelocityChange);
+            }
+            else
+            {
+                Interactible interactible = col.GetComponent<Interactible>();
+                if (interactible != null)
+                {
+                    interactible.Activate();
+                }
             }
         }
         
