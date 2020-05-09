@@ -65,7 +65,7 @@ public class RocketBehavior : MonoBehaviour
             else if (col.CompareTag("Player"))
             {
                 Vector3 direction = col.transform.position - explosionPoint;
-                float force = Mathf.Lerp(minMaxExplosionForce.x, minMaxExplosionForce.y, direction.magnitude / explosionRadius);
+                float force = Mathf.Lerp(minMaxExplosionForce.x, minMaxExplosionForce.y, 1 - (direction.magnitude / explosionRadius));
                 col.attachedRigidbody.AddForce(direction.normalized * force,ForceMode.VelocityChange);
             }
             else
