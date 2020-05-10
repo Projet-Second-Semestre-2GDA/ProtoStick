@@ -272,6 +272,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RecoltableShower: {fileID: 385991130937967408}
+  durationBoost: 0.1
 --- !u!1 &1712822072570862583
 GameObject:
   m_ObjectHideFlags: 0

@@ -130,7 +130,7 @@ MonoBehaviour:
   explosionVisualLifeTime: 0.551
   explosionRadius: 20
   defaultTimeBeforeDestroy: 1.5
-  minMaxExplosionForce: {x: 10, y: 35.322777}
+  minMaxExplosionForce: {x: 10, y: 35}
 --- !u!54 &2914702739594896616
 Rigidbody:
   m_ObjectHideFlags: 0
