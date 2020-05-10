@@ -10478,7 +10478,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CollisionTag: 
-  Event: event:/DA glitch/Personnage longiforme/tir
+  Event: event:/DA glitch/Personnage longiforme/joueur_explosion_rocket
   PlayEvent: 0
   StopEvent: 0
   AllowFadeout: 1
@@ -10486,8 +10486,8 @@ MonoBehaviour:
   Preload: 0
   Params: []
   OverrideAttenuation: 0
-  OverrideMinDistance: 15
-  OverrideMaxDistance: 80
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!65 &1663979928
 BoxCollider:
   m_ObjectHideFlags: 0

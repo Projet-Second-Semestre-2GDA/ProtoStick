@@ -100,6 +100,23 @@ MonoBehaviour:
   Max: 200
   Default: 9.81
   Exists: 1
+--- !u!114 &-7398806913680860753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/chute_avatar/vitesseDeChute
+  m_EditorClassIdentifier: 
+  Name: vitesseDeChute
+  Min: 9.81
+  Max: 200
+  Default: 9.81
+  Exists: 0
 --- !u!114 &-6815746838691451736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121,6 +138,23 @@ MonoBehaviour:
   - Name: Desktop
     Value: 51392
   Exists: 1
+--- !u!114 &-6694965657467021821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/chute_avatar/vitesseDeChute
+  m_EditorClassIdentifier: 
+  Name: vitesseDeChute
+  Min: 9.81
+  Max: 200
+  Default: 9.81
+  Exists: 0
 --- !u!114 &-6517446311743389897
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,15 +192,38 @@ MonoBehaviour:
   guid: eab61753b656864f915b1c7ab76fe2e7
   Banks:
   - {fileID: 8008430209676961606}
-  - {fileID: -5533985749201055345}
+  - {fileID: 5595351917627681828}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 2671391127953356078}
+  - {fileID: 6034252334424159033}
   MinDistance: 0
   MaxDistance: 0
   Length: 1745
+--- !u!114 &-6324535215108610733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/DA glitch/Personnage longiforme/joueur_explosion_rocket
+  m_EditorClassIdentifier: 
+  Path: event:/DA glitch/Personnage longiforme/joueur_explosion_rocket
+  guid: 5f4190dd1bb62447b9d128d41f7e2acf
+  Banks:
+  - {fileID: 5595351917627681828}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 10
+  MaxDistance: 200
+  Length: 712
 --- !u!114 &-5890650314847509947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,7 +239,7 @@ MonoBehaviour:
   Path: event:/DA glitch/Bumper/propulsion_bumper
   guid: 84e5812035213e4cb0952963a1c5ba70
   Banks:
-  - {fileID: -5533985749201055345}
+  - {fileID: 5595351917627681828}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -281,7 +338,7 @@ MonoBehaviour:
   Path: event:/DA glitch/Bumper/ambiant_bumper
   guid: 9948fa2472a9e64599b2415d0811fcd8
   Banks:
-  - {fileID: -5533985749201055345}
+  - {fileID: 5595351917627681828}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -326,7 +383,7 @@ MonoBehaviour:
   guid: 2fa6a1d917e58e46850602fb7554c1a0
   Banks:
   - {fileID: 8008430209676961606}
-  - {fileID: -5533985749201055345}
+  - {fileID: 5595351917627681828}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -588,8 +645,8 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 6061180569623331557}
-  - {fileID: -5533985749201055345}
+  - {fileID: 3060684213668760507}
+  - {fileID: 5595351917627681828}
   EditorEvents:
   - {fileID: -4027328660929523503}
   - {fileID: 6308415972350629624}
@@ -601,12 +658,14 @@ MonoBehaviour:
   - {fileID: -5890650314847509947}
   - {fileID: -4546942112838490444}
   - {fileID: 8658487279961789394}
+  - {fileID: 3290854344339256721}
+  - {fileID: -6324535215108610733}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -5533985749201055345}
+  - {fileID: 5595351917627681828}
   StringsBanks:
-  - {fileID: 6061180569623331557}
-  stringsBankWriteTime: 637245777559649445
+  - {fileID: 3060684213668760507}
+  stringsBankWriteTime: 637247550530847326
   cacheVersion: 3
 --- !u!114 &1017013693529645080
 MonoBehaviour:
@@ -646,6 +705,23 @@ MonoBehaviour:
   - Name: Desktop
     Value: 1052
   Exists: 1
+--- !u!114 &1653334368030991792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/chute_avatar/vitesseDeChute
+  m_EditorClassIdentifier: 
+  Name: vitesseDeChute
+  Min: 9.81
+  Max: 200
+  Default: 9.81
+  Exists: 0
 --- !u!114 &1674908058413751654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -700,6 +776,23 @@ MonoBehaviour:
   Max: 200
   Default: 9.81
   Exists: 1
+--- !u!114 &2571997896605328044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/chute_avatar/vitesseDeChute
+  m_EditorClassIdentifier: 
+  Name: vitesseDeChute
+  Min: 9.81
+  Max: 200
+  Default: 9.81
+  Exists: 0
 --- !u!114 &2671391127953356078
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -717,6 +810,50 @@ MonoBehaviour:
   Max: 200
   Default: 9.81
   Exists: 1
+--- !u!114 &3060684213668760507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: D:/gitHub/ripository/ProtoStick/ProtoStick/Assets/sound design/Assemblage
+    FMOD/Build/Desktop/Master.strings.bank
+  SubDir: 
+  lastModified: 637247550530847326
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 1430
+  Exists: 1
+--- !u!114 &3290854344339256721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/DA glitch/Level Design/LD_D\xE9part_course"
+  m_EditorClassIdentifier: 
+  Path: "event:/DA glitch/Level Design/LD_D\xE9part_course"
+  guid: 3efe5eebb1fe2e4984fb7bd7eac04bf5
+  Banks:
+  - {fileID: 5595351917627681828}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 4440
 --- !u!114 &3514336246602166480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -847,7 +984,7 @@ MonoBehaviour:
   guid: d0cc3a51db6dd341b4fafb53507f5d97
   Banks:
   - {fileID: 8008430209676961606}
-  - {fileID: -5533985749201055345}
+  - {fileID: 5595351917627681828}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -897,6 +1034,23 @@ MonoBehaviour:
   - Name: Desktop
     Value: 51392
   Exists: 1
+--- !u!114 &5087383092849184303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/chute_avatar/vitesseDeChute
+  m_EditorClassIdentifier: 
+  Name: vitesseDeChute
+  Min: 9.81
+  Max: 200
+  Default: 9.81
+  Exists: 0
 --- !u!114 &5587339156128553892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -917,6 +1071,27 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 51392
+  Exists: 1
+--- !u!114 &5595351917627681828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: D:/gitHub/ripository/ProtoStick/ProtoStick/Assets/sound design/Assemblage
+    FMOD/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637247550530807417
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 226944
   Exists: 1
 --- !u!114 &5674295879427064096
 MonoBehaviour:
@@ -956,6 +1131,23 @@ MonoBehaviour:
   Max: 200
   Default: 9.81
   Exists: 0
+--- !u!114 &6034252334424159033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/chute_avatar/vitesseDeChute
+  m_EditorClassIdentifier: 
+  Name: vitesseDeChute
+  Min: 9.81
+  Max: 200
+  Default: 9.81
+  Exists: 1
 --- !u!114 &6061180569623331557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1031,7 +1223,7 @@ MonoBehaviour:
   guid: 7d75630b5b35e4469d606b69fdd05966
   Banks:
   - {fileID: 8008430209676961606}
-  - {fileID: -5533985749201055345}
+  - {fileID: 5595351917627681828}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1173,7 +1365,7 @@ MonoBehaviour:
   guid: adbb3f0707ac4b4791186a1ff53664b1
   Banks:
   - {fileID: 8008430209676961606}
-  - {fileID: -5533985749201055345}
+  - {fileID: 5595351917627681828}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1217,7 +1409,7 @@ MonoBehaviour:
   Path: event:/DA glitch/Bumper/instanciation_bumper
   guid: 458887dc405ef44bbc5b02b2a7670f2f
   Banks:
-  - {fileID: -5533985749201055345}
+  - {fileID: 5595351917627681828}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1258,7 +1450,7 @@ MonoBehaviour:
   guid: 926aa91430f55f498f35d3249d48167d
   Banks:
   - {fileID: 8008430209676961606}
-  - {fileID: -5533985749201055345}
+  - {fileID: 5595351917627681828}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1281,7 +1473,7 @@ MonoBehaviour:
   Path: event:/DA glitch/Personnage longiforme/tir
   guid: ee91981e157d544499970122c358b40a
   Banks:
-  - {fileID: -5533985749201055345}
+  - {fileID: 5595351917627681828}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1

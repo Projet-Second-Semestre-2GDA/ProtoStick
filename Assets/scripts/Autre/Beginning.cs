@@ -14,7 +14,10 @@ public class Beginning : MonoBehaviour
     private List<float> compteur = new List<float>();
     private void Start()
     {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/DA glitch/Level Design/LD_Départ_course");
+
         hasBegin = false;
+        
         for (int i = 0; i < players.Length; i++)
         {
             players[i].GetComponent<Movement>().DisableMovement(((listApperanceOnBegining.Count - 1)*timeBetweenBegining) + 0.5f);
