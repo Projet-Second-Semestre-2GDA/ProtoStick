@@ -192,12 +192,12 @@ MonoBehaviour:
   guid: eab61753b656864f915b1c7ab76fe2e7
   Banks:
   - {fileID: 8008430209676961606}
-  - {fileID: 5595351917627681828}
+  - {fileID: -4723472810490445371}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 6034252334424159033}
+  - {fileID: 4982321749655861999}
   MinDistance: 0
   MaxDistance: 0
   Length: 1745
@@ -216,7 +216,7 @@ MonoBehaviour:
   Path: event:/DA glitch/Personnage longiforme/joueur_explosion_rocket
   guid: 5f4190dd1bb62447b9d128d41f7e2acf
   Banks:
-  - {fileID: 5595351917627681828}
+  - {fileID: -4723472810490445371}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -239,7 +239,7 @@ MonoBehaviour:
   Path: event:/DA glitch/Bumper/propulsion_bumper
   guid: 84e5812035213e4cb0952963a1c5ba70
   Banks:
-  - {fileID: 5595351917627681828}
+  - {fileID: -4723472810490445371}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -323,6 +323,27 @@ MonoBehaviour:
   Max: 200
   Default: 9.81
   Exists: 0
+--- !u!114 &-4723472810490445371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: C:/Users/ianpo/Documents/GitHub/ProtoStick/Assets/sound design/Assemblage
+    FMOD/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637247553498998064
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 226944
+  Exists: 1
 --- !u!114 &-4546942112838490444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -338,7 +359,7 @@ MonoBehaviour:
   Path: event:/DA glitch/Bumper/ambiant_bumper
   guid: 9948fa2472a9e64599b2415d0811fcd8
   Banks:
-  - {fileID: 5595351917627681828}
+  - {fileID: -4723472810490445371}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -383,7 +404,7 @@ MonoBehaviour:
   guid: 2fa6a1d917e58e46850602fb7554c1a0
   Banks:
   - {fileID: 8008430209676961606}
-  - {fileID: 5595351917627681828}
+  - {fileID: -4723472810490445371}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -645,8 +666,8 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 3060684213668760507}
-  - {fileID: 5595351917627681828}
+  - {fileID: 4991167297471119307}
+  - {fileID: -4723472810490445371}
   EditorEvents:
   - {fileID: -4027328660929523503}
   - {fileID: 6308415972350629624}
@@ -662,10 +683,10 @@ MonoBehaviour:
   - {fileID: -6324535215108610733}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 5595351917627681828}
+  - {fileID: -4723472810490445371}
   StringsBanks:
-  - {fileID: 3060684213668760507}
-  stringsBankWriteTime: 637247550530847326
+  - {fileID: 4991167297471119307}
+  stringsBankWriteTime: 637247553499007798
   cacheVersion: 3
 --- !u!114 &1017013693529645080
 MonoBehaviour:
@@ -846,7 +867,7 @@ MonoBehaviour:
   Path: "event:/DA glitch/Level Design/LD_D\xE9part_course"
   guid: 3efe5eebb1fe2e4984fb7bd7eac04bf5
   Banks:
-  - {fileID: 5595351917627681828}
+  - {fileID: -4723472810490445371}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -984,7 +1005,7 @@ MonoBehaviour:
   guid: d0cc3a51db6dd341b4fafb53507f5d97
   Banks:
   - {fileID: 8008430209676961606}
-  - {fileID: 5595351917627681828}
+  - {fileID: -4723472810490445371}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1033,6 +1054,44 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 51392
+  Exists: 1
+--- !u!114 &4982321749655861999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/chute_avatar/vitesseDeChute
+  m_EditorClassIdentifier: 
+  Name: vitesseDeChute
+  Min: 9.81
+  Max: 200
+  Default: 9.81
+  Exists: 1
+--- !u!114 &4991167297471119307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: C:/Users/ianpo/Documents/GitHub/ProtoStick/Assets/sound design/Assemblage
+    FMOD/Build/Desktop/Master.strings.bank
+  SubDir: 
+  lastModified: 637247553499007798
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 1430
   Exists: 1
 --- !u!114 &5087383092849184303
 MonoBehaviour:
@@ -1223,7 +1282,7 @@ MonoBehaviour:
   guid: 7d75630b5b35e4469d606b69fdd05966
   Banks:
   - {fileID: 8008430209676961606}
-  - {fileID: 5595351917627681828}
+  - {fileID: -4723472810490445371}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1365,7 +1424,7 @@ MonoBehaviour:
   guid: adbb3f0707ac4b4791186a1ff53664b1
   Banks:
   - {fileID: 8008430209676961606}
-  - {fileID: 5595351917627681828}
+  - {fileID: -4723472810490445371}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1409,7 +1468,7 @@ MonoBehaviour:
   Path: event:/DA glitch/Bumper/instanciation_bumper
   guid: 458887dc405ef44bbc5b02b2a7670f2f
   Banks:
-  - {fileID: 5595351917627681828}
+  - {fileID: -4723472810490445371}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1450,7 +1509,7 @@ MonoBehaviour:
   guid: 926aa91430f55f498f35d3249d48167d
   Banks:
   - {fileID: 8008430209676961606}
-  - {fileID: 5595351917627681828}
+  - {fileID: -4723472810490445371}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1473,7 +1532,7 @@ MonoBehaviour:
   Path: event:/DA glitch/Personnage longiforme/tir
   guid: ee91981e157d544499970122c358b40a
   Banks:
-  - {fileID: 5595351917627681828}
+  - {fileID: -4723472810490445371}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
