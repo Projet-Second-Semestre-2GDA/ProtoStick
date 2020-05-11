@@ -39,6 +39,9 @@ public class RocketBehavior : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
+        // feedback FMOD
+        FMODUnity.RuntimeManager.PlayOneShot("event:/DA glitch/Personnage longiforme/joueur_explosion_rocket", transform.position);
+
         // Debug.Log(name+ " a touché " + other.collider.name);
         ContactPoint firstPoint = other.GetContact(0);
         Vector3 explosionPoint = firstPoint.point;

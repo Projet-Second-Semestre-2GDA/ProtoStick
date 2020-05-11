@@ -58,3 +58,22 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+
+Assets/sound design/Assemblage FMOD/Plugins.meta
+Assets/sound design/Assemblage FMOD/Metadata/VCA.meta
+Assets/sound design/Assemblage FMOD/Metadata/Snapshot.meta
+Assets/sound design/Assemblage FMOD/Metadata/MixerView.meta
+Assets/sound design/Assemblage FMOD/Metadata/Locale.meta
+Assets/sound design/Assemblage FMOD/Metadata/Group.meta
+Assets/sound design/Assemblage FMOD/Metadata/EffectPreset.meta
+Assets/sound design/Assemblage FMOD/Metadata/DAWProject.meta
+Assets/sound design/Assemblage FMOD/Metadata/DAWAsset.meta
+Assets/sound design/Assemblage FMOD/Metadata/DataFile.meta
+Assets/Shader.meta
+Assets/Plugins/Sirenix/Demos/Sample - RPG Editor.unitypackage.meta
+Assets/Plugins/Sirenix/Demos/Editor Windows.unitypackage.meta
+Assets/Plugins/Sirenix/Demos/Custom Drawers.unitypackage.meta
+Assets/Plugins/Sirenix/Demos/Custom Attribute Processors.unitypackage.meta
+Assets/Plugins/FMOD/Resources/FMODStudioCache.asset
+Assets/Others/Photon/PhotonLibs.meta
+Assets/Others/Input.meta

@@ -79,25 +79,25 @@ public class Jump : MonoBehaviour
                 
             }
     
-            if (forceJump)
-            {
-                SetVelocityY(jumpVelocity);
-                var actualY = transform.position.y;
-                bool forceStop = false;
-                if (Time.time > nextCheck)
-                {
-                    SetNextCheck(timeBetweenCheck);
-                    forceStop = (actualY - heightPreviousCheck) < 0.2f;
-                    heightPreviousCheck = actualY;
-                }
-                actualHeight = actualY;
-                if (actualHeight >futurHeight || forceStop)
-                {
-                    forceJump = false;
-                    SetVelocityY(jumpVelocity/2);
-                    // modifiedGravity.ForceGoDown();
-                }
-            }
+            // if (forceJump)
+            // {
+            //     SetVelocityY(jumpVelocity);
+            //     var actualY = transform.position.y;
+            //     bool forceStop = false;
+            //     if (Time.time > nextCheck)
+            //     {
+            //         SetNextCheck(timeBetweenCheck);
+            //         forceStop = (actualY - heightPreviousCheck) < 0.2f;
+            //         heightPreviousCheck = actualY;
+            //     }
+            //     actualHeight = actualY;
+            //     if (actualHeight >futurHeight || forceStop)
+            //     {
+            //         forceJump = false;
+            //         SetVelocityY(jumpVelocity/2);
+            //         // modifiedGravity.ForceGoDown();
+            //     }
+            // }
         }
 
         if (hasToActive)
@@ -113,9 +113,10 @@ public class Jump : MonoBehaviour
 
     private void DoJump(float height = 2)
     {
-        actualHeight = transform.position.y;
-        heightPreviousCheck = actualHeight;
-        futurHeight = actualHeight + height;
+        // actualHeight = transform.position.y;
+        // heightPreviousCheck = actualHeight;
+        // futurHeight = actualHeight + height;
+        SetVelocityY(jumpVelocity);
         forceJump = true;
         SetNextCheck(timeBetweenCheck);
     }

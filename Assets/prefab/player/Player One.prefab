@@ -76,7 +76,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba613b0a557d0944eb43cee18c7ef4d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpVelocity: 6.93
+  jumpVelocity: 7.4
   numberOfJump: 2
   firstJumpStable: 1
   isGrounded: 0
