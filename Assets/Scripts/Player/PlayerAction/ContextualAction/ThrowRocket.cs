@@ -54,11 +54,11 @@ public class ThrowRocket : MonoBehaviour
     private void Shoot()
     {
         var shootedRocket = Instantiate(rocket, spawnPoint.position, spawnPoint.rotation);
-
+        shootedRocket.layer = LayerMask.NameToLayer("RocketPlayer" + GetComponent<PlayerNumber>().playerNumber);
         //Feedback FMOD
         FMODUnity.RuntimeManager.PlayOneShot("event:/DA glitch/Personnage longiforme/tir", transform.position);
 
-        shootedRocket.layer = LayerMask.NameToLayer("RocketPlayer" + GetComponent<PlayerNumber>().playerNumber);
+        
         Vector3 shootPoint;
         Vector3 direction;
         if (TryGetShootingPoint(out shootPoint))
@@ -71,6 +71,7 @@ public class ThrowRocket : MonoBehaviour
             shootPoint = camTrans.position + (camTrans.forward * 10000);
             direction = shootPoint - spawnPoint.position;
         }
+        Debug.DrawRay(shootPoint,direction,Color.red,2f);
         // shootedRocket.transform.rotation = Quaternion.Euler(direction);
         var rbRocket = shootedRocket.GetComponent<Rigidbody>();
         rbRocket.AddForce(direction.normalized*rocketSpeed,ForceMode.VelocityChange);
@@ -81,10 +82,12 @@ public class ThrowRocket : MonoBehaviour
         var camTrans = cam.transform;
         bool found = false;
         RaycastHit hit;
+        int layerMask =~ LayerMask.NameToLayer("Player" + GetComponent<PlayerNumber>().playerNumber);
         Ray ray = new Ray(camTrans.position,camTrans.forward);
-        if (Physics.Raycast(ray,out hit))
+        if (Physics.Raycast(ray,out hit,Mathf.Infinity,layerMask))
         {
             shootPoint = hit.point;
+            Debug.DrawLine(spawnPoint.position,shootPoint,Color.blue,5f);
             found = true;
         }
         else

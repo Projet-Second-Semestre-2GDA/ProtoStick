@@ -82,10 +82,15 @@ public class Movement : MonoBehaviour
 
         if (isUpgrade && jump.isGrounded && Time.time >= timeStopUpgrade)
         {
-            Debug.Log("J'ai reset ton multiplicateur connard !");
-            globalUpgradeMultiplicator = 1;
-            isUpgrade = false;
+            ResetUpgrade();
         }
+    }
+
+    public void ResetUpgrade()
+    {
+        Debug.Log("J'ai reset ton multiplicateur connard !");
+        globalUpgradeMultiplicator = 1;
+        isUpgrade = false;
     }
 
     private void Moove(float v, float h, float deltaTime, float oldV,float oldH)

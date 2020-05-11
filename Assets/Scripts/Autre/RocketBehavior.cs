@@ -16,6 +16,7 @@ public class RocketBehavior : MonoBehaviour
     [Title("Rocket Parameters")]
     [SerializeField] private float explosionRadius = 20f;
     [SerializeField] private float defaultTimeBeforeDestroy = 1.5f;
+    [SerializeField] private bool reinitialiseAcceleration = false;
 
     [Title("Explosion Parameters")] //C'est le "10" et le "200" les variable a modifié si vous trouver ne pas avoir assez de liberté sur mes valeurs
     [SerializeField, MinMaxSlider(10, 200, true)] private Vector2 minMaxExplosionForce = new Vector2(10,50);
@@ -48,6 +49,7 @@ public class RocketBehavior : MonoBehaviour
         Debug.DrawRay(explosionPoint,Vector3.left,Color.green);
         ActiveVisual(explosionPoint);
         Explode(explosionPoint);
+        
         DestroySelf();
         
         
@@ -70,6 +72,10 @@ public class RocketBehavior : MonoBehaviour
                 Vector3 direction = col.transform.position - explosionPoint;
                 float force = Mathf.Lerp(minMaxExplosionForce.x, minMaxExplosionForce.y, 1 - (direction.magnitude / explosionRadius));
                 col.attachedRigidbody.AddForce(direction.normalized * force,ForceMode.VelocityChange);
+                if (reinitialiseAcceleration)
+                {    
+                    col.GetComponent<Movement>().ResetUpgrade();
+                }
             }
             else
             {
