@@ -13,9 +13,13 @@ public class Ralentisseur : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Rigidbody rb;
-        (rb = other.attachedRigidbody).GetComponent<Movement>().ReductionSpeed(vitesseimposée,duree);
-        // rb.velocity = rb.velocity.normalized;
-        // playerIn.Add(rb.gameObject);
+        if (other.attachedRigidbody.CompareTag("Player"))
+        {
+            Rigidbody rb;
+            (rb = other.attachedRigidbody).GetComponent<Movement>().ReductionSpeed(vitesseimposée, duree);
+            // rb.velocity = rb.velocity.normalized;
+            // playerIn.Add(rb.gameObject);
+        }
+
     }
 }
