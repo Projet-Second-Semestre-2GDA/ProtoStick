@@ -268,8 +268,10 @@
                 <e p="{48b3381c-fcb7-48a3-b2dc-7597533cd972}.xml" t="Include" />
                 <e p="{4bb3fc31-8817-4db0-9ff1-22587fe0e7d3}.xml" t="Include" />
                 <e p="{521f0d52-6c12-4d3d-8bd2-ba46522c8577}.xml" t="Include" />
+                <e p="{556a8c83-a55f-499e-b4ee-0c494077e560}.xml" t="Include" />
                 <e p="{55b6166c-f724-41a0-b3a1-29693317c3be}.xml" t="Include" />
                 <e p="{6172db73-5777-4605-97f1-127f6b5b757f}.xml" t="Include" />
+                <e p="{7bb116bb-fcf7-460f-a233-2becadac3a85}.xml" t="Include" />
                 <e p="{9c11fec7-02ca-4abe-b181-32ba3b76c9e5}.xml" t="Include" />
                 <e p="{9ce3710a-c51b-428c-a2e1-d9838e0689e0}.xml" t="Include" />
                 <e p="{bc99d092-7b68-447c-afa0-cf50bb98fb04}.xml" t="Include" />
@@ -306,6 +308,8 @@
                 <e p="{d0f56ae5-1bd5-4a67-b6e7-cd8784189ec0}.xml" t="Include" />
                 <e p="{d9a1a62f-e517-468e-8506-02fb7554c1a0}.xml" t="Include" />
                 <e p="{dc878845-5e40-4bf4-bc5b-02b2a7670f2f}.xml" t="Include" />
+                <e p="{dd90415f-b61b-4724-b9d1-28d41f7e2acf}.xml" t="Include" />
+                <e p="{eb5efe3e-feb1-492e-84fb-7bd7eac04bf5}.xml" t="Include" />
               </e>
               <e p="EventFolder" t="Include">
                 <e p="{14254331-0ce3-402d-ac44-2e35a1252bf8}.xml" t="Include" />
