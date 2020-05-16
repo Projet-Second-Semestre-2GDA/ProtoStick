@@ -241,6 +241,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6888272976029738482}
   - component: {fileID: 6888272976029738481}
+  - component: {fileID: -6235846041701915304}
   m_Layer: 0
   m_Name: "D\xE9but"
   m_TagString: Untagged
@@ -286,6 +287,18 @@ MonoBehaviour:
   players:
   - {fileID: 802273919599641455, guid: 8b95e52bd63a3f842a4f483764829299, type: 3}
   - {fileID: 5487105126608302974, guid: 7f0ea0bd2b811a740a6b1b0309726ef3, type: 3}
+--- !u!114 &-6235846041701915304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6888272976029738483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7a0b96af53eca648b275316033cc13f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6888272976286312894
 GameObject:
   m_ObjectHideFlags: 0

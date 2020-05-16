@@ -10557,7 +10557,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CollisionTag: 
-  Event: event:/DA glitch/Level Design/LD_Recoltables
+  Event: 
   PlayEvent: 0
   StopEvent: 0
   AllowFadeout: 1
@@ -10565,8 +10565,8 @@ MonoBehaviour:
   Preload: 0
   Params: []
   OverrideAttenuation: 0
-  OverrideMinDistance: 10
-  OverrideMaxDistance: 200
+  OverrideMinDistance: 25
+  OverrideMaxDistance: 90
 --- !u!65 &1663979928
 BoxCollider:
   m_ObjectHideFlags: 0
