@@ -20,7 +20,7 @@ public class ModeUnPlayer : MonoBehaviour
     private Camera cameraAModifier;
     
     [Title("ChoosingMode")]
-    [SerializeField] private bool modeUnJoueur;
+    public bool modeUnJoueur;
 
     private void Start()
     {
