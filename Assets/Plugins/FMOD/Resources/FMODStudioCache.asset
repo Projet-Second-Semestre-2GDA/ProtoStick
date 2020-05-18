@@ -193,11 +193,11 @@ MonoBehaviour:
   Path: D:/gitHub/ripository/ProtoStick/ProtoStick/Assets/sound design/Assemblage
     FMOD/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637253245860235240
+  lastModified: 637254486784878061
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1636
+    Value: 1728
   Exists: 1
 --- !u!114 &-7398806913680860753
 MonoBehaviour:
@@ -231,11 +231,11 @@ MonoBehaviour:
   Path: D:/gitHub/ripository/ProtoStick/ProtoStick/Assets/sound design/Assemblage
     FMOD/Build/Desktop/Master.bank
   SubDir: 
-  lastModified: 637253245860205330
+  lastModified: 637254486784847889
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 2020928
+    Value: 2248832
   Exists: 1
 --- !u!114 &-7052315309437294979
 MonoBehaviour:
@@ -340,7 +340,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -8433468315875441568}
+  - {fileID: 8793299848530046664}
   MinDistance: 0
   MaxDistance: 0
   Length: 1745
@@ -411,6 +411,23 @@ MonoBehaviour:
   - Name: Desktop
     Value: 174656
   Exists: 1
+--- !u!114 &-5372825286760023643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/chute_avatar/vitesseDeChute
+  m_EditorClassIdentifier: 
+  Name: vitesseDeChute
+  Min: 9.81
+  Max: 200
+  Default: 9.81
+  Exists: 0
 --- !u!114 &-5330903864252940538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -997,12 +1014,14 @@ MonoBehaviour:
   - {fileID: -7052315309437294979}
   - {fileID: -8707641141873735568}
   - {fileID: 3804778594650227301}
+  - {fileID: 5002220390838956599}
+  - {fileID: 3816549787452006412}
   EditorParameters: []
   MasterBanks:
   - {fileID: -7131642005570033489}
   StringsBanks:
   - {fileID: -7563439036196175199}
-  stringsBankWriteTime: 637253245860235240
+  stringsBankWriteTime: 637254486784878061
   cacheVersion: 3
 --- !u!114 &623319020902445519
 MonoBehaviour:
@@ -1305,6 +1324,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 51692
+--- !u!114 &3816549787452006412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/DA glitch/Level Design/LD_Victoire_joueur_1
+  m_EditorClassIdentifier: 
+  Path: event:/DA glitch/Level Design/LD_Victoire_joueur_1
+  guid: c365ec1edb2359499bb0e4035d2e8b21
+  Banks:
+  - {fileID: -7131642005570033489}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3692
 --- !u!114 &3936178556734373529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1506,6 +1548,29 @@ MonoBehaviour:
   - Name: Desktop
     Value: 1430
   Exists: 1
+--- !u!114 &5002220390838956599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/DA glitch/Level Design/LD_Victoire_joueur_2
+  m_EditorClassIdentifier: 
+  Path: event:/DA glitch/Level Design/LD_Victoire_joueur_2
+  guid: 56d4bab5065adb42a7022247cec89540
+  Banks:
+  - {fileID: -7131642005570033489}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3230
 --- !u!114 &5024620123470740306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2058,6 +2123,23 @@ MonoBehaviour:
   MinDistance: 25
   MaxDistance: 125
   Length: 550
+--- !u!114 &8793299848530046664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/chute_avatar/vitesseDeChute
+  m_EditorClassIdentifier: 
+  Name: vitesseDeChute
+  Min: 9.81
+  Max: 200
+  Default: 9.81
+  Exists: 1
 --- !u!114 &8928643195946973851
 MonoBehaviour:
   m_ObjectHideFlags: 0

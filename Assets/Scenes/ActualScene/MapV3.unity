@@ -594,9 +594,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d928ee8a9c5d9be45a45439fef0a0aed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameObjectsADesactiver:
-  - {fileID: 52724005}
-  - {fileID: 1868993947}
+  playerTwo: {fileID: 0}
   playerOne: {fileID: 644190112}
   UpRef: {fileID: 420030964}
   modeUnJoueur: 1
@@ -10557,7 +10555,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CollisionTag: 
-  Event: 
+  Event: event:/DA glitch/Level Design/LD_Victoire_joueur_1
   PlayEvent: 0
   StopEvent: 0
   AllowFadeout: 1
@@ -12320,12 +12318,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 1879900250216117662, guid: a5c925968748bab47a988666e96adcd2, type: 3}
---- !u!1 &1868993947 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 726325250287077268, guid: 7f0ea0bd2b811a740a6b1b0309726ef3,
-    type: 3}
-  m_PrefabInstance: {fileID: 52724003}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1873702087
 PrefabInstance:
   m_ObjectHideFlags: 0
