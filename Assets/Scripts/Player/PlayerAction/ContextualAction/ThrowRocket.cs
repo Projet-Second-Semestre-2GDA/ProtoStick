@@ -82,7 +82,7 @@ public class ThrowRocket : MonoBehaviour
         var camTrans = cam.transform;
         bool found = false;
         RaycastHit hit;
-        int layerMask =~ LayerMask.NameToLayer("Player" + GetComponent<PlayerNumber>().playerNumber);
+        int layerMask =~ LayerMask.GetMask("Player" + GetComponent<PlayerNumber>().playerNumber);
         Ray ray = new Ray(camTrans.position,camTrans.forward);
         if (Physics.Raycast(ray,out hit,Mathf.Infinity,layerMask))
         {
