@@ -54,7 +54,7 @@ public class MenuPause : MonoBehaviour
 
     public void ReturnToMenu()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        SceneManager.LoadScene(0);
     }
     
     public void SendFeedback()
