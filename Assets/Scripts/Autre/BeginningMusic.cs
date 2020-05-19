@@ -15,14 +15,9 @@ public class BeginningMusic : MonoBehaviour
     public ModeUnPlayer modeUnPlayer;
 
 
-    
-
-
     private void Start()
     {
        
-        
-
         comptageDepart = FMODUnity.RuntimeManager.CreateInstance("event:/DA glitch/Level Design/LD_Départ_course");
 
         bassLine = FMODUnity.RuntimeManager.CreateInstance("event:/DA glitch/Musique/Msc_Bassline");

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{a8a6f441-45fa-4c00-b33e-6d67da74f7cd}">
+		<property name="assetPath">
+			<value>arpège_16-bits_grande_montée_descente.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.3846258503401361</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{e579ccfe-ed38-4b72-b609-9edebfefcf05}</destination>
+		</relationship>
+	</object>
+</objects>
