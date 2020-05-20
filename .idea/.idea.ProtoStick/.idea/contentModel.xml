@@ -188,6 +188,7 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="Autre" t="Include">
+            <e p="AccelerationFeedback.cs" t="Include" />
             <e p="AnimationLauncher.cs" t="Include" />
             <e p="Beginning.cs" t="Include" />
             <e p="BeginningMusic.cs" t="Include" />
@@ -250,10 +251,13 @@
             <e p="GestionMenu.cs" t="Include" />
             <e p="MenuPause.cs" t="Include" />
             <e p="ModeUnPlayer.cs" t="Include" />
-            <e p="MoveScrollRect.cs" t="Include" />
-            <e p="MyButton.cs" t="Include" />
             <e p="PlayerNumber.cs" t="Include" />
             <e p="PlayerOptionChoose.cs" t="Include" />
+            <e p="UI" t="Include">
+              <e p="MoveScrollRect.cs" t="Include" />
+              <e p="MyButton.cs" t="Include" />
+              <e p="Testeur.cs" t="Include" />
+            </e>
           </e>
         </e>
         <e p="sound design" t="Include">
@@ -278,11 +282,13 @@
                 <e p="{4a8ecdb5-99a8-48ae-9ce4-30e3941c6e94}.xml" t="Include" />
                 <e p="{4bb3fc31-8817-4db0-9ff1-22587fe0e7d3}.xml" t="Include" />
                 <e p="{4e51ffb4-aa3c-436c-9ffa-7d949ad3ce42}.xml" t="Include" />
+                <e p="{4e54949e-9edb-4e1e-928e-6d3d9c245714}.xml" t="Include" />
                 <e p="{521f0d52-6c12-4d3d-8bd2-ba46522c8577}.xml" t="Include" />
                 <e p="{52fce3c1-3a21-4b7d-ae71-70e41df4d82c}.xml" t="Include" />
                 <e p="{556a8c83-a55f-499e-b4ee-0c494077e560}.xml" t="Include" />
                 <e p="{55b6166c-f724-41a0-b3a1-29693317c3be}.xml" t="Include" />
                 <e p="{6172db73-5777-4605-97f1-127f6b5b757f}.xml" t="Include" />
+                <e p="{7485093a-a3ce-48af-9c83-891c14394be0}.xml" t="Include" />
                 <e p="{7bb116bb-fcf7-460f-a233-2becadac3a85}.xml" t="Include" />
                 <e p="{8297f126-dc31-495e-a398-1bc337ef2993}.xml" t="Include" />
                 <e p="{88838de1-f3fe-46ca-b1b2-d809d429da4e}.xml" t="Include" />
@@ -293,6 +299,7 @@
                 <e p="{9ea00d3f-d3e2-4343-adcf-8580b5b9da38}.xml" t="Include" />
                 <e p="{a37ea239-c92b-45e4-8ac0-8e6276abe48f}.xml" t="Include" />
                 <e p="{a678adbe-e2d0-40e7-8617-a5e918ef118b}.xml" t="Include" />
+                <e p="{a8a6f441-45fa-4c00-b33e-6d67da74f7cd}.xml" t="Include" />
                 <e p="{b70e4fc6-a802-4b68-a13c-ec7c1f66ab7a}.xml" t="Include" />
                 <e p="{bc99d092-7b68-447c-afa0-cf50bb98fb04}.xml" t="Include" />
                 <e p="{c851e447-c219-4d1b-9d32-5c9e7f0d935a}.xml" t="Include" />
@@ -301,6 +308,7 @@
                 <e p="{dc129d6b-b0d0-4817-b055-a14c2e41084f}.xml" t="Include" />
                 <e p="{e667da00-fa91-47d6-9edd-03de42887e06}.xml" t="Include" />
                 <e p="{e9142bc3-418a-4302-91e9-9bd187a8aa06}.xml" t="Include" />
+                <e p="{eaaca86c-fa25-4891-ab23-23671d8f1997}.xml" t="Include" />
                 <e p="{f3090bbd-aa8d-458d-8a58-0340d0880a79}.xml" t="Include" />
                 <e p="{f6af8e40-4afc-4ed3-b272-109028cdeca4}.xml" t="Include" />
               </e>
@@ -329,6 +337,8 @@
                 <e p="{5356293e-df9e-4dfe-8339-af9529ab2b19}.xml" t="Include" />
                 <e p="{67039aa2-6673-45b2-a18c-600dd274a47c}.xml" t="Include" />
                 <e p="{6b263c15-7d21-4ebb-9e8f-2d0a9455da19}.xml" t="Include" />
+                <e p="{6db3450f-de72-4e3c-819f-3439b2a960c8}.xml" t="Include" />
+                <e p="{83fb99e0-3e8a-4418-b68d-166d8074ccf2}.xml" t="Include" />
                 <e p="{ab1ccfab-c377-4beb-bbff-d757dd758a6b}.xml" t="Include" />
                 <e p="{b5bad456-5a06-42db-a702-2247cec89540}.xml" t="Include" />
                 <e p="{b7d317d3-d49d-49d9-b841-5c14b0f7fc6a}.xml" t="Include" />
@@ -357,6 +367,8 @@
               <e p="Mixer.xml" t="Include" />
               <e p="ParameterPreset" t="Include">
                 <e p="{50c324ea-9068-4aa1-b5f2-8af088ce4762}.xml" t="Include" />
+                <e p="{85f5b5b6-19ee-40aa-98f0-b24e49de7373}.xml" t="Include" />
+                <e p="{f92e020b-8a7c-48d9-881c-58e9777f8331}.xml" t="Include" />
               </e>
               <e p="ParameterPresetFolder" t="Include">
                 <e p="{de75cc86-ab55-4957-a60c-f58e8b9b8778}.xml" t="Include" />
