@@ -7,7 +7,7 @@ public class Beginning : MonoBehaviour
 {
     private bool hasBegin = false;
     [SerializeField] private List<GameObject> listApperanceOnBegining;
-    [SerializeField] private GameObject Over;
+    [SerializeField] private List<GameObject> Over;
     [SerializeField] private float timeBetweenBegining = 1f;
     [SerializeField] private GameObject[] players;
     
@@ -20,11 +20,10 @@ public class Beginning : MonoBehaviour
         
         for (int i = 0; i < players.Length; i++)
         {
-            players[i].GetComponent<Movement>().DisableMovement(((listApperanceOnBegining.Count - 1)*timeBetweenBegining) + 0.5f);
+            // players[i].GetComponent<Movement>().DisableMovement(((listApperanceOnBegining.Count - 1)*timeBetweenBegining) + 0.5f);
             players[i].GetComponent<TimerShower>().StopChrono();
             
-            players[i].GetComponent<TirsClicGauche>().SetThrowBumper(false);
-
+        
         }
 
         for (int i = 0; i < listApperanceOnBegining.Count; i++)
@@ -55,13 +54,16 @@ public class Beginning : MonoBehaviour
     
             if (Time.time > compteur[compteur.Count - 1])
             {
-                Over.SetActive(false);
-                for (int i = 0; i < players.Length; i++)
+                foreach (var obj in Over)
                 {
-                    // players[i].GetComponent<Movement>().DisableMovement(4.2f);
-                    players[i].GetComponent<TimerShower>().StartChrono();
-                    players[i].GetComponent<TirsClicGauche>().SetThrowBumper(true);
+                    obj.SetActive(false);
                 }
+                //
+                // for (int i = 0; i < players.Length; i++)
+                // {
+                //     // players[i].GetComponent<Movement>().DisableMovement(4.2f);
+                //     players[i].GetComponent<TimerShower>().StartChrono();
+                // }
 
                 hasBegin = true;
             }

@@ -34,6 +34,8 @@ public class GestionMenu : MonoBehaviour
         
         sliderJ2.value = PlayerPrefs.GetFloat(sensibilityKeyJ2);
         Debug.Log("La sensisibilité est de " + PlayerPrefs.GetFloat(sensibilityKeyJ2));
+        
+        HideCursor();
     }
 
     public void PlayOnPlayerMode()
@@ -91,5 +93,17 @@ public class GestionMenu : MonoBehaviour
         PlayerPrefs.SetFloat(sensibilityKeyJ2,value);
         sliderJ2.value = PlayerPrefs.GetFloat(sensibilityKeyJ2);
         Debug.Log("La sensisibilité est de " + PlayerPrefs.GetFloat(sensibilityKeyJ2));
+    }
+
+    public void HideCursor()
+    {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    public void ShowCursor()
+    {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 }
