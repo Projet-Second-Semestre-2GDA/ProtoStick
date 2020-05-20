@@ -5,16 +5,28 @@ using UnityEngine;
 
 public class Ralentisseur : MonoBehaviour
 {
+    private FMOD.Studio.EventInstance ralentisseurFeedback;
     
     [SerializeField] private float vitesseimposée = 15f;
 
     [SerializeField] private float duree = 1f;
     // List<GameObject> playerIn = new List<GameObject>();
 
+    private void Start()
+    {
+        ralentisseurFeedback = FMODUnity.RuntimeManager.CreateInstance("event:/DA glitch/Level Design/LD_ralentisseur_collision");
+    }
+
+    private void Update()
+    {
+        ralentisseurFeedback.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.attachedRigidbody.CompareTag("Player"))
         {
+            ralentisseurFeedback.start();
             Rigidbody rb;
             (rb = other.attachedRigidbody).GetComponent<Movement>().ReductionSpeed(vitesseimposée, duree);
             // rb.velocity = rb.velocity.normalized;

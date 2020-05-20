@@ -15,7 +15,7 @@ public class UPS : MonoBehaviour
     // [SerializeField] private GameObject[] players = new GameObject[2];
 
     private List<Vector3> previousPositionPlayer = new List<Vector3>();
-    private float actualsUPSPlayer = 0;
+    [HideInInspector] public float actualsUPSPlayer = 0;
 
     private float playerNumber;
 
@@ -66,7 +66,7 @@ public class UPS : MonoBehaviour
         UPSAffichagePlayer.text = "La vitesse du joueur " + playerNumber + " est de " +
                                   ((actualsUPSPlayer < 0.5f) ? 0 : actualsUPSPlayer) + " UPS.     ";
         previousPositionPlayer.Clear();
-        actualsUPSPlayer = 0;
+        //actualsUPSPlayer = 0;
         nextTimer = Time.time + refreshTime;
         timePass = 0;
     }
