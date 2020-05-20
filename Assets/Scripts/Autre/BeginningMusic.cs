@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BeginningMusic : MonoBehaviour
 {
@@ -60,12 +61,21 @@ public class BeginningMusic : MonoBehaviour
 
         if (Input.GetAxis("Pause") != 0)
         {
-            comptageDepart.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
-
-            bassLine.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
-            prideAscent.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
-            dexterityAscent.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+            comptageDepart.setPaused(true);
+            
+            bassLine.setPaused(true);
+            prideAscent.setPaused(true);
+            dexterityAscent.setPaused(true);
         }
+    }
+
+    public void ResumeMusic()
+    {
+        comptageDepart.setPaused(false);
+
+        bassLine.setPaused(false);
+        prideAscent.setPaused(false);
+        dexterityAscent.setPaused(false);
     }
 
 
