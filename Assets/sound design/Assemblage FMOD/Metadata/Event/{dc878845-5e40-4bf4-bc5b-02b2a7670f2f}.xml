@@ -34,6 +34,9 @@
 		<relationship name="timeline">
 			<destination>{7f37e857-27dd-4a9b-86a2-77834f1473c0}</destination>
 		</relationship>
+		<relationship name="parameters">
+			<destination>{8c659a81-50c4-4713-a6f2-2071f7b0dfac}</destination>
+		</relationship>
 		<relationship name="banks">
 			<destination>{1491bbb6-f3c9-456e-9f74-f28dc9f18a3e}</destination>
 		</relationship>
@@ -64,6 +67,7 @@
 	<object class="GroupTrack" id="{c9f00531-43bc-4138-a0ab-f3ace48a7b2b}">
 		<relationship name="automationTracks">
 			<destination>{35774747-b24c-4dfc-b8f2-81e2e41bf41f}</destination>
+			<destination>{164ae660-aaa3-438c-8ed3-0648a842c16f}</destination>
 		</relationship>
 		<relationship name="modules">
 			<destination>{36d20f9a-1191-4721-a224-b7338070795f}</destination>
@@ -107,6 +111,11 @@
 			<destination>{4b93c766-44ac-4ef2-898c-67ee67e6b9a0}</destination>
 		</relationship>
 	</object>
+	<object class="ParameterProxy" id="{8c659a81-50c4-4713-a6f2-2071f7b0dfac}">
+		<relationship name="preset">
+			<destination>{1acfc6c6-ae77-4203-9e0b-5c90c75e6532}</destination>
+		</relationship>
+	</object>
 	<object class="EventMixerMaster" id="{c2f40c28-7fd3-41f2-800c-0cc3bdf1963d}">
 		<relationship name="effectChain">
 			<destination>{e89f0453-b6da-4a71-9699-04cc2dcf5ebe}</destination>
@@ -127,6 +136,11 @@
 	<object class="AutomationTrack" id="{35774747-b24c-4dfc-b8f2-81e2e41bf41f}">
 		<relationship name="automator">
 			<destination>{e4edf3fc-76b5-46bd-8d26-20faddc2590e}</destination>
+		</relationship>
+	</object>
+	<object class="AutomationTrack" id="{164ae660-aaa3-438c-8ed3-0648a842c16f}">
+		<relationship name="automator">
+			<destination>{0b85f5dd-6c03-4536-b10a-35d7bd1deaca}</destination>
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{36d20f9a-1191-4721-a224-b7338070795f}">
@@ -156,6 +170,9 @@
 		<property name="name">
 			<value>Audio 1</value>
 		</property>
+		<relationship name="automators">
+			<destination>{0b85f5dd-6c03-4536-b10a-35d7bd1deaca}</destination>
+		</relationship>
 		<relationship name="effectChain">
 			<destination>{2ad19563-5e5a-479f-a6c0-f7c0d9458885}</destination>
 		</relationship>
@@ -297,6 +314,14 @@
 			<destination>{5b2a8390-ada8-45c6-bbeb-5666d3a6cf31}</destination>
 		</relationship>
 	</object>
+	<object class="Automator" id="{0b85f5dd-6c03-4536-b10a-35d7bd1deaca}">
+		<property name="nameOfPropertyBeingAutomated">
+			<value>volume</value>
+		</property>
+		<relationship name="automationCurves">
+			<destination>{fac0f320-06c2-433a-b5d3-a04efaa37f13}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusEffectChain" id="{2ad19563-5e5a-479f-a6c0-f7c0d9458885}">
 		<relationship name="effects">
 			<destination>{8dc360f4-6c0d-4be4-8b57-552bcf5da757}</destination>
@@ -401,6 +426,15 @@
 		<property name="value">
 			<value>0</value>
 		</property>
+	</object>
+	<object class="AutomationCurve" id="{fac0f320-06c2-433a-b5d3-a04efaa37f13}">
+		<relationship name="parameter">
+			<destination>{1acfc6c6-ae77-4203-9e0b-5c90c75e6532}</destination>
+		</relationship>
+		<relationship name="automationPoints">
+			<destination>{fd5c075e-f039-476d-b261-e9c12c400062}</destination>
+			<destination>{e36bd2ba-b0b4-4bf2-8780-53066a8262d0}</destination>
+		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{8dc360f4-6c0d-4be4-8b57-552bcf5da757}" />
 	<object class="FlangerEffect" id="{acb7b3c0-3f87-40e6-bfb8-167f81a9b1b5}">
@@ -619,6 +653,22 @@
 		</property>
 		<property name="value">
 			<value>0</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{fd5c075e-f039-476d-b261-e9c12c400062}">
+		<property name="position">
+			<value>99.858757062146893</value>
+		</property>
+		<property name="value">
+			<value>-2.5</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{e36bd2ba-b0b4-4bf2-8780-53066a8262d0}">
+		<property name="position">
+			<value>0</value>
+		</property>
+		<property name="value">
+			<value>-80</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{0490e865-c4bd-4aa8-8ed5-a93cda6b482d}">

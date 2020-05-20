@@ -4332,7 +4332,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
-<<<<<<< HEAD
 --- !u!1 &350597716
 GameObject:
   m_ObjectHideFlags: 0
@@ -4377,7 +4376,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.0849526, y: 170.11041, z: 45.0136}
   m_Center: {x: -18.054844, y: 80.31193, z: -359.86935}
-=======
 --- !u!114 &349095583 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: -6235846041701915304, guid: 6bc831fa2b1f460479f1157aabf0e237,
@@ -4389,8 +4387,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b7a0b96af53eca648b275316033cc13f, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
->>>>>>> 73b099c203ced4e0f400090f7970f5989d3b0d84
+  m_EditorClassIdentifier: 73b099c203ced4e0f400090f7970f5989d3b0d84
 --- !u!1001 &350626437
 PrefabInstance:
   m_ObjectHideFlags: 0
