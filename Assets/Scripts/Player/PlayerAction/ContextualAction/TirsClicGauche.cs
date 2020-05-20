@@ -31,7 +31,7 @@ public class TirsClicGauche : MonoBehaviour
     private bool alreadyDid = false;
     private Ray ray;
 
-    private bool activitee = false;
+    private bool activitee = true;
     
     private void Start()
     {
