@@ -291,7 +291,7 @@
 			<value>249.5894909688013</value>
 		</property>
 		<property name="value">
-			<value>-19</value>
+			<value>-21</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{259ecb3f-3090-47e9-8845-9bd93e1c5ce9}">
@@ -302,7 +302,7 @@
 			<value>-80</value>
 		</property>
 		<property name="curveShape">
-			<value>-0.418604732</value>
+			<value>-0.602615237</value>
 		</property>
 	</object>
 	<object class="Automator" id="{e6f48f69-382c-4eaf-85e3-79a71fdc815d}">

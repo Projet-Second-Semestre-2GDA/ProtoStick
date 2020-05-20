@@ -7,12 +7,17 @@ public class BeginningMusic : MonoBehaviour
     public List <GameObject> player;
 
     private FMOD.Studio.EventInstance comptageDepart;
+    private FMOD.Studio.EventDescription comptageDepartDescription;
+    private FMOD.Studio.PARAMETER_DESCRIPTION beginningRaceDescription;
+    private FMOD.Studio.PARAMETER_ID beginningRaceId;
 
     private FMOD.Studio.EventInstance bassLine;
     private FMOD.Studio.EventInstance prideAscent;
     private FMOD.Studio.EventInstance dexterityAscent;
 
     public ModeUnPlayer modeUnPlayer;
+
+    public float debutCourse;
 
 
     private void Start()
@@ -32,10 +37,19 @@ public class BeginningMusic : MonoBehaviour
 
         comptageDepart.start();
 
+        comptageDepartDescription = FMODUnity.RuntimeManager.GetEventDescription("event:/DA glitch/Level Design/LD_Départ_course");
+        comptageDepartDescription.getParameterDescriptionByName("beginning_race", out beginningRaceDescription);
+
+        beginningRaceId = beginningRaceDescription.id;
+
+        comptageDepart.setParameterByID(beginningRaceId, debutCourse);
+
     }
 
     private void Update()
     {
+
+
         if (modeUnPlayer.modeUnJoueur)
         {
             dexterityAscent.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
