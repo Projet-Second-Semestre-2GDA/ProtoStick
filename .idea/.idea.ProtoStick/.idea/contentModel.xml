@@ -250,6 +250,8 @@
             <e p="GestionMenu.cs" t="Include" />
             <e p="MenuPause.cs" t="Include" />
             <e p="ModeUnPlayer.cs" t="Include" />
+            <e p="MoveScrollRect.cs" t="Include" />
+            <e p="MyButton.cs" t="Include" />
             <e p="PlayerNumber.cs" t="Include" />
             <e p="PlayerOptionChoose.cs" t="Include" />
           </e>

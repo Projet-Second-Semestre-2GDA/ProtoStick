@@ -13,6 +13,7 @@ TagManager:
   - NoBumper
   - Recoltable
   - Button
+  - ScrollViewer
   layers:
   - Default
   - TransparentFX

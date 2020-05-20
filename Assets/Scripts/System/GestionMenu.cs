@@ -39,18 +39,24 @@ public class GestionMenu : MonoBehaviour
     public void PlayOnPlayerMode()
     {
         PlayerOptionChoose.ModeDeJoueur = PlayerMode.OnePlayer;
-        EnterNextScene();
+        // EnterNextScene();
     }
 
     public void PlayTwoPlayerMode()
     {
         PlayerOptionChoose.ModeDeJoueur = PlayerMode.TwoPlayer;
-        EnterNextScene();
+        // EnterNextScene();
     }
 
     private void EnterNextScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void EnterScene(int buildSceneNumber)
+    {
+        SceneManager.LoadScene(buildSceneNumber);
+
     }
 
     public void ExitGame()
