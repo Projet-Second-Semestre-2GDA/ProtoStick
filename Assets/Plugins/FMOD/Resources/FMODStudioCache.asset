@@ -265,11 +265,11 @@ MonoBehaviour:
   Path: D:/gitHub/ripository/ProtoStick/ProtoStick/Assets/sound design/Assemblage
     FMOD/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637255965525285077
+  lastModified: 637256124116019949
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 2122
+    Value: 2174
   Exists: 1
 --- !u!114 &-7676652603841676347
 MonoBehaviour:
@@ -381,6 +381,23 @@ MonoBehaviour:
   - Name: Desktop
     Value: 2468384
   Exists: 1
+--- !u!114 &-7059441088940221649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/chute_avatar/vitesseDeChute
+  m_EditorClassIdentifier: 
+  Name: vitesseDeChute
+  Min: 9.81
+  Max: 200
+  Default: 9.81
+  Exists: 0
 --- !u!114 &-7052315309437294979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -421,6 +438,23 @@ MonoBehaviour:
   Max: 200
   Default: 9.81
   Exists: 0
+--- !u!114 &-6891018264912472127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: global_volume_music
+  m_EditorClassIdentifier: 
+  Name: global_volume_music
+  Min: 0
+  Max: 100
+  Default: 100
+  Exists: 1
 --- !u!114 &-6815746838691451736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -535,7 +569,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 6235344371194625399}
+  - {fileID: 4199796679097816097}
   MinDistance: 0
   MaxDistance: 0
   Length: 1745
@@ -599,8 +633,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 15
-  MaxDistance: 80
+  MinDistance: 55
+  MaxDistance: 200
   Length: 990
 --- !u!114 &-5603131765334275659
 MonoBehaviour:
@@ -859,6 +893,23 @@ MonoBehaviour:
   Max: 200
   Default: 9.81
   Exists: 0
+--- !u!114 &-4652349108938510061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: global_volume_ambiant
+  m_EditorClassIdentifier: 
+  Name: global_volume_ambiant
+  Min: 0
+  Max: 100
+  Default: 100
+  Exists: 0
 --- !u!114 &-4546942112838490444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -961,6 +1012,23 @@ MonoBehaviour:
   Max: 250
   Default: 0
   Exists: 0
+--- !u!114 &-3888162232662428398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: global_volume_effect
+  m_EditorClassIdentifier: 
+  Name: global_volume_effect
+  Min: 0
+  Max: 100
+  Default: 100
+  Exists: 1
 --- !u!114 &-3885373658864647855
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -977,6 +1045,23 @@ MonoBehaviour:
   Min: 9.81
   Max: 200
   Default: 9.81
+  Exists: 0
+--- !u!114 &-3848555329990391439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: global_volume_music
+  m_EditorClassIdentifier: 
+  Name: global_volume_music
+  Min: 0
+  Max: 100
+  Default: 100
   Exists: 0
 --- !u!114 &-3771445459655567787
 MonoBehaviour:
@@ -1037,6 +1122,29 @@ MonoBehaviour:
   - Name: Desktop
     Value: 51392
   Exists: 1
+--- !u!114 &-3393119437929050994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/DA glitch/Bumper/bump_instanciation_V2
+  m_EditorClassIdentifier: 
+  Path: event:/DA glitch/Bumper/bump_instanciation_V2
+  guid: e5d2222755371a4ab828370a6dfd0eb3
+  Banks:
+  - {fileID: 8632218652289709459}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 30
+  MaxDistance: 250
+  Length: 555
 --- !u!114 &-3318629694957669116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1088,6 +1196,23 @@ MonoBehaviour:
   Max: 9
   Default: 0
   Exists: 1
+--- !u!114 &-3041089794832234456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: global_volume_voice
+  m_EditorClassIdentifier: 
+  Name: global_volume_voice
+  Min: 0
+  Max: 100
+  Default: 100
+  Exists: 0
 --- !u!114 &-2925983463874614170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1122,6 +1247,23 @@ MonoBehaviour:
   Max: 9
   Default: 0
   Exists: 0
+--- !u!114 &-2406829479594840689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/chute_avatar/vitesseDeChute
+  m_EditorClassIdentifier: 
+  Name: vitesseDeChute
+  Min: 9.81
+  Max: 200
+  Default: 9.81
+  Exists: 1
 --- !u!114 &-2386510893459766843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1219,6 +1361,40 @@ MonoBehaviour:
   Max: 250
   Default: 0
   Exists: 1
+--- !u!114 &-2181516496655233834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: global_volume_voice
+  m_EditorClassIdentifier: 
+  Name: global_volume_voice
+  Min: 0
+  Max: 100
+  Default: 100
+  Exists: 0
+--- !u!114 &-2175232666071993991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: "parameter:/LD_D\xE9part_course/beginning_race"
+  m_EditorClassIdentifier: 
+  Name: beginning_race
+  Min: 0
+  Max: 9
+  Default: 0
+  Exists: 0
 --- !u!114 &-2137822752795220236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1321,6 +1497,23 @@ MonoBehaviour:
   Max: 200
   Default: 9.81
   Exists: 1
+--- !u!114 &-1722905547919745430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: global_volume_voice
+  m_EditorClassIdentifier: 
+  Name: global_volume_voice
+  Min: 0
+  Max: 100
+  Default: 100
+  Exists: 1
 --- !u!114 &-1496161201866477319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1389,6 +1582,23 @@ MonoBehaviour:
   Max: 200
   Default: 9.81
   Exists: 1
+--- !u!114 &-1235843482426248946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/chute_avatar/vitesseDeChute
+  m_EditorClassIdentifier: 
+  Name: vitesseDeChute
+  Min: 9.81
+  Max: 200
+  Default: 9.81
+  Exists: 0
 --- !u!114 &-1211078751494490573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1427,6 +1637,23 @@ MonoBehaviour:
   - Name: Desktop
     Value: 1052
   Exists: 1
+--- !u!114 &-1147736495930924627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: "parameter:/LD_D\xE9part_course/beginning_race"
+  m_EditorClassIdentifier: 
+  Name: beginning_race
+  Min: 0
+  Max: 9
+  Default: 0
+  Exists: 0
 --- !u!114 &-993622436901579762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1662,16 +1889,17 @@ MonoBehaviour:
   - {fileID: 1755586990279990483}
   - {fileID: 966849951012903380}
   - {fileID: 7587790584360508039}
+  - {fileID: -3393119437929050994}
   EditorParameters:
-  - {fileID: 3394064612496451367}
-  - {fileID: 2512650636106978703}
-  - {fileID: 5650327535264180196}
-  - {fileID: -7776671981554267458}
+  - {fileID: 4573453653629125221}
+  - {fileID: 427759602728203533}
+  - {fileID: -3888162232662428398}
+  - {fileID: 732794003797256131}
   MasterBanks:
   - {fileID: 8632218652289709459}
   StringsBanks:
   - {fileID: -7691348394263408453}
-  stringsBankWriteTime: 637255965525285077
+  stringsBankWriteTime: 637256124116019949
   cacheVersion: 3
 --- !u!114 &73073012226879880
 MonoBehaviour:
@@ -1707,6 +1935,23 @@ MonoBehaviour:
   Max: 200
   Default: 9.81
   Exists: 0
+--- !u!114 &427759602728203533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: global_volume_voice
+  m_EditorClassIdentifier: 
+  Name: global_volume_voice
+  Min: 0
+  Max: 100
+  Default: 100
+  Exists: 1
 --- !u!114 &521287879714059967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1763,6 +2008,23 @@ MonoBehaviour:
   Max: 200
   Default: 9.81
   Exists: 0
+--- !u!114 &732794003797256131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: global_volume_ambiant
+  m_EditorClassIdentifier: 
+  Name: global_volume_ambiant
+  Min: 0
+  Max: 100
+  Default: 100
+  Exists: 1
 --- !u!114 &966849951012903380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1858,6 +2120,23 @@ MonoBehaviour:
   Max: 200
   Default: 9.81
   Exists: 1
+--- !u!114 &1329390287686329037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: "parameter:/LD_D\xE9part_course/beginning_race"
+  m_EditorClassIdentifier: 
+  Name: beginning_race
+  Min: 0
+  Max: 9
+  Default: 0
+  Exists: 1
 --- !u!114 &1653334368030991792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1912,7 +2191,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -5442405672139043576}
+  - {fileID: 8593958490921867703}
   MinDistance: 0
   MaxDistance: 0
   Length: 3410
@@ -2079,7 +2358,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 3619188757797397361}
+  - {fileID: 7147574861047878974}
   MinDistance: 0
   MaxDistance: 0
   Length: 9230
@@ -2185,6 +2464,40 @@ MonoBehaviour:
   Max: 200
   Default: 9.81
   Exists: 1
+--- !u!114 &3730505206035631201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: global_volume_music
+  m_EditorClassIdentifier: 
+  Name: global_volume_music
+  Min: 0
+  Max: 100
+  Default: 100
+  Exists: 0
+--- !u!114 &3791184719810538436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/joueur_vitesse/acceleration_player
+  m_EditorClassIdentifier: 
+  Name: acceleration_player
+  Min: 0
+  Max: 250
+  Default: 0
+  Exists: 0
 --- !u!114 &3804778594650227301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2231,6 +2544,23 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 3692
+--- !u!114 &3875656430491170186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: global_volume_effect
+  m_EditorClassIdentifier: 
+  Name: global_volume_effect
+  Min: 0
+  Max: 100
+  Default: 100
+  Exists: 0
 --- !u!114 &3936178556734373529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2270,6 +2600,23 @@ MonoBehaviour:
     Value: 51392
   Exists: 1
 --- !u!114 &3968754234521729234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/chute_avatar/vitesseDeChute
+  m_EditorClassIdentifier: 
+  Name: vitesseDeChute
+  Min: 9.81
+  Max: 200
+  Default: 9.81
+  Exists: 1
+--- !u!114 &4199796679097816097
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2385,6 +2732,23 @@ MonoBehaviour:
   Min: 0
   Max: 250
   Default: 0
+  Exists: 1
+--- !u!114 &4573453653629125221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: global_volume_music
+  m_EditorClassIdentifier: 
+  Name: global_volume_music
+  Min: 0
+  Max: 100
+  Default: 100
   Exists: 1
 --- !u!114 &4777089043275826657
 MonoBehaviour:
@@ -2586,6 +2950,23 @@ MonoBehaviour:
   - Name: Desktop
     Value: 2020928
   Exists: 1
+--- !u!114 &5498385571180460455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: global_volume_effect
+  m_EditorClassIdentifier: 
+  Name: global_volume_effect
+  Min: 0
+  Max: 100
+  Default: 100
+  Exists: 1
 --- !u!114 &5587339156128553892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2759,6 +3140,23 @@ MonoBehaviour:
   Max: 250
   Default: 0
   Exists: 1
+--- !u!114 &6158867128145508967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/joueur_vitesse/acceleration_player
+  m_EditorClassIdentifier: 
+  Name: acceleration_player
+  Min: 0
+  Max: 250
+  Default: 0
+  Exists: 0
 --- !u!114 &6170346620681877783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2893,6 +3291,57 @@ MonoBehaviour:
   Max: 250
   Default: 0
   Exists: 1
+--- !u!114 &6656778628576628233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/joueur_vitesse/acceleration_player
+  m_EditorClassIdentifier: 
+  Name: acceleration_player
+  Min: 0
+  Max: 250
+  Default: 0
+  Exists: 1
+--- !u!114 &6721223066423712569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: global_volume_ambiant
+  m_EditorClassIdentifier: 
+  Name: global_volume_ambiant
+  Min: 0
+  Max: 100
+  Default: 100
+  Exists: 0
+--- !u!114 &7024558808156221464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: global_volume_ambiant
+  m_EditorClassIdentifier: 
+  Name: global_volume_ambiant
+  Min: 0
+  Max: 100
+  Default: 100
+  Exists: 1
 --- !u!114 &7031152000284058611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2927,6 +3376,23 @@ MonoBehaviour:
   Max: 250
   Default: 200
   Exists: 0
+--- !u!114 &7147574861047878974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: "parameter:/LD_D\xE9part_course/beginning_race"
+  m_EditorClassIdentifier: 
+  Name: beginning_race
+  Min: 0
+  Max: 9
+  Default: 0
+  Exists: 1
 --- !u!114 &7170281863466282382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3149,6 +3615,23 @@ MonoBehaviour:
   Max: 200
   Default: 9.81
   Exists: 1
+--- !u!114 &8177443025888829954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: global_volume_effect
+  m_EditorClassIdentifier: 
+  Name: global_volume_effect
+  Min: 0
+  Max: 100
+  Default: 100
+  Exists: 0
 --- !u!114 &8216017561397440450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3232,6 +3715,23 @@ MonoBehaviour:
   - Name: Desktop
     Value: 2020928
   Exists: 1
+--- !u!114 &8593958490921867703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/joueur_vitesse/acceleration_player
+  m_EditorClassIdentifier: 
+  Name: acceleration_player
+  Min: 0
+  Max: 250
+  Default: 0
+  Exists: 1
 --- !u!114 &8632218652289709459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3247,11 +3747,11 @@ MonoBehaviour:
   Path: D:/gitHub/ripository/ProtoStick/ProtoStick/Assets/sound design/Assemblage
     FMOD/Build/Desktop/Master.bank
   SubDir: 
-  lastModified: 637255965525235176
+  lastModified: 637256124115969896
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 2477376
+    Value: 2496672
   Exists: 1
 --- !u!114 &8632441688051669436
 MonoBehaviour:

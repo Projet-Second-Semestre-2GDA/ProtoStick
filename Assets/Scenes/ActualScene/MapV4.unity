@@ -4024,6 +4024,18 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!114 &349095583 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -6235846041701915304, guid: 6bc831fa2b1f460479f1157aabf0e237,
+    type: 3}
+  m_PrefabInstance: {fileID: 1801271625}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7a0b96af53eca648b275316033cc13f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &350626437
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15670,9 +15682,9 @@ PrefabInstance:
       objectReference: {fileID: 1844727398}
     - target: {fileID: 5537710055724716039, guid: a1dbefe15d3c41b478931db6fce973d5,
         type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Resume
-      objectReference: {fileID: 0}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 349095583}
     - target: {fileID: 5537710055913066748, guid: a1dbefe15d3c41b478931db6fce973d5,
         type: 3}
       propertyPath: m_textInfo.characterCount

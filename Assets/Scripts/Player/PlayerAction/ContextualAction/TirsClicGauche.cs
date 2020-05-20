@@ -32,9 +32,13 @@ public class TirsClicGauche : MonoBehaviour
     private Ray ray;
 
     private bool activitee = true;
+
+    private FMOD.Studio.EventInstance instanciationJumper;
     
     private void Start()
     {
+        instanciationJumper = FMODUnity.RuntimeManager.CreateInstance("event:/DA glitch/Bumper/bump_instanciation_V2");
+
         playerNumber = GetComponent<PlayerNumber>();
         inputName = "ShootBumper" + playerNumber.playerNumber;
         cam = GetComponentInChildren<Camera>();
@@ -45,6 +49,8 @@ public class TirsClicGauche : MonoBehaviour
 
     private void Update()
     {
+        instanciationJumper.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
+
         // c'est pas le plus visible du monde mais au moins je fais qu'un seul raycast ! (puis trois de plus pour placer le bumper mais chut ça)
         if (Input.GetAxis(inputName) >0.1f && !alreadyDid && activitee)
         {
@@ -80,6 +86,7 @@ public class TirsClicGauche : MonoBehaviour
     
                         var bumperPosition = hit.point;
                         var bumperTemp = Instantiate(bumperPrefab, bumperPosition, Quaternion.identity);
+                        instanciationJumper.start();
 
                         //feedback FMOD
                         //FMODUnity.RuntimeManager.PlayOneShot("event:/DA glitch/Bumper/ambiant_bumper", transform.position);
