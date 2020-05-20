@@ -3226,6 +3226,37 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &294606390 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 4a3b721a5c79c5c4db0c31dcbd497d38,
+    type: 3}
+  m_PrefabInstance: {fileID: 1693635531}
+  m_PrefabAsset: {fileID: 0}
+--- !u!135 &294606391
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 294606390}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2
+  m_Center: {x: 0.0000000058490857, y: -0.39252555, z: 0}
+--- !u!114 &294606392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 294606390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2a10f7b36f5cd341bb221861289b526, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!43 &304620718
 Mesh:
   m_ObjectHideFlags: 0
@@ -3401,7 +3432,6 @@ GameObject:
   - component: {fileID: 323767903}
   - component: {fileID: 323767902}
   - component: {fileID: 323767901}
-  - component: {fileID: 323767900}
   - component: {fileID: 323767905}
   m_Layer: 0
   m_Name: Cube
@@ -3410,20 +3440,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!64 &323767900
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 323767899}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 344039876}
 --- !u!114 &323767901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3763,7 +3779,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh17836
+  m_Name: pb_Mesh17892
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -18246,7 +18262,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-2322
+  m_Name: pb_Mesh-2374
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -19559,6 +19575,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PorteTunnel
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 4a3b721a5c79c5c4db0c31dcbd497d38,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a3b721a5c79c5c4db0c31dcbd497d38, type: 3}
@@ -23644,7 +23665,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1976
+  m_Name: pb_Mesh-2014
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
