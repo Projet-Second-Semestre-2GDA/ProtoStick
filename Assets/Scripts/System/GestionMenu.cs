@@ -30,6 +30,8 @@ public class GestionMenu : MonoBehaviour
     private string globalVolumeAmbiantKey = "GlobalVolumeAmbiant";
     private string globalVolumeMusiqueKey = "GlobalVolumeMusique";
 
+
+
     
     private void Awake()
     {
@@ -150,24 +152,28 @@ public class GestionMenu : MonoBehaviour
             {
                 PlayerPrefs.SetFloat(globalVolumeVoiceKey,sliderVoice.value);
                 sliderVoice.value = PlayerPrefs.GetFloat(globalVolumeVoiceKey);
+                FMODUnity.RuntimeManager.StudioSystem.setParameterByName("global_volume_voice", sliderVoice.value);
             }
             break;
             case SoundType.Effect://1
             {
                 PlayerPrefs.SetFloat(globalVolumeEffectKey,sliderEffect.value);
                 sliderEffect.value = PlayerPrefs.GetFloat(globalVolumeEffectKey);
+                FMODUnity.RuntimeManager.StudioSystem.setParameterByName("global_volume_effect", sliderEffect.value);
             }
             break;
             case SoundType.Ambiant://2
             {
                 PlayerPrefs.SetFloat(globalVolumeAmbiantKey,sliderAmbiant.value);
                 sliderAmbiant.value = PlayerPrefs.GetFloat(globalVolumeAmbiantKey);
+                FMODUnity.RuntimeManager.StudioSystem.setParameterByName("global_volume_ambiant", sliderAmbiant.value);
             }
             break;
             case SoundType.Musique://3
             {
                 PlayerPrefs.SetFloat(globalVolumeMusiqueKey,sliderMusique.value);
                 sliderMusique.value = PlayerPrefs.GetFloat(globalVolumeMusiqueKey);
+                FMODUnity.RuntimeManager.StudioSystem.setParameterByName("global_volume_music", sliderMusique.value);
             }
             break;
         }
