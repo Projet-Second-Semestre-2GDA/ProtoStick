@@ -15,9 +15,11 @@ public class GestionMenu : MonoBehaviour
     [Title("Sliders Reference")]
     public Slider sliderJ1;
     public Slider sliderJ2;
+    public Slider sliderSound;
 
     private string sensibilityKeyJ1 = "Sensibilitee1";
     private string sensibilityKeyJ2 = "Sensibilitee2";
+    private string globalVolumeKey = "GlobalVolume";
 
     private void Awake()
     {
@@ -34,6 +36,11 @@ public class GestionMenu : MonoBehaviour
         
         sliderJ2.value = PlayerPrefs.GetFloat(sensibilityKeyJ2);
         Debug.Log("La sensisibilité est de " + PlayerPrefs.GetFloat(sensibilityKeyJ2));
+        
+        //Sound
+        if (sliderSound == null)throw new NullReferenceException();
+        if (!PlayerPrefs.HasKey(globalVolumeKey)) PlayerPrefs.SetFloat(globalVolumeKey,100f);
+        sliderSound.value = PlayerPrefs.GetFloat(globalVolumeKey);
         
         HideCursor();
     }
@@ -105,5 +112,12 @@ public class GestionMenu : MonoBehaviour
     {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
+    }
+
+    public void ChangeVolume()
+    {
+        PlayerPrefs.SetFloat(globalVolumeKey,sliderSound.value);
+        sliderJ1.value = PlayerPrefs.GetFloat(globalVolumeKey);
+
     }
 }
