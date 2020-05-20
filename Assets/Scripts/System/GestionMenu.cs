@@ -12,17 +12,28 @@ using UnityEngine.UI;
 
 public class GestionMenu : MonoBehaviour
 {
-    [Title("Sliders Reference")]
+    [TitleGroup("Sliders Sensibility")]
     public Slider sliderJ1;
     public Slider sliderJ2;
-    public Slider sliderSound;
+    [TitleGroup("Sliders Sound")]
+    public Slider sliderVoice;
+    public Slider sliderEffect;
+    public Slider sliderAmbiant;
+    public Slider sliderMusique;
 
+    //Sensibility Key
     private string sensibilityKeyJ1 = "Sensibilitee1";
     private string sensibilityKeyJ2 = "Sensibilitee2";
-    private string globalVolumeKey = "GlobalVolume";
+    //Volument Key
+    private string globalVolumeVoiceKey = "GlobalVolumeVoice";
+    private string globalVolumeEffectKey = "GlobalVolumeEffect";
+    private string globalVolumeAmbiantKey = "GlobalVolumeAmbiant";
+    private string globalVolumeMusiqueKey = "GlobalVolumeMusique";
 
+    
     private void Awake()
     {
+        //-------------------Sensibility-------------------
         //Joueur 1
         if (sliderJ1 == null)throw new NullReferenceException();
         if (!PlayerPrefs.HasKey(sensibilityKeyJ1)) PlayerPrefs.SetFloat(sensibilityKeyJ1,0.8f);
@@ -37,10 +48,27 @@ public class GestionMenu : MonoBehaviour
         sliderJ2.value = PlayerPrefs.GetFloat(sensibilityKeyJ2);
         Debug.Log("La sensisibilité est de " + PlayerPrefs.GetFloat(sensibilityKeyJ2));
         
-        //Sound
-        if (sliderSound == null)throw new NullReferenceException();
-        if (!PlayerPrefs.HasKey(globalVolumeKey)) PlayerPrefs.SetFloat(globalVolumeKey,100f);
-        sliderSound.value = PlayerPrefs.GetFloat(globalVolumeKey);
+        //-------------------Sound-------------------
+        //Voice
+        if (sliderVoice == null)throw new NullReferenceException();
+        if (!PlayerPrefs.HasKey(globalVolumeVoiceKey)) PlayerPrefs.SetFloat(globalVolumeVoiceKey,100f);
+        sliderVoice.value = PlayerPrefs.GetFloat(globalVolumeVoiceKey);
+        
+        //Effect
+        if (sliderEffect == null)throw new NullReferenceException();
+        if (!PlayerPrefs.HasKey(globalVolumeEffectKey)) PlayerPrefs.SetFloat(globalVolumeEffectKey,100f);
+        sliderEffect.value = PlayerPrefs.GetFloat(globalVolumeEffectKey);
+
+        //Ambiant
+        if (sliderAmbiant == null)throw new NullReferenceException();
+        if (!PlayerPrefs.HasKey(globalVolumeAmbiantKey)) PlayerPrefs.SetFloat(globalVolumeAmbiantKey,100f);
+        sliderAmbiant.value = PlayerPrefs.GetFloat(globalVolumeAmbiantKey);
+
+        //Musique
+        if (sliderMusique == null)throw new NullReferenceException();
+        if (!PlayerPrefs.HasKey(globalVolumeMusiqueKey)) PlayerPrefs.SetFloat(globalVolumeMusiqueKey,100f);
+        sliderMusique.value = PlayerPrefs.GetFloat(globalVolumeMusiqueKey);
+
         
         HideCursor();
     }
@@ -114,10 +142,44 @@ public class GestionMenu : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
     }
 
-    public void ChangeVolume()
+    public void ChangeVolume(int soundType)
     {
-        PlayerPrefs.SetFloat(globalVolumeKey,sliderSound.value);
-        sliderJ1.value = PlayerPrefs.GetFloat(globalVolumeKey);
+        switch ((SoundType)soundType)
+        {
+            case SoundType.Voice://0
+            {
+                PlayerPrefs.SetFloat(globalVolumeVoiceKey,sliderVoice.value);
+                sliderVoice.value = PlayerPrefs.GetFloat(globalVolumeVoiceKey);
+            }
+            break;
+            case SoundType.Effect://1
+            {
+                PlayerPrefs.SetFloat(globalVolumeEffectKey,sliderEffect.value);
+                sliderEffect.value = PlayerPrefs.GetFloat(globalVolumeEffectKey);
+            }
+            break;
+            case SoundType.Ambiant://2
+            {
+                PlayerPrefs.SetFloat(globalVolumeAmbiantKey,sliderAmbiant.value);
+                sliderAmbiant.value = PlayerPrefs.GetFloat(globalVolumeAmbiantKey);
+            }
+            break;
+            case SoundType.Musique://3
+            {
+                PlayerPrefs.SetFloat(globalVolumeMusiqueKey,sliderMusique.value);
+                sliderMusique.value = PlayerPrefs.GetFloat(globalVolumeMusiqueKey);
+            }
+            break;
+        }
+        
 
     }
+}
+
+public enum SoundType
+{
+    Voice,
+    Effect,
+    Ambiant,
+    Musique
 }
