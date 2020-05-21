@@ -34,12 +34,13 @@ public class Leadboard : MonoBehaviour
     }
 
     [Button(ButtonSizes.Gigantic)]
-    private void ResetTimers()
+    public void ResetTimers()
     {
         for (int i = 1; i <= levelsTimerText.Count; i++)
         {
             var key = LeadboardSetter.baseLevelKey + i;
             PlayerPrefs.DeleteKey(key);
+            levelsTimerText[i - 1].text = "None";
         }
     }
 }
