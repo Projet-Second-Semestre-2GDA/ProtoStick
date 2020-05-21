@@ -10,7 +10,7 @@ public class Leadboard : MonoBehaviour
 
     private void Start()
     {
-        for (int i = 1; i < levelsTimerText.Count; i++)
+        for (int i = 1; i <= levelsTimerText.Count; i++)
         {
             var key = LeadboardSetter.baseLevelKey + i;
             if (PlayerPrefs.HasKey(key))
@@ -26,9 +26,9 @@ public class Leadboard : MonoBehaviour
 
     private string SetTime(float time)
     {
-        
-        int minute = Mathf.FloorToInt(time/60);
-        var txt = minute + " min "+ ((int)(time - minute*60));
+
+        int minute = Mathf.FloorToInt(time / 60);
+        var txt = minute + " min " + ((int)(time - minute * 60));
         return txt;
     }
 }
