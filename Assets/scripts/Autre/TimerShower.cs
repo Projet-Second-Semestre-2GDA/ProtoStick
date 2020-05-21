@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.OdinInspector;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class TimerShower : MonoBehaviour
@@ -59,5 +60,9 @@ public class TimerShower : MonoBehaviour
     public void raceEnd()
     {
         isOver = true;
+        int levelID = SceneManager.GetActiveScene().buildIndex;
+        Debug.LogWarning("L'ID est : " + levelID);
+        Debug.LogWarning("Duration : " + timer);
+        LeadboardSetter.LevelFinish(levelID,timer);
     }
 }

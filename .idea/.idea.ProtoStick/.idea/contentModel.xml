@@ -256,6 +256,8 @@
             <e p="PlayerOptionChoose.cs" t="Include" />
             <e p="UI" t="Include">
               <e p="ButtonColor.cs" t="Include" />
+              <e p="Leadboard.cs" t="Include" />
+              <e p="LeadboardSetter.cs" t="Include" />
               <e p="MoveScrollRect.cs" t="Include" />
               <e p="MyButton.cs" t="Include" />
               <e p="SetButtonColor.cs" t="Include" />

@@ -32,7 +32,7 @@ public class Ending : MonoBehaviour
         Debug.LogWarning("The winner est " + name);
         canvas.SetActive(true);
         text.text = "The Winner is\n" + name;
-
+        
         if (name == "Player One")
         {
             FMODUnity.RuntimeManager.PlayOneShot("event:/DA glitch/Level Design/LD_Victoire_joueur_1");
