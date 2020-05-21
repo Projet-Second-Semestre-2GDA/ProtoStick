@@ -11,6 +11,7 @@ public class TimerShower : MonoBehaviour
 
     private float timer;
     private bool canUpdate = false;
+    private bool isOver = false;
 
     private void Start()
     {
@@ -19,7 +20,7 @@ public class TimerShower : MonoBehaviour
 
     private void Update()
     {
-        if (canUpdate)
+        if (canUpdate && !isOver)
         {
             UpdateChrono(Time.deltaTime);
         }
@@ -53,5 +54,10 @@ public class TimerShower : MonoBehaviour
     public float GetTimer()
     {
         return timer;
+    }
+
+    public void raceEnd()
+    {
+        isOver = true;
     }
 }

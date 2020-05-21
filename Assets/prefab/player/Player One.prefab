@@ -23,7 +23,6 @@ GameObject:
   - component: {fileID: 1508312984744263816}
   - component: {fileID: 6818670899115546122}
   - component: {fileID: 133733549028643256}
-  - component: {fileID: 2812861378163735721}
   - component: {fileID: 6408339261444185377}
   m_Layer: 8
   m_Name: Player One
@@ -291,13 +290,60 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RecoltableShower: {fileID: 385991130937967408}
   durationBoost: 0.1
---- !u!120 &2812861378163735721
-LineRenderer:
+--- !u!114 &6408339261444185377
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 802273919599641455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 821d2c7fe221042479a52eed8dd34522, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lineRenderer: {fileID: 956875141147641464}
+  pointToGetPosition: {fileID: 5503389215465642508}
+  numberOfPosition: 50
+  refreshTime: 0
+--- !u!1 &875288797131213352
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5503389215465642508}
+  - component: {fileID: 956875141147641464}
+  m_Layer: 14
+  m_Name: TrailPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5503389215465642508
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875288797131213352}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.698}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2101401817797215672}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!120 &956875141147641464
+LineRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875288797131213352}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -454,52 +500,6 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
---- !u!114 &6408339261444185377
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 802273919599641455}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 821d2c7fe221042479a52eed8dd34522, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lineRenderer: {fileID: 2812861378163735721}
-  pointToGetPosition: {fileID: 5503389215465642508}
-  numberOfPosition: 50
-  refreshTime: 0
---- !u!1 &875288797131213352
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5503389215465642508}
-  m_Layer: 8
-  m_Name: TrailPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5503389215465642508
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 875288797131213352}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.698}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2101401817797215672}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1712822072570862583
 GameObject:
   m_ObjectHideFlags: 0
@@ -1509,7 +1509,7 @@ GameObject:
   - component: {fileID: 7843147735145539945}
   - component: {fileID: 5313208689542727714}
   - component: {fileID: 2516376216932702915}
-  m_Layer: 8
+  m_Layer: 14
   m_Name: Cube
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1724,7 +1724,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 48951
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -2295,6 +2295,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8833459485358862283}
     m_Modifications:
+    - target: {fileID: -8470045053010906745, guid: f85df37363ad4114ea9d1920581499a6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: -6860305590714054535, guid: f85df37363ad4114ea9d1920581499a6,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -2365,6 +2370,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Only_Canon
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: f85df37363ad4114ea9d1920581499a6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: -239555428307642338, guid: f85df37363ad4114ea9d1920581499a6,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -2375,11 +2385,31 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 2f25df5928d085645b760579fddfdb11, type: 2}
+    - target: {fileID: 3028042972331259927, guid: f85df37363ad4114ea9d1920581499a6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8051415255134806348, guid: f85df37363ad4114ea9d1920581499a6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8304545770963488453, guid: f85df37363ad4114ea9d1920581499a6,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 2f25df5928d085645b760579fddfdb11, type: 2}
+    - target: {fileID: 8562367068721807943, guid: f85df37363ad4114ea9d1920581499a6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091094862930139297, guid: f85df37363ad4114ea9d1920581499a6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f85df37363ad4114ea9d1920581499a6, type: 3}
 --- !u!4 &6021075184600836547 stripped
