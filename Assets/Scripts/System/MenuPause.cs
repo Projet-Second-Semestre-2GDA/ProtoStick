@@ -12,6 +12,7 @@ using Debug = UnityEngine.Debug;
 public class MenuPause : MonoBehaviour
 {
     [SerializeField] private GameObject UI;
+    [SerializeField] private Beginning debut;
     [SerializeField] private List<GameObject> players;
     [SerializeField] private EventSystem eventSystem;
     [SerializeField] private GameObject gameObjectToSelect;
@@ -43,12 +44,14 @@ public class MenuPause : MonoBehaviour
         isPause = false;
         DisablePlayer();
         UI.SetActive(true);
+        debut.Pause();
         eventSystem.SetSelectedGameObject(gameObjectToSelect);
     }
 
     public void Resume()
     {
         EnablePlayer();
+        debut.Resume();
         UI.SetActive(false);
     }
 

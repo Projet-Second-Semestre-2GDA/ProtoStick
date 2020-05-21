@@ -6,12 +6,14 @@ using UnityEngine;
 public class Beginning : MonoBehaviour
 {
     private bool hasBegin = false;
+    [SerializeField] private GameObject globaleUI;
     [SerializeField] private List<GameObject> listApperanceOnBegining;
     [SerializeField] private List<GameObject> Over;
     [SerializeField] private float timeBetweenBegining = 1f;
     [SerializeField] private GameObject[] players;
-    
+    private bool pause = false;
     private List<float> compteur = new List<float>();
+    private float timePass = 0;
     private void Start()
     {
         
@@ -29,7 +31,7 @@ public class Beginning : MonoBehaviour
         for (int i = 0; i < listApperanceOnBegining.Count; i++)
         {
             listApperanceOnBegining[i].SetActive(false);
-            compteur.Add(Time.time + i*timeBetweenBegining + 0.5f);
+            compteur.Add(timePass + i*timeBetweenBegining + 0.5f);
         }
         listApperanceOnBegining[0].SetActive(true);
 
@@ -37,11 +39,12 @@ public class Beginning : MonoBehaviour
 
     private void Update()
     {
-        if (!hasBegin)
+        if (!hasBegin && !pause)
         {
+            timePass += Time.deltaTime;
             for (int i = 0; i < compteur.Count; i++)
             {
-                if (Time.time >compteur[i])
+                if (timePass >compteur[i])
                 {
                     listApperanceOnBegining[i].SetActive(false);
                 }
@@ -52,22 +55,33 @@ public class Beginning : MonoBehaviour
                 }
             }
     
-            if (Time.time > compteur[compteur.Count - 1])
+            if (timePass > compteur[compteur.Count - 1])
             {
                 foreach (var obj in Over)
                 {
                     obj.SetActive(false);
                 }
-                //
-                // for (int i = 0; i < players.Length; i++)
-                // {
-                //     // players[i].GetComponent<Movement>().DisableMovement(4.2f);
-                //     players[i].GetComponent<TimerShower>().StartChrono();
-                // }
+                
+                for (int i = 0; i < players.Length; i++)
+                {
+                    players[i].GetComponent<TimerShower>().StartChrono();
+                }
 
                 hasBegin = true;
             }
         }
 
+    }
+
+    public void Pause()
+    {
+        pause = true;
+        globaleUI.SetActive(false);
+    }
+
+    public void Resume()
+    {
+        pause = false;
+        globaleUI.SetActive(true);
     }
 }
