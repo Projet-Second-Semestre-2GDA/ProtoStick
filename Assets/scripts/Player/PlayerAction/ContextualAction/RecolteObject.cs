@@ -45,7 +45,8 @@ public class RecolteObject : MonoBehaviour
     {
         if (!haveBeenBoost)
         {
-            rb.velocity += rb.velocity.normalized * puissance;
+            
+            rb.velocity +=  transform.forward * puissance;
             haveBeenBoost = true;
             timerNextBoost = Time.time + durationBoost;
         }

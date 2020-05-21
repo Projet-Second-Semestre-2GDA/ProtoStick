@@ -55,7 +55,7 @@ public class Ending : MonoBehaviour
                 winnerName = obj.name;
                 SetWin(winnerName);
             }
-            obj.GetComponent<TimerShower>().StopChrono();
+            obj.GetComponent<TimerShower>().raceEnd();
         }
     }
 }
