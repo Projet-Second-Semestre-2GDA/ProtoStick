@@ -7,51 +7,17 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0000012A420BC418 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 000001DA2AB6BA78 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Priority: 0, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] PlaybackSystem::init                     : done
 [LOG] Thread::initThread                       : Init FMOD Studio bank load thread. Priority: 0, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] Manager::init                            : done.
-[LOG] Manager::readBank                        : fileversion = 121, compatVersion = 119 (oldest = 44, newest = 121)
-[LOG] SoundI::release                          :  (0000012AE5B508B8)
-[LOG] SoundI::release                          :     décompte course 5 sec (0000012A41783D28)
-[LOG] SoundI::release                          : Dual Ascent - Pride Ascent V0.2 - start (0000012AE2EE8338)
-[LOG] SoundI::release                          :     Dual Ascent - Pride Ascent V0.2 - start (0000012ABAC00A98)
-[LOG] SoundI::release                          :     Dual Ascent - Pride Ascent V0.2 - start (0000012AE2EE75B8)
-[LOG] SoundI::release                          : Dual Ascent V0.2 - bassline start (0000012AE2EE84E8)
-[LOG] SoundI::release                          :     Dual Ascent V0.2 - bassline start (0000012ABAC00758)
-[LOG] SoundI::release                          :     Dual Ascent V0.2 - bassline start (0000012AE2EE8698)
-[LOG] SoundI::release                          :  (0000012AE5B4FD38)
-[LOG] SoundI::release                          :     départ_couse (0000012A417824C8)
-[LOG] SoundI::release                          :  (0000012AE5B502F8)
-[LOG] SoundI::release                          :     arpège_16-bits_grande_montée_descente (0000012A41782328)
-[LOG] SoundI::release                          :  (0000012AE5B51B68)
-[LOG] SoundI::release                          :     arpège_16-bits_descente_rapide (0000012A41785728)
-[LOG] SoundI::release                          :  (0000012AE5B50A28)
-[LOG] SoundI::release                          :     arpège_codage_descendant_rapide (0000012A41784F08)
-[LOG] SoundI::release                          :  (0000012AE5B51718)
-[LOG] SoundI::release                          :     bourrasque_très_courte_modérée (0000012A417853E8)
-[LOG] SoundI::release                          :  (0000012AE5B50748)
-[LOG] SoundI::release                          :     note_rapide_bip (0000012A41781FE8)
-[LOG] SoundI::release                          :  (0000012AE5B53268)
-[LOG] SoundI::release                          :     Tools, Welding, Metal, Electric Buzz SND0725 (0000012A417846E8)
-[LOG] SoundI::release                          :  (0000012AE5B50FE8)
-[LOG] SoundI::release                          :     basse_vibration_montée (0000012A41784208)
-[LOG] SoundI::release                          :  (0000012AE5B52128)
-[LOG] SoundI::release                          :     drop_dubstep_freeze (0000012A41785248)
-[LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
-[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
 [LOG] Thread::callback                         : FMOD Studio sample load thread finished.
 [LOG] LiveUpdate::release                      : 
 [LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
 [LOG] Thread::callback                         : FMOD stream thread finished.
 [LOG] Thread::callback                         : FMOD mixer thread finished.
-[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
 [LOG] SystemI::close                           : Closed.
-[LOG] Manager::readBank                        : fileversion = 121, compatVersion = 119 (oldest = 44, newest = 121)
-[LOG] Manager::readBank                        : fileversion = 121, compatVersion = 119 (oldest = 44, newest = 121)
-[LOG] Manager::readBank                        : fileversion = 121, compatVersion = 119 (oldest = 44, newest = 121)
-[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
