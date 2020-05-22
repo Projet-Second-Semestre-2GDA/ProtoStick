@@ -90,11 +90,13 @@ public class TirsClicGauche : MonoBehaviour
 
                         //feedback FMOD
                         //FMODUnity.RuntimeManager.PlayOneShot("event:/DA glitch/Bumper/ambiant_bumper", transform.position);
-
-                        foreach (var render in bumperTemp.GetComponentsInChildren<Renderer>())
-                        {
-                            render.material = materiauxBumper[playerNumber.playerIndex];
-                        }
+                        
+                        bumperTemp.GetComponent<MaterialsSetter>().ChangeEmissive(materiauxBumper[playerNumber.playerIndex]);
+                        
+                        // foreach (var render in bumperTemp.GetComponentsInChildren<Renderer>())
+                        // {
+                        //     render.material = materiauxBumper[playerNumber.playerIndex];
+                        // }
                         bumperTemp.GetComponent<RotateBumper>().SetPoints(points);
                         
                         nextTimeThrow = Time.time + timerBeforeNewShoot;
