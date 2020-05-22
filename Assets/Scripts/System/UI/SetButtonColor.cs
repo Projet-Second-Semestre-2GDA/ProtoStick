@@ -9,8 +9,18 @@ public class SetButtonColor : MonoBehaviour
     private void Start()
     {
         var buttons = GetComponentsInChildren<Button>();
-
+        var buttons2 = GetComponents<Button>();
         foreach (var button in buttons)
+        {
+            var colors = button.colors;
+            colors.highlightedColor = buttonColor.highlightedColor;
+            colors.normalColor = buttonColor.normalColor;
+            colors.pressedColor = buttonColor.pressedColor;
+            colors.selectedColor = buttonColor.selectedColor;
+            colors.disabledColor = buttonColor.disableColor;
+            button.colors = colors;
+        }
+        foreach (var button in buttons2)
         {
             var colors = button.colors;
             colors.highlightedColor = buttonColor.highlightedColor;

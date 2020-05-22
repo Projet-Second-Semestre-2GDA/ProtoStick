@@ -12,7 +12,7 @@ public static class LeadboardSetter
         Debug.LogWarning("Duration : " + duration);
         if (PlayerPrefs.HasKey(key))
         {
-            if (PlayerPrefs.GetFloat(key) < duration)
+            if (PlayerPrefs.GetFloat(key) >= duration)
             {
                 PlayerPrefs.SetFloat(key,duration);
             }
@@ -21,5 +21,16 @@ public static class LeadboardSetter
         {
             PlayerPrefs.SetFloat(key,duration);
         }
+    }
+    
+    /// <summary>
+    /// Rounding float value with defined digit precision.
+    /// </summary>
+    /// <param name ="num">Number to be rounded</param>
+    /// <param name ="precision">Number of digit after comma (100 will be 0.00, 1000 will be 0.000 etc..)</param>
+    /// <returns> Rounded float value </returns>
+    public static float RoundValue(float num, float precision)
+    {
+        return Mathf.Floor(num * precision + 0.5f) / precision;
     }
 }
