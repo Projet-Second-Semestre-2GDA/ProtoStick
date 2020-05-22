@@ -94,13 +94,13 @@ public class RocketBehavior : MonoBehaviour
                 }
             }
 
-            if (numeroCollisionJoueur == 8 && rocketHasPlayed == false)
+            if (numeroCollisionJoueur == 8 && rocketHasPlayed == false && playerWhoThrowTheRocket == 2)
             {
                 FMODUnity.RuntimeManager.PlayOneShot("event:/DA glitch/Level Design/LD_rocket_touchée_sur_joueur_1");
                 rocketHasPlayed = true;
             }
 
-            else if (numeroCollisionJoueur == 11 && rocketHasPlayed == false)
+            else if (numeroCollisionJoueur == 11 && rocketHasPlayed == false && playerWhoThrowTheRocket == 1)
             {
                 FMODUnity.RuntimeManager.PlayOneShot("event:/DA glitch/Level Design/LD_rocket_touchée_sur_joueur_2");
                 rocketHasPlayed = true;
