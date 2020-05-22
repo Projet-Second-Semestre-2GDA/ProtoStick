@@ -28,7 +28,7 @@ public class RocketBehavior : MonoBehaviour
     
     // For the code
     private float timer;
-    
+    [HideInInspector] public int playerWhoThrowTheRocket = -1;
     
     private void Awake()
     {
