@@ -137,8 +137,8 @@ public class ThirdPersonCameraControl : MonoBehaviour
         }
         else
         {
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
         }
     }
 }

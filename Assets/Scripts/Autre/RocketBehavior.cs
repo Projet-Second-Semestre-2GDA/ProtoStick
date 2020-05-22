@@ -21,11 +21,14 @@ public class RocketBehavior : MonoBehaviour
     [Title("Explosion Parameters")] //C'est le "10" et le "200" les variable a modifié si vous trouver ne pas avoir assez de liberté sur mes valeurs
     [SerializeField, MinMaxSlider(10, 200, true)] private Vector2 minMaxExplosionForce = new Vector2(10,50);
 
+    private float numeroCollisionJoueur;
+    private bool rocketHasPlayed = false;
+
     
     
     // For the code
     private float timer;
-    
+    [HideInInspector] public int playerWhoThrowTheRocket = -1;
     
     private void Awake()
     {
@@ -49,6 +52,10 @@ public class RocketBehavior : MonoBehaviour
         Debug.DrawRay(explosionPoint,Vector3.left,Color.green);
         ActiveVisual(explosionPoint);
         Explode(explosionPoint);
+
+        numeroCollisionJoueur = other.gameObject.layer;
+
+        
         
         DestroySelf();
         
@@ -61,7 +68,8 @@ public class RocketBehavior : MonoBehaviour
 
         foreach (var col in collidersInExplosion)
         {
-            
+            numeroCollisionJoueur = col.gameObject.layer;
+
             if (col.CompareTag("Bumper"))
             {
                 var test = col.gameObject.GetComponent<BumperDestroyBehavior>();
@@ -85,7 +93,22 @@ public class RocketBehavior : MonoBehaviour
                     interactible.Activate();
                 }
             }
+
+            if (numeroCollisionJoueur == 8 && rocketHasPlayed == false && playerWhoThrowTheRocket == 2)
+            {
+                FMODUnity.RuntimeManager.PlayOneShot("event:/DA glitch/Level Design/LD_rocket_touchée_sur_joueur_1");
+                rocketHasPlayed = true;
+            }
+
+            else if (numeroCollisionJoueur == 11 && rocketHasPlayed == false && playerWhoThrowTheRocket == 1)
+            {
+                FMODUnity.RuntimeManager.PlayOneShot("event:/DA glitch/Level Design/LD_rocket_touchée_sur_joueur_2");
+                rocketHasPlayed = true;
+            }
+
         }
+
+        rocketHasPlayed = false;
         
     }
 
