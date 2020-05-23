@@ -34,7 +34,7 @@ public class AccelerationFeedback : MonoBehaviour
     {
         
         speedNumber = uPS.actualsUPSPlayer;
-        Debug.Log("speednumber =" + speedNumber);
+        // Debug.Log("speednumber =" + speedNumber);
 
         joueurVitesse.setParameterByID(accelerationID, speedNumber);
     }

@@ -7,13 +7,18 @@ using UnityEngine;
 
 public class Leadboard : MonoBehaviour
 {
+    [TitleGroup("Timers")]
     [SerializeField] private List<TextMeshProUGUI> levelsTimerText;
+    [TitleGroup("Recoltable")]
+    [SerializeField] private List<TextMeshProUGUI> levelsRecoltableText;
 
     private void Start()
     {
         for (int i = 1; i <= levelsTimerText.Count; i++)
         {
             var key = LeadboardSetter.baseLevelKey + i;
+            var keyTwo = UniversalRecoltObject.RecoltableBaseKey + i;
+            var keyThree = UniversalRecoltObject.TotalRecoltableBaseKey + i;
             if (PlayerPrefs.HasKey(key))
             {
                 levelsTimerText[i - 1].text = SetTime(PlayerPrefs.GetFloat(key));
@@ -21,6 +26,15 @@ public class Leadboard : MonoBehaviour
             else
             {
                 levelsTimerText[i - 1].text = "None";
+            }
+
+            if (PlayerPrefs.HasKey(keyTwo))
+            {
+                levelsRecoltableText[i - 1].text = PlayerPrefs.GetInt(keyTwo) + " / " + PlayerPrefs.GetInt(keyThree);
+            }
+            else
+            {
+                levelsRecoltableText[i - 1].text = "None";
             }
         }
     }
@@ -33,6 +47,7 @@ public class Leadboard : MonoBehaviour
         return txt;
     }
 
+    [TitleGroup("Timers")]
     [Button(ButtonSizes.Gigantic)]
     public void ResetTimers()
     {
@@ -40,6 +55,21 @@ public class Leadboard : MonoBehaviour
         {
             var key = LeadboardSetter.baseLevelKey + i;
             PlayerPrefs.DeleteKey(key);
+            levelsTimerText[i - 1].text = "None";
+        }
+    }
+    
+    
+    [TitleGroup("Recoltable")]
+    [Button(ButtonSizes.Gigantic)]
+    public void ResetRecoltable()
+    {
+        for (int i = 1; i <= levelsTimerText.Count; i++)
+        {
+            var keyTwo = UniversalRecoltObject.RecoltableBaseKey + i;
+            var keyThree = UniversalRecoltObject.TotalRecoltableBaseKey + i;
+            PlayerPrefs.DeleteKey(keyTwo);
+            PlayerPrefs.DeleteKey(keyThree);
             levelsTimerText[i - 1].text = "None";
         }
     }

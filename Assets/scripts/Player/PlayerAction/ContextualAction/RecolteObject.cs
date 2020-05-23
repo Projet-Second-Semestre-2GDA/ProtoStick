@@ -38,7 +38,13 @@ public class RecolteObject : MonoBehaviour
     public void AddRecoltable(GameObject obj)
     {
         ++objectRecolted;
+        // UniversalRecoltObject.AddRecoltable();
         Destroy(obj);
+    }
+
+    public int GetNumberRecoltable()
+    {
+        return objectRecolted;
     }
 
     public void Boost(float puissance)

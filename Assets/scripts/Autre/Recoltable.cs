@@ -11,7 +11,7 @@ public class Recoltable : MonoBehaviour
         //feedback FMOD
         FMODUnity.RuntimeManager.PlayOneShot("event:/DA glitch/Level Design/LD_Recoltables", transform.position);
         var rb = other.attachedRigidbody;
-        rb.GetComponent<RecolteObject>().AddRecoltable(gameObject);
+        // rb.GetComponent<RecolteObject>().AddRecoltable(gameObject);
         rb.GetComponent<RecolteObject>().Boost(puissance);
 
     }
