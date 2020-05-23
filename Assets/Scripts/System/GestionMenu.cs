@@ -30,8 +30,8 @@ public class GestionMenu : MonoBehaviour
     private string globalVolumeAmbiantKey = "GlobalVolumeAmbiant";
     private string globalVolumeMusiqueKey = "GlobalVolumeMusique";
 
-
-
+    //Bouton Retour
+    private CustomButton retour;
     
     private void Awake()
     {
@@ -75,6 +75,19 @@ public class GestionMenu : MonoBehaviour
         HideCursor();
     }
 
+    private void Update()
+    {
+        if (Input.GetButtonDown("Cancel") && retour != null)
+        {
+            retour.Press();
+        }
+    }
+
+    public void SetCancelButton(CustomButton cancel)
+    {
+        retour = cancel;
+    }
+    
     public void PlayOnPlayerMode()
     {
         PlayerOptionChoose.ModeDeJoueur = PlayerMode.OnePlayer;

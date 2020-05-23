@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using Sirenix.OdinInspector;
-using TreeEditor;
+// using TreeEditor;
 using UnityEngine;
 using Debug = UnityEngine.Debug;
 
@@ -19,7 +19,7 @@ public class RocketBehavior : MonoBehaviour
     [SerializeField] private float defaultTimeBeforeDestroy = 1.5f;
     [SerializeField] private bool reinitialiseAcceleration = false;
     [SerializeField] private bool rocketExplodeAfterLifeTime = true;
-
+    
     [Title("Explosion Parameters")] //C'est le "10" et le "200" les variable a modifié si vous trouver ne pas avoir assez de liberté sur mes valeurs
     [SerializeField, MinMaxSlider(10, 200, true)] private Vector2 minMaxExplosionForce = new Vector2(10,50);
 

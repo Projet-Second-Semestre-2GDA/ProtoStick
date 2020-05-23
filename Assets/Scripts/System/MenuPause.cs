@@ -7,6 +7,7 @@ using UnityEngine;
 using Sirenix.OdinInspector;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using Debug = UnityEngine.Debug;
 
 public class MenuPause : MonoBehaviour
@@ -16,6 +17,7 @@ public class MenuPause : MonoBehaviour
     [SerializeField] private List<GameObject> players;
     [SerializeField] private EventSystem eventSystem;
     [SerializeField] private GameObject gameObjectToSelect;
+    [SerializeField] private CustomButton ResumeButton;
     [SerializeField] private String urlFeedback = "https://forms.gle/pSeSzSjDvmm3j1eX8";
     private List<Vector3> velocity;
     private List<Vector3> angularVelocity;
@@ -34,14 +36,18 @@ public class MenuPause : MonoBehaviour
     {
         if (Input.GetButtonDown("Pause") && !isPause)
         {
-            isPause = true;
             SetPause();
+        }
+
+        if (isPause && Input.GetButtonDown("Cancel"))
+        {
+            ResumeButton.Press();
         }
     }
 
     public void SetPause()
     {
-        isPause = false;
+        isPause = true;
         DisablePlayer();
         UI.SetActive(true);
         debut.Pause();
@@ -53,6 +59,9 @@ public class MenuPause : MonoBehaviour
         EnablePlayer();
         debut.Resume();
         UI.SetActive(false);
+        isPause = false;
+        eventSystem.SetSelectedGameObject(null);
+
     }
 
     public void ReturnToMenu()

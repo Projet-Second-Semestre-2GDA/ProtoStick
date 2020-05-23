@@ -260,6 +260,7 @@
             </e>
             <e p="UI" t="Include">
               <e p="ButtonColor.cs" t="Include" />
+              <e p="CustomButton.cs" t="Include" />
               <e p="CustomInputModule.cs" t="Include" />
               <e p="Leadboard.cs" t="Include" />
               <e p="LeadboardSetter.cs" t="Include" />

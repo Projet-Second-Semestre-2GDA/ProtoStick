@@ -174,7 +174,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3658925847912440174
 RectTransform:
   m_ObjectHideFlags: 0
@@ -297,6 +297,7 @@ GameObject:
   - component: {fileID: 5537710055465694622}
   - component: {fileID: 5537710055465694623}
   - component: {fileID: 5537710055465694620}
+  - component: {fileID: 1192511341875391286}
   m_Layer: 5
   m_Name: Menu
   m_TagString: Untagged
@@ -414,6 +415,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1192511341875391286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5537710055465694618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 153dde007edc1a5408e0e7b6dbec1c81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonColor: {fileID: 11400000, guid: 30534d3ce7a0e5f45aec6fe85e2fff48, type: 2}
 --- !u!1 &5537710055550857221
 GameObject:
   m_ObjectHideFlags: 0
@@ -526,7 +540,8 @@ GameObject:
   - component: {fileID: 5537710055724716036}
   - component: {fileID: 5537710055724716057}
   - component: {fileID: 5537710055724716038}
-  - component: {fileID: 5537710055724716039}
+  - component: {fileID: 6576850958685014573}
+  - component: {fileID: 2676657334803611781}
   m_Layer: 5
   m_Name: Resume
   m_TagString: Untagged
@@ -590,7 +605,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &5537710055724716039
+--- !u!114 &6576850958685014573
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -599,7 +614,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5537710055724716037}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: ef0944bef7829f44ea2592924b9b0bab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -611,9 +626,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.6792453, g: 0.6792453, b: 0.6792453, a: 1}
-    m_PressedColor: {r: 0.23584908, g: 0.23584908, b: 0.23584908, a: 1}
-    m_SelectedColor: {r: 0.4528302, g: 0.4528302, b: 0.4528302, a: 1}
+    m_HighlightedColor: {r: 0.6784314, g: 0.6784314, b: 0.6784314, a: 1}
+    m_PressedColor: {r: 0.23529413, g: 0.23529413, b: 0.23529413, a: 1}
+    m_SelectedColor: {r: 0.45098042, g: 0.45098042, b: 0.45098042, a: 1}
     m_DisabledColor: {r: 0, g: 0, b: 0, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -634,27 +649,40 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_MethodName: Resume
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 0}
-        m_MethodName: ResumeMusic
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &2676657334803611781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5537710055724716037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 153dde007edc1a5408e0e7b6dbec1c81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonColor: {fileID: 11400000, guid: 30534d3ce7a0e5f45aec6fe85e2fff48, type: 2}
 --- !u!1 &5537710055829976073
 GameObject:
   m_ObjectHideFlags: 0
