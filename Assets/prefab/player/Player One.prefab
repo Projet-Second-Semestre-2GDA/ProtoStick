@@ -230,8 +230,8 @@ MonoBehaviour:
   bumperPrefab: {fileID: 3818499470033779928, guid: e78ced3cce39377489e09d756d949010,
     type: 3}
   materiauxBumper:
-  - {fileID: 2100000, guid: ebde088c0ac11424587641f685f2bd7c, type: 2}
-  - {fileID: 2100000, guid: 0b2ff8ead2d127e4e8c1faa0c00f2a5b, type: 2}
+  - {fileID: 2100000, guid: 1c541794f53da564b9f5a76526a3dccb, type: 2}
+  - {fileID: 2100000, guid: 7041e000fed0a5e49a5d176c5c2a0cc1, type: 2}
   timerBeforeNewShoot: 2
   distanceMaxTir: 350
   durationBewteenOpeningDoors: 0.5

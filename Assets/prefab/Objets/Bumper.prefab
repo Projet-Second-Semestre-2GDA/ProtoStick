@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6484790322904253899}
   - component: {fileID: 3119496313791162191}
   - component: {fileID: 5816834342345372817}
+  - component: {fileID: 2445066509649823560}
   m_Layer: 0
   m_Name: Bumper
   m_TagString: Bumper
@@ -113,6 +114,21 @@ MonoBehaviour:
   OverrideAttenuation: 1
   OverrideMinDistance: 30
   OverrideMaxDistance: 90
+--- !u!114 &2445066509649823560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3818499470033779928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7c6bb389907ace4e8c99ca734b8623c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsWithEmissiveMaterial:
+  - {fileID: 4160611299140870617}
+  - {fileID: 7712498567211359537}
 --- !u!1001 &192310151120912621
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -198,12 +214,17 @@ PrefabInstance:
     - target: {fileID: -1504981713932161579, guid: 54d5a50e8177ff647b0d9ec6abdde74c,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 54d5a50e8177ff647b0d9ec6abdde74c,
         type: 3}
       propertyPath: m_Name
       value: Base_Bumber
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 54d5a50e8177ff647b0d9ec6abdde74c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54d5a50e8177ff647b0d9ec6abdde74c, type: 3}
@@ -220,6 +241,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6287753611849498506}
     m_Modifications:
+    - target: {fileID: -7217828390678641911, guid: 7d1af46832ece954e94fe65e68c6bd1c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4898841953366944908, guid: 7d1af46832ece954e94fe65e68c6bd1c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 7d1af46832ece954e94fe65e68c6bd1c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -290,6 +321,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.75
       objectReference: {fileID: 0}
+    - target: {fileID: -1303533798577211092, guid: 7d1af46832ece954e94fe65e68c6bd1c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 7d1af46832ece954e94fe65e68c6bd1c,
         type: 3}
       propertyPath: m_Name
@@ -305,11 +341,28 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 7977819192417808284, guid: 7d1af46832ece954e94fe65e68c6bd1c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d1af46832ece954e94fe65e68c6bd1c, type: 3}
 --- !u!4 &4666872785817393591 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 7d1af46832ece954e94fe65e68c6bd1c,
+    type: 3}
+  m_PrefabInstance: {fileID: 413949480884040365}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4160611299140870617 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -4898841953366944908, guid: 7d1af46832ece954e94fe65e68c6bd1c,
+    type: 3}
+  m_PrefabInstance: {fileID: 413949480884040365}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7712498567211359537 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7977819192417808284, guid: 7d1af46832ece954e94fe65e68c6bd1c,
     type: 3}
   m_PrefabInstance: {fileID: 413949480884040365}
   m_PrefabAsset: {fileID: 0}
@@ -398,12 +451,17 @@ PrefabInstance:
     - target: {fileID: -1504981713932161579, guid: 11c76d533deac124eb315bad8267fc39,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 11c76d533deac124eb315bad8267fc39,
         type: 3}
       propertyPath: m_Name
       value: Head_Bumber
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 11c76d533deac124eb315bad8267fc39,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11c76d533deac124eb315bad8267fc39, type: 3}

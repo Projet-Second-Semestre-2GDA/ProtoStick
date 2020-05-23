@@ -195,6 +195,7 @@
             <e p="BumperDestroyBehavior.cs" t="Include" />
             <e p="Ending.cs" t="Include" />
             <e p="HelpOrientation.cs" t="Include" />
+            <e p="MaterialsSetter.cs" t="Include" />
             <e p="Obstacles" t="Include">
               <e p="DoubleDoor.cs" t="Include" />
               <e p="Interactible.cs" t="Include" />
@@ -254,8 +255,12 @@
             <e p="ModeUnPlayer.cs" t="Include" />
             <e p="PlayerNumber.cs" t="Include" />
             <e p="PlayerOptionChoose.cs" t="Include" />
+            <e p="Shader" t="Include">
+              <e p="RandomRecoltable.cs" t="Include" />
+            </e>
             <e p="UI" t="Include">
               <e p="ButtonColor.cs" t="Include" />
+              <e p="CustomInputModule.cs" t="Include" />
               <e p="Leadboard.cs" t="Include" />
               <e p="LeadboardSetter.cs" t="Include" />
               <e p="MoveScrollRect.cs" t="Include" />
@@ -296,6 +301,7 @@
                 <e p="{563024ab-ed8a-463a-a1e3-1c14c5c686ea}.xml" t="Include" />
                 <e p="{6172db73-5777-4605-97f1-127f6b5b757f}.xml" t="Include" />
                 <e p="{7485093a-a3ce-48af-9c83-891c14394be0}.xml" t="Include" />
+                <e p="{751fce70-bba9-4876-9acb-1276de37ea4e}.xml" t="Include" />
                 <e p="{7bb116bb-fcf7-460f-a233-2becadac3a85}.xml" t="Include" />
                 <e p="{8297f126-dc31-495e-a398-1bc337ef2993}.xml" t="Include" />
                 <e p="{88838de1-f3fe-46ca-b1b2-d809d429da4e}.xml" t="Include" />
@@ -312,14 +318,19 @@
                 <e p="{c4fb186d-7bbc-45aa-bea5-9f8e1e7988c4}.xml" t="Include" />
                 <e p="{c851e447-c219-4d1b-9d32-5c9e7f0d935a}.xml" t="Include" />
                 <e p="{ce605dd1-aa70-4555-9037-6f98c610eba0}.xml" t="Include" />
+                <e p="{cf0c2a48-50b7-4a9e-8702-6bdac2ab2b64}.xml" t="Include" />
                 <e p="{d2f1cea4-0833-4e5f-aff9-a0e942bb7eac}.xml" t="Include" />
                 <e p="{dc129d6b-b0d0-4817-b055-a14c2e41084f}.xml" t="Include" />
                 <e p="{e667da00-fa91-47d6-9edd-03de42887e06}.xml" t="Include" />
+                <e p="{e8a0c3b2-f020-4572-85ca-4c7b3b52130e}.xml" t="Include" />
                 <e p="{e9142bc3-418a-4302-91e9-9bd187a8aa06}.xml" t="Include" />
                 <e p="{eaaca86c-fa25-4891-ab23-23671d8f1997}.xml" t="Include" />
+                <e p="{edcd7765-a551-44bc-b251-971512340ba8}.xml" t="Include" />
+                <e p="{ef17bd8f-f8ea-45f9-8ed2-924a0a036b35}.xml" t="Include" />
                 <e p="{f3090bbd-aa8d-458d-8a58-0340d0880a79}.xml" t="Include" />
                 <e p="{f6af8e40-4afc-4ed3-b272-109028cdeca4}.xml" t="Include" />
                 <e p="{f9c81368-731f-493d-8ecb-55d8f53c10b4}.xml" t="Include" />
+                <e p="{fbd68df4-e9b9-499e-a2d1-8f21b0abab3c}.xml" t="Include" />
               </e>
               <e p="Bank" t="Include">
                 <e p="{1491bbb6-f3c9-456e-9f74-f28dc9f18a3e}.xml" t="Include" />
@@ -343,9 +354,11 @@
                 <e p="{2081e584-2135-4c3e-b095-2963a1c5ba70}.xml" t="Include" />
                 <e p="{24fa4899-a972-45e6-99b2-415d0811fcd8}.xml" t="Include" />
                 <e p="{2722d2e5-3755-4a1a-b828-370a6dfd0eb3}.xml" t="Include" />
+                <e p="{35bb712a-0dbb-4cc8-9454-ce413862df6c}.xml" t="Include" />
                 <e p="{3f86084a-7782-4081-8d0e-10c476ebefeb}.xml" t="Include" />
                 <e p="{513accd0-6ddb-41d3-b4fa-fb53507f5d97}.xml" t="Include" />
                 <e p="{5317b6ea-56b6-4f86-915b-1c7ab76fe2e7}.xml" t="Include" />
+                <e p="{53553789-b79b-41e4-86ca-c04f77c25004}.xml" t="Include" />
                 <e p="{5356293e-df9e-4dfe-8339-af9529ab2b19}.xml" t="Include" />
                 <e p="{67039aa2-6673-45b2-a18c-600dd274a47c}.xml" t="Include" />
                 <e p="{6b263c15-7d21-4ebb-9e8f-2d0a9455da19}.xml" t="Include" />
