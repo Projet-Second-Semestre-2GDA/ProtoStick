@@ -109,7 +109,8 @@ MonoBehaviour:
   guid: abcf1cab77c3eb4bbbffd757dd758a6b
   Banks:
   - {fileID: -7635345785730971095}
-  - {fileID: 8797789228890302055}
+  - {fileID: -7009625003562020218}
+  - {fileID: -3292894691690682369}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -209,6 +210,23 @@ MonoBehaviour:
   - Name: Desktop
     Value: 1052
   Exists: 1
+--- !u!114 &-8205693745300177332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/joueur_vitesse/acceleration_player
+  m_EditorClassIdentifier: 
+  Name: acceleration_player
+  Min: 0
+  Max: 250
+  Default: 0
+  Exists: 0
 --- !u!114 &-8126207065923501556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -539,6 +557,23 @@ MonoBehaviour:
   Max: 100
   Default: 100
   Exists: 0
+--- !u!114 &-7161169422346607529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: "parameter:/LD_D\xE9part_course/beginning_race"
+  m_EditorClassIdentifier: 
+  Name: beginning_race
+  Min: 0
+  Max: 9
+  Default: 0
+  Exists: 1
 --- !u!114 &-7131642005570033489
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -593,7 +628,8 @@ MonoBehaviour:
   guid: 3e2956539edffe4d8339af9529ab2b19
   Banks:
   - {fileID: -7635345785730971095}
-  - {fileID: 8797789228890302055}
+  - {fileID: -7009625003562020218}
+  - {fileID: -3292894691690682369}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -601,6 +637,27 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 51692
+--- !u!114 &-7009625003562020218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: D:/gitHub/ripository/ProtoStick/ProtoStick/Assets/sound design/Assemblage
+    FMOD/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637257771519244657
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 2781760
+  Exists: 1
 --- !u!114 &-6976306451288141526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -796,12 +853,13 @@ MonoBehaviour:
   Banks:
   - {fileID: 8008430209676961606}
   - {fileID: -7635345785730971095}
-  - {fileID: 8797789228890302055}
+  - {fileID: -7009625003562020218}
+  - {fileID: -3292894691690682369}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -7485554868267326885}
+  - {fileID: 3788339435999105049}
   MinDistance: 0
   MaxDistance: 0
   Length: 1745
@@ -821,7 +879,8 @@ MonoBehaviour:
   guid: 5f4190dd1bb62447b9d128d41f7e2acf
   Banks:
   - {fileID: -7635345785730971095}
-  - {fileID: 8797789228890302055}
+  - {fileID: -7009625003562020218}
+  - {fileID: -3292894691690682369}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -862,7 +921,8 @@ MonoBehaviour:
   guid: 84e5812035213e4cb0952963a1c5ba70
   Banks:
   - {fileID: -7635345785730971095}
-  - {fileID: 8797789228890302055}
+  - {fileID: -7009625003562020218}
+  - {fileID: -3292894691690682369}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1031,6 +1091,23 @@ MonoBehaviour:
   Max: 250
   Default: 0
   Exists: 0
+--- !u!114 &-5225398733854267910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: global_volume_voice
+  m_EditorClassIdentifier: 
+  Name: global_volume_voice
+  Min: 0
+  Max: 100
+  Default: 100
+  Exists: 1
 --- !u!114 &-5088205553624387438
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1051,6 +1128,27 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 2174
+  Exists: 1
+--- !u!114 &-5086625682535298469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: D:/gitHub/ripository/ProtoStick/ProtoStick/Assets/sound design/Assemblage
+    FMOD/Build/Desktop/Master.strings.bank
+  SubDir: 
+  lastModified: 637257771519294830
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 2276
   Exists: 1
 --- !u!114 &-5066107024516218555
 MonoBehaviour:
@@ -1288,7 +1386,8 @@ MonoBehaviour:
   guid: 9948fa2472a9e64599b2415d0811fcd8
   Banks:
   - {fileID: -7635345785730971095}
-  - {fileID: 8797789228890302055}
+  - {fileID: -7009625003562020218}
+  - {fileID: -3292894691690682369}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -1402,7 +1501,8 @@ MonoBehaviour:
   Banks:
   - {fileID: 8008430209676961606}
   - {fileID: -7635345785730971095}
-  - {fileID: 8797789228890302055}
+  - {fileID: -7009625003562020218}
+  - {fileID: -3292894691690682369}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1604,7 +1704,8 @@ MonoBehaviour:
   guid: e5d2222755371a4ab828370a6dfd0eb3
   Banks:
   - {fileID: -7635345785730971095}
-  - {fileID: 8797789228890302055}
+  - {fileID: -7009625003562020218}
+  - {fileID: -3292894691690682369}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1628,6 +1729,27 @@ MonoBehaviour:
   Min: 9.81
   Max: 200
   Default: 9.81
+  Exists: 1
+--- !u!114 &-3292894691690682369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: D:/gitHub/ripository/ProtoStick/ProtoStick/Assets/sound design/Assemblage
+    FMOD/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637257771519244657
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 2781760
   Exists: 1
 --- !u!114 &-3214162275627965974
 MonoBehaviour:
@@ -2049,6 +2171,23 @@ MonoBehaviour:
   Max: 200
   Default: 9.81
   Exists: 1
+--- !u!114 &-2002019191370269278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: global_volume_effect
+  m_EditorClassIdentifier: 
+  Name: global_volume_effect
+  Min: 0
+  Max: 100
+  Default: 100
+  Exists: 1
 --- !u!114 &-2000335079195956742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2066,6 +2205,23 @@ MonoBehaviour:
   Max: 250
   Default: 0
   Exists: 0
+--- !u!114 &-1801768931153682742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/joueur_vitesse/acceleration_player
+  m_EditorClassIdentifier: 
+  Name: acceleration_player
+  Min: 0
+  Max: 250
+  Default: 0
+  Exists: 1
 --- !u!114 &-1788787991166057544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2167,6 +2323,23 @@ MonoBehaviour:
   Min: 0
   Max: 9
   Default: 0
+  Exists: 1
+--- !u!114 &-1471241182179267725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: global_volume_effect
+  m_EditorClassIdentifier: 
+  Name: global_volume_effect
+  Min: 0
+  Max: 100
+  Default: 100
   Exists: 1
 --- !u!114 &-1451429230071845890
 MonoBehaviour:
@@ -2371,6 +2544,23 @@ MonoBehaviour:
   - Name: Desktop
     Value: 1052
   Exists: 1
+--- !u!114 &-726372090857729926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: global_volume_voice
+  m_EditorClassIdentifier: 
+  Name: global_volume_voice
+  Min: 0
+  Max: 100
+  Default: 100
+  Exists: 1
 --- !u!114 &-716807882816346150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2388,6 +2578,23 @@ MonoBehaviour:
   Max: 200
   Default: 9.81
   Exists: 1
+--- !u!114 &-653401751945243112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: "parameter:/LD_D\xE9part_course/beginning_race"
+  m_EditorClassIdentifier: 
+  Name: beginning_race
+  Min: 0
+  Max: 9
+  Default: 0
+  Exists: 0
 --- !u!114 &-628867889256031647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2438,6 +2645,23 @@ MonoBehaviour:
   Min: 9.81
   Max: 200
   Default: 9.81
+  Exists: 1
+--- !u!114 &-599787616727267202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: global_volume_music
+  m_EditorClassIdentifier: 
+  Name: global_volume_music
+  Min: 0
+  Max: 100
+  Default: 100
   Exists: 1
 --- !u!114 &-572964525005586191
 MonoBehaviour:
@@ -2634,6 +2858,23 @@ MonoBehaviour:
   Max: 100
   Default: 100
   Exists: 0
+--- !u!114 &-4119452434979301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: global_volume_ambiant
+  m_EditorClassIdentifier: 
+  Name: global_volume_ambiant
+  Min: 0
+  Max: 100
+  Default: 100
+  Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2647,8 +2888,8 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 808362800095000925}
-  - {fileID: 8797789228890302055}
+  - {fileID: 4147550659050738618}
+  - {fileID: -3292894691690682369}
   EditorEvents:
   - {fileID: -4027328660929523503}
   - {fileID: 6308415972350629624}
@@ -2674,15 +2915,15 @@ MonoBehaviour:
   - {fileID: 8195072987517368521}
   - {fileID: 5653255755675623432}
   EditorParameters:
-  - {fileID: 8009342739876390767}
-  - {fileID: -3891897296780362415}
-  - {fileID: -572964525005586191}
-  - {fileID: 6115888358753700878}
+  - {fileID: 2493099648327368580}
+  - {fileID: -726372090857729926}
+  - {fileID: -2002019191370269278}
+  - {fileID: 7880153750158208515}
   MasterBanks:
-  - {fileID: 8797789228890302055}
+  - {fileID: -3292894691690682369}
   StringsBanks:
-  - {fileID: 808362800095000925}
-  stringsBankWriteTime: 637257958832705025
+  - {fileID: 4147550659050738618}
+  stringsBankWriteTime: 637257771519294830
   cacheVersion: 3
 --- !u!114 &73073012226879880
 MonoBehaviour:
@@ -2900,7 +3141,8 @@ MonoBehaviour:
   guid: 0f45b36d72de3c4e819f3439b2a960c8
   Banks:
   - {fileID: -7635345785730971095}
-  - {fileID: 8797789228890302055}
+  - {fileID: -7009625003562020218}
+  - {fileID: -3292894691690682369}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -3081,12 +3323,13 @@ MonoBehaviour:
   guid: e099fb838a3e1844b68d166d8074ccf2
   Banks:
   - {fileID: -7635345785730971095}
-  - {fileID: 8797789228890302055}
+  - {fileID: -7009625003562020218}
+  - {fileID: -3292894691690682369}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 3538831106480248698}
+  - {fileID: -1801768931153682742}
   MinDistance: 0
   MaxDistance: 0
   Length: 3410
@@ -3161,6 +3404,23 @@ MonoBehaviour:
   - Name: Desktop
     Value: 51392
   Exists: 1
+--- !u!114 &1918053491901691903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/chute_avatar/vitesseDeChute
+  m_EditorClassIdentifier: 
+  Name: vitesseDeChute
+  Min: 9.81
+  Max: 200
+  Default: 9.81
+  Exists: 0
 --- !u!114 &1949513694071526071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3263,6 +3523,23 @@ MonoBehaviour:
   Max: 100
   Default: 100
   Exists: 0
+--- !u!114 &2493099648327368580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: global_volume_music
+  m_EditorClassIdentifier: 
+  Name: global_volume_music
+  Min: 0
+  Max: 100
+  Default: 100
+  Exists: 1
 --- !u!114 &2512650636106978703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3436,12 +3713,13 @@ MonoBehaviour:
   guid: 3efe5eebb1fe2e4984fb7bd7eac04bf5
   Banks:
   - {fileID: -7635345785730971095}
-  - {fileID: 8797789228890302055}
+  - {fileID: -7009625003562020218}
+  - {fileID: -3292894691690682369}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 2726360512234524479}
+  - {fileID: -7161169422346607529}
   MinDistance: 0
   MaxDistance: 0
   Length: 9230
@@ -3581,6 +3859,23 @@ MonoBehaviour:
   Max: 100
   Default: 100
   Exists: 0
+--- !u!114 &3788339435999105049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/chute_avatar/vitesseDeChute
+  m_EditorClassIdentifier: 
+  Name: vitesseDeChute
+  Min: 9.81
+  Max: 200
+  Default: 9.81
+  Exists: 1
 --- !u!114 &3791184719810538436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3614,7 +3909,8 @@ MonoBehaviour:
   guid: f7831fbdeff1a84596f7ed99a5ac5317
   Banks:
   - {fileID: -7635345785730971095}
-  - {fileID: 8797789228890302055}
+  - {fileID: -7009625003562020218}
+  - {fileID: -3292894691690682369}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -3638,7 +3934,8 @@ MonoBehaviour:
   guid: c365ec1edb2359499bb0e4035d2e8b21
   Banks:
   - {fileID: -7635345785730971095}
-  - {fileID: 8797789228890302055}
+  - {fileID: -7009625003562020218}
+  - {fileID: -3292894691690682369}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -3717,6 +4014,27 @@ MonoBehaviour:
   Min: 9.81
   Max: 200
   Default: 9.81
+  Exists: 1
+--- !u!114 &4147550659050738618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: D:/gitHub/ripository/ProtoStick/ProtoStick/Assets/sound design/Assemblage
+    FMOD/Build/Desktop/Master.strings.bank
+  SubDir: 
+  lastModified: 637257771519294830
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 2276
   Exists: 1
 --- !u!114 &4199796679097816097
 MonoBehaviour:
@@ -3811,7 +4129,8 @@ MonoBehaviour:
   Banks:
   - {fileID: 8008430209676961606}
   - {fileID: -7635345785730971095}
-  - {fileID: 8797789228890302055}
+  - {fileID: -7009625003562020218}
+  - {fileID: -3292894691690682369}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -4038,7 +4357,8 @@ MonoBehaviour:
   guid: 56d4bab5065adb42a7022247cec89540
   Banks:
   - {fileID: -7635345785730971095}
-  - {fileID: 8797789228890302055}
+  - {fileID: -7009625003562020218}
+  - {fileID: -3292894691690682369}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -4213,7 +4533,8 @@ MonoBehaviour:
   Path: "event:/DA glitch/Level Design/LD_rocket_touch\xE9e_sur_joueur_2"
   guid: 893755539bb7e44186cac04f77c25004
   Banks:
-  - {fileID: 8797789228890302055}
+  - {fileID: -7009625003562020218}
+  - {fileID: -3292894691690682369}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -4530,7 +4851,8 @@ MonoBehaviour:
   Banks:
   - {fileID: 8008430209676961606}
   - {fileID: -7635345785730971095}
-  - {fileID: 8797789228890302055}
+  - {fileID: -7009625003562020218}
+  - {fileID: -3292894691690682369}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -4893,7 +5215,8 @@ MonoBehaviour:
   guid: d317d3b79dd4d949b8415c14b0f7fc6a
   Banks:
   - {fileID: -7635345785730971095}
-  - {fileID: 8797789228890302055}
+  - {fileID: -7009625003562020218}
+  - {fileID: -3292894691690682369}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -4918,7 +5241,8 @@ MonoBehaviour:
   Banks:
   - {fileID: 8008430209676961606}
   - {fileID: -7635345785730971095}
-  - {fileID: 8797789228890302055}
+  - {fileID: -7009625003562020218}
+  - {fileID: -3292894691690682369}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -4926,6 +5250,23 @@ MonoBehaviour:
   MinDistance: 65
   MaxDistance: 200
   Length: 511
+--- !u!114 &7880153750158208515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: global_volume_ambiant
+  m_EditorClassIdentifier: 
+  Name: global_volume_ambiant
+  Min: 0
+  Max: 100
+  Default: 100
+  Exists: 1
 --- !u!114 &8008430209676961606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4980,7 +5321,8 @@ MonoBehaviour:
   guid: 458887dc405ef44bbc5b02b2a7670f2f
   Banks:
   - {fileID: -7635345785730971095}
-  - {fileID: 8797789228890302055}
+  - {fileID: -7009625003562020218}
+  - {fileID: -3292894691690682369}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -5054,7 +5396,8 @@ MonoBehaviour:
   Path: "event:/DA glitch/Level Design/LD_rocket_touch\xE9e_sur_joueur_1"
   guid: 2a71bb35bb0dc84c9454ce413862df6c
   Banks:
-  - {fileID: 8797789228890302055}
+  - {fileID: -7009625003562020218}
+  - {fileID: -3292894691690682369}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -5079,7 +5422,8 @@ MonoBehaviour:
   Banks:
   - {fileID: 8008430209676961606}
   - {fileID: -7635345785730971095}
-  - {fileID: 8797789228890302055}
+  - {fileID: -7009625003562020218}
+  - {fileID: -3292894691690682369}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -5251,7 +5595,8 @@ MonoBehaviour:
   guid: ee91981e157d544499970122c358b40a
   Banks:
   - {fileID: -7635345785730971095}
-  - {fileID: 8797789228890302055}
+  - {fileID: -7009625003562020218}
+  - {fileID: -3292894691690682369}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1

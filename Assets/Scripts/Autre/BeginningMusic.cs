@@ -16,6 +16,8 @@ public class BeginningMusic : MonoBehaviour
     private FMOD.Studio.EventInstance prideAscent;
     private FMOD.Studio.EventInstance dexterityAscent;
 
+    private FMOD.Studio.EventInstance feedbackChute;
+
     public ModeUnPlayer modeUnPlayer;
 
     public float debutCourse;
@@ -61,21 +63,15 @@ public class BeginningMusic : MonoBehaviour
 
         if (Input.GetAxis("Pause") != 0)
         {
-            comptageDepart.setPaused(true);
             
-            bassLine.setPaused(true);
-            prideAscent.setPaused(true);
-            dexterityAscent.setPaused(true);
+            FMODUnity.RuntimeManager.PauseAllEvents(true);
         }
     }
 
     public void ResumeMusic()
     {
-        comptageDepart.setPaused(false);
-
-        bassLine.setPaused(false);
-        prideAscent.setPaused(false);
-        dexterityAscent.setPaused(false);
+        
+        FMODUnity.RuntimeManager.PauseAllEvents(false);
     }
 
 
