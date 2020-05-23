@@ -27,7 +27,7 @@ public class Ending : MonoBehaviour
 
     private int recoltableInMap;
     
-    [SerializeField] List<string> finishNames = new List<string>();
+    private List<string> finishNames = new List<string>();
     
     void Awake()
     {
