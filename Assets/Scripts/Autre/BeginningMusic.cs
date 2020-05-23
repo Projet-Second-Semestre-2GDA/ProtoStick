@@ -7,6 +7,8 @@ public class BeginningMusic : MonoBehaviour
 {
     public List <GameObject> player;
 
+    private FMOD.Studio.Bus masterBus;
+
     private FMOD.Studio.EventInstance comptageDepart;
     private FMOD.Studio.EventDescription comptageDepartDescription;
     private FMOD.Studio.PARAMETER_DESCRIPTION beginningRaceDescription;
@@ -25,6 +27,7 @@ public class BeginningMusic : MonoBehaviour
 
     private void Start()
     {
+        masterBus = FMODUnity.RuntimeManager.GetBus("Bus:/");
        
         comptageDepart = FMODUnity.RuntimeManager.CreateInstance("event:/DA glitch/Level Design/LD_Départ_course");
 
@@ -72,6 +75,12 @@ public class BeginningMusic : MonoBehaviour
     {
         
         FMODUnity.RuntimeManager.PauseAllEvents(false);
+    }
+
+    public void StopMusicMenu()
+    {
+        FMODUnity.RuntimeManager.PauseAllEvents(false);
+        masterBus.stopAllEvents(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
 
 

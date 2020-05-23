@@ -130,7 +130,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{a6338848-bb1d-45a9-9265-01a35139b130}">
 		<property name="volume">
-			<value>-9.5</value>
+			<value>-11.5</value>
 		</property>
 		<property name="name">
 			<value>Audio 1</value>
@@ -197,13 +197,13 @@
 	</object>
 	<object class="SingleSound" id="{81bfcba1-4a45-4596-8f3d-5caeae1d45ae}">
 		<property name="start">
-			<value>0.22</value>
+			<value>0.23000000000000001</value>
 		</property>
 		<property name="length">
-			<value>0.33999999999999997</value>
+			<value>0.32999999999999996</value>
 		</property>
 		<property name="timelockedOffset">
-			<value>0.26681279467858221</value>
+			<value>0.27452384880562192</value>
 		</property>
 		<property name="pitch">
 			<value>-4.5</value>
@@ -267,6 +267,7 @@
 			<destination>{388123e0-8cf0-4643-b7e3-33dbd0aa0598}</destination>
 			<destination>{9a953402-9562-4b1c-8fdb-9d4d7aa0f400}</destination>
 			<destination>{533308ca-7bbb-455f-9b0d-3d34e5b93f56}</destination>
+			<destination>{afa66957-bbc8-4fce-a26f-a6c9a0d24042}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{e64e62af-0720-42a9-82a6-bd643e60dca3}" />
@@ -364,12 +365,12 @@
 			<value>0</value>
 		</property>
 		<property name="curveShape">
-			<value>-0.0658798888</value>
+			<value>0.155178994</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{659e4e86-6f18-4ac6-aa02-2f79a521b51a}">
 		<property name="position">
-			<value>0.11</value>
+			<value>0.19</value>
 		</property>
 		<property name="value">
 			<value>1</value>
@@ -377,7 +378,7 @@
 	</object>
 	<object class="AutomationPoint" id="{a10f312e-73f7-4a12-b116-b565a96cfa61}">
 		<property name="position">
-			<value>0.17999999999999999</value>
+			<value>0.44</value>
 		</property>
 		<property name="value">
 			<value>1</value>
@@ -400,7 +401,7 @@
 			<value>-8.5</value>
 		</property>
 		<property name="dryLevel">
-			<value>-5</value>
+			<value>-11</value>
 		</property>
 	</object>
 	<object class="ChorusEffect" id="{533308ca-7bbb-455f-9b0d-3d34e5b93f56}">
@@ -409,6 +410,11 @@
 		</property>
 		<property name="depth">
 			<value>100</value>
+		</property>
+	</object>
+	<object class="ThreeEQEffect" id="{afa66957-bbc8-4fce-a26f-a6c9a0d24042}">
+		<property name="lowGain">
+			<value>3.5</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{644d427a-c8f9-425e-baa6-ec8e358ce9bf}">
@@ -560,7 +566,7 @@
 	</object>
 	<object class="AutomationPoint" id="{9a3e8571-35fb-417c-a68d-abe8c8e45ae9}">
 		<property name="position">
-			<value>0.22</value>
+			<value>0.23000000000000001</value>
 		</property>
 		<property name="value">
 			<value>0</value>
@@ -571,7 +577,7 @@
 	</object>
 	<object class="AutomationPoint" id="{9ca5dabc-9e62-4f91-a906-e18678b63b25}">
 		<property name="position">
-			<value>0.32000000000000006</value>
+			<value>0.33000000000000007</value>
 		</property>
 		<property name="value">
 			<value>1</value>
@@ -579,7 +585,7 @@
 	</object>
 	<object class="AutomationPoint" id="{038a3681-7f4b-4302-a553-f8f2b9cca60d}">
 		<property name="position">
-			<value>0.41000000000000014</value>
+			<value>0.44</value>
 		</property>
 		<property name="value">
 			<value>1</value>
