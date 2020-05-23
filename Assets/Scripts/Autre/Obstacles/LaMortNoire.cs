@@ -49,6 +49,8 @@ public class LaMortNoire : MonoBehaviour
             attachedRigidbody.velocity = new Vector3();
             attachedRigidbody.angularVelocity = new Vector3();
             player.GetComponent<Movement>().DisableMovement(durationCantMoveAfterRespawn);
+
+            FMODUnity.RuntimeManager.PlayOneShot("event:/DA glitch/Level Design/LD_chute_zone_noire", playerCollider.transform.position);
         }
     }
 }
