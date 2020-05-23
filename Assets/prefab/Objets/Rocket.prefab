@@ -130,9 +130,10 @@ MonoBehaviour:
     type: 3}
   explosionVisualLifeTime: 0.551
   explosionRadius: 20
-  defaultTimeBeforeDestroy: 1.5
+  defaultTimeBeforeDestroy: 5
   reinitialiseAcceleration: 0
   minMaxExplosionForce: {x: 10, y: 35}
+  playerWhoThrowTheRocket: -1
 --- !u!54 &2914702739594896616
 Rigidbody:
   m_ObjectHideFlags: 0

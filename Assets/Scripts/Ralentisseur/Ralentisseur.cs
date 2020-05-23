@@ -9,6 +9,8 @@ public class Ralentisseur : MonoBehaviour
     
     [SerializeField] private float vitesseimposée = 15f;
 
+    [SerializeField] private bool ralentisseurStopUpgraderSpeed = true; 
+
     [SerializeField] private float duree = 1f;
     // List<GameObject> playerIn = new List<GameObject>();
 
@@ -26,12 +28,31 @@ public class Ralentisseur : MonoBehaviour
     {
         if (other.attachedRigidbody.CompareTag("Player"))
         {
-            ralentisseurFeedback.start();
-            Rigidbody rb;
-            (rb = other.attachedRigidbody).GetComponent<Movement>().ReductionSpeed(vitesseimposée, duree);
-            // rb.velocity = rb.velocity.normalized;
-            // playerIn.Add(rb.gameObject);
+            Ralentissement(other);
         }
 
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.attachedRigidbody.CompareTag("Player"))
+        {
+            Ralentissement(other);
+        }
+    }
+
+    private void Ralentissement(Collider other)
+    {
+        ralentisseurFeedback.start();
+        Rigidbody rb;
+        (rb = other.attachedRigidbody).GetComponent<Movement>().ReductionSpeed(vitesseimposée, duree);
+        if (ralentisseurStopUpgraderSpeed)
+        {
+            rb.GetComponent<Movement>().ResetUpgrade();
+            rb.GetComponent<ModifiedGravity>().ForceGoDown();
+        }
+
+        // rb.velocity = rb.velocity.normalized;
+        // playerIn.Add(rb.gameObject);
     }
 }
