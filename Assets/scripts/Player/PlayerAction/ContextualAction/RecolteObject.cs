@@ -47,7 +47,7 @@ public class RecolteObject : MonoBehaviour
         return objectRecolted;
     }
 
-    public void Boost(float puissance)
+    public void Boost(float puissance, GameObject obj)
     {
         if (!haveBeenBoost)
         {
@@ -56,6 +56,6 @@ public class RecolteObject : MonoBehaviour
             haveBeenBoost = true;
             timerNextBoost = Time.time + durationBoost;
         }
-        
+        Destroy(obj);
     }
 }
