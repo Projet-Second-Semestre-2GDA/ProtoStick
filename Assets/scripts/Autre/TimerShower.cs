@@ -10,7 +10,7 @@ public class TimerShower : MonoBehaviour
 {
     [SerializeField] private Text timeShower;
 
-    private float timer;
+    public float timer;
     private bool canUpdate = false;
     private bool isOver = false;
 

@@ -684,7 +684,7 @@
 			<value>-12</value>
 		</property>
 		<property name="release">
-			<value>840</value>
+			<value>680</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{9a3e8571-35fb-417c-a68d-abe8c8e45ae9}">
@@ -820,7 +820,7 @@
 			<value>-12</value>
 		</property>
 		<property name="release">
-			<value>840</value>
+			<value>680</value>
 		</property>
 	</object>
 	<object class="SFXReverbEffect" id="{86889390-b135-41fd-9922-4c69e21a992c}">

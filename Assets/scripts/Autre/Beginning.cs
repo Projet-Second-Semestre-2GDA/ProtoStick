@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Beginning : MonoBehaviour
 {
     private bool hasBegin = false;
@@ -14,6 +15,7 @@ public class Beginning : MonoBehaviour
     private bool pause = false;
     private List<float> compteur = new List<float>();
     private float timePass = 0;
+
     private void Start()
     {
         
@@ -57,6 +59,7 @@ public class Beginning : MonoBehaviour
     
             if (timePass > compteur[compteur.Count - 1])
             {
+                TheGameHasBegin.theGameHasBegin = true; //là ou il y a la flèche rouge
                 foreach (var obj in Over)
                 {
                     obj.SetActive(false);
@@ -69,6 +72,8 @@ public class Beginning : MonoBehaviour
 
                 hasBegin = true;
             }
+            else TheGameHasBegin.theGameHasBegin = false;
+
         }
 
     }

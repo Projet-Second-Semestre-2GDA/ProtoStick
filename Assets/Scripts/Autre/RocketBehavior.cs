@@ -26,12 +26,17 @@ public class RocketBehavior : MonoBehaviour
     private float numeroCollisionJoueur;
     private bool rocketHasPlayed = false;
 
+    [Title("script de Timer Total")]
+    public TimerTotal timerTotal;
+
     
     
     // For the code
     private float timer;
     [HideInInspector] public int playerWhoThrowTheRocket = -1;
+
     
+
     private void Awake()
     {
         if (explosionVisual == null)
@@ -96,13 +101,13 @@ public class RocketBehavior : MonoBehaviour
                 }
             }
 
-            if (numeroCollisionJoueur == 8 && rocketHasPlayed == false && playerWhoThrowTheRocket == 2)
+            if (numeroCollisionJoueur == 8 && rocketHasPlayed == false && playerWhoThrowTheRocket == 2 && TheGameHasBegin.theGameHasBegin == true)
             {
                 FMODUnity.RuntimeManager.PlayOneShot("event:/DA glitch/Level Design/LD_rocket_touchée_sur_joueur_1");
                 rocketHasPlayed = true;
             }
 
-            else if (numeroCollisionJoueur == 11 && rocketHasPlayed == false && playerWhoThrowTheRocket == 1)
+            else if (numeroCollisionJoueur == 11 && rocketHasPlayed == false && playerWhoThrowTheRocket == 1 && TheGameHasBegin.theGameHasBegin == true)
             {
                 FMODUnity.RuntimeManager.PlayOneShot("event:/DA glitch/Level Design/LD_rocket_touchée_sur_joueur_2");
                 rocketHasPlayed = true;
@@ -116,6 +121,8 @@ public class RocketBehavior : MonoBehaviour
 
     private void Update()
     {
+        
+
         if (Time.time >= timer)
         {
             if (rocketExplodeAfterLifeTime) TimeOver();
