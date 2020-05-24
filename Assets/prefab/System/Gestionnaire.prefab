@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6869106727264498710}
   - component: {fileID: 3289001071545339349}
   - component: {fileID: 1414106271614882485}
+  - component: {fileID: 8508769729232166817}
   m_Layer: 0
   m_Name: Gestionnaire
   m_TagString: Gestionnaire
@@ -44,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d928ee8a9c5d9be45a45439fef0a0aed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameObjectsADesactiver: []
+  playerTwo: {fileID: 0}
   playerOne: {fileID: 0}
   UpRef: {fileID: 0}
   modeUnJoueur: 0
@@ -61,7 +62,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UI: {fileID: 0}
+  debut: {fileID: 0}
   players: []
   eventSystem: {fileID: 0}
   gameObjectToSelect: {fileID: 0}
+  ResumeButton: {fileID: 0}
   urlFeedback: https://forms.gle/pSeSzSjDvmm3j1eX8
+--- !u!114 &8508769729232166817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6869106727264498696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ce2decd5fdad2142beaf05df3f966b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  beginningTimer: 6
+  canPlayRocketAnnounce: 0
