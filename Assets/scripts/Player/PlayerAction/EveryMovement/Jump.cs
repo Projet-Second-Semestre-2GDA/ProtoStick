@@ -38,6 +38,10 @@ public class Jump : MonoBehaviour
     private bool hasToActive = false;
     private float realActive;
 
+    
+    // [TitleGroup("Animation")]
+    private Animator playerAnimation;
+    
     private void Awake()
     {
         active = true;
@@ -48,10 +52,14 @@ public class Jump : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         modifiedGravity = GetComponent<ModifiedGravity>();
         playerNumber = GetComponent<PlayerNumber>();
+        playerAnimation = GetComponentInChildren<Animator>();
+
     }
 
     private void Update()
     {
+        playerAnimation.SetBool("Jump",false);
+        playerAnimation.SetBool("IsGrounded",isGrounded);
         if (active)
         {
             // Debug.Log(name + "a pour input" + "Jump" + playerNumber.playerNumber);
@@ -116,6 +124,7 @@ public class Jump : MonoBehaviour
         // actualHeight = transform.position.y;
         // heightPreviousCheck = actualHeight;
         // futurHeight = actualHeight + height;
+        
         SetVelocityY(jumpVelocity);
         forceJump = true;
         SetNextCheck(timeBetweenCheck);
@@ -145,6 +154,7 @@ public class Jump : MonoBehaviour
 
     private void SetVelocityY(float y)
     {
+        playerAnimation.SetBool("Jump",true);
         var velocity = rb.velocity; 
         velocity.y = y;
         rb.velocity = velocity;

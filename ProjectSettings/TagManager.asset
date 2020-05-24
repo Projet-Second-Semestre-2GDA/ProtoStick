@@ -15,6 +15,7 @@ TagManager:
   - Button
   - ScrollViewer
   - SuperRecoltable
+  - Animation
   layers:
   - Default
   - TransparentFX

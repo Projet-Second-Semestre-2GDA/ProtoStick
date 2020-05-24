@@ -27,6 +27,10 @@ public class Movement : MonoBehaviour
 
     [Title("Variable liées aux bumper")]
     [SerializeField] private float upgradeMax = 10; 
+    
+    // [TitleGroup("Animation")]
+    private Animator playerAnimation;
+    
     // [SerializeField] private float durationUpgradeDefault = 2f;
     // [Title("Variable liée à l'influence sur la vitesse")] 
     // [SerializeField] private float speedReductor = 2;
@@ -55,6 +59,7 @@ public class Movement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         jump = GetComponent<Jump>();
         playerNumber = GetComponent<PlayerNumber>();
+        playerAnimation = GetComponentInChildren<Animator>();
     }
 
     private void FixedUpdate()
@@ -95,6 +100,11 @@ public class Movement : MonoBehaviour
 
     private void Moove(float v, float h, float deltaTime, float oldV,float oldH)
     {
+        //Animation
+        playerAnimation.SetFloat("Walk",Mathf.Abs(v));
+        playerAnimation.SetBool("WalkBackward",(oldV<-0.1));
+        //Fin de l'animation
+        
         var velocity = rb.velocity;
         float y = velocity.y;
         

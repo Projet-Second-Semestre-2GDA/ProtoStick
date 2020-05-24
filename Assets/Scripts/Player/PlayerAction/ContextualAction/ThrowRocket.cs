@@ -22,12 +22,15 @@ public class ThrowRocket : MonoBehaviour
     private bool alreadyDid = false;
     private float timer;
     private Camera cam;
+    
+    private Animator playerAnimation;
 
     private void Start()
     {
         cam = GetComponentInChildren<Camera>();
         timer = 0;
         inputName += GetComponent<PlayerNumber>().playerNumber;
+        playerAnimation = GetComponentInChildren<Animator>();
     }
 
     // Start is called before the first frame update
@@ -35,13 +38,14 @@ public class ThrowRocket : MonoBehaviour
     void Update()
     {
         // Debug.Log(inputName + " = "+ Input.GetAxis(inputName));
-        
+        var shoot = false;
         if (Input.GetAxis(inputName) >0.1f && !alreadyDid)
         {
             alreadyDid = true;
             if (Time.time >= timer)
             {
                 Shoot();
+                shoot = true;
                 timer = Time.time + timeBeforeNextShot;
             }
         }
@@ -49,6 +53,9 @@ public class ThrowRocket : MonoBehaviour
         {
             alreadyDid = false;
         }
+
+        
+        playerAnimation.SetBool("Shoot",shoot);
     }
 
     private void Shoot()
