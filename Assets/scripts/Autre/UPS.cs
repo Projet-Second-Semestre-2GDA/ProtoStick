@@ -1,14 +1,18 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using UnityEngine;
 using Sirenix.OdinInspector;
 using UnityEngine.UI;
 
 public class UPS : MonoBehaviour
 {
+    [TitleGroup("UPS Parameters")]
     [SerializeField,Range(0,1)] private float refreshTime = 0.5f;
     [SerializeField] private Text UPSAffichagePlayer;
+    [SerializeField] private int numberOfNumberOfterComa = 2;
+    
     
     private float nextTimer = -1;
     
@@ -62,9 +66,13 @@ public class UPS : MonoBehaviour
 
             actualsUPSPlayer /= timePass;
         }
+        
+        var vitesse = (actualsUPSPlayer < 0.5f)? 0f : actualsUPSPlayer;
+        
+        UPSAffichagePlayer.text =
+            LeadboardSetter.RoundValue(vitesse, Mathf.Pow(10, numberOfNumberOfterComa))
+                .ToString(CultureInfo.CurrentUICulture);
 
-        UPSAffichagePlayer.text = "La vitesse du joueur " + playerNumber + " est de " +
-                                  ((actualsUPSPlayer < 0.5f) ? 0 : actualsUPSPlayer) + " UPS.     ";
         previousPositionPlayer.Clear();
         //actualsUPSPlayer = 0;
         nextTimer = Time.time + refreshTime;

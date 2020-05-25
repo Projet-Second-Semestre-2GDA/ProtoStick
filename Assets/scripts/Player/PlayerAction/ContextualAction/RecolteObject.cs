@@ -28,7 +28,7 @@ public class RecolteObject : MonoBehaviour
 
     private void Update()
     {
-        RecoltableShower.text ="     " + objectRecolted + " " + ((objectRecolted < 2) ? "objet récolté" : "objets récoltés");
+        RecoltableShower.text = objectRecolted.ToString()/*+ " " + ((objectRecolted < 2) ? "objet récolté" : "objets récoltés")*/;
         if (haveBeenBoost && Time.time >= timerNextBoost)
         {
             haveBeenBoost = false;

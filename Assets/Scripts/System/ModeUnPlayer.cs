@@ -19,11 +19,14 @@ public class ModeUnPlayer : MonoBehaviour
     [SerializeField] private GameObject playerOne;
     public RectTransform UpRef;
 
-    private Camera cameraAModifier;
+    [TitleGroup("HideInTwoPlayer")] [SerializeField]
+    private List<GameObject> objectToDisable = new List<GameObject>();
     
     [Title("ChoosingMode")]
     public bool modeUnJoueur;
-
+    
+    //Private !!
+    private Camera cameraAModifier;
     private void Start()
     {
         cameraAModifier = playerOne.GetComponentInChildren<Camera>();
@@ -33,20 +36,31 @@ public class ModeUnPlayer : MonoBehaviour
 
     private void Update()
     {
-        if (modeUnJoueur)
+        if (modeUnJoueur)//Mode un joueur
         {
             playerTwo.SetActive(false);
             
             cameraAModifier.rect = new Rect(0,0,1,1);
             cameraAModifier.fieldOfView = 100;
             ChangeViseurPosition(1080);
+            
+            foreach (var obj in objectToDisable)
+            {
+                obj.SetActive(true);
+            }
+            
         }
-        else
+        else//Mode Deux Joueurs
         {
             playerTwo.SetActive(true);
             cameraAModifier.rect = new Rect(0,0.5f,1,0.5f);
             cameraAModifier.fieldOfView = 60;
 
+            foreach (var obj in objectToDisable)
+            {
+                obj.SetActive(false);
+            }
+            
             ChangeViseurPosition(540);
 
         }
