@@ -23,13 +23,12 @@ public class RocketBehavior : MonoBehaviour
     [Title("Explosion Parameters")] //C'est le "10" et le "200" les variable a modifié si vous trouver ne pas avoir assez de liberté sur mes valeurs
     [SerializeField, MinMaxSlider(10, 200, true)] private Vector2 minMaxExplosionForce = new Vector2(10,50);
 
-    private float numeroCollisionJoueur;
+    private int numeroCollisionJoueur;
     private bool rocketHasPlayed = false;
 
     [Title("script de Timer Total")]
     public TimerTotal timerTotal;
 
-    
     
     // For the code
     private float timer;
@@ -86,10 +85,19 @@ public class RocketBehavior : MonoBehaviour
             {
                 Vector3 direction = col.transform.position - explosionPoint;
                 float force = Mathf.Lerp(minMaxExplosionForce.x, minMaxExplosionForce.y, 1 - (direction.magnitude / explosionRadius));
-                col.attachedRigidbody.AddForce(direction.normalized * force,ForceMode.VelocityChange);
+                Rigidbody rb = null;
+                (rb = col.attachedRigidbody).AddForce(direction.normalized * force,ForceMode.VelocityChange);
                 if (reinitialiseAcceleration)
                 {    
                     col.GetComponent<Movement>().ResetUpgrade();
+                }
+                
+                //Fmod :
+                int playerNumberTouch = rb.GetComponent<PlayerNumber>().playerNumber;
+                
+                if ( playerNumberTouch != playerWhoThrowTheRocket && TheGameHasBegin.theGameHasBegin)
+                {
+                    VoiceLinePlaying.PlaySound("event:/DA glitch/Level Design/LD_rocket_touchée_sur_joueur_" + playerNumberTouch);
                 }
             }
             else
@@ -100,22 +108,7 @@ public class RocketBehavior : MonoBehaviour
                     interactible.Activate();
                 }
             }
-
-            if (numeroCollisionJoueur == 8 && rocketHasPlayed == false && playerWhoThrowTheRocket == 2 && TheGameHasBegin.theGameHasBegin == true && VoiceLinePlaying.voiceLineIsPlayingRightNow == false)
-            {
-                FMODUnity.RuntimeManager.PlayOneShot("event:/DA glitch/Level Design/LD_rocket_touchée_sur_joueur_1");
-                rocketHasPlayed = true;
-            }
-
-            else if (numeroCollisionJoueur == 11 && rocketHasPlayed == false && playerWhoThrowTheRocket == 1 && TheGameHasBegin.theGameHasBegin == true && VoiceLinePlaying.voiceLineIsPlayingRightNow == false)
-            {
-                FMODUnity.RuntimeManager.PlayOneShot("event:/DA glitch/Level Design/LD_rocket_touchée_sur_joueur_2");
-                rocketHasPlayed = true;
-            }
-
         }
-
-        rocketHasPlayed = false;
         
     }
 
