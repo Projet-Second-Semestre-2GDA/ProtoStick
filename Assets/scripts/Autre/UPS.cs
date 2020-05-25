@@ -12,8 +12,8 @@ public class UPS : MonoBehaviour
     [SerializeField,Range(0,1)] private float refreshTime = 0.5f;
     [SerializeField] private Text UPSAffichagePlayer;
     [SerializeField] private int numberOfNumberOfterComa = 2;
-    
-    
+
+    private int textSize;
     private float nextTimer = -1;
     
     // [SerializeField] private GameObject[] players = new GameObject[2];
@@ -35,6 +35,7 @@ public class UPS : MonoBehaviour
     private void Start()
     {
         playerNumber = GetComponent<PlayerNumber>().playerNumber;
+        textSize = UPSAffichagePlayer.fontSize;
     }
 
     // Update is called once per frame
@@ -68,10 +69,20 @@ public class UPS : MonoBehaviour
         }
         
         var vitesse = (actualsUPSPlayer < 0.5f)? 0f : actualsUPSPlayer;
+        if (vitesse<1000)
+        {
+            UPSAffichagePlayer.fontSize = textSize;
+            UPSAffichagePlayer.text =
+                        LeadboardSetter.RoundValue(vitesse, Mathf.Pow(10, numberOfNumberOfterComa))
+                            .ToString(CultureInfo.CurrentUICulture);
+        }
+        else
+        {
+            UPSAffichagePlayer.fontSize = (int)(textSize / 1.8f);
+            UPSAffichagePlayer.text = "Trop Rapide";
+        }
+
         
-        UPSAffichagePlayer.text =
-            LeadboardSetter.RoundValue(vitesse, Mathf.Pow(10, numberOfNumberOfterComa))
-                .ToString(CultureInfo.CurrentUICulture);
 
         previousPositionPlayer.Clear();
         //actualsUPSPlayer = 0;

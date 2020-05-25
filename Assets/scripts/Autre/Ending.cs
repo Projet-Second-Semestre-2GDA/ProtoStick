@@ -112,4 +112,13 @@ public class Ending : MonoBehaviour
             obj.GetComponent<TimerShower>().raceEnd();
         }
     }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            other.attachedRigidbody.GetComponent<ModifiedGravity>().ForceGoDown();
+        }
+        
+    }
 }

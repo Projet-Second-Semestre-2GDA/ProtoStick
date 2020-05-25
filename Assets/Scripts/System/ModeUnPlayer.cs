@@ -24,6 +24,9 @@ public class ModeUnPlayer : MonoBehaviour
     
     [Title("ChoosingMode")]
     public bool modeUnJoueur;
+
+    [TitleGroup("Resize in J1")] [SerializeField]
+    private List<RectTransform> uiToResize;
     
     //Private !!
     private Camera cameraAModifier;
@@ -71,6 +74,12 @@ public class ModeUnPlayer : MonoBehaviour
         var pos = UpRef.sizeDelta;
         pos.y = Y;
         UpRef.sizeDelta = pos;
+        foreach (RectTransform ui in uiToResize)
+        {
+            pos = ui.sizeDelta;
+            pos.y = Y;
+            ui.sizeDelta = pos;
+        }
     }
 
     public void SetMode(PlayerMode playerMode)
