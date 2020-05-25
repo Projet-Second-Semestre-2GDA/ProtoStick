@@ -335,6 +335,23 @@ MonoBehaviour:
   Max: 200
   Default: 9.81
   Exists: 0
+--- !u!114 &-8090899860274305132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: global_volume_effect
+  m_EditorClassIdentifier: 
+  Name: global_volume_effect
+  Min: 0
+  Max: 100
+  Default: 100
+  Exists: 1
 --- !u!114 &-8088052205965079949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -885,6 +902,23 @@ MonoBehaviour:
   Max: 200
   Default: 9.81
   Exists: 0
+--- !u!114 &-6906106566905292281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/joueur_vitesse/acceleration_player
+  m_EditorClassIdentifier: 
+  Name: acceleration_player
+  Min: 0
+  Max: 250
+  Default: 0
+  Exists: 1
 --- !u!114 &-6891018264912472127
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1120,7 +1154,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 1872196846808359554}
+  - {fileID: -4883060409562740877}
   MinDistance: 0
   MaxDistance: 0
   Length: 1745
@@ -1588,6 +1622,23 @@ MonoBehaviour:
   MinDistance: 80
   MaxDistance: 200
   Length: 3410
+--- !u!114 &-4883060409562740877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/chute_avatar/vitesseDeChute
+  m_EditorClassIdentifier: 
+  Name: vitesseDeChute
+  Min: 9.81
+  Max: 200
+  Default: 9.81
+  Exists: 1
 --- !u!114 &-4842231292653243597
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2193,11 +2244,11 @@ MonoBehaviour:
   Path: D:/gitHub/ripository/ProtoStick/ProtoStick/Assets/sound design/Assemblage
     FMOD/Build/Desktop/Master.bank
   SubDir: 
-  lastModified: 637260498245986363
+  lastModified: 637260528949756520
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 2994176
+    Value: 3014368
   Exists: 1
 --- !u!114 &-3214162275627965974
 MonoBehaviour:
@@ -2700,6 +2751,23 @@ MonoBehaviour:
   m_Name: global_volume_music
   m_EditorClassIdentifier: 
   Name: global_volume_music
+  Min: 0
+  Max: 100
+  Default: 100
+  Exists: 1
+--- !u!114 &-1860189491071789988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: global_volume_ambiant
+  m_EditorClassIdentifier: 
+  Name: global_volume_ambiant
   Min: 0
   Max: 100
   Default: 100
@@ -3450,16 +3518,17 @@ MonoBehaviour:
   - {fileID: -8393146296223944019}
   - {fileID: 2054683541948779063}
   - {fileID: 8423765386113973562}
+  - {fileID: 8555096281418068264}
   EditorParameters:
-  - {fileID: 3667797107505846087}
-  - {fileID: -8222815472751492937}
-  - {fileID: 91464035022973412}
-  - {fileID: 5005341778237477147}
+  - {fileID: 695496430996859791}
+  - {fileID: 2769115020069191843}
+  - {fileID: -8090899860274305132}
+  - {fileID: -1860189491071789988}
   MasterBanks:
   - {fileID: -3292894691690682369}
   StringsBanks:
   - {fileID: 4147550659050738618}
-  stringsBankWriteTime: 637260498246245689
+  stringsBankWriteTime: 637260528949836315
   cacheVersion: 3
 --- !u!114 &73073012226879880
 MonoBehaviour:
@@ -3657,6 +3726,23 @@ MonoBehaviour:
   - Name: Desktop
     Value: 2781760
   Exists: 0
+--- !u!114 &695496430996859791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: global_volume_music
+  m_EditorClassIdentifier: 
+  Name: global_volume_music
+  Min: 0
+  Max: 100
+  Default: 100
+  Exists: 1
 --- !u!114 &732794003797256131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3933,7 +4019,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -5390244798155555902}
+  - {fileID: -6906106566905292281}
   MinDistance: 0
   MaxDistance: 0
   Length: 3410
@@ -4286,6 +4372,23 @@ MonoBehaviour:
   Max: 9
   Default: 0
   Exists: 1
+--- !u!114 &2769115020069191843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: global_volume_voice
+  m_EditorClassIdentifier: 
+  Name: global_volume_voice
+  Min: 0
+  Max: 100
+  Default: 100
+  Exists: 1
 --- !u!114 &2886318271987375528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4448,7 +4551,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 6339315927046191597}
+  - {fileID: 3549150680379362490}
   MinDistance: 0
   MaxDistance: 0
   Length: 8800
@@ -4518,6 +4621,23 @@ MonoBehaviour:
   Name: acceleration_player
   Min: 0
   Max: 250
+  Default: 0
+  Exists: 1
+--- !u!114 &3549150680379362490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: "parameter:/LD_D\xE9part_course/beginning_race"
+  m_EditorClassIdentifier: 
+  Name: beginning_race
+  Min: 0
+  Max: 9
   Default: 0
   Exists: 1
 --- !u!114 &3552165802818875906
@@ -4827,11 +4947,11 @@ MonoBehaviour:
   Path: D:/gitHub/ripository/ProtoStick/ProtoStick/Assets/sound design/Assemblage
     FMOD/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637260498246245689
+  lastModified: 637260528949836315
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 2432
+    Value: 2480
   Exists: 1
 --- !u!114 &4199796679097816097
 MonoBehaviour:
@@ -6514,6 +6634,29 @@ MonoBehaviour:
   - Name: Desktop
     Value: 2020928
   Exists: 1
+--- !u!114 &8555096281418068264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/DA glitch/Level Design/LD_Super_Recoltable
+  m_EditorClassIdentifier: 
+  Path: event:/DA glitch/Level Design/LD_Super_Recoltable
+  guid: 57c08a9af4a18645aa472162e75df450
+  Banks:
+  - {fileID: -3292894691690682369}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 60
+  MaxDistance: 300
+  Length: 1000
 --- !u!114 &8578984095512406101
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -38,6 +38,7 @@ public class RecolteObject : MonoBehaviour
     public void AddRecoltable(GameObject obj)
     {
         ++objectRecolted;
+        FMODUnity.RuntimeManager.PlayOneShot("event:/DA glitch/Level Design/LD_Super_Recoltable", transform.position);
         // UniversalRecoltObject.AddRecoltable();
         Destroy(obj);
     }
