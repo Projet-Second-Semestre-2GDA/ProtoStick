@@ -29,7 +29,7 @@ public class TimerTotal : MonoBehaviour
         if (timerTotal >= beginningTimer)
         {
             canPlayRocketAnnounce = true;
-            Debug.Log("TU PEUX JOUER LA ROCKET");
+            // Debug.Log("TU PEUX JOUER LA ROCKET");
         }
 
          
