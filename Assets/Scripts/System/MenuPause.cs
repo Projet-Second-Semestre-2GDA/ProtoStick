@@ -22,11 +22,13 @@ public class MenuPause : MonoBehaviour
     private List<Vector3> velocity;
     private List<Vector3> angularVelocity;
 
+    private GlobalTimer timer;
+
 
     private bool isPause = false;
     void Start()
     {
-        
+        timer = GetComponent<GlobalTimer>();
         velocity = new List<Vector3>();
         angularVelocity = new List<Vector3>();
         UI.SetActive(false);
@@ -52,6 +54,7 @@ public class MenuPause : MonoBehaviour
         UI.SetActive(true);
         debut.Pause();
         eventSystem.SetSelectedGameObject(gameObjectToSelect);
+        timer.Pause();
     }
 
     public void Resume()
@@ -61,7 +64,7 @@ public class MenuPause : MonoBehaviour
         UI.SetActive(false);
         isPause = false;
         eventSystem.SetSelectedGameObject(null);
-
+        timer.Resume();
     }
 
     public void ReturnToMenu()
@@ -91,7 +94,7 @@ public class MenuPause : MonoBehaviour
                 players[i].GetComponent<TirsClicGauche>().SetThrowBumper(false);
                 players[i].GetComponent<Jump>().SetThrowJump(false);
                 players[i].GetComponent<ModifiedGravity>().SetModifiedGravity(false);
-                players[i].GetComponent<TimerShower>().StopChrono();
+                // players[i].GetComponent<TimerShower>().StopChrono();
                 players[i].GetComponentInChildren<ThirdPersonCameraControl>().SetCamera(false);
             }
 
@@ -113,7 +116,7 @@ public class MenuPause : MonoBehaviour
                 players[i].GetComponent<TirsClicGauche>().SetThrowBumper(true);
                 players[i].GetComponent<Jump>().SetThrowJump(true);
                 players[i].GetComponent<ModifiedGravity>().SetModifiedGravity(true);
-                players[i].GetComponent<TimerShower>().ResumeChrono();
+                // players[i].GetComponent<TimerShower>().ResumeChrono();
                 players[i].GetComponentInChildren<ThirdPersonCameraControl>().SetCamera(true);
             }
         }

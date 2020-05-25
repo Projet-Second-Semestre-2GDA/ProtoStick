@@ -254,6 +254,7 @@
           </e>
           <e p="system" t="Include">
             <e p="GestionMenu.cs" t="Include" />
+            <e p="GlobalTimer.cs" t="Include" />
             <e p="MenuPause.cs" t="Include" />
             <e p="ModeUnPlayer.cs" t="Include" />
             <e p="PlayerNumber.cs" t="Include" />

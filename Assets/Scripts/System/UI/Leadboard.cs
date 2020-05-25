@@ -16,7 +16,6 @@ public class Leadboard : MonoBehaviour
     [SerializeField] private Color couleurDeLaVictoire = Color.yellow;
     [SerializeField,ListDrawerSettings(Expanded = true)] private FontStyles[] fontStylesDeLaVictoire;
     [SerializeField] private float fontSize = 35f;
-    
 
     private void Start()
     {
@@ -80,6 +79,7 @@ public class Leadboard : MonoBehaviour
             levelsTimerText[i - 1].text = "None";
         }
     }
+    
     
     
     [TitleGroup("Recoltable")]
