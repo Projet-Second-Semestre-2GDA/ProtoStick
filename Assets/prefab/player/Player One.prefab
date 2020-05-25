@@ -337,6 +337,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   refreshTime: 0.5
   UPSAffichagePlayer: {fileID: 5031663922845032661}
+  numberOfNumberOfterComa: 2
   actualsUPSPlayer: 0
 --- !u!114 &6818670899115546122
 MonoBehaviour:

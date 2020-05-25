@@ -31,6 +31,6 @@ public static class LeadboardSetter
     /// <returns> Rounded float value </returns>
     public static float RoundValue(float num, float precision)
     {
-        return Mathf.Floor(num * precision + 0.5f) / precision;
+        return Mathf.Floor(num * precision) / precision;
     }
 }
