@@ -2,16 +2,17 @@
 using System.Collections.Generic;
 using FMOD.Studio;
 using UnityEngine;
+using UnityEngine.UI;
 
-public static class VoiceLinePlaying 
+public static class VoiceLinePlaying
 {
 
 
     private static FMOD.Studio.EventInstance currentSound;
+    private static VoiceLinePriority soundPriority;
 
-    
 
-    public static void PlaySound(string path, bool playNow = false)
+    public static void PlaySound(string path, VoiceLinePriority priotity = VoiceLinePriority.None)
     {
         FMOD.Studio.PLAYBACK_STATE state;
         currentSound.getPlaybackState(out state);
@@ -19,14 +20,14 @@ public static class VoiceLinePlaying
         {
             currentSound = FMODUnity.RuntimeManager.CreateInstance(path);
             currentSound.start();
+            soundPriority = priotity;
         }
-        else if (playNow)
+        else if (priotity != VoiceLinePriority.None && (int)priotity > (int)soundPriority)
         {
             currentSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             currentSound = FMODUnity.RuntimeManager.CreateInstance(path);
             currentSound.start();
         }
-        
     }
 
     public static void ForceStopCurrentVoice()
@@ -34,4 +35,12 @@ public static class VoiceLinePlaying
         currentSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
 
+}
+
+public enum VoiceLinePriority
+{
+    None = -1,
+    small = 1,
+    big = 2,
+    gigantic = 3
 }
