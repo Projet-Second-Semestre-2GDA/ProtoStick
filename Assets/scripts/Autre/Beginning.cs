@@ -16,19 +16,15 @@ public class Beginning : MonoBehaviour
     private List<float> compteur = new List<float>();
     private float timePass = 0;
 
+    private GameObject gestionnaire;
+    private GlobalTimer timer;
+
     private void Start()
     {
-        
-
+        gestionnaire = GameObject.FindGameObjectWithTag("Gestionnaire");
+        timer = gestionnaire.GetComponent<GlobalTimer>();
         hasBegin = false;
-        
-        for (int i = 0; i < players.Length; i++)
-        {
-            // players[i].GetComponent<Movement>().DisableMovement(((listApperanceOnBegining.Count - 1)*timeBetweenBegining) + 0.5f);
-            players[i].GetComponent<TimerShower>().StopChrono();
-            
-        
-        }
+
 
         for (int i = 0; i < listApperanceOnBegining.Count; i++)
         {
@@ -36,7 +32,7 @@ public class Beginning : MonoBehaviour
             compteur.Add(timePass + i*timeBetweenBegining + 0.5f);
         }
         listApperanceOnBegining[0].SetActive(true);
-
+        timer.StopAndRest();
     }
 
     private void Update()
@@ -60,15 +56,12 @@ public class Beginning : MonoBehaviour
             if (timePass > compteur[compteur.Count - 1])
             {
                 TheGameHasBegin.theGameHasBegin = true; //là ou il y a la flèche rouge
+                timer.Start();
                 foreach (var obj in Over)
                 {
                     obj.SetActive(false);
                 }
                 
-                for (int i = 0; i < players.Length; i++)
-                {
-                    players[i].GetComponent<TimerShower>().StartChrono();
-                }
 
                 hasBegin = true;
             }

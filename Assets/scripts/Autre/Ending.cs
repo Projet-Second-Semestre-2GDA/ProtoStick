@@ -8,6 +8,8 @@ using UnityEngine.UI;
 
 public class Ending : MonoBehaviour
 {
+    [TitleGroup("The big Show")] 
+    [SerializeField] private List<GameObject> winners;
     
     private bool raceIsOver;
 
@@ -15,7 +17,7 @@ public class Ending : MonoBehaviour
 
     private GameObject canvas;
     
-    private Text text;
+    // private Text text;
 
     private int numberOfPlayerArrive;
 
@@ -40,20 +42,24 @@ public class Ending : MonoBehaviour
     private void Start()
     {
         canvas = GetComponentInChildren<Canvas>().gameObject;
-        text = GetComponentInChildren<Text>();
+        // text = GetComponentInChildren<Text>();
         canvas.SetActive(false);
         modeUnPlayer = GameObject.FindGameObjectWithTag("Gestionnaire").GetComponent<ModeUnPlayer>();
         nombreDeJoueurAAtteindre = (modeUnPlayer.modeUnJoueur) ? 1 : 2;
         recoltableCatch = 0;
         recoltableInMap = GameObject.FindGameObjectsWithTag("SuperRecoltable").Length;
+        foreach (var winner in winners)
+        {
+            winner.SetActive(false);
+        }
     }
 
-    private void SetWin(string name)
+    private void SetWin(string name,int winnerIndex)
     {
         Debug.LogWarning("The winner est " + name);
         canvas.SetActive(true);
-        text.text = "The Winner is\n" + name;
-        
+        // text.text = "The Winner is\n" + name;
+        winners[winnerIndex].SetActive(true);
         if (name == "Player One")
         {
             VoiceLinePlaying.PlaySound("event:/DA glitch/Level Design/LD_Victoire_joueur_1", VoiceLinePriority.gigantic);
@@ -94,7 +100,7 @@ public class Ending : MonoBehaviour
             {
                 raceIsOver = true;
                 winnerName = obj.name;
-                SetWin(winnerName);
+                SetWin(winnerName,obj.GetComponent<PlayerNumber>().playerIndex);
             }
 
             if (numberOfPlayerArrive >= nombreDeJoueurAAtteindre)

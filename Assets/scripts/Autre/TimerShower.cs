@@ -14,19 +14,21 @@ public class TimerShower : MonoBehaviour
     [TitleGroup("Parameters")] 
     private int numberAfterComma = 4;
     [HideInInspector]public float timer;
-    private bool canUpdate = false;
     private bool isOver = false;
 
+    private GlobalTimer globalTimer;
+    
     private void Start()
     {
-        //StartChrono();
+        globalTimer = GameObject.FindGameObjectWithTag("Gestionnaire").GetComponent<GlobalTimer>();
     }
 
     private void Update()
     {
-        if (canUpdate && !isOver)
+
+        if (!isOver)
         {
-            UpdateChrono(Time.deltaTime);
+            UpdateChrono();
         }
 
         int minute = Mathf.FloorToInt(timer/60);
@@ -101,33 +103,15 @@ public class TimerShower : MonoBehaviour
             
         }
         
-        
         //Fin de l'affichage
         timeShower.text = (minute < 60)
             ? realMin + " min " + realSec
             : "Trop Long";
     }
 
-    public void StartChrono()
+    private void UpdateChrono()
     {
-        canUpdate = true;
-        timer = 0;
-    }
-
-    public void ResumeChrono(float timeResume = -1)
-    {
-        canUpdate = true;
-        timer = (timeResume < 0) ? timer : timeResume;
-    }
-
-    public void StopChrono()
-    {
-        canUpdate = false;
-    }
-
-    private void UpdateChrono(float timeAdd)
-    {
-        timer += timeAdd;
+        timer = globalTimer.GetTime();
     }
 
     public float GetTimer()
@@ -144,3 +128,4 @@ public class TimerShower : MonoBehaviour
         LeadboardSetter.LevelFinish(levelID,timer);
     }
 }
+
