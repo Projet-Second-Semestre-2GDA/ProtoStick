@@ -12,8 +12,8 @@ public class TimerShower : MonoBehaviour
     [SerializeField] private Text timeShower;
 
     [TitleGroup("Parameters")] 
-    [SerializeField] private int numberAfterComma = 4;
-    public float timer;
+    private int numberAfterComma = 4;
+    [HideInInspector]public float timer;
     private bool canUpdate = false;
     private bool isOver = false;
 
