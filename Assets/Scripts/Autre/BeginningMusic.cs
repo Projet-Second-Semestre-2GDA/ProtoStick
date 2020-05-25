@@ -29,20 +29,16 @@ public class BeginningMusic : MonoBehaviour
     {
         masterBus = FMODUnity.RuntimeManager.GetBus("Bus:/");
        
-        comptageDepart = FMODUnity.RuntimeManager.CreateInstance("event:/DA glitch/Level Design/LD_Départ_course");
-
         bassLine = FMODUnity.RuntimeManager.CreateInstance("event:/DA glitch/Musique/Msc_Bassline");
         prideAscent = FMODUnity.RuntimeManager.CreateInstance("event:/DA glitch/Musique/Msc_Pride_Ascent");
         dexterityAscent = FMODUnity.RuntimeManager.CreateInstance("event:/DA glitch/Musique/Msc_Dexterity_Ascent");
-
-        
 
         bassLine.start();
         prideAscent.start();
         dexterityAscent.start();
 
-        comptageDepart.start();
-
+        VoiceLinePlaying.PlaySound("event:/DA glitch/Level Design/LD_Départ_course", VoiceLinePriority.gigantic);
+        
         comptageDepartDescription = FMODUnity.RuntimeManager.GetEventDescription("event:/DA glitch/Level Design/LD_Départ_course");
         comptageDepartDescription.getParameterDescriptionByName("beginning_race", out beginningRaceDescription);
 

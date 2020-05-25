@@ -56,12 +56,12 @@ public class Ending : MonoBehaviour
         
         if (name == "Player One")
         {
-            FMODUnity.RuntimeManager.PlayOneShot("event:/DA glitch/Level Design/LD_Victoire_joueur_1");
+            VoiceLinePlaying.PlaySound("event:/DA glitch/Level Design/LD_Victoire_joueur_1", VoiceLinePriority.gigantic);
         }
 
         if (name == "Player Two")
         {
-            FMODUnity.RuntimeManager.PlayOneShot("event:/DA glitch/Level Design/LD_Victoire_joueur_2");
+            VoiceLinePlaying.PlaySound("event:/DA glitch/Level Design/LD_Victoire_joueur_2", VoiceLinePriority.gigantic);
         }
     }
     
