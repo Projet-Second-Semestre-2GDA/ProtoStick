@@ -27,7 +27,7 @@ public class TimerShower : MonoBehaviour
         }
 
         int minute = Mathf.FloorToInt(timer/60);
-        timeShower.text = "     Timer : " + minute + " min "+ (timer - minute*60);
+        timeShower.text = /*"     Timer : " +*/ minute + " min "+ (timer - minute*60);
     }
 
     public void StartChrono()
