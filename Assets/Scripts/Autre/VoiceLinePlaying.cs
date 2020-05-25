@@ -1,46 +1,37 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using FMOD.Studio;
 using UnityEngine;
 
-public class VoiceLinePlaying : MonoBehaviour
+public static class VoiceLinePlaying 
 {
 
-    private FMOD.Studio.EventInstance voiceComptageDepart;
-    private FMOD.Studio.EventInstance voiceRocketTouchJoueur1;
-    private FMOD.Studio.EventInstance voiceRocketTouchJoueur2;
-    private FMOD.Studio.EventInstance voiceVictoireJoueur1;
-    private FMOD.Studio.EventInstance voiceVictoireJoueur2;
 
-    private bool IsPlaying(FMOD.Studio.EventInstance instance)
+    private static FMOD.Studio.EventInstance currentSound;
+
+    
+
+    public static void PlaySound(string path, bool playNow = false)
     {
         FMOD.Studio.PLAYBACK_STATE state;
-        instance.getPlaybackState(out state);
-        return state != FMOD.Studio.PLAYBACK_STATE.STOPPED;
-    }
-
-    public static bool voiceLineIsPlayingRightNow = false;
-
-    private void Start()
-    {
-        voiceComptageDepart = FMODUnity.RuntimeManager.CreateInstance("event:/DA glitch/Level Design/LD_Départ_course");
-
-        voiceRocketTouchJoueur1 = FMODUnity.RuntimeManager.CreateInstance("event:/DA glitch/Level Design/LD_rocket_touchée_sur_joueur_1");
-        voiceRocketTouchJoueur2 = FMODUnity.RuntimeManager.CreateInstance("event:/DA glitch/Level Design/LD_rocket_touchée_sur_joueur_2");
-
-        voiceVictoireJoueur1 = FMODUnity.RuntimeManager.CreateInstance("event:/DA glitch/Level Design/LD_Victoire_joueur_1");
-        voiceVictoireJoueur2 = FMODUnity.RuntimeManager.CreateInstance("event:/DA glitch/Level Design/LD_Victoire_joueur_2");
-    }
-
-    private void Update()
-    {
-        if (IsPlaying(voiceComptageDepart) || IsPlaying(voiceRocketTouchJoueur1) || IsPlaying(voiceRocketTouchJoueur2) || IsPlaying(voiceVictoireJoueur1) || IsPlaying(voiceVictoireJoueur2))
+        currentSound.getPlaybackState(out state);
+        if (state == FMOD.Studio.PLAYBACK_STATE.STOPPED)
         {
-            voiceLineIsPlayingRightNow = true;
-            Debug.Log("Il y a une voiceline en train de se jouer");
+            currentSound = FMODUnity.RuntimeManager.CreateInstance(path);
+            currentSound.start();
         }
-        else voiceLineIsPlayingRightNow = false;
+        else if (playNow)
+        {
+            currentSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            currentSound = FMODUnity.RuntimeManager.CreateInstance(path);
+            currentSound.start();
+        }
+        
+    }
 
-        Debug.Log("voice line is playing : " + voiceLineIsPlayingRightNow);
+    public static void ForceStopCurrentVoice()
+    {
+        currentSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
 
 }
