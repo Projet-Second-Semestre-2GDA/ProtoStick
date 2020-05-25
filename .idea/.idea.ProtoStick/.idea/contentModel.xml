@@ -205,9 +205,12 @@
             </e>
             <e p="Recoltable.cs" t="Include" />
             <e p="RocketBehavior.cs" t="Include" />
+            <e p="TheGameHasBegin.cs" t="Include" />
             <e p="TimerShower.cs" t="Include" />
+            <e p="TimerTotal.cs" t="Include" />
             <e p="UpRefScript.cs" t="Include" />
             <e p="UPS.cs" t="Include" />
+            <e p="VoiceLinePlaying.cs" t="Include" />
           </e>
           <e p="Ball" t="Include">
             <e p="PickableObject.cs" t="Include" />
@@ -289,6 +292,7 @@
                 <e p="{1f30314a-8515-47a3-8e5b-e43242fb7e38}.xml" t="Include" />
                 <e p="{23bf42dc-7c34-4603-b966-d16c23df3608}.xml" t="Include" />
                 <e p="{23e8bc95-c937-4721-a137-84a455fc0484}.xml" t="Include" />
+                <e p="{298b1fa7-4053-4f08-9442-755757acdf07}.xml" t="Include" />
                 <e p="{2b48d9b0-e04e-4f14-9466-59bbc4c10634}.xml" t="Include" />
                 <e p="{36e6aab7-8234-4084-8bfb-6b10584ee2c4}.xml" t="Include" />
                 <e p="{4445e7f6-d955-4091-9318-1091f308dd16}.xml" t="Include" />
@@ -303,6 +307,8 @@
                 <e p="{55b6166c-f724-41a0-b3a1-29693317c3be}.xml" t="Include" />
                 <e p="{563024ab-ed8a-463a-a1e3-1c14c5c686ea}.xml" t="Include" />
                 <e p="{6172db73-5777-4605-97f1-127f6b5b757f}.xml" t="Include" />
+                <e p="{64546822-cdb7-46b2-ac1a-313673159ee3}.xml" t="Include" />
+                <e p="{6e230eca-6147-48ee-8946-869fb66d2481}.xml" t="Include" />
                 <e p="{7485093a-a3ce-48af-9c83-891c14394be0}.xml" t="Include" />
                 <e p="{751fce70-bba9-4876-9acb-1276de37ea4e}.xml" t="Include" />
                 <e p="{7bb116bb-fcf7-460f-a233-2becadac3a85}.xml" t="Include" />
@@ -327,6 +333,7 @@
                 <e p="{db0fa330-19a1-4f5f-b3d8-81bb385437a1}.xml" t="Include" />
                 <e p="{dc129d6b-b0d0-4817-b055-a14c2e41084f}.xml" t="Include" />
                 <e p="{dda7ea87-71e4-422c-b8e9-10eb0c91187a}.xml" t="Include" />
+                <e p="{dfa47bdc-19c5-47a6-a845-e8ab67aae17b}.xml" t="Include" />
                 <e p="{e667da00-fa91-47d6-9edd-03de42887e06}.xml" t="Include" />
                 <e p="{e8a0c3b2-f020-4572-85ca-4c7b3b52130e}.xml" t="Include" />
                 <e p="{e9142bc3-418a-4302-91e9-9bd187a8aa06}.xml" t="Include" />
@@ -381,6 +388,7 @@
                 <e p="{dc878845-5e40-4bf4-bc5b-02b2a7670f2f}.xml" t="Include" />
                 <e p="{dd90415f-b61b-4724-b9d1-28d41f7e2acf}.xml" t="Include" />
                 <e p="{eb5efe3e-feb1-492e-84fb-7bd7eac04bf5}.xml" t="Include" />
+                <e p="{eccf3e8b-df37-4e0d-a2c4-55a4d581bd70}.xml" t="Include" />
               </e>
               <e p="EventFolder" t="Include">
                 <e p="{14254331-0ce3-402d-ac44-2e35a1252bf8}.xml" t="Include" />
