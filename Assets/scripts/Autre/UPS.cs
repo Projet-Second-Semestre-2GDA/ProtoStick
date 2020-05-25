@@ -63,8 +63,8 @@ public class UPS : MonoBehaviour
             actualsUPSPlayer /= timePass;
         }
 
-        UPSAffichagePlayer.text = "La vitesse du joueur " + playerNumber + " est de " +
-                                  ((actualsUPSPlayer < 0.5f) ? 0 : actualsUPSPlayer) + " UPS.     ";
+        UPSAffichagePlayer.text = /*"La vitesse du joueur " + playerNumber + " est de " +*/((actualsUPSPlayer < 0.5f) ? 0 : actualsUPSPlayer).ToString()/* + " UPS.     "*/;
+
         previousPositionPlayer.Clear();
         //actualsUPSPlayer = 0;
         nextTimer = Time.time + refreshTime;
