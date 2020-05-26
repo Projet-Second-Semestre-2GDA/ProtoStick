@@ -5,8 +5,8 @@ using Sirenix.OdinInspector;
 public class ModifiedGravity : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField,PropertyRange(0,1)] private float addedGravity = 0.732f;
-    [SerializeField,PropertyRange(0.9f,1)] private float frictionMultiplicator = 1f;
+    [SerializeField, PropertyRange(0, 1)] private float addedGravity = 0.732f;
+    [SerializeField, PropertyRange(0.9f, 1)] private float frictionMultiplicator = 1f;
 
     Vector3 previousPosition;
     Vector3 thisPosition;
@@ -15,7 +15,9 @@ public class ModifiedGravity : MonoBehaviour
     private bool ForceGravity = false;
 
     private bool active = true;
-    
+
+    public float totalFall = 0;
+
     void Awake()
     {
         active = true;
@@ -32,6 +34,7 @@ public class ModifiedGravity : MonoBehaviour
 
             if (thisPosition.y < previousPosition.y)
             {
+                totalFall += (previousPosition.y - thisPosition.y);
                 ForceGravity = false;
                 AccelerationVerticale();
                 FrictionDeLAir();
@@ -41,7 +44,11 @@ public class ModifiedGravity : MonoBehaviour
                 AccelerationVerticale();
                 FrictionDeLAir();
             }
-        
+            else
+            {
+                totalFall = 0;
+            }
+
             previousPosition = thisPosition;
         }
 

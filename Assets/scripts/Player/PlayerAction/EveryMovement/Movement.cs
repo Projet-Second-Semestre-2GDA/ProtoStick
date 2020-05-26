@@ -51,6 +51,8 @@ public class Movement : MonoBehaviour
     private float designDivider = -1;
     
     private float canMove = 0;
+
+    public bool hasTheMultiplicatorReset = false;
     
     //Check if ground
     
@@ -88,14 +90,17 @@ public class Movement : MonoBehaviour
         if (isUpgrade && jump.isGrounded && Time.time >= timeStopUpgrade)
         {
             ResetUpgrade();
+            hasTheMultiplicatorReset = true;
         }
     }
 
     public void ResetUpgrade()
     {
         Debug.Log("J'ai reset ton multiplicateur connard !");
+
         globalUpgradeMultiplicator = 1;
         isUpgrade = false;
+        hasTheMultiplicatorReset = false;
     }
 
     private void Moove(float v, float h, float deltaTime, float oldV,float oldH)
