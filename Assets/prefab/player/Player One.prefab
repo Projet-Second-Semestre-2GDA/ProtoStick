@@ -1314,7 +1314,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1.5
+      scalar: 0.5
       minScalar: 0.2
       maxCurve:
         serializedVersion: 2
@@ -1799,7 +1799,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 5000
+    maxNumParticles: 2000
     size3D: 0
     rotation3D: 0
     gravityModifier:
@@ -1859,7 +1859,7 @@ ParticleSystem:
     serializedVersion: 6
     enabled: 1
     type: 4
-    angle: 20
+    angle: 15
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
@@ -1945,7 +1945,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 10
+      value: 30
       mode: 0
       spread: 0
       speed:
@@ -6100,8 +6100,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0579183b475c500459f311b9aeca1504, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emissionOverSpeed: {x: 0, y: 80}
-  speedDesire: {x: 100, y: 500}
+  emissionOverSpeed: {x: 0, y: 30}
+  speedDesire: {x: 120, y: 300}
   transitionSpeed: 20
 --- !u!1 &4826098183085389569
 GameObject:

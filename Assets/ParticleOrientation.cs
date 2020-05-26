@@ -13,7 +13,7 @@ public class ParticleOrientation : MonoBehaviour
         /// </summary>
       
     [TitleGroup("Parameters")]
-    [SerializeField,MinMaxSlider(0,500,true)] private Vector2 emissionOverSpeed = new Vector2(0,80);
+    [SerializeField,MinMaxSlider(0,100,true)] private Vector2 emissionOverSpeed = new Vector2(0,80);
     [SerializeField,MinMaxSlider(0,500,true)] private Vector2 speedDesire = new Vector2(120,300);
     
     [SerializeField] public float transitionSpeed = 20;
