@@ -23,9 +23,10 @@ public class AccelerationFeedback : MonoBehaviour
 
     private void Start()
     {
+        
         uPS = GetComponent<UPS>();
         // FMODUnity.RuntimeManager.
-        joueurVitesse = FMODUnity.RuntimeManager.CreateInstance("event:/DA glitch/Personnage longiforme/joueur_vitesse");
+        joueurVitesse = FMODUnity.RuntimeManager.CreateInstance("event:/DA glitch/Personnage longiforme/joueur_acceleration");
         joueurVitesse.setVolume(5);
         
 
@@ -34,6 +35,8 @@ public class AccelerationFeedback : MonoBehaviour
 
     private void Update()
     {
+
+        Debug.Log(FindObjectsOfType<FMODUnity.RuntimeManager>().Length);
         joueurVitesse.setVolume(5);
         speedNumber = uPS.actualsUPSPlayer;
         var result = joueurVitesse.setParameterByName("acceleration_player_flanger", speedNumber);
@@ -43,6 +46,9 @@ public class AccelerationFeedback : MonoBehaviour
         PLAYBACK_STATE state;
         joueurVitesse.getPlaybackState(out state);
         Debug.Log("State : " + state);
+
+        //GlobalParameterAcceleration();
+
         if (state == PLAYBACK_STATE.STOPPED)
         {
             joueurVitesse.start();
@@ -52,11 +58,11 @@ public class AccelerationFeedback : MonoBehaviour
             float accelerationPlayerFlanger;
             joueurVitesse.getParameterByName("acceleration_player_flanger", out accelerationPlayerFlanger);
             Debug.Log("acceleration_player_flanger : " + accelerationPlayerFlanger);
-            
+
             float accelerationPlayerVolume;
             joueurVitesse.getParameterByName("acceleration_player_volume", out accelerationPlayerVolume);
             Debug.Log("acceleration_player_volume : " + accelerationPlayerVolume);
-            
+
             float volume;
             float finalVolume;
             joueurVitesse.getVolume(out volume,out finalVolume);
@@ -72,4 +78,17 @@ public class AccelerationFeedback : MonoBehaviour
         }
     }
 
+    private void GlobalParameterAcceleration()
+    {
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("acceleration_player_flanger", speedNumber);
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("acceleration_player_volume", speedNumber);
+
+        float speed1;
+        float speed2;
+        FMODUnity.RuntimeManager.StudioSystem.getParameterByName("acceleration_player_flanger", out speed1);
+        FMODUnity.RuntimeManager.StudioSystem.getParameterByName("acceleration_player_volume", out speed2);
+
+        Debug.Log("speed 1 : " + speed1);
+        Debug.Log("speed 2 : " + speed2);
+    }
 }

@@ -24,10 +24,6 @@ public class BeginningMusic : MonoBehaviour
 
     public float debutCourse;
 
-    private void Awake()
-    {
-        masterBus.stopAllEvents(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-    }
 
     private void Start()
     {
@@ -81,7 +77,7 @@ public class BeginningMusic : MonoBehaviour
 
     public void StopMusicMenu()
     {
-        FMODUnity.RuntimeManager.PauseAllEvents(false);
+        
         masterBus.stopAllEvents(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
 

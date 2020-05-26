@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3289001071545339349}
   - component: {fileID: 1414106271614882485}
   - component: {fileID: 8508769729232166817}
+  - component: {fileID: 2380740635615469382}
   m_Layer: 0
   m_Name: Gestionnaire
   m_TagString: Gestionnaire
@@ -48,7 +49,9 @@ MonoBehaviour:
   playerTwo: {fileID: 0}
   playerOne: {fileID: 0}
   UpRef: {fileID: 0}
+  objectToDisable: []
   modeUnJoueur: 0
+  uiToResize: []
 --- !u!114 &1414106271614882485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82,3 +85,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   beginningTimer: 6
   canPlayRocketAnnounce: 0
+--- !u!114 &2380740635615469382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6869106727264498696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31ffb889d7839ab4f9eb5360d23715a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
