@@ -27,7 +27,7 @@ public class AccelerationFeedback : MonoBehaviour
         uPS = GetComponent<UPS>();
         // FMODUnity.RuntimeManager.
         joueurVitesse = FMODUnity.RuntimeManager.CreateInstance("event:/DA glitch/Personnage longiforme/joueur_acceleration");
-        joueurVitesse.setVolume(5);
+        joueurVitesse.setVolume(2);
         
 
     }
@@ -37,7 +37,7 @@ public class AccelerationFeedback : MonoBehaviour
     {
 
         Debug.Log(FindObjectsOfType<FMODUnity.RuntimeManager>().Length);
-        joueurVitesse.setVolume(5);
+        joueurVitesse.setVolume(2);
         speedNumber = uPS.actualsUPSPlayer;
         var result = joueurVitesse.setParameterByName("acceleration_player_flanger", speedNumber);
         var result2 = joueurVitesse.setParameterByName("acceleration_player_volume", speedNumber);
