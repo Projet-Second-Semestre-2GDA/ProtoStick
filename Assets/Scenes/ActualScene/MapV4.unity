@@ -21539,6 +21539,11 @@ PrefabInstance:
       propertyPath: ResumeButton
       value: 
       objectReference: {fileID: 1307905347}
+    - target: {fileID: 1414106271614882485, guid: ba22cf436d6a9b948bae3c722b590293,
+        type: 3}
+      propertyPath: beginningMusic
+      value: 
+      objectReference: {fileID: 349095583}
     - target: {fileID: 3289001071545339349, guid: ba22cf436d6a9b948bae3c722b590293,
         type: 3}
       propertyPath: gameObjectsADesactiver.Array.size
