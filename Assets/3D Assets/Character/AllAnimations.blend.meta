@@ -21,6 +21,18 @@ ModelImporter:
   - first:
       74: 6694062621419110703
     second: Course et Tir
+  - first:
+      74: -2555465515788340543
+    second: DoubleJump
+  - first:
+      74: 6037083642482348837
+    second: "Pas De C\xF4t\xE9"
+  - first:
+      74: 3053390266494562386
+    second: None
+  - first:
+      74: -7842570538212460501
+    second: "PasDeC\xF4t\xE9Inverse"
   externalObjects: {}
   materials:
     materialImportMode: 1
@@ -74,9 +86,149 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
+      transformMask:
+      - path: 
+        weight: 1
+      - path: root.C.001
+        weight: 0
+      - path: root.C.001/hip.C.001
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.002
+        weight: 1
+      - path: root.C.001/hip.C.001/hip.C.002/leg_deform.L.001
+        weight: 1
+      - path: root.C.001/hip.C.001/hip.C.002/leg_deform.L.001/Cylinder.009
+        weight: 1
+      - path: root.C.001/hip.C.001/hip.C.002/leg_deform.L.001/leg_deform.L.002
+        weight: 1
+      - path: root.C.001/hip.C.001/hip.C.002/leg_deform.L.001/leg_deform.L.002/Cylinder.010
+        weight: 1
+      - path: root.C.001/hip.C.001/hip.C.002/leg_deform.L.001/leg_deform.L.002/leg_deform.L.003
+        weight: 1
+      - path: root.C.001/hip.C.001/hip.C.002/leg_deform.L.001/leg_deform.L.002/leg_deform.L.003/Cube.012
+        weight: 1
+      - path: root.C.001/hip.C.001/hip.C.002/leg_deform.L.001/leg_deform.L.002/leg_deform.L.003/leg_deform.L.003_end
+        weight: 1
+      - path: root.C.001/hip.C.001/hip.C.003
+        weight: 1
+      - path: root.C.001/hip.C.001/hip.C.003/leg_deform.R.001
+        weight: 1
+      - path: root.C.001/hip.C.001/hip.C.003/leg_deform.R.001/Cylinder.005
+        weight: 1
+      - path: root.C.001/hip.C.001/hip.C.003/leg_deform.R.001/leg_deform.R.002
+        weight: 1
+      - path: root.C.001/hip.C.001/hip.C.003/leg_deform.R.001/leg_deform.R.002/Cylinder.006
+        weight: 1
+      - path: root.C.001/hip.C.001/hip.C.003/leg_deform.R.001/leg_deform.R.002/leg_deform.R.003
+        weight: 1
+      - path: root.C.001/hip.C.001/hip.C.003/leg_deform.R.001/leg_deform.R.002/leg_deform.R.003/Cube.014
+        weight: 1
+      - path: root.C.001/hip.C.001/hip.C.003/leg_deform.R.001/leg_deform.R.002/leg_deform.R.003/leg_deform.R.003_end
+        weight: 1
+      - path: root.C.001/hip.C.001/hip.C.004
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/Cube.002
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/Cube.006
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/Cylinder.004
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.001
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.001/Cube.010
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.001/fing.L.005
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.001/fing.L.005/Cube.001
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.001/fing.L.005/fing.L.005_end
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.002
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.002/Cube.009
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.002/fing.L.006
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.002/fing.L.006/Cube.004
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.002/fing.L.006/fing.L.006_end
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.003
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.003/Cube.008
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.003/fing.L.007
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.003/fing.L.007/Cube.005
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.003/fing.L.007/fing.L.007_end
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.004
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.004/Cube.007
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.004/fing.L.008
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.004/fing.L.008/Cube.013
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.004/fing.L.008/fing.L.008_end
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/Cylinder.003
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.R.001
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.R.001/arm.R.002
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.R.001/arm.R.002/arm.R.002_end
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.R.001/arm.R.002/Cube.015
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.R.001/arm.R.002/Cube.016
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.R.001/arm.R.002/Cube.017
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.R.001/arm.R.002/Cylinder.002
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.R.001/arm.R.002/Cylinder.007
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.R.001/arm.R.002/Cylinder.008
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.R.001/arm.R.002/Plane
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.R.001/arm.R.002/Plane.001
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.R.001/Cylinder.001
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/Cube
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/shoulder.L.001
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/shoulder.L.001/Cube.011
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/shoulder.L.001/shoulder.L.001_end
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/shoulder.R.001
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/shoulder.R.001/Cube.003
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/shoulder.R.001/shoulder.R.001_end
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/torse.L.001
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/torse.L.001/torse.L.001_end
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/torse.R.001
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/torse.R.001/torse.R.001_end
+        weight: 0
+      maskType: 1
+      maskSource: {fileID: 31900000, guid: f38a621fab63efb4f84befc327d7f4c6, type: 2}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Idle Start
@@ -161,9 +313,149 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
+      transformMask:
+      - path: 
+        weight: 1
+      - path: root.C.001
+        weight: 0
+      - path: root.C.001/hip.C.001
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.002
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.002/leg_deform.L.001
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.002/leg_deform.L.001/Cylinder.009
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.002/leg_deform.L.001/leg_deform.L.002
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.002/leg_deform.L.001/leg_deform.L.002/Cylinder.010
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.002/leg_deform.L.001/leg_deform.L.002/leg_deform.L.003
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.002/leg_deform.L.001/leg_deform.L.002/leg_deform.L.003/Cube.012
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.002/leg_deform.L.001/leg_deform.L.002/leg_deform.L.003/leg_deform.L.003_end
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.003
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.003/leg_deform.R.001
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.003/leg_deform.R.001/Cylinder.005
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.003/leg_deform.R.001/leg_deform.R.002
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.003/leg_deform.R.001/leg_deform.R.002/Cylinder.006
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.003/leg_deform.R.001/leg_deform.R.002/leg_deform.R.003
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.003/leg_deform.R.001/leg_deform.R.002/leg_deform.R.003/Cube.014
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.003/leg_deform.R.001/leg_deform.R.002/leg_deform.R.003/leg_deform.R.003_end
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/Cube.002
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/Cube.006
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/Cylinder.004
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.001
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.001/Cube.010
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.001/fing.L.005
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.001/fing.L.005/Cube.001
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.001/fing.L.005/fing.L.005_end
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.002
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.002/Cube.009
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.002/fing.L.006
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.002/fing.L.006/Cube.004
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.002/fing.L.006/fing.L.006_end
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.003
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.003/Cube.008
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.003/fing.L.007
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.003/fing.L.007/Cube.005
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.003/fing.L.007/fing.L.007_end
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.004
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.004/Cube.007
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.004/fing.L.008
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.004/fing.L.008/Cube.013
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.004/fing.L.008/fing.L.008_end
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/Cylinder.003
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.R.001
+        weight: 1
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.R.001/arm.R.002
+        weight: 1
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.R.001/arm.R.002/arm.R.002_end
+        weight: 1
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.R.001/arm.R.002/Cube.015
+        weight: 1
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.R.001/arm.R.002/Cube.016
+        weight: 1
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.R.001/arm.R.002/Cube.017
+        weight: 1
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.R.001/arm.R.002/Cylinder.002
+        weight: 1
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.R.001/arm.R.002/Cylinder.007
+        weight: 1
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.R.001/arm.R.002/Cylinder.008
+        weight: 1
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.R.001/arm.R.002/Plane
+        weight: 1
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.R.001/arm.R.002/Plane.001
+        weight: 1
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.R.001/Cylinder.001
+        weight: 1
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/Cube
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/shoulder.L.001
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/shoulder.L.001/Cube.011
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/shoulder.L.001/shoulder.L.001_end
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/shoulder.R.001
+        weight: 1
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/shoulder.R.001/Cube.003
+        weight: 1
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/shoulder.R.001/shoulder.R.001_end
+        weight: 1
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/torse.L.001
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/torse.L.001/torse.L.001_end
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/torse.R.001
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/torse.R.001/torse.R.001_end
+        weight: 0
+      maskType: 1
+      maskSource: {fileID: 31900000, guid: 093d5c8cb77049848acccaf4c80ebd36, type: 2}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Course
@@ -200,6 +492,233 @@ ModelImporter:
       internalID: 0
       firstFrame: 153
       lastFrame: 194
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: DoubleJump
+      takeName: Scene
+      internalID: 0
+      firstFrame: 195
+      lastFrame: 219
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: "Pas De C\xF4t\xE9"
+      takeName: Scene
+      internalID: 0
+      firstFrame: 220
+      lastFrame: 254
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: root.C.001
+        weight: 0
+      - path: root.C.001/hip.C.001
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.002
+        weight: 1
+      - path: root.C.001/hip.C.001/hip.C.002/leg_deform.L.001
+        weight: 1
+      - path: root.C.001/hip.C.001/hip.C.002/leg_deform.L.001/Cylinder.009
+        weight: 1
+      - path: root.C.001/hip.C.001/hip.C.002/leg_deform.L.001/leg_deform.L.002
+        weight: 1
+      - path: root.C.001/hip.C.001/hip.C.002/leg_deform.L.001/leg_deform.L.002/Cylinder.010
+        weight: 1
+      - path: root.C.001/hip.C.001/hip.C.002/leg_deform.L.001/leg_deform.L.002/leg_deform.L.003
+        weight: 1
+      - path: root.C.001/hip.C.001/hip.C.002/leg_deform.L.001/leg_deform.L.002/leg_deform.L.003/Cube.012
+        weight: 1
+      - path: root.C.001/hip.C.001/hip.C.002/leg_deform.L.001/leg_deform.L.002/leg_deform.L.003/leg_deform.L.003_end
+        weight: 1
+      - path: root.C.001/hip.C.001/hip.C.003
+        weight: 1
+      - path: root.C.001/hip.C.001/hip.C.003/leg_deform.R.001
+        weight: 1
+      - path: root.C.001/hip.C.001/hip.C.003/leg_deform.R.001/Cylinder.005
+        weight: 1
+      - path: root.C.001/hip.C.001/hip.C.003/leg_deform.R.001/leg_deform.R.002
+        weight: 1
+      - path: root.C.001/hip.C.001/hip.C.003/leg_deform.R.001/leg_deform.R.002/Cylinder.006
+        weight: 1
+      - path: root.C.001/hip.C.001/hip.C.003/leg_deform.R.001/leg_deform.R.002/leg_deform.R.003
+        weight: 1
+      - path: root.C.001/hip.C.001/hip.C.003/leg_deform.R.001/leg_deform.R.002/leg_deform.R.003/Cube.014
+        weight: 1
+      - path: root.C.001/hip.C.001/hip.C.003/leg_deform.R.001/leg_deform.R.002/leg_deform.R.003/leg_deform.R.003_end
+        weight: 1
+      - path: root.C.001/hip.C.001/hip.C.004
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/Cube.002
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/Cube.006
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/Cylinder.004
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.001
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.001/Cube.010
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.001/fing.L.005
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.001/fing.L.005/Cube.001
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.001/fing.L.005/fing.L.005_end
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.002
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.002/Cube.009
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.002/fing.L.006
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.002/fing.L.006/Cube.004
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.002/fing.L.006/fing.L.006_end
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.003
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.003/Cube.008
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.003/fing.L.007
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.003/fing.L.007/Cube.005
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.003/fing.L.007/fing.L.007_end
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.004
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.004/Cube.007
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.004/fing.L.008
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.004/fing.L.008/Cube.013
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.004/fing.L.008/fing.L.008_end
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/Cylinder.003
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.R.001
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.R.001/arm.R.002
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.R.001/arm.R.002/arm.R.002_end
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.R.001/arm.R.002/Cube.015
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.R.001/arm.R.002/Cube.016
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.R.001/arm.R.002/Cube.017
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.R.001/arm.R.002/Cylinder.002
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.R.001/arm.R.002/Cylinder.007
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.R.001/arm.R.002/Cylinder.008
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.R.001/arm.R.002/Plane
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.R.001/arm.R.002/Plane.001
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.R.001/Cylinder.001
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/Cube
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/shoulder.L.001
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/shoulder.L.001/Cube.011
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/shoulder.L.001/shoulder.L.001_end
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/shoulder.R.001
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/shoulder.R.001/Cube.003
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/shoulder.R.001/shoulder.R.001_end
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/torse.L.001
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/torse.L.001/torse.L.001_end
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/torse.R.001
+        weight: 0
+      - path: root.C.001/hip.C.001/hip.C.004/torse.C.001/torse.R.001/torse.R.001_end
+        weight: 0
+      maskType: 1
+      maskSource: {fileID: 31900000, guid: 216d1f7e57ea2594c8963a0de5ce42e4, type: 2}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: None
+      takeName: Scene
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 0
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

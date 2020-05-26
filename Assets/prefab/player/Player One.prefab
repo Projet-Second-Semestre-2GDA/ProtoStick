@@ -121,7 +121,6 @@ Transform:
   - {fileID: 7572003379919972941}
   - {fileID: 7426186080088690790}
   - {fileID: 3069138023356224403}
-  - {fileID: 5503389215465642508}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -380,7 +379,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lineRenderer: {fileID: 956875141147641464}
   pointToGetPosition: {fileID: 5503389215465642508}
-  numberOfPosition: 50
+  numberOfPosition: 100
   refreshTime: 0
 --- !u!1 &875288797131213352
 GameObject:
@@ -406,12 +405,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 875288797131213352}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.698}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.47886872, y: -0, z: -0, w: 0.8778865}
+  m_LocalPosition: {x: -0.0018071769, y: 1.23, z: 1.8}
+  m_LocalScale: {x: 1.7307919, y: 3.9538133, z: 3.0988638}
   m_Children: []
-  m_Father: {fileID: 2101401817797215672}
-  m_RootOrder: 6
+  m_Father: {fileID: 9140912935141459198}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!120 &956875141147641464
 LineRenderer:
@@ -431,7 +430,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ebde088c0ac11424587641f685f2bd7c, type: 2}
+  - {fileID: 2100000, guid: 795049ce1538f4444859c03725f6eb75, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3552,6 +3551,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6af65e3c9ea53d040a842c3ee617d047, type: 3}
+--- !u!4 &9140912935141459198 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -1617365279978105996, guid: 6af65e3c9ea53d040a842c3ee617d047,
+    type: 3}
+  m_PrefabInstance: {fileID: 1681809938889545610}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5921188922718829712 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 6af65e3c9ea53d040a842c3ee617d047,

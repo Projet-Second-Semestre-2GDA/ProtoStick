@@ -1,0 +1,151 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: MoveRight
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: root.C.001
+    m_Weight: 0
+  - m_Path: root.C.001/hip.C.001
+    m_Weight: 0
+  - m_Path: root.C.001/hip.C.001/hip.C.002
+    m_Weight: 1
+  - m_Path: root.C.001/hip.C.001/hip.C.002/leg_deform.L.001
+    m_Weight: 1
+  - m_Path: root.C.001/hip.C.001/hip.C.002/leg_deform.L.001/Cylinder.009
+    m_Weight: 1
+  - m_Path: root.C.001/hip.C.001/hip.C.002/leg_deform.L.001/leg_deform.L.002
+    m_Weight: 1
+  - m_Path: root.C.001/hip.C.001/hip.C.002/leg_deform.L.001/leg_deform.L.002/Cylinder.010
+    m_Weight: 1
+  - m_Path: root.C.001/hip.C.001/hip.C.002/leg_deform.L.001/leg_deform.L.002/leg_deform.L.003
+    m_Weight: 1
+  - m_Path: root.C.001/hip.C.001/hip.C.002/leg_deform.L.001/leg_deform.L.002/leg_deform.L.003/Cube.012
+    m_Weight: 1
+  - m_Path: root.C.001/hip.C.001/hip.C.002/leg_deform.L.001/leg_deform.L.002/leg_deform.L.003/leg_deform.L.003_end
+    m_Weight: 1
+  - m_Path: root.C.001/hip.C.001/hip.C.003
+    m_Weight: 1
+  - m_Path: root.C.001/hip.C.001/hip.C.003/leg_deform.R.001
+    m_Weight: 1
+  - m_Path: root.C.001/hip.C.001/hip.C.003/leg_deform.R.001/Cylinder.005
+    m_Weight: 1
+  - m_Path: root.C.001/hip.C.001/hip.C.003/leg_deform.R.001/leg_deform.R.002
+    m_Weight: 1
+  - m_Path: root.C.001/hip.C.001/hip.C.003/leg_deform.R.001/leg_deform.R.002/Cylinder.006
+    m_Weight: 1
+  - m_Path: root.C.001/hip.C.001/hip.C.003/leg_deform.R.001/leg_deform.R.002/leg_deform.R.003
+    m_Weight: 1
+  - m_Path: root.C.001/hip.C.001/hip.C.003/leg_deform.R.001/leg_deform.R.002/leg_deform.R.003/Cube.014
+    m_Weight: 1
+  - m_Path: root.C.001/hip.C.001/hip.C.003/leg_deform.R.001/leg_deform.R.002/leg_deform.R.003/leg_deform.R.003_end
+    m_Weight: 1
+  - m_Path: root.C.001/hip.C.001/hip.C.004
+    m_Weight: 0
+  - m_Path: root.C.001/hip.C.001/hip.C.004/Cube.002
+    m_Weight: 0
+  - m_Path: root.C.001/hip.C.001/hip.C.004/torse.C.001
+    m_Weight: 0
+  - m_Path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001
+    m_Weight: 0
+  - m_Path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002
+    m_Weight: 0
+  - m_Path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/Cube.006
+    m_Weight: 0
+  - m_Path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/Cylinder.004
+    m_Weight: 0
+  - m_Path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.001
+    m_Weight: 0
+  - m_Path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.001/Cube.010
+    m_Weight: 0
+  - m_Path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.001/fing.L.005
+    m_Weight: 0
+  - m_Path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.001/fing.L.005/Cube.001
+    m_Weight: 0
+  - m_Path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.001/fing.L.005/fing.L.005_end
+    m_Weight: 0
+  - m_Path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.002
+    m_Weight: 0
+  - m_Path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.002/Cube.009
+    m_Weight: 0
+  - m_Path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.002/fing.L.006
+    m_Weight: 0
+  - m_Path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.002/fing.L.006/Cube.004
+    m_Weight: 0
+  - m_Path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.002/fing.L.006/fing.L.006_end
+    m_Weight: 0
+  - m_Path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.003
+    m_Weight: 0
+  - m_Path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.003/Cube.008
+    m_Weight: 0
+  - m_Path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.003/fing.L.007
+    m_Weight: 0
+  - m_Path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.003/fing.L.007/Cube.005
+    m_Weight: 0
+  - m_Path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.003/fing.L.007/fing.L.007_end
+    m_Weight: 0
+  - m_Path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.004
+    m_Weight: 0
+  - m_Path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.004/Cube.007
+    m_Weight: 0
+  - m_Path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.004/fing.L.008
+    m_Weight: 0
+  - m_Path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.004/fing.L.008/Cube.013
+    m_Weight: 0
+  - m_Path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/arm.L.002/fing.L.004/fing.L.008/fing.L.008_end
+    m_Weight: 0
+  - m_Path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.L.001/Cylinder.003
+    m_Weight: 0
+  - m_Path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.R.001
+    m_Weight: 0
+  - m_Path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.R.001/arm.R.002
+    m_Weight: 0
+  - m_Path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.R.001/arm.R.002/arm.R.002_end
+    m_Weight: 0
+  - m_Path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.R.001/arm.R.002/Cube.015
+    m_Weight: 0
+  - m_Path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.R.001/arm.R.002/Cube.016
+    m_Weight: 0
+  - m_Path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.R.001/arm.R.002/Cube.017
+    m_Weight: 0
+  - m_Path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.R.001/arm.R.002/Cylinder.002
+    m_Weight: 0
+  - m_Path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.R.001/arm.R.002/Cylinder.007
+    m_Weight: 0
+  - m_Path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.R.001/arm.R.002/Cylinder.008
+    m_Weight: 0
+  - m_Path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.R.001/arm.R.002/Plane
+    m_Weight: 0
+  - m_Path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.R.001/arm.R.002/Plane.001
+    m_Weight: 0
+  - m_Path: root.C.001/hip.C.001/hip.C.004/torse.C.001/arm.R.001/Cylinder.001
+    m_Weight: 0
+  - m_Path: root.C.001/hip.C.001/hip.C.004/torse.C.001/Cube
+    m_Weight: 0
+  - m_Path: root.C.001/hip.C.001/hip.C.004/torse.C.001/shoulder.L.001
+    m_Weight: 0
+  - m_Path: root.C.001/hip.C.001/hip.C.004/torse.C.001/shoulder.L.001/Cube.011
+    m_Weight: 0
+  - m_Path: root.C.001/hip.C.001/hip.C.004/torse.C.001/shoulder.L.001/shoulder.L.001_end
+    m_Weight: 0
+  - m_Path: root.C.001/hip.C.001/hip.C.004/torse.C.001/shoulder.R.001
+    m_Weight: 0
+  - m_Path: root.C.001/hip.C.001/hip.C.004/torse.C.001/shoulder.R.001/Cube.003
+    m_Weight: 0
+  - m_Path: root.C.001/hip.C.001/hip.C.004/torse.C.001/shoulder.R.001/shoulder.R.001_end
+    m_Weight: 0
+  - m_Path: root.C.001/hip.C.001/hip.C.004/torse.C.001/torse.L.001
+    m_Weight: 0
+  - m_Path: root.C.001/hip.C.001/hip.C.004/torse.C.001/torse.L.001/torse.L.001_end
+    m_Weight: 0
+  - m_Path: root.C.001/hip.C.001/hip.C.004/torse.C.001/torse.R.001
+    m_Weight: 0
+  - m_Path: root.C.001/hip.C.001/hip.C.004/torse.C.001/torse.R.001/torse.R.001_end
+    m_Weight: 0

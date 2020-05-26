@@ -102,7 +102,9 @@ public class Movement : MonoBehaviour
     {
         //Animation
         playerAnimation.SetFloat("Walk",Mathf.Abs(v));
-        playerAnimation.SetBool("WalkBackward",(oldV<-0.1));
+        // playerAnimation.SetBool("WalkFront",(oldV<0));
+        playerAnimation.SetFloat("WalkSide",h);
+        // playerAnimation.SetBool("WalkRight",(oldH<0));
         //Fin de l'animation
         
         var velocity = rb.velocity;

@@ -55,11 +55,12 @@ public class ThrowRocket : MonoBehaviour
         }
 
         
-        playerAnimation.SetBool("Shoot",shoot);
+        
     }
 
     private void Shoot()
     {
+        playerAnimation.SetTrigger("Shoot");
         var playerNumber = GetComponent<PlayerNumber>().playerNumber;
         var shootedRocket = Instantiate(rocket, spawnPoint.position, spawnPoint.rotation);
         shootedRocket.layer = LayerMask.NameToLayer("RocketPlayer" + playerNumber);

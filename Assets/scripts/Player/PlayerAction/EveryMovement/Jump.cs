@@ -154,7 +154,7 @@ public class Jump : MonoBehaviour
 
     private void SetVelocityY(float y)
     {
-        playerAnimation.SetBool("Jump",true);
+        playerAnimation.SetTrigger("Jump");
         var velocity = rb.velocity; 
         velocity.y = y;
         rb.velocity = velocity;
