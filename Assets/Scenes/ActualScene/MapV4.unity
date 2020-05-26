@@ -59379,6 +59379,11 @@ PrefabInstance:
       propertyPath: player.Array.data[1]
       value: 
       objectReference: {fileID: 1111030432}
+    - target: {fileID: -6235846041701915304, guid: 6bc831fa2b1f460479f1157aabf0e237,
+        type: 3}
+      propertyPath: debutCourse
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6888272976029738481, guid: 6bc831fa2b1f460479f1157aabf0e237,
         type: 3}
       propertyPath: Over.Array.size

@@ -357,7 +357,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &841784308
 Transform:
   m_ObjectHideFlags: 0
@@ -500,6 +500,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3204108123833404140, guid: 8b95e52bd63a3f842a4f483764829299,
+        type: 3}
+      propertyPath: m_Text
+      value: 02 min 34,482
+      objectReference: {fileID: 0}
     - target: {fileID: 3967642073236559566, guid: 8b95e52bd63a3f842a4f483764829299,
         type: 3}
       propertyPath: m_Enabled
@@ -509,6 +514,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5031663922845032661, guid: 8b95e52bd63a3f842a4f483764829299,
+        type: 3}
+      propertyPath: m_Text
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 5191214037542734623, guid: 8b95e52bd63a3f842a4f483764829299,
         type: 3}
@@ -543,7 +553,7 @@ PrefabInstance:
     - target: {fileID: 8289133646052106793, guid: 8b95e52bd63a3f842a4f483764829299,
         type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
-      value: 1000
+      value: 3000
       objectReference: {fileID: 0}
     - target: {fileID: 9113896516682695900, guid: 8b95e52bd63a3f842a4f483764829299,
         type: 3}
@@ -559,11 +569,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_VertexStreams.Array.data[2]
       value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 9113896516682695900, guid: 8b95e52bd63a3f842a4f483764829299,
-        type: 3}
-      propertyPath: m_SortingFudge
-      value: -100000
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5461206388881069972, guid: 8b95e52bd63a3f842a4f483764829299, type: 3}

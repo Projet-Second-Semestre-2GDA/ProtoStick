@@ -41,14 +41,14 @@ public class GestionMenu : MonoBehaviour
         if (!PlayerPrefs.HasKey(sensibilityKeyJ1)) PlayerPrefs.SetFloat(sensibilityKeyJ1,0.8f);
         
         sliderJ1.value = PlayerPrefs.GetFloat(sensibilityKeyJ1);
-        Debug.Log("La sensisibilité est de " + PlayerPrefs.GetFloat(sensibilityKeyJ1));
+        //Debug.Log("La sensisibilité est de " + PlayerPrefs.GetFloat(sensibilityKeyJ1));
         
         //Joueur 2
         if (sliderJ2 == null)throw new NullReferenceException();
         if (!PlayerPrefs.HasKey(sensibilityKeyJ2)) PlayerPrefs.SetFloat(sensibilityKeyJ2,0.8f);
         
         sliderJ2.value = PlayerPrefs.GetFloat(sensibilityKeyJ2);
-        Debug.Log("La sensisibilité est de " + PlayerPrefs.GetFloat(sensibilityKeyJ2));
+        //Debug.Log("La sensisibilité est de " + PlayerPrefs.GetFloat(sensibilityKeyJ2));
         
         //-------------------Sound-------------------
         //Voice
@@ -119,13 +119,13 @@ public class GestionMenu : MonoBehaviour
     public void UpdateSensitivityPlayerPrefJ1()
     {
         PlayerPrefs.SetFloat(sensibilityKeyJ1,sliderJ1.value);
-        Debug.Log("La sensisibilité est de " + PlayerPrefs.GetFloat(sensibilityKeyJ1));
+        //Debug.Log("La sensisibilité est de " + PlayerPrefs.GetFloat(sensibilityKeyJ1));
     }
     
     public void UpdateSensitivityPlayerPrefJ2()
     {
         PlayerPrefs.SetFloat(sensibilityKeyJ2,sliderJ2.value);
-        Debug.Log("La sensisibilité est de " + PlayerPrefs.GetFloat(sensibilityKeyJ2));
+        //Debug.Log("La sensisibilité est de " + PlayerPrefs.GetFloat(sensibilityKeyJ2));
     }
     [Title("Buttons Set Sliders")]
     
@@ -134,7 +134,7 @@ public class GestionMenu : MonoBehaviour
     {
         PlayerPrefs.SetFloat(sensibilityKeyJ1,value);
         sliderJ1.value = PlayerPrefs.GetFloat(sensibilityKeyJ1);
-        Debug.Log("La sensisibilité est de " + PlayerPrefs.GetFloat(sensibilityKeyJ1));
+        //Debug.Log("La sensisibilité est de " + PlayerPrefs.GetFloat(sensibilityKeyJ1));
     }
     
     [Button(ButtonSizes.Large,ButtonStyle.FoldoutButton)]
@@ -142,7 +142,7 @@ public class GestionMenu : MonoBehaviour
     {
         PlayerPrefs.SetFloat(sensibilityKeyJ2,value);
         sliderJ2.value = PlayerPrefs.GetFloat(sensibilityKeyJ2);
-        Debug.Log("La sensisibilité est de " + PlayerPrefs.GetFloat(sensibilityKeyJ2));
+        //Debug.Log("La sensisibilité est de " + PlayerPrefs.GetFloat(sensibilityKeyJ2));
     }
 
     public void HideCursor()

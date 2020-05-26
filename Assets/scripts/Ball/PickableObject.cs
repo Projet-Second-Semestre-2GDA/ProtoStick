@@ -23,7 +23,7 @@ public class PickableObject : MonoBehaviour
     public void TakeObject(Transform playerWhoTake, Transform camera)
     {
         if(player) return;
-        Debug.Log("Take object");
+        //Debug.Log("Take object");
 
         player = playerWhoTake;
         playerCam = camera;
@@ -38,7 +38,7 @@ public class PickableObject : MonoBehaviour
     public void ThrowObject()
     {
         if (!player) return;
-        Debug.Log("ThrowObject");
+        //Debug.Log("ThrowObject");
 
         GetComponent<Rigidbody>().isKinematic = false;
         transform.parent = null;
@@ -52,7 +52,7 @@ public class PickableObject : MonoBehaviour
     public void LeaveObject()
     {
         if(!player) return;    
-        Debug.Log("Leave Object");
+        //Debug.Log("Leave Object");
 
         GetComponent<Rigidbody>().isKinematic = false;
         transform.parent = null;
@@ -62,7 +62,7 @@ public class PickableObject : MonoBehaviour
 
     private void DeletePlayer()
     {
-        Debug.Log("Delete player");
+        //Debug.Log("Delete player");
         player.GetComponent<ControlObject>().LeaveBall();
         player = null;
         playerCam = null;

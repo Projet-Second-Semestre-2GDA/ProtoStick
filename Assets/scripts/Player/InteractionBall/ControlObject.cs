@@ -22,7 +22,7 @@ public class ControlObject : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            Debug.Log(ball);
+            //Debug.Log(ball);
             if (!ball)
             {
                 rayCamera = new Ray(camera.position,camera.forward);
@@ -31,7 +31,7 @@ public class ControlObject : MonoBehaviour
                 {
                     if (hit.collider.CompareTag("Ball"))
                     {
-                        // Debug.Log(hit.collider.name);
+                        // //Debug.Log(hit.collider.name);
 
                         ActionOneOnBall(hit.collider.gameObject);
                     }

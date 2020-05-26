@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMOD.Studio;
 
 public class AccelerationFeedback : MonoBehaviour
 {
 
-    public UPS uPS;
+    private UPS uPS;
 
     private FMOD.Studio.EventInstance joueurVitesse;
     private FMOD.Studio.EventDescription joueurVitesseDescription;
@@ -14,29 +15,35 @@ public class AccelerationFeedback : MonoBehaviour
 
     private float speedNumber;
 
+    private void Awake()
+    {
+        speedNumber = 250;
+        Debug.Log("----------------------------------Game Begin----------------------------------");
+    }
 
     private void Start()
     {
+        uPS = GetComponent<UPS>();
+
         joueurVitesse = FMODUnity.RuntimeManager.CreateInstance("event:/DA glitch/Personnage longiforme/joueur_vitesse");
-        joueurVitesse.start();
-
-        joueurVitesseDescription = FMODUnity.RuntimeManager.GetEventDescription("event:/DA glitch/Personnage longiforme/joueur_vitesse");
-        Debug.Log(joueurVitesseDescription);
-
-        joueurVitesseDescription.getParameterDescriptionByName("acceleration_player", out accelerationDescription);
-
-        accelerationID = accelerationDescription.id;
-        Debug.Log(accelerationID);
+        
     }
 
 
     private void Update()
     {
-        
         speedNumber = uPS.actualsUPSPlayer;
-        // Debug.Log("speednumber =" + speedNumber);
+        var result = joueurVitesse.setParameterByName("acceleration_player_flanger", speedNumber);
+        var result2 = joueurVitesse.setParameterByName("acceleration_player_volume", speedNumber);
+        Debug.Log("player speed flanger : " + result);
+        Debug.Log("player speed volume : " + result2);
+        PLAYBACK_STATE state;
+        joueurVitesse.getPlaybackState(out state);
 
-        joueurVitesse.setParameterByID(accelerationID, speedNumber);
+        if (state == PLAYBACK_STATE.STOPPED)
+        {
+            joueurVitesse.start();
+        }
     }
 
 }

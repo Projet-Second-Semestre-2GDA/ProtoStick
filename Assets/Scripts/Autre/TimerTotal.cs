@@ -24,12 +24,12 @@ public class TimerTotal : MonoBehaviour
     {
         if (Input.GetAxis("Pause") == 0) timerTotal += Time.deltaTime;
 
-        //Debug.Log("le timer total est de : " + timerTotal);
+        ////Debug.Log("le timer total est de : " + timerTotal);
 
         if (timerTotal >= beginningTimer)
         {
             canPlayRocketAnnounce = true;
-            // Debug.Log("TU PEUX JOUER LA ROCKET");
+            // //Debug.Log("TU PEUX JOUER LA ROCKET");
         }
 
          

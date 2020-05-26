@@ -123,8 +123,8 @@ public class TimerShower : MonoBehaviour
     {
         isOver = true;
         int levelID = SceneManager.GetActiveScene().buildIndex;
-        Debug.LogWarning("L'ID est : " + levelID);
-        Debug.LogWarning("Duration : " + timer);
+        //Debug.LogWarning("L'ID est : " + levelID);
+        //Debug.LogWarning("Duration : " + timer);
         LeadboardSetter.LevelFinish(levelID,timer);
     }
 }

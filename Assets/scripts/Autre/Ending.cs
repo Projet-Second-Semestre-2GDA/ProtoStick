@@ -56,7 +56,7 @@ public class Ending : MonoBehaviour
 
     private void SetWin(string name,int winnerIndex)
     {
-        Debug.LogWarning("The winner est " + name);
+        //Debug.LogWarning("The winner est " + name);
         canvas.SetActive(true);
         // text.text = "The Winner is\n" + name;
         winners[winnerIndex].SetActive(true);
@@ -91,9 +91,9 @@ public class Ending : MonoBehaviour
             {
                 ++numberOfPlayerArrive;
                 var objGet = obj.GetComponent<RecolteObject>().GetNumberRecoltable();
-                Debug.Log(obj.name + " a récupéré " + objGet + " récoltable");
+                //Debug.Log(obj.name + " a récupéré " + objGet + " récoltable");
                 recoltableCatch += objGet;
-                Debug.Log("Ce qui fait donc un total de " + recoltableCatch);
+                //Debug.Log("Ce qui fait donc un total de " + recoltableCatch);
             }
             
             if (!raceIsOver)

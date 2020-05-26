@@ -52,7 +52,7 @@ public class RocketBehavior : MonoBehaviour
         // feedback FMOD
         FMODUnity.RuntimeManager.PlayOneShot("event:/DA glitch/Personnage longiforme/joueur_explosion_rocket", transform.position);
 
-        // Debug.Log(name+ " a touché " + other.collider.name);
+        // //Debug.Log(name+ " a touché " + other.collider.name);
         ContactPoint firstPoint = other.GetContact(0);
         Vector3 explosionPoint = firstPoint.point;
         Debug.DrawRay(explosionPoint,Vector3.left,Color.green);

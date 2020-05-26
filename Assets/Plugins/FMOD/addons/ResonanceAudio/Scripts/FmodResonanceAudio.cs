@@ -232,7 +232,7 @@ public static class FmodResonanceAudio {
         }
       }
     }
-    Debug.LogError(listenerPluginName + " not found in the FMOD project.");
+    //Debug.LogError(listenerPluginName + " not found in the FMOD project.");
     return dsp;
   }
 

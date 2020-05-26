@@ -25,7 +25,7 @@ public class EffectAttaching : MonoBehaviour
         var actualPosition = trans.position;
         
         trans.LookAt(actualPosition + Vector3.up);
-        //Debug.Log("Je fais des trucs");
+        ////Debug.Log("Je fais des trucs");
         bool test = HasTouchSomething(actualPosition, Vector3.down, trans);
         if (!test)
         {
@@ -36,7 +36,7 @@ public class EffectAttaching : MonoBehaviour
                 for (int i = 0; i < directionOrdre.Length; i++)
                 {
                     var directionCheck = (directionOrdre[i] + hauteurOrdre[j]).normalized;
-                    //Debug.Log("direction check : " + directionCheck);
+                    ////Debug.Log("direction check : " + directionCheck);
                     test = HasTouchSomething(actualPosition, directionCheck, trans); 
                     if(test)break;
                 }
@@ -76,7 +76,7 @@ public class EffectAttaching : MonoBehaviour
         //         et me renvoie le vector3 associé (lié au transform de l'objet évidemment)*/
         //     trans.position = position;
         //     trans.rotation = rotation;
-        //     Debug.Log("Le point touché est : " + position);
+        //     //Debug.Log("Le point touché est : " + position);
         //     joint = gameObject.AddComponent<FixedJoint>();
         //     joint.connectedBody = hits[indexLowerPoint].rigidbody;
         // }
@@ -88,10 +88,10 @@ public class EffectAttaching : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(actualPosition, directionCheck, out hit, sizeChecker))
         {
-            //Debug.Log("elle a réussi !");
+            ////Debug.Log("elle a réussi !");
             var direction = actualPosition - hit.point;
             direction = direction.normalized;
-            Debug.Log("La direction obtenu du calcul est : " + direction);
+            //Debug.Log("La direction obtenu du calcul est : " + direction);
             trans.position = hit.point + direction * (0.4f / 3);
             lookAt = actualPosition + direction;
             trans.LookAt(lookAt);

@@ -359,7 +359,7 @@ namespace UnityEngine.EventSystems
                 if (newPressed == null)
                     newPressed = ExecuteEvents.GetEventHandler<IPointerClickHandler>(currentOverGo);
 
-                // Debug.Log("Pressed: " + newPressed);
+                // //Debug.Log("Pressed: " + newPressed);
 
                 float time = Time.unscaledTime;
 
@@ -395,10 +395,10 @@ namespace UnityEngine.EventSystems
             // PointerUp notification
             if (released)
             {
-                // Debug.Log("Executing pressup on: " + pointer.pointerPress);
+                // //Debug.Log("Executing pressup on: " + pointer.pointerPress);
                 ExecuteEvents.Execute(pointerEvent.pointerPress, pointerEvent, ExecuteEvents.pointerUpHandler);
 
-                // Debug.Log("KeyCode: " + pointer.eventData.keyCode);
+                // //Debug.Log("KeyCode: " + pointer.eventData.keyCode);
 
                 // see if we mouse up on the same element that we clicked on...
                 var pointerUpHandler = ExecuteEvents.GetEventHandler<IPointerClickHandler>(currentOverGo);
@@ -599,7 +599,7 @@ namespace UnityEngine.EventSystems
                 if (newPressed == null)
                     newPressed = ExecuteEvents.GetEventHandler<IPointerClickHandler>(currentOverGo);
 
-                // Debug.Log("Pressed: " + newPressed);
+                // //Debug.Log("Pressed: " + newPressed);
 
                 float time = Time.unscaledTime;
 

@@ -8,8 +8,8 @@ public static class LeadboardSetter
     public static void LevelFinish(int levelNumber, float duration)
     {
         var key = baseLevelKey + levelNumber;
-        Debug.LogWarning("La clé est : " + key);
-        Debug.LogWarning("Duration : " + duration);
+        //Debug.LogWarning("La clé est : " + key);
+        //Debug.LogWarning("Duration : " + duration);
         if (PlayerPrefs.HasKey(key))
         {
             if (PlayerPrefs.GetFloat(key) >= duration)

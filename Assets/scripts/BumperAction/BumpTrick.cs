@@ -33,7 +33,7 @@ public class BumpTrick : PlayerEffect
         var velocity = otherRb.velocity;
         playerWhoTouch.GetComponent<Movement>().UpgradeSpeed(speedMultiplicator);
         var force = transform.forward * bumpForce;
-        Debug.Log("La force est : " + force);
+        //Debug.Log("La force est : " + force);
         var otherValue = new float[] {force.x,force.y,force.z};
         var values = new float[] {velocity.x,velocity.y,velocity.z};
         for (int i = 0; i < values.Length; i++)
@@ -45,7 +45,7 @@ public class BumpTrick : PlayerEffect
         velocity = new Vector3(values[0],values[1],values[2]);
 
         // velocity = (velocity.magnitude > bumpForce) ? velocity.normalized * bumpForce : velocity;
-        // Debug.Log("Ca vélocité est maintenant : " + velocity);
+        // //Debug.Log("Ca vélocité est maintenant : " + velocity);
         velocityGiven = velocity;
         if (transform.forward != Vector3.up && transform.forward != Vector3.down)
         {

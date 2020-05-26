@@ -243,7 +243,7 @@ namespace FMODUnity
                 break;
             }
 
-            UnityEngine.Debug.Log(String.Format("FMOD Studio: Device {0} classed as {1}", SystemInfo.deviceModel, result.ToString()));
+            UnityEngine.//Debug.Log(String.Format("FMOD Studio: Device {0} classed as {1}", SystemInfo.deviceModel, result.ToString()));
             return result;
             #elif UNITY_ANDROID
             FMODPlatform result;
@@ -281,7 +281,7 @@ namespace FMODUnity
                 }
             }
             
-            UnityEngine.Debug.Log(String.Format("[FMOD] Device {0} classed as {1}", SystemInfo.deviceModel, result.ToString()));
+            UnityEngine.//Debug.Log(String.Format("[FMOD] Device {0} classed as {1}", SystemInfo.deviceModel, result.ToString()));
             return result;
             #elif UNITY_WINRT_8_1
             FMODPlatform result;
@@ -294,7 +294,7 @@ namespace FMODUnity
                 result = FMODPlatform.MobileHigh;
             }
 
-            UnityEngine.Debug.Log(String.Format("[FMOD] Device {0} classed as {1}", SystemInfo.deviceModel, result.ToString()));
+            UnityEngine.//Debug.Log(String.Format("[FMOD] Device {0} classed as {1}", SystemInfo.deviceModel, result.ToString()));
             return result;
 
             #elif UNITY_PS4
