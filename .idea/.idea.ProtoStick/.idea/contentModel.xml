@@ -9,6 +9,7 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="LineTracer.cs" t="Include" />
+        <e p="ParticleOrientation.cs" t="Include" />
         <e p="Plugins" t="Include">
           <e p="FMOD" t="Include">
             <e p="addons" t="Include">
@@ -302,6 +303,7 @@
                 <e p="{4bb3fc31-8817-4db0-9ff1-22587fe0e7d3}.xml" t="Include" />
                 <e p="{4e51ffb4-aa3c-436c-9ffa-7d949ad3ce42}.xml" t="Include" />
                 <e p="{4e54949e-9edb-4e1e-928e-6d3d9c245714}.xml" t="Include" />
+                <e p="{515be632-ed3d-4753-af97-cacccafa6590}.xml" t="Include" />
                 <e p="{521f0d52-6c12-4d3d-8bd2-ba46522c8577}.xml" t="Include" />
                 <e p="{52fce3c1-3a21-4b7d-ae71-70e41df4d82c}.xml" t="Include" />
                 <e p="{556a8c83-a55f-499e-b4ee-0c494077e560}.xml" t="Include" />
@@ -323,7 +325,9 @@
                 <e p="{a37ea239-c92b-45e4-8ac0-8e6276abe48f}.xml" t="Include" />
                 <e p="{a678adbe-e2d0-40e7-8617-a5e918ef118b}.xml" t="Include" />
                 <e p="{a8a6f441-45fa-4c00-b33e-6d67da74f7cd}.xml" t="Include" />
+                <e p="{b37854f5-e62b-4d0d-839c-9c62b5fca5f6}.xml" t="Include" />
                 <e p="{b70e4fc6-a802-4b68-a13c-ec7c1f66ab7a}.xml" t="Include" />
+                <e p="{bbd003af-9e82-4a88-b9d1-b8abe5034085}.xml" t="Include" />
                 <e p="{bc99d092-7b68-447c-afa0-cf50bb98fb04}.xml" t="Include" />
                 <e p="{c3b70201-0027-4f89-89d5-39719016c982}.xml" t="Include" />
                 <e p="{c4fb186d-7bbc-45aa-bea5-9f8e1e7988c4}.xml" t="Include" />
@@ -369,6 +373,7 @@
                 <e p="{24fa4899-a972-45e6-99b2-415d0811fcd8}.xml" t="Include" />
                 <e p="{2722d2e5-3755-4a1a-b828-370a6dfd0eb3}.xml" t="Include" />
                 <e p="{2cf5841f-ad88-45ff-87f0-fea30581a526}.xml" t="Include" />
+                <e p="{2f92aea3-9e71-4175-a3e3-5e3d11a775f7}.xml" t="Include" />
                 <e p="{35bb712a-0dbb-4cc8-9454-ce413862df6c}.xml" t="Include" />
                 <e p="{3f86084a-7782-4081-8d0e-10c476ebefeb}.xml" t="Include" />
                 <e p="{513accd0-6ddb-41d3-b4fa-fb53507f5d97}.xml" t="Include" />
@@ -380,11 +385,13 @@
                 <e p="{6b263c15-7d21-4ebb-9e8f-2d0a9455da19}.xml" t="Include" />
                 <e p="{6db3450f-de72-4e3c-819f-3439b2a960c8}.xml" t="Include" />
                 <e p="{83fb99e0-3e8a-4418-b68d-166d8074ccf2}.xml" t="Include" />
+                <e p="{9a8ac057-a1f4-4586-aa47-2162e75df450}.xml" t="Include" />
                 <e p="{ab1ccfab-c377-4beb-bbff-d757dd758a6b}.xml" t="Include" />
                 <e p="{b5bad456-5a06-42db-a702-2247cec89540}.xml" t="Include" />
                 <e p="{b7d317d3-d49d-49d9-b841-5c14b0f7fc6a}.xml" t="Include" />
                 <e p="{bd1f83f7-f1ef-45a8-96f7-ed99a5ac5317}.xml" t="Include" />
                 <e p="{d0f56ae5-1bd5-4a67-b6e7-cd8784189ec0}.xml" t="Include" />
+                <e p="{d320aebb-b530-423f-a147-ea6df0e88879}.xml" t="Include" />
                 <e p="{d9a1a62f-e517-468e-8506-02fb7554c1a0}.xml" t="Include" />
                 <e p="{dc878845-5e40-4bf4-bc5b-02b2a7670f2f}.xml" t="Include" />
                 <e p="{dd90415f-b61b-4724-b9d1-28d41f7e2acf}.xml" t="Include" />
@@ -410,6 +417,7 @@
               <e p="ParameterPreset" t="Include">
                 <e p="{24d3f2ee-8bc5-4470-8269-6606af36ec61}.xml" t="Include" />
                 <e p="{4b1def93-89b0-41e5-8937-2648f69a8744}.xml" t="Include" />
+                <e p="{4fa1bb1c-5b06-4498-84dc-35e87a956a2b}.xml" t="Include" />
                 <e p="{50c324ea-9068-4aa1-b5f2-8af088ce4762}.xml" t="Include" />
                 <e p="{85f5b5b6-19ee-40aa-98f0-b24e49de7373}.xml" t="Include" />
                 <e p="{88f499c1-24de-4302-9505-e77cedd99295}.xml" t="Include" />

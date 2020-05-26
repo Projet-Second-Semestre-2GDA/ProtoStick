@@ -72,6 +72,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 904855479003579218, guid: 8b95e52bd63a3f842a4f483764829299,
+        type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 3072
+      objectReference: {fileID: 0}
     - target: {fileID: 956875141147641464, guid: 8b95e52bd63a3f842a4f483764829299,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -283,6 +288,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 0b2ff8ead2d127e4e8c1faa0c00f2a5b, type: 2}
+    - target: {fileID: 2950385499997816030, guid: 8b95e52bd63a3f842a4f483764829299,
+        type: 3}
+      propertyPath: m_Layer
+      value: 17
+      objectReference: {fileID: 0}
     - target: {fileID: 2983102056647231483, guid: 8b95e52bd63a3f842a4f483764829299,
         type: 3}
       propertyPath: m_Layer
@@ -418,6 +428,11 @@ PrefabInstance:
     - target: {fileID: 4631573607003334185, guid: 8b95e52bd63a3f842a4f483764829299,
         type: 3}
       propertyPath: m_AnchoredPosition.x
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 4678978291039649298, guid: 8b95e52bd63a3f842a4f483764829299,
+        type: 3}
+      propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 4691323078435332041, guid: 8b95e52bd63a3f842a4f483764829299,
@@ -670,7 +685,7 @@ PrefabInstance:
     - target: {fileID: 7291736996946027350, guid: 8b95e52bd63a3f842a4f483764829299,
         type: 3}
       propertyPath: m_CullingMask.m_Bits
-      value: 32567
+      value: 163639
       objectReference: {fileID: 0}
     - target: {fileID: 7334744578015398940, guid: 8b95e52bd63a3f842a4f483764829299,
         type: 3}
@@ -732,6 +747,21 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 8289133646052106793, guid: 8b95e52bd63a3f842a4f483764829299,
+        type: 3}
+      propertyPath: InitialModule.startColor.minColor.r
+      value: 0.81960785
+      objectReference: {fileID: 0}
+    - target: {fileID: 8289133646052106793, guid: 8b95e52bd63a3f842a4f483764829299,
+        type: 3}
+      propertyPath: InitialModule.startColor.minColor.g
+      value: 0.31796998
+      objectReference: {fileID: 0}
+    - target: {fileID: 8289133646052106793, guid: 8b95e52bd63a3f842a4f483764829299,
+        type: 3}
+      propertyPath: InitialModule.startColor.minColor.b
+      value: 0.15294115
+      objectReference: {fileID: 0}
     - target: {fileID: 8303998781407742124, guid: 8b95e52bd63a3f842a4f483764829299,
         type: 3}
       propertyPath: m_Layer
@@ -776,6 +806,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 9062993752362183231, guid: 8b95e52bd63a3f842a4f483764829299,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 9065976712582780949, guid: 8b95e52bd63a3f842a4f483764829299,
         type: 3}
