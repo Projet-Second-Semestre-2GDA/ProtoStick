@@ -70,6 +70,9 @@
 		</relationship>
 		<relationship name="modules">
 			<destination>{f4d1dd5e-75a1-4e62-8e0e-4be57979e1eb}</destination>
+			<destination>{5909423f-674b-4e12-9aab-40540c926389}</destination>
+			<destination>{cb75cb96-6d00-4791-b447-f1bc537d99ad}</destination>
+			<destination>{62aad060-3d96-494d-b7a3-78c743e9c810}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{2c2f5c11-dd9a-4536-8f1f-7484d47bace2}</destination>
@@ -84,16 +87,25 @@
 		</relationship>
 	</object>
 	<object class="ParameterProxy" id="{9d93f018-4293-4c6d-a14b-3f18e3fc0ac0}">
+		<relationship name="modules">
+			<destination>{5909423f-674b-4e12-9aab-40540c926389}</destination>
+		</relationship>
 		<relationship name="preset">
 			<destination>{5da1c3fa-6a7c-4149-a1a6-72ec26eb3e2a}</destination>
 		</relationship>
 	</object>
 	<object class="ParameterProxy" id="{87f23429-8891-4350-8869-8c66f65b2b0a}">
+		<relationship name="modules">
+			<destination>{cb75cb96-6d00-4791-b447-f1bc537d99ad}</destination>
+		</relationship>
 		<relationship name="preset">
 			<destination>{371539b8-b8de-41b4-816c-0a0aea7e9b0b}</destination>
 		</relationship>
 	</object>
 	<object class="ParameterProxy" id="{608eb6bd-6b83-4044-8774-c92b72e2ccbc}">
+		<relationship name="modules">
+			<destination>{62aad060-3d96-494d-b7a3-78c743e9c810}</destination>
+		</relationship>
 		<relationship name="preset">
 			<destination>{b65476ec-727d-4cb7-87dc-7b4adcd8960a}</destination>
 		</relationship>
@@ -131,6 +143,48 @@
 		</property>
 		<property name="length">
 			<value>3.4108390022675739</value>
+		</property>
+		<property name="looping">
+			<value>true</value>
+		</property>
+		<relationship name="audioFile">
+			<destination>{db0fa330-19a1-4f5f-b3d8-81bb385437a1}</destination>
+		</relationship>
+	</object>
+	<object class="SingleSound" id="{5909423f-674b-4e12-9aab-40540c926389}">
+		<property name="isAsync">
+			<value>true</value>
+		</property>
+		<property name="length">
+			<value>20</value>
+		</property>
+		<property name="looping">
+			<value>true</value>
+		</property>
+		<relationship name="audioFile">
+			<destination>{db0fa330-19a1-4f5f-b3d8-81bb385437a1}</destination>
+		</relationship>
+	</object>
+	<object class="SingleSound" id="{cb75cb96-6d00-4791-b447-f1bc537d99ad}">
+		<property name="isAsync">
+			<value>true</value>
+		</property>
+		<property name="length">
+			<value>20</value>
+		</property>
+		<property name="looping">
+			<value>true</value>
+		</property>
+		<relationship name="audioFile">
+			<destination>{db0fa330-19a1-4f5f-b3d8-81bb385437a1}</destination>
+		</relationship>
+	</object>
+	<object class="SingleSound" id="{62aad060-3d96-494d-b7a3-78c743e9c810}">
+		<property name="isAsync">
+			<value>true</value>
+		</property>
+		<property name="length">
+			<value>8</value>
 		</property>
 		<property name="looping">
 			<value>true</value>

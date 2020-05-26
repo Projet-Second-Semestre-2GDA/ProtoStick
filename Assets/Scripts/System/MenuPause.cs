@@ -32,6 +32,8 @@ public class MenuPause : MonoBehaviour
         velocity = new List<Vector3>();
         angularVelocity = new List<Vector3>();
         UI.SetActive(false);
+        SetPause();
+        ResumeButton.Press();
     }
 
     private void Update()
