@@ -29,7 +29,7 @@ namespace ProBuilder.Examples
         static void Init()
         {
             if (s_Instance == null)
-                Debug.LogError("No Handles object found in scene");
+                //Debug.LogError("No Handles object found in scene");
 
 			if (s_Initialized)
 				return;

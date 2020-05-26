@@ -48,7 +48,7 @@ public class MyButton : Button
             var contentY = content.transform.localPosition.y;
             var y = transform.localPosition.y;
             var realY = contentY + y;
-            // Debug.Log(contentY + " + " + y + " = " + realY);
+            // //Debug.Log(contentY + " + " + y + " = " + realY);
             if (realY > 0)
             {
                 content.Translate(0,-455,0);

@@ -107,8 +107,8 @@ public class MenuPause : MonoBehaviour
             if (players[i].activeInHierarchy)
             {
                 var rb = players[i].GetComponent<Rigidbody>();
-                Debug.Log("rb : " + rb);
-                Debug.Log("i : " + i);
+                //Debug.Log("rb : " + rb);
+                //Debug.Log("i : " + i);
                 rb.velocity = velocity[i];
                 rb.angularVelocity = angularVelocity[i];
                 rb.useGravity = true;

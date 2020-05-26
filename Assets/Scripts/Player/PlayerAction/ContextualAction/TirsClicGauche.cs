@@ -83,7 +83,7 @@ public class TirsClicGauche : MonoBehaviour
                         {
                             Physics.Raycast(rays[i], out hits[i],Mathf.Infinity,aLayerMask);
                             points[i] = hits[i].point;
-                            Debug.Log(points[i]);
+                            //Debug.Log(points[i]);
                         }
     
                         var bumperPosition = hit.point;

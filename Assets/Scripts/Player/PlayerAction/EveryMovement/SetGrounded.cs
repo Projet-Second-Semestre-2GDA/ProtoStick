@@ -12,12 +12,12 @@ public class SetGrounded : MonoBehaviour
     
     private void OnTriggerEnter(Collider collider)
     {
-        Debug.Log("I'm collising with " + collider.tag);
+        //Debug.Log("I'm collising with " + collider.tag);
         if (collider.CompareTag("Ground")|| collider.CompareTag("Player")/*|| collision.collider.CompareTag("Bumper")*/)
         {
-            Debug.Log("Je suis grounded.");
+            //Debug.Log("Je suis grounded.");
             jump.PlayerIsGround();
-            if (/*(!feedbackHasPlayed && modifiedGravity.totalFall >= 6) || */movement.hasTheMultiplicatorReset)
+            if ((!feedbackHasPlayed && modifiedGravity.totalFall >= 6) || movement.hasTheMultiplicatorReset)
             {
                 FMODUnity.RuntimeManager.PlayOneShot("event:/DA glitch/Personnage longiforme/joueur_touche_sol", transform.position);
                 feedbackHasPlayed = true;
@@ -26,10 +26,10 @@ public class SetGrounded : MonoBehaviour
     }
     private void OnTriggerExit(Collider collider)
     {
-        Debug.Log("I'm collising with " + collider.tag);
+        //Debug.Log("I'm collising with " + collider.tag);
         if (collider.CompareTag("Ground") || collider.CompareTag("Player")/*|| collision.collider.CompareTag("Bumper")*/)
         {
-            Debug.Log("Je suis plus grounded.");
+            //Debug.Log("Je suis plus grounded.");
 
             jump.PlayerIsNotGround();
 

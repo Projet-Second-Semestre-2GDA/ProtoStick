@@ -57,7 +57,7 @@ namespace ProBuilder.Examples
 
 			if (target == null)
 			{
-				Debug.LogWarning("Missing the ProBuilder Mesh target!");
+				//Debug.LogWarning("Missing the ProBuilder Mesh target!");
 				return;
 			}
 

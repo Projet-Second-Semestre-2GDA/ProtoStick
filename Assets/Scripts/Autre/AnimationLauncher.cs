@@ -58,15 +58,15 @@ public class AnimationLauncher : SerializedMonoBehaviour
     {
         CheckAllAnimation(LaunchAnimationCondition.OnTriggerStay);
     }
-    private void OnCollisionEnter(Collider other)
+    private void OnCollisionEnter(Collision other)
     {
         CheckAllAnimation(LaunchAnimationCondition.OnCollisionEnter);
     }
-    private void OnCollisionExit(Collider other)
+    private void OnCollisionExit(Collision other)
     {
         CheckAllAnimation(LaunchAnimationCondition.OnCollisionExit);
     }
-    private void OnCollisionStay(Collider other)
+    private void OnCollisionStay(Collision other)
     {
         CheckAllAnimation(LaunchAnimationCondition.OnCollisionStay);
     }

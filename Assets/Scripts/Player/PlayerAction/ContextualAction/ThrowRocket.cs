@@ -37,7 +37,7 @@ public class ThrowRocket : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Debug.Log(inputName + " = "+ Input.GetAxis(inputName));
+        // //Debug.Log(inputName + " = "+ Input.GetAxis(inputName));
         var shoot = false;
         if (Input.GetAxis(inputName) >0.1f && !alreadyDid)
         {

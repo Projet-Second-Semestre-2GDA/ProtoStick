@@ -46,12 +46,12 @@ public class ParticleOrientation : MonoBehaviour
         trans.LookAt(lookAt);
         
         var percent =Mathf.Clamp((speed- speedDesire.x) / (speedDesire.y - speedDesire.x),0,1);
-        // Debug.Log("Percent : " + percent);
+        // //Debug.Log("Percent : " + percent);
         var particles = Mathf.Lerp(emissionOverSpeed.x, emissionOverSpeed.y, percent);
         particleSystem.Emit((int)particles);
         
 
-        // Debug.Log("numberOfParticle = " + particles);
+        // //Debug.Log("numberOfParticle = " + particles);
         // emission.rateOverDistance = particles;
 
         

@@ -6,6 +6,6 @@ public class Interactible : MonoBehaviour
 {
     public virtual void Activate()
     {
-        Debug.Log(name + " has been touch");
+        //Debug.Log(name + " has been touch");
     }
 }

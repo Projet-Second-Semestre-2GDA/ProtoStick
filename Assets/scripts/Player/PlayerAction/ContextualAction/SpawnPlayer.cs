@@ -64,7 +64,7 @@ public class SpawnPlayer : MonoBehaviour
         rbPlayer = lastPlayerMovement.GetComponent<Rigidbody>();
         lastEffect = lastPlayer.GetComponent<PlayerEffect>();
         // lastEffect.canWork = false;
-        // Debug.Log("l'effet du " + lastPlayer.name + " est " + lastEffect.canWork);
+        // //Debug.Log("l'effet du " + lastPlayer.name + " est " + lastEffect.canWork);
         
         added++;
     }

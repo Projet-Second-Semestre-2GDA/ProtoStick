@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.00.00">
 	<object class="Event" id="{83fb99e0-3e8a-4418-b68d-166d8074ccf2}">
 		<property name="name">
-			<value>Joueur_vitesse</value>
+			<value>joueur_vitesse</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>
@@ -160,6 +160,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{ef9336d6-6f49-49b8-8d86-6a99a2b1bcd1}">
+		<property name="volume">
+			<value>-16</value>
+		</property>
 		<property name="name">
 			<value>Audio 2</value>
 		</property>
@@ -207,7 +210,6 @@
 		<relationship name="effects">
 			<destination>{7e55553b-e247-4ca9-8c6d-5615fa45ee6b}</destination>
 			<destination>{5c259b95-69e8-41a1-8abc-8f2ea61009f8}</destination>
-			<destination>{fba9bf9c-f9da-44ba-adc0-1b4f4cf33b88}</destination>
 			<destination>{c2c73f97-e051-475a-99d5-05515eef6fab}</destination>
 			<destination>{9df44ac1-ca0d-413e-a7d8-470105f936b5}</destination>
 		</relationship>
@@ -260,29 +262,6 @@
 		</property>
 		<property name="dryLevel">
 			<value>-5.5</value>
-		</property>
-	</object>
-	<object class="TremoloEffect" id="{fba9bf9c-f9da-44ba-adc0-1b4f4cf33b88}">
-		<property name="bypass">
-			<value>true</value>
-		</property>
-		<property name="frequency">
-			<value>0.13000001</value>
-		</property>
-		<property name="shape">
-			<value>0.555000067</value>
-		</property>
-		<property name="duty">
-			<value>0.495000035</value>
-		</property>
-		<property name="square">
-			<value>1</value>
-		</property>
-		<property name="phase">
-			<value>0.660000026</value>
-		</property>
-		<property name="spread">
-			<value>1</value>
 		</property>
 	</object>
 	<object class="FlangerEffect" id="{c2c73f97-e051-475a-99d5-05515eef6fab}">

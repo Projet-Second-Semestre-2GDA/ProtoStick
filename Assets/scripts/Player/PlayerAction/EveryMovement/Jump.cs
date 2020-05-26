@@ -62,11 +62,11 @@ public class Jump : MonoBehaviour
         playerAnimation.SetBool("IsGrounded",isGrounded);
         if (active)
         {
-            // Debug.Log(name + "a pour input" + "Jump" + playerNumber.playerNumber);
+            // //Debug.Log(name + "a pour input" + "Jump" + playerNumber.playerNumber);
             if (Input.GetButtonDown("Jump" + playerNumber.playerNumber))
             {
                 // DoJump();
-                // Debug.Log("Jump" + playerNumber.playerNumber);
+                // //Debug.Log("Jump" + playerNumber.playerNumber);
                 if (jumpDone == 0)
                 {
                     ++jumpDone;
@@ -137,7 +137,7 @@ public class Jump : MonoBehaviour
     
     private void OnCollisionEnter(Collision collision)
     {
-        //Debug.Log("I'm collising with " + collision.collider.tag);
+        ////Debug.Log("I'm collising with " + collision.collider.tag);
         if (collision.collider.CompareTag("Bumper"))
         {
             PlayerIsGround();
@@ -145,7 +145,7 @@ public class Jump : MonoBehaviour
     }
     private void OnCollisionExit(Collision collision)
     {
-        //Debug.Log("I'm collising with " + collision.collider.tag);
+        ////Debug.Log("I'm collising with " + collision.collider.tag);
         if (collision.collider.CompareTag("Bumper"))
         {
             PlayerIsNotGround();

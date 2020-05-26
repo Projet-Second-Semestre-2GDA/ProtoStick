@@ -14,19 +14,26 @@ public class AccelerationFeedback : MonoBehaviour
 
     private float speedNumber;
 
+    private void Awake()
+    {
+        speedNumber = 250;
+    }
 
     private void Start()
     {
+        uPS = GetComponent<UPS>();
+
         joueurVitesse = FMODUnity.RuntimeManager.CreateInstance("event:/DA glitch/Personnage longiforme/joueur_vitesse");
         joueurVitesse.start();
 
         joueurVitesseDescription = FMODUnity.RuntimeManager.GetEventDescription("event:/DA glitch/Personnage longiforme/joueur_vitesse");
-        Debug.Log(joueurVitesseDescription);
+        //Debug.Log(joueurVitesseDescription);
 
         joueurVitesseDescription.getParameterDescriptionByName("acceleration_player", out accelerationDescription);
 
         accelerationID = accelerationDescription.id;
-        Debug.Log(accelerationID);
+        Debug.Log(accelerationID.data1);
+        Debug.Log(accelerationID.data2);
     }
 
 
@@ -34,7 +41,7 @@ public class AccelerationFeedback : MonoBehaviour
     {
         
         speedNumber = uPS.actualsUPSPlayer;
-        // Debug.Log("speednumber =" + speedNumber);
+        //Debug.Log("speednumber =" + speedNumber);
 
         joueurVitesse.setParameterByID(accelerationID, speedNumber);
     }

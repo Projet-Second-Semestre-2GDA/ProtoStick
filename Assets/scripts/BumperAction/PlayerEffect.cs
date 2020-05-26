@@ -7,12 +7,12 @@ public class PlayerEffect : MonoBehaviour
     // [HideInInspector] public bool canWork = false;
     protected virtual void Effect(GameObject playerWhoTouch)
     {
-        Debug.Log(this.name + " do " + effect);
+        //Debug.Log(this.name + " do " + effect);
     } 
     
     protected void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Collision with " + other.gameObject.tag);
+        //Debug.Log("Collision with " + other.gameObject.tag);
         if (other.gameObject.CompareTag("Player"))
         {
             Effect(other.attachedRigidbody.gameObject);
@@ -21,7 +21,7 @@ public class PlayerEffect : MonoBehaviour
     protected void OnCollisionEnter(Collision col)
     {
         Collider other = col.collider;
-        Debug.Log("Collision with " + other.gameObject.tag);
+        //Debug.Log("Collision with " + other.gameObject.tag);
         if (other.gameObject.CompareTag("Player"))
         {
             Effect(other.attachedRigidbody.gameObject);

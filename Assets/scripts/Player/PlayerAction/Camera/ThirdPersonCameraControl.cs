@@ -49,7 +49,7 @@ public class ThirdPersonCameraControl : MonoBehaviour
         
         if (!PlayerPrefs.HasKey(sensibilityKey))PlayerPrefs.SetFloat(sensibilityKey,0.8f);
         sensitivity = PlayerPrefs.GetFloat(sensibilityKey);
-        Debug.Log("La "+ sensibilityKey +" est de " + PlayerPrefs.GetFloat(sensibilityKey));
+        //Debug.Log("La "+ sensibilityKey +" est de " + PlayerPrefs.GetFloat(sensibilityKey));
     }
 
     private void LateUpdate()

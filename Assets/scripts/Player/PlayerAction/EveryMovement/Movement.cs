@@ -96,7 +96,7 @@ public class Movement : MonoBehaviour
 
     public void ResetUpgrade()
     {
-        Debug.Log("J'ai reset ton multiplicateur connard !");
+        //Debug.Log("J'ai reset ton multiplicateur connard !");
 
         globalUpgradeMultiplicator = 1;
         isUpgrade = false;
@@ -126,9 +126,9 @@ public class Movement : MonoBehaviour
             
             var realSpeed = speedDeplacement * globalUpgradeMultiplicator;
             
-            Debug.Log("reduc = " + reduc);
-            Debug.Log("SpeedDeplacement = " + speedDeplacement);
-            Debug.Log("realSpeed = " + realSpeed);
+            //Debug.Log("reduc = " + reduc);
+            //Debug.Log("SpeedDeplacement = " + speedDeplacement);
+            //Debug.Log("realSpeed = " + realSpeed);
             var temp = trans.forward * (v * (realSpeed) * accelerator);
             temp += trans.right * (h * (realSpeed) * accelerator);
             temp = (temp.magnitude > (realSpeed) * accelerator)

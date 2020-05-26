@@ -35,12 +35,12 @@ public class LaMortNoire : MonoBehaviour
 
     private void RespawnPlayer(Collider playerCollider)
     {
-        Debug.Log("I'm in " + playerCollider.name);
+        //Debug.Log("I'm in " + playerCollider.name);
         if (playerCollider.CompareTag("Player"))
         {
             var attachedRigidbody = playerCollider.attachedRigidbody;
             var player = attachedRigidbody.gameObject;
-            Debug.Log(player.name + " is in");
+            //Debug.Log(player.name + " is in");
             var transPlayer = player.transform;
             transPlayer.position = respawnPoint.position;
             transPlayer.rotation = Quaternion.identity;

@@ -13,9 +13,9 @@ public static class UniversalRecoltObject
     {
         var key = RecoltableBaseKey + levelNumber;
         var keyTwo = TotalRecoltableBaseKey + levelNumber;
-        Debug.LogWarning("Les clés sont : " + key + ", " + keyTwo);
-        Debug.LogWarning("Nombre de récoltable attrapé : " + numberOfRecoltableCatch);
-        Debug.LogWarning("Nombre de récoltable total dans la map : " + totalOfRecoltableInMaps);
+        //Debug.LogWarning("Les clés sont : " + key + ", " + keyTwo);
+        //Debug.LogWarning("Nombre de récoltable attrapé : " + numberOfRecoltableCatch);
+        //Debug.LogWarning("Nombre de récoltable total dans la map : " + totalOfRecoltableInMaps);
         
         if (PlayerPrefs.HasKey(key))
         {

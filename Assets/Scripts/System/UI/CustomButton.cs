@@ -48,7 +48,7 @@ namespace UnityEngine.UI
         ///
         ///     void TaskOnClick()
         ///     {
-        ///         Debug.Log("You have clicked the button!");
+        ///         //Debug.Log("You have clicked the button!");
         ///     }
         /// }
         ///</code>
@@ -89,13 +89,13 @@ namespace UnityEngine.UI
         ///         if (pointerEventData.button == PointerEventData.InputButton.Right)
         ///         {
         ///             //Output to console the clicked GameObject's name and the following message. You can replace this with your own actions for when clicking the GameObject.
-        ///             Debug.Log(name + " Game Object Right Clicked!");
+        ///             //Debug.Log(name + " Game Object Right Clicked!");
         ///         }
         ///
         ///         //Use this to tell when the user left-clicks on the Button
         ///         if (pointerEventData.button == PointerEventData.InputButton.Left)
         ///         {
-        ///             Debug.Log(name + " Game Object Left Clicked!");
+        ///             //Debug.Log(name + " Game Object Left Clicked!");
         ///         }
         ///     }
         /// }

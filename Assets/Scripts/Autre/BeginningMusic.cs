@@ -24,6 +24,10 @@ public class BeginningMusic : MonoBehaviour
 
     public float debutCourse;
 
+    private void Awake()
+    {
+        masterBus.stopAllEvents(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+    }
 
     private void Start()
     {
@@ -37,7 +41,7 @@ public class BeginningMusic : MonoBehaviour
         prideAscent.start();
         dexterityAscent.start();
 
-        VoiceLinePlaying.PlaySound("event:/DA glitch/Level Design/LD_Départ_course", VoiceLinePriority.gigantic);
+        
         
         comptageDepartDescription = FMODUnity.RuntimeManager.GetEventDescription("event:/DA glitch/Level Design/LD_Départ_course");
         comptageDepartDescription.getParameterDescriptionByName("beginning_race", out beginningRaceDescription);
@@ -45,6 +49,8 @@ public class BeginningMusic : MonoBehaviour
         beginningRaceId = beginningRaceDescription.id;
 
         comptageDepart.setParameterByID(beginningRaceId, debutCourse);
+
+        VoiceLinePlaying.PlaySound("event:/DA glitch/Level Design/LD_Départ_course", VoiceLinePriority.gigantic);
 
     }
 
