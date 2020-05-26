@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{996e3c89-efb0-461a-95b1-72ec7a634a21}">
+		<property name="assetPath">
+			<value>arpège_codage_game_chromatique_descente.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.8461451247165532</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{e579ccfe-ed38-4b72-b609-9edebfefcf05}</destination>
+		</relationship>
+	</object>
+</objects>
