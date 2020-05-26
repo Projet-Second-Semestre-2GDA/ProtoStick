@@ -27,7 +27,7 @@ public class AccelerationFeedback : MonoBehaviour
         uPS = GetComponent<UPS>();
         // FMODUnity.RuntimeManager.
         joueurVitesse = FMODUnity.RuntimeManager.CreateInstance("event:/DA glitch/Personnage longiforme/joueur_acceleration");
-        joueurVitesse.setVolume(2);
+        // joueurVitesse.setVolume(2);
         
 
     }
@@ -37,7 +37,7 @@ public class AccelerationFeedback : MonoBehaviour
     {
 
         Debug.Log(FindObjectsOfType<FMODUnity.RuntimeManager>().Length);
-        joueurVitesse.setVolume(2);
+        // joueurVitesse.setVolume(2);
         speedNumber = uPS.actualsUPSPlayer;
         var result = joueurVitesse.setParameterByName("acceleration_player_flanger", speedNumber);
         var result2 = joueurVitesse.setParameterByName("acceleration_player_volume", speedNumber);
@@ -53,29 +53,29 @@ public class AccelerationFeedback : MonoBehaviour
         {
             joueurVitesse.start();
         }
-        else
-        {
-            float accelerationPlayerFlanger;
-            joueurVitesse.getParameterByName("acceleration_player_flanger", out accelerationPlayerFlanger);
-            Debug.Log("acceleration_player_flanger : " + accelerationPlayerFlanger);
-
-            float accelerationPlayerVolume;
-            joueurVitesse.getParameterByName("acceleration_player_volume", out accelerationPlayerVolume);
-            Debug.Log("acceleration_player_volume : " + accelerationPlayerVolume);
-
-            float volume;
-            float finalVolume;
-            joueurVitesse.getVolume(out volume,out finalVolume);
-            Debug.Log("Volume : " + volume);
-            Debug.Log("Final volume : " + finalVolume);
-
-
-            float pitch;
-            float finalPitch;
-            joueurVitesse.getPitch(out pitch,out finalPitch);
-            Debug.Log("Pitch : " + pitch);
-            Debug.Log("Final Pitch : " + finalPitch);
-        }
+        // else
+        // {
+        //     float accelerationPlayerFlanger;
+        //     joueurVitesse.getParameterByName("acceleration_player_flanger", out accelerationPlayerFlanger);
+        //     Debug.Log("acceleration_player_flanger : " + accelerationPlayerFlanger);
+        //
+        //     float accelerationPlayerVolume;
+        //     joueurVitesse.getParameterByName("acceleration_player_volume", out accelerationPlayerVolume);
+        //     Debug.Log("acceleration_player_volume : " + accelerationPlayerVolume);
+        //
+        //     float volume;
+        //     float finalVolume;
+        //     joueurVitesse.getVolume(out volume,out finalVolume);
+        //     Debug.Log("Volume : " + volume);
+        //     Debug.Log("Final volume : " + finalVolume);
+        //
+        //
+        //     float pitch;
+        //     float finalPitch;
+        //     joueurVitesse.getPitch(out pitch,out finalPitch);
+        //     Debug.Log("Pitch : " + pitch);
+        //     Debug.Log("Final Pitch : " + finalPitch);
+        // }
     }
 
     private void GlobalParameterAcceleration()
