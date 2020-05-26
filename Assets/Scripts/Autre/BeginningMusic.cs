@@ -62,7 +62,10 @@ public class BeginningMusic : MonoBehaviour
             dexterityAscent.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         }
 
-        
+        if (!isPause)
+        {
+            FMODUnity.RuntimeManager.PauseAllEvents(false);
+        }
 
 
         if (isPause)

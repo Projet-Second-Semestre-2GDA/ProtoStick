@@ -15,6 +15,8 @@ public class AccelerationFeedback : MonoBehaviour
 
     private float speedNumber;
 
+    
+
     private void Awake()
     {
         speedNumber = 250;
@@ -23,6 +25,7 @@ public class AccelerationFeedback : MonoBehaviour
 
     private void Start()
     {
+        
         
         uPS = GetComponent<UPS>();
         // FMODUnity.RuntimeManager.
