@@ -207,6 +207,7 @@ MonoBehaviour:
   timeToSpeedMax: 1
   diviseurAcceleration: {x: 0.5, y: 1}
   upgradeMax: 5
+  hasTheMultiplicatorReset: 0
 --- !u!114 &7693042373447387321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -245,6 +246,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   addedGravity: 0.732
   frictionMultiplicator: 1
+  totalFall: 0
 --- !u!114 &4111039021087859853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1115,6 +1117,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jump: {fileID: 392275785582107487}
+  modifiedGravity: {fileID: 1521426552997744118}
+  movement: {fileID: 0}
 --- !u!1 &2293670991915601738
 GameObject:
   m_ObjectHideFlags: 0
