@@ -18,6 +18,7 @@ public static class VoiceLinePlaying
         currentSound.getPlaybackState(out state);
         if (state == FMOD.Studio.PLAYBACK_STATE.STOPPED)
         {
+            currentSound.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
             currentSound = FMODUnity.RuntimeManager.CreateInstance(path);
             currentSound.start();
             soundPriority = priotity;
@@ -32,7 +33,7 @@ public static class VoiceLinePlaying
 
     public static void ForceStopCurrentVoice()
     {
-        currentSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        currentSound.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
     }
 
 }

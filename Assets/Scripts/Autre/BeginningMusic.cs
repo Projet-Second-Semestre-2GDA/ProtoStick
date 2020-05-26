@@ -24,15 +24,11 @@ public class BeginningMusic : MonoBehaviour
 
     public float debutCourse;
 
-    private void Awake()
-    {
-        masterBus.stopAllEvents(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-    }
+    private bool isPause;
 
     private void Start()
     {
         masterBus = FMODUnity.RuntimeManager.GetBus("Bus:/");
-       
         bassLine = FMODUnity.RuntimeManager.CreateInstance("event:/DA glitch/Musique/Msc_Bassline");
         prideAscent = FMODUnity.RuntimeManager.CreateInstance("event:/DA glitch/Musique/Msc_Pride_Ascent");
         dexterityAscent = FMODUnity.RuntimeManager.CreateInstance("event:/DA glitch/Musique/Msc_Dexterity_Ascent");
@@ -52,6 +48,9 @@ public class BeginningMusic : MonoBehaviour
 
         VoiceLinePlaying.PlaySound("event:/DA glitch/Level Design/LD_Départ_course", VoiceLinePriority.gigantic);
 
+        FMODUnity.RuntimeManager.PauseAllEvents(false);
+
+
     }
 
     private void Update()
@@ -63,27 +62,40 @@ public class BeginningMusic : MonoBehaviour
             dexterityAscent.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         }
 
-        
-
-
-        if (Input.GetAxis("Pause") != 0)
+        if (!isPause)
         {
-            
-            FMODUnity.RuntimeManager.PauseAllEvents(true);
+            FMODUnity.RuntimeManager.PauseAllEvents(false);
+        }
+
+
+        if (isPause)
+        {
+            // FMODUnity.RuntimeManager.PauseAllEvents(true);
+        }
+        else
+        {
+            // FMODUnity.RuntimeManager.PauseAllEvents(false);
         }
     }
 
     public void ResumeMusic()
     {
-        
+        isPause = false;
         FMODUnity.RuntimeManager.PauseAllEvents(false);
     }
 
     public void StopMusicMenu()
     {
-        FMODUnity.RuntimeManager.PauseAllEvents(false);
+        FMODUnity.RuntimeManager.PauseAllEvents(true);
+        VoiceLinePlaying.ForceStopCurrentVoice();
         masterBus.stopAllEvents(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
 
+    public void PauseMusic()
+    {
+        isPause = true;
+        FMODUnity.RuntimeManager.PauseAllEvents(true);
+
+    }
 
 }

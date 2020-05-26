@@ -353,7 +353,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 986d18981762b244e934fa23186e4496, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uPS: {fileID: 0}
 --- !u!114 &133733549028643256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6052,7 +6051,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0579183b475c500459f311b9aeca1504, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emissionOverSpeed: {x: 0, y: 30}
+  emissionOverSpeed: {x: 0, y: 20}
   speedDesire: {x: 120, y: 300}
   transitionSpeed: 20
 --- !u!1 &4826098183085389569

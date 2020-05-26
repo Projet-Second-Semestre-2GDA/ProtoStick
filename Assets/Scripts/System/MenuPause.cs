@@ -23,7 +23,7 @@ public class MenuPause : MonoBehaviour
     private List<Vector3> angularVelocity;
 
     private GlobalTimer timer;
-
+    [SerializeField] BeginningMusic beginningMusic;
 
     private bool isPause = false;
     void Start()
@@ -55,6 +55,7 @@ public class MenuPause : MonoBehaviour
         debut.Pause();
         eventSystem.SetSelectedGameObject(gameObjectToSelect);
         timer.Pause();
+        beginningMusic.PauseMusic();
     }
 
     public void Resume()
@@ -65,6 +66,7 @@ public class MenuPause : MonoBehaviour
         isPause = false;
         eventSystem.SetSelectedGameObject(null);
         timer.Resume();
+        beginningMusic.ResumeMusic();
     }
 
     public void ReturnToMenu()
