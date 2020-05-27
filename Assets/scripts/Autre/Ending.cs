@@ -60,15 +60,8 @@ public class Ending : MonoBehaviour
         canvas.SetActive(true);
         // text.text = "The Winner is\n" + name;
         winners[winnerIndex].SetActive(true);
-        if (name == "Player One")
-        {
-            VoiceLinePlaying.PlaySound("event:/DA glitch/Level Design/LD_Victoire_joueur_1", VoiceLinePriority.gigantic);
-        }
-
-        if (name == "Player Two")
-        {
-            VoiceLinePlaying.PlaySound("event:/DA glitch/Level Design/LD_Victoire_joueur_2", VoiceLinePriority.gigantic);
-        }
+        VoiceLinePlaying.PlaySound("event:/DA glitch/Level Design/LD_Victoire_joueur_" + (winnerIndex + 1), VoiceLinePriority.gigantic);
+        
     }
     
     private void OnTriggerEnter(Collider other)
