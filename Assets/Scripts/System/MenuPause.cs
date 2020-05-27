@@ -21,7 +21,6 @@ public class MenuPause : MonoBehaviour
     [SerializeField] private String urlFeedback = "https://forms.gle/pSeSzSjDvmm3j1eX8";
     private List<Vector3> velocity;
     private List<Vector3> angularVelocity;
-
     private GlobalTimer timer;
     [SerializeField] BeginningMusic beginningMusic;
 
@@ -98,6 +97,7 @@ public class MenuPause : MonoBehaviour
                 players[i].GetComponent<ModifiedGravity>().SetModifiedGravity(false);
                 // players[i].GetComponent<TimerShower>().StopChrono();
                 players[i].GetComponentInChildren<ThirdPersonCameraControl>().SetCamera(false);
+                players[i].GetComponent<LineTracer>().SetPause(true);
             }
 
         }
@@ -120,6 +120,7 @@ public class MenuPause : MonoBehaviour
                 players[i].GetComponent<ModifiedGravity>().SetModifiedGravity(true);
                 // players[i].GetComponent<TimerShower>().ResumeChrono();
                 players[i].GetComponentInChildren<ThirdPersonCameraControl>().SetCamera(true);
+                players[i].GetComponent<LineTracer>().SetPause(false);
             }
         }
         velocity.Clear();

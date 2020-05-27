@@ -1070,7 +1070,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jump: {fileID: 392275785582107487}
   modifiedGravity: {fileID: 1521426552997744118}
-  movement: {fileID: 0}
+  movement: {fileID: 3967642073236559566}
 --- !u!1 &2293670991915601738
 GameObject:
   m_ObjectHideFlags: 0

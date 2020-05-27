@@ -18,22 +18,25 @@ public class LineTracer : MonoBehaviour
     private float nexRefreshTime;
     private List<Vector3> positions = new List<Vector3>();
 
+    private bool isPause;
+
     private void Start()
     {
-        if (lineRenderer == null) lineRenderer = GetComponent<LineRenderer>();
-        if (lineRenderer == null) throw new NullReferenceException("Aucun LineRenderer n'est sur l'objet \"" + name + "\".");
-
-        var pos = pointToGetPosition.position;
-        
-        for (int i = 0; i < numberOfPosition; i++)
+        if (!isPause)
         {
-            positions.Add(pos);
+            if (lineRenderer == null) lineRenderer = GetComponent<LineRenderer>();
+            if (lineRenderer == null)
+                throw new NullReferenceException("Aucun LineRenderer n'est sur l'objet \"" + name + "\".");
+
+            var pos = pointToGetPosition.position;
+
+            for (int i = 0; i < numberOfPosition; i++)
+            {
+                positions.Add(pos);
+            }
+
+            nexRefreshTime = Time.time + refreshTime;
         }
-        
-
-        
-
-        nexRefreshTime = Time.time + refreshTime;
     }
 
     private void Update()
@@ -53,5 +56,10 @@ public class LineTracer : MonoBehaviour
         positions.Add(position);
         lineRenderer.positionCount = numberOfPosition;
         lineRenderer.SetPositions(positions.ToArray());
+    }
+
+    public void SetPause(bool isPause)
+    {
+        this.isPause = isPause;
     }
 }
