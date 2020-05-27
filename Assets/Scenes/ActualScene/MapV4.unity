@@ -20850,11 +20850,6 @@ PrefabInstance:
       propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2920776898754496041, guid: 8b95e52bd63a3f842a4f483764829299,
-        type: 3}
-      propertyPath: movement
-      value: 
-      objectReference: {fileID: 1506392840}
     - target: {fileID: 6818670899115546122, guid: 8b95e52bd63a3f842a4f483764829299,
         type: 3}
       propertyPath: uPS
@@ -44323,18 +44318,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a490a8c2725a0fc4eba896b5c2c68063, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1506392840 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3967642073236559566, guid: 8b95e52bd63a3f842a4f483764829299,
-    type: 3}
-  m_PrefabInstance: {fileID: 680580398}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1506392825}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fb3f1c38ba253e41a5aac5eaec8536c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1506749137
