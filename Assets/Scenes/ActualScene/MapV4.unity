@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: e19adf50a9d4b374d99ba1eaa1497e60, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -10198,9 +10198,9 @@ GameObject:
   - component: {fileID: 318642318}
   - component: {fileID: 318642317}
   - component: {fileID: 318642321}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Trigger Zone 2
-  m_TagString: Untagged
+  m_TagString: NoBumper
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35434,9 +35434,9 @@ GameObject:
   - component: {fileID: 1191647527}
   - component: {fileID: 1191647526}
   - component: {fileID: 1191647525}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Trigger Zone 3
-  m_TagString: Untagged
+  m_TagString: NoBumper
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
