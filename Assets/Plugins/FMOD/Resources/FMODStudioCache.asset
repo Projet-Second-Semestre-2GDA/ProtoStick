@@ -121,7 +121,7 @@ MonoBehaviour:
   Path: event:/DA glitch/Personnage longiforme/joueur_touche_sol
   guid: bbae20d330b53f42a147ea6df0e88879
   Banks:
-  - {fileID: 2844364384607559161}
+  - {fileID: -1548181180266890663}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -163,6 +163,29 @@ MonoBehaviour:
   Max: 100
   Default: 100
   Exists: 0
+--- !u!114 &-8944624290691701374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/DA glitch/Level Design/LD_Ouverture_Porte
+  m_EditorClassIdentifier: 
+  Path: event:/DA glitch/Level Design/LD_Ouverture_Porte
+  guid: c6cfbe7cf5ff844bb2b75a4b262f19da
+  Banks:
+  - {fileID: 8180938920630407888}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 100
+  MaxDistance: 400
+  Length: 820
 --- !u!114 &-8939336303972655928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -405,7 +428,7 @@ MonoBehaviour:
   Banks:
   - {fileID: -7635345785730971095}
   - {fileID: -7009625003562020218}
-  - {fileID: 2844364384607559161}
+  - {fileID: -1548181180266890663}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -515,6 +538,29 @@ MonoBehaviour:
   Max: 250
   Default: 0
   Exists: 0
+--- !u!114 &-8515506102958494341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/DA glitch/Level Design/LD_rocket_touch\xE9e_sur_joueur_1"
+  m_EditorClassIdentifier: 
+  Path: "event:/DA glitch/Level Design/LD_rocket_touch\xE9e_sur_joueur_1"
+  guid: 2a71bb35bb0dc84c9454ce413862df6c
+  Banks:
+  - {fileID: 8180938920630407888}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3000
 --- !u!114 &-8489546842974480927
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -531,6 +577,23 @@ MonoBehaviour:
   Min: 0
   Max: 100
   Default: 100
+  Exists: 1
+--- !u!114 &-8451091844244213566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: "parameter:/LD_D\xE9part_course/beginning_race"
+  m_EditorClassIdentifier: 
+  Name: beginning_race
+  Min: 0
+  Max: 9
+  Default: 0
   Exists: 1
 --- !u!114 &-8442870961634777126
 MonoBehaviour:
@@ -566,6 +629,23 @@ MonoBehaviour:
   Max: 200
   Default: 9.81
   Exists: 1
+--- !u!114 &-8394260375356901270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/joueur_acceleration/acceleration_player_volume
+  m_EditorClassIdentifier: 
+  Name: acceleration_player_volume
+  Min: 0
+  Max: 250
+  Default: 0
+  Exists: 0
 --- !u!114 &-8393146296223944019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -581,7 +661,7 @@ MonoBehaviour:
   Path: event:/DA glitch/Level Design/LD_chute_zone_noire
   guid: 64281059afafe84faad6d8b22c03b8c5
   Banks:
-  - {fileID: 2844364384607559161}
+  - {fileID: -1548181180266890663}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -855,6 +935,23 @@ MonoBehaviour:
   Max: 100
   Default: 100
   Exists: 1
+--- !u!114 &-7993172236331897128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/joueur_vitesse/acceleration_player_volume
+  m_EditorClassIdentifier: 
+  Name: acceleration_player_volume
+  Min: 0
+  Max: 250
+  Default: 0
+  Exists: 0
 --- !u!114 &-7971977309813489226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -872,6 +969,31 @@ MonoBehaviour:
   Max: 100
   Default: 100
   Exists: 0
+--- !u!114 &-7951004951163288807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/DA glitch/Personnage longiforme/joueur_acceleration_2
+  m_EditorClassIdentifier: 
+  Path: event:/DA glitch/Personnage longiforme/joueur_acceleration_2
+  guid: bf1d780104534b4bbccbf50581546910
+  Banks:
+  - {fileID: 8180938920630407888}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -7860013529178128786}
+  - {fileID: 3029233100316378751}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3410
 --- !u!114 &-7947581898222295327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -925,6 +1047,23 @@ MonoBehaviour:
   Name: beginning_race
   Min: 0
   Max: 9
+  Default: 0
+  Exists: 1
+--- !u!114 &-7860013529178128786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/joueur_acceleration_2/acceleration_player_volume
+  m_EditorClassIdentifier: 
+  Name: acceleration_player_volume
+  Min: 0
+  Max: 250
   Default: 0
   Exists: 1
 --- !u!114 &-7833666496895870820
@@ -1436,6 +1575,23 @@ MonoBehaviour:
   Max: 200
   Default: 9.81
   Exists: 1
+--- !u!114 &-7411812398521771861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/joueur_acceleration/acceleration_player_flanger
+  m_EditorClassIdentifier: 
+  Name: acceleration_player_flanger
+  Min: 0
+  Max: 250
+  Default: 0
+  Exists: 1
 --- !u!114 &-7409965856231345869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1487,6 +1643,23 @@ MonoBehaviour:
   Max: 100
   Default: 100
   Exists: 1
+--- !u!114 &-7329774747248649342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/joueur_acceleration_2/acceleration_player_volume
+  m_EditorClassIdentifier: 
+  Name: acceleration_player_volume
+  Min: 0
+  Max: 250
+  Default: 0
+  Exists: 0
 --- !u!114 &-7293059500282247379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1644,6 +1817,29 @@ MonoBehaviour:
   - Name: Desktop
     Value: 2468384
   Exists: 1
+--- !u!114 &-7104015547034255397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/DA glitch/Level Design/LD_entree_zone_3_joueur_1
+  m_EditorClassIdentifier: 
+  Path: event:/DA glitch/Level Design/LD_entree_zone_3_joueur_1
+  guid: 2e8d3fc120d8bc4d8544454a63b3f588
+  Banks:
+  - {fileID: 8180938920630407888}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3692
 --- !u!114 &-7087511493637002438
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1729,7 +1925,7 @@ MonoBehaviour:
   Banks:
   - {fileID: -7635345785730971095}
   - {fileID: -7009625003562020218}
-  - {fileID: 2844364384607559161}
+  - {fileID: -1548181180266890663}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -1809,6 +2005,46 @@ MonoBehaviour:
   Max: 200
   Default: 9.81
   Exists: 0
+--- !u!114 &-6925147470409705025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: global_volume_effect
+  m_EditorClassIdentifier: 
+  Name: global_volume_effect
+  Min: 0
+  Max: 100
+  Default: 100
+  Exists: 1
+--- !u!114 &-6914464197140181599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/DA glitch/Level Design/LD_chute_zone_noire
+  m_EditorClassIdentifier: 
+  Path: event:/DA glitch/Level Design/LD_chute_zone_noire
+  guid: 64281059afafe84faad6d8b22c03b8c5
+  Banks:
+  - {fileID: 8180938920630407888}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 50
+  MaxDistance: 250
+  Length: 560
 --- !u!114 &-6913228894852315142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2068,6 +2304,23 @@ MonoBehaviour:
   Max: 200
   Default: 9.81
   Exists: 1
+--- !u!114 &-6552102817693375602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/joueur_acceleration_2/acceleration_player_volume
+  m_EditorClassIdentifier: 
+  Name: acceleration_player_volume
+  Min: 0
+  Max: 250
+  Default: 0
+  Exists: 1
 --- !u!114 &-6535476134371913001
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2085,6 +2338,29 @@ MonoBehaviour:
   Max: 250
   Default: 0
   Exists: 1
+--- !u!114 &-6525419470994762406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/DA placeholder/personnage/double_saut
+  m_EditorClassIdentifier: 
+  Path: event:/DA placeholder/personnage/double_saut
+  guid: adbb3f0707ac4b4791186a1ff53664b1
+  Banks:
+  - {fileID: 8180938920630407888}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 65
+  MaxDistance: 200
+  Length: 511
 --- !u!114 &-6517446311743389897
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2140,6 +2416,47 @@ MonoBehaviour:
   Max: 250
   Default: 0
   Exists: 0
+--- !u!114 &-6430969470715792836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/DA placeholder/personnage/chute_avatar
+  m_EditorClassIdentifier: 
+  Path: event:/DA placeholder/personnage/chute_avatar
+  guid: eab61753b656864f915b1c7ab76fe2e7
+  Banks:
+  - {fileID: 8180938920630407888}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 6780133977663127585}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1745
+--- !u!114 &-6413889965935131261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/joueur_vitesse/acceleration_player_flanger
+  m_EditorClassIdentifier: 
+  Name: acceleration_player_flanger
+  Min: 0
+  Max: 250
+  Default: 0
+  Exists: 1
 --- !u!114 &-6399930116618341809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2209,12 +2526,12 @@ MonoBehaviour:
   - {fileID: 8008430209676961606}
   - {fileID: -7635345785730971095}
   - {fileID: -7009625003562020218}
-  - {fileID: 2844364384607559161}
+  - {fileID: -1548181180266890663}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 5088277235539225431}
+  - {fileID: 597208574157233518}
   MinDistance: 0
   MaxDistance: 0
   Length: 1745
@@ -2235,7 +2552,7 @@ MonoBehaviour:
   Banks:
   - {fileID: -7635345785730971095}
   - {fileID: -7009625003562020218}
-  - {fileID: 2844364384607559161}
+  - {fileID: -1548181180266890663}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -2277,6 +2594,23 @@ MonoBehaviour:
   Max: 100
   Default: 100
   Exists: 0
+--- !u!114 &-6181159985337892824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: global_volume_voice
+  m_EditorClassIdentifier: 
+  Name: global_volume_voice
+  Min: 0
+  Max: 100
+  Default: 100
+  Exists: 1
 --- !u!114 &-6180385947244914079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2310,6 +2644,23 @@ MonoBehaviour:
   Min: 0
   Max: 100
   Default: 100
+  Exists: 1
+--- !u!114 &-6043298035612038288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/joueur_acceleration/acceleration_player_volume
+  m_EditorClassIdentifier: 
+  Name: acceleration_player_volume
+  Min: 0
+  Max: 250
+  Default: 0
   Exists: 1
 --- !u!114 &-5969468681303834718
 MonoBehaviour:
@@ -2345,7 +2696,7 @@ MonoBehaviour:
   Banks:
   - {fileID: -7635345785730971095}
   - {fileID: -7009625003562020218}
-  - {fileID: 2844364384607559161}
+  - {fileID: -1548181180266890663}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -2451,6 +2802,46 @@ MonoBehaviour:
   m_Name: parameter:/joueur_vitesse/acceleration_player
   m_EditorClassIdentifier: 
   Name: acceleration_player
+  Min: 0
+  Max: 250
+  Default: 0
+  Exists: 1
+--- !u!114 &-5601552130529478579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/DA glitch/Ambiants/amb_ralentisseur
+  m_EditorClassIdentifier: 
+  Path: event:/DA glitch/Ambiants/amb_ralentisseur
+  guid: 1f84f52c88adff4587f0fea30581a526
+  Banks:
+  - {fileID: 8180938920630407888}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 15
+  MaxDistance: 150
+  Length: 3692
+--- !u!114 &-5566536278637876482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/joueur_acceleration/acceleration_player_volume
+  m_EditorClassIdentifier: 
+  Name: acceleration_player_volume
   Min: 0
   Max: 250
   Default: 0
@@ -2807,6 +3198,29 @@ MonoBehaviour:
   Max: 2000
   Default: 0
   Exists: 0
+--- !u!114 &-5119902512518567956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/DA glitch/Personnage longiforme/joueur_touche_sol
+  m_EditorClassIdentifier: 
+  Path: event:/DA glitch/Personnage longiforme/joueur_touche_sol
+  guid: bbae20d330b53f42a147ea6df0e88879
+  Banks:
+  - {fileID: 8180938920630407888}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 30
+  MaxDistance: 150
+  Length: 305
 --- !u!114 &-5089474886890881993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2941,6 +3355,29 @@ MonoBehaviour:
   MinDistance: 80
   MaxDistance: 200
   Length: 3410
+--- !u!114 &-4900059044358483913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/DA glitch/Level Design/LD_entree_zone_2_joueur_2
+  m_EditorClassIdentifier: 
+  Path: event:/DA glitch/Level Design/LD_entree_zone_2_joueur_2
+  guid: 24e0656dccdc834bb87e1549a44675d4
+  Banks:
+  - {fileID: 8180938920630407888}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3230
 --- !u!114 &-4890231998839350586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2992,6 +3429,23 @@ MonoBehaviour:
   Max: 200
   Default: 9.81
   Exists: 0
+--- !u!114 &-4857218617465772305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: ChangementMusique
+  m_EditorClassIdentifier: 
+  Name: ChangementMusique
+  Min: -2000
+  Max: 2000
+  Default: 0
+  Exists: 1
 --- !u!114 &-4842231292653243597
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3324,7 +3778,7 @@ MonoBehaviour:
   Banks:
   - {fileID: -7635345785730971095}
   - {fileID: -7009625003562020218}
-  - {fileID: 2844364384607559161}
+  - {fileID: -1548181180266890663}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -3592,7 +4046,7 @@ MonoBehaviour:
   - {fileID: 8008430209676961606}
   - {fileID: -7635345785730971095}
   - {fileID: -7009625003562020218}
-  - {fileID: 2844364384607559161}
+  - {fileID: -1548181180266890663}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -3838,6 +4292,23 @@ MonoBehaviour:
   Max: 100
   Default: 100
   Exists: 0
+--- !u!114 &-3828789834577150903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/joueur_acceleration_2/acceleration_player_flanger
+  m_EditorClassIdentifier: 
+  Name: acceleration_player_flanger
+  Min: 0
+  Max: 250
+  Default: 0
+  Exists: 1
 --- !u!114 &-3775545842948534060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4050,7 +4521,7 @@ MonoBehaviour:
   Banks:
   - {fileID: -7635345785730971095}
   - {fileID: -7009625003562020218}
-  - {fileID: 2844364384607559161}
+  - {fileID: -1548181180266890663}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -4266,6 +4737,23 @@ MonoBehaviour:
   Max: 100
   Default: 100
   Exists: 1
+--- !u!114 &-3093571209753180541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: global_volume_ambiant
+  m_EditorClassIdentifier: 
+  Name: global_volume_ambiant
+  Min: 0
+  Max: 100
+  Default: 100
+  Exists: 1
 --- !u!114 &-3062994761382520653
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4350,6 +4838,23 @@ MonoBehaviour:
   Min: 9.81
   Max: 200
   Default: 9.81
+  Exists: 0
+--- !u!114 &-2887802066324713137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: "parameter:/LD_D\xE9part_course/beginning_race"
+  m_EditorClassIdentifier: 
+  Name: beginning_race
+  Min: 0
+  Max: 9
+  Default: 0
   Exists: 0
 --- !u!114 &-2857179422421735919
 MonoBehaviour:
@@ -4698,6 +5203,23 @@ MonoBehaviour:
   Min: 9.81
   Max: 200
   Default: 9.81
+  Exists: 1
+--- !u!114 &-2350062754501719099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: global_volume_effect
+  m_EditorClassIdentifier: 
+  Name: global_volume_effect
+  Min: 0
+  Max: 100
+  Default: 100
   Exists: 1
 --- !u!114 &-2331810727458817779
 MonoBehaviour:
@@ -5390,6 +5912,23 @@ MonoBehaviour:
   Max: 9
   Default: 0
   Exists: 1
+--- !u!114 &-1560349448685046125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/joueur_acceleration/acceleration_player_flanger
+  m_EditorClassIdentifier: 
+  Name: acceleration_player_flanger
+  Min: 0
+  Max: 250
+  Default: 0
+  Exists: 0
 --- !u!114 &-1549478052815773069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5407,6 +5946,27 @@ MonoBehaviour:
   Max: 100
   Default: 100
   Exists: 0
+--- !u!114 &-1548181180266890663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: D:/gitHub/ripository/ProtoStick/ProtoStick/Assets/sound design/Assemblage
+    FMOD/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637261658202202913
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 3378688
+  Exists: 1
 --- !u!114 &-1523599445914018486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5492,6 +6052,23 @@ MonoBehaviour:
   Max: 100
   Default: 100
   Exists: 1
+--- !u!114 &-1466021413111784745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/joueur_vitesse/acceleration_player_flanger
+  m_EditorClassIdentifier: 
+  Name: acceleration_player_flanger
+  Min: 0
+  Max: 250
+  Default: 0
+  Exists: 1
 --- !u!114 &-1451429230071845890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5560,6 +6137,29 @@ MonoBehaviour:
   Max: 100
   Default: 100
   Exists: 0
+--- !u!114 &-1363661078286058825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/DA placeholder/personnage/premier_saut
+  m_EditorClassIdentifier: 
+  Path: event:/DA placeholder/personnage/premier_saut
+  guid: 2fa6a1d917e58e46850602fb7554c1a0
+  Banks:
+  - {fileID: 8180938920630407888}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 65
+  MaxDistance: 200
+  Length: 511
 --- !u!114 &-1327357855538014300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5626,13 +6226,13 @@ MonoBehaviour:
   Path: event:/DA glitch/Personnage longiforme/joueur_acceleration_2
   guid: bf1d780104534b4bbccbf50581546910
   Banks:
-  - {fileID: 2844364384607559161}
+  - {fileID: -1548181180266890663}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -2082824727369025167}
-  - {fileID: -8637362017725761287}
+  - {fileID: -6552102817693375602}
+  - {fileID: -3828789834577150903}
   MinDistance: 0
   MaxDistance: 0
   Length: 3410
@@ -5763,6 +6363,23 @@ MonoBehaviour:
   Max: 9
   Default: 0
   Exists: 0
+--- !u!114 &-1070857108766551375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: "parameter:/LD_D\xE9part_course/beginning_race"
+  m_EditorClassIdentifier: 
+  Name: beginning_race
+  Min: 0
+  Max: 9
+  Default: 0
+  Exists: 1
 --- !u!114 &-1052297788983705485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5852,6 +6469,29 @@ MonoBehaviour:
   Max: 250
   Default: 0
   Exists: 1
+--- !u!114 &-977370956131095426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/DA glitch/Level Design/LD_Super_Recoltable
+  m_EditorClassIdentifier: 
+  Path: event:/DA glitch/Level Design/LD_Super_Recoltable
+  guid: 57c08a9af4a18645aa472162e75df450
+  Banks:
+  - {fileID: 8180938920630407888}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 60
+  MaxDistance: 300
+  Length: 1000
 --- !u!114 &-965556765336911281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6077,6 +6717,29 @@ MonoBehaviour:
   Max: 200
   Default: 9.81
   Exists: 1
+--- !u!114 &-608309418198329539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/DA glitch/Musique/Msc_Bassline
+  m_EditorClassIdentifier: 
+  Path: event:/DA glitch/Musique/Msc_Bassline
+  guid: 3e2956539edffe4d8339af9529ab2b19
+  Banks:
+  - {fileID: 8180938920630407888}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 51692
 --- !u!114 &-600675993299239492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6264,6 +6927,29 @@ MonoBehaviour:
   Max: 250
   Default: 0
   Exists: 1
+--- !u!114 &-411055065463571035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/DA placeholder/personnage/retour_spawn
+  m_EditorClassIdentifier: 
+  Path: event:/DA placeholder/personnage/retour_spawn
+  guid: 7d75630b5b35e4469d606b69fdd05966
+  Banks:
+  - {fileID: 8180938920630407888}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 489
 --- !u!114 &-410460202199010844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6281,6 +6967,29 @@ MonoBehaviour:
   Max: 100
   Default: 100
   Exists: 1
+--- !u!114 &-318579622059008310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/DA placeholder/personnage/instanciation_bumper
+  m_EditorClassIdentifier: 
+  Path: event:/DA placeholder/personnage/instanciation_bumper
+  guid: 926aa91430f55f498f35d3249d48167d
+  Banks:
+  - {fileID: 8180938920630407888}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 596
 --- !u!114 &-291754369485272860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6472,50 +7181,55 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: -5432910631825139350}
-  - {fileID: 2844364384607559161}
+  - {fileID: 4156737503800583306}
+  - {fileID: 8180938920630407888}
   EditorEvents:
-  - {fileID: -4027328660929523503}
-  - {fileID: 6308415972350629624}
-  - {fileID: 8216017561397440450}
-  - {fileID: 7835061960988741702}
-  - {fileID: 4510579497891306019}
-  - {fileID: -6340931701024359857}
-  - {fileID: 8015420881219081153}
-  - {fileID: -5890650314847509947}
-  - {fileID: -4546942112838490444}
-  - {fileID: 8658487279961789394}
-  - {fileID: 3290854344339256721}
-  - {fileID: -6324535215108610733}
-  - {fileID: -7052315309437294979}
-  - {fileID: -8707641141873735568}
-  - {fileID: 3804778594650227301}
-  - {fileID: 5002220390838956599}
-  - {fileID: 3816549787452006412}
-  - {fileID: 1755586990279990483}
-  - {fileID: 966849951012903380}
-  - {fileID: 7587790584360508039}
-  - {fileID: -3393119437929050994}
-  - {fileID: 8195072987517368521}
-  - {fileID: 5653255755675623432}
-  - {fileID: -8393146296223944019}
-  - {fileID: 2054683541948779063}
-  - {fileID: 8423765386113973562}
-  - {fileID: 8555096281418068264}
-  - {fileID: -8994234346378981933}
-  - {fileID: -1284352863922745753}
-  - {fileID: 5185498576741294324}
+  - {fileID: 8195956848714227889}
+  - {fileID: 962423320577471090}
+  - {fileID: -5601552130529478579}
+  - {fileID: -4900059044358483913}
+  - {fileID: -8515506102958494341}
+  - {fileID: -7104015547034255397}
+  - {fileID: -1363661078286058825}
+  - {fileID: -608309418198329539}
+  - {fileID: 8360933503222258411}
+  - {fileID: 1949619639974192421}
+  - {fileID: 8886198666359369181}
+  - {fileID: -977370956131095426}
+  - {fileID: 8130538315875877463}
+  - {fileID: -6914464197140181599}
+  - {fileID: -411055065463571035}
+  - {fileID: 7734687476366254425}
+  - {fileID: 8747065044712173277}
+  - {fileID: 3962546649389286493}
+  - {fileID: 982752048613949591}
+  - {fileID: -318579622059008310}
+  - {fileID: 7266885912649571987}
+  - {fileID: 3889434964566833749}
+  - {fileID: 3274915179053109663}
+  - {fileID: -6525419470994762406}
+  - {fileID: -5119902512518567956}
+  - {fileID: -7951004951163288807}
+  - {fileID: 2562395288070966363}
+  - {fileID: -8944624290691701374}
+  - {fileID: 3287415892395928075}
+  - {fileID: 6258620012248418714}
+  - {fileID: 554717577210894006}
+  - {fileID: 3655839753356779309}
+  - {fileID: -6430969470715792836}
+  - {fileID: 6253723228879795773}
+  - {fileID: 7922069466724936821}
   EditorParameters:
-  - {fileID: 969278288892148319}
-  - {fileID: -8718386210813211037}
-  - {fileID: 4124328646425596202}
-  - {fileID: -7833666496895870820}
-  - {fileID: -881991019480611114}
+  - {fileID: -4857218617465772305}
+  - {fileID: 4914692320158581535}
+  - {fileID: 6994785579306393895}
+  - {fileID: -6925147470409705025}
+  - {fileID: 7009259004229445794}
   MasterBanks:
-  - {fileID: 2844364384607559161}
+  - {fileID: 8180938920630407888}
   StringsBanks:
-  - {fileID: -5432910631825139350}
-  stringsBankWriteTime: 637261350440048952
+  - {fileID: 4156737503800583306}
+  stringsBankWriteTime: 637262026563673471
   cacheVersion: 3
 --- !u!114 &35865073347192246
 MonoBehaviour:
@@ -6704,6 +7418,29 @@ MonoBehaviour:
   Max: 100
   Default: 100
   Exists: 0
+--- !u!114 &314165035049031200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/DA glitch/Level Design/LD_Ouverture_Porte
+  m_EditorClassIdentifier: 
+  Path: event:/DA glitch/Level Design/LD_Ouverture_Porte
+  guid: c6cfbe7cf5ff844bb2b75a4b262f19da
+  Banks:
+  - {fileID: -1548181180266890663}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 100
+  MaxDistance: 400
+  Length: 820
 --- !u!114 &352413835444786781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6840,6 +7577,48 @@ MonoBehaviour:
   Max: 9
   Default: 0
   Exists: 0
+--- !u!114 &554717577210894006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/DA glitch/Personnage longiforme/joueur_vitesse
+  m_EditorClassIdentifier: 
+  Path: event:/DA glitch/Personnage longiforme/joueur_vitesse
+  guid: e099fb838a3e1844b68d166d8074ccf2
+  Banks:
+  - {fileID: 8180938920630407888}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -6413889965935131261}
+  - {fileID: 7777951446790104416}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3410
+--- !u!114 &597208574157233518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/chute_avatar/vitesseDeChute
+  m_EditorClassIdentifier: 
+  Name: vitesseDeChute
+  Min: 9.81
+  Max: 200
+  Default: 9.81
+  Exists: 1
 --- !u!114 &623319020902445519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7006,6 +7785,29 @@ MonoBehaviour:
   Max: 200
   Default: 9.81
   Exists: 0
+--- !u!114 &962423320577471090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/DA glitch/Level Design/LD_ralentisseur_collision
+  m_EditorClassIdentifier: 
+  Path: event:/DA glitch/Level Design/LD_ralentisseur_collision
+  guid: 0f45b36d72de3c4e819f3439b2a960c8
+  Banks:
+  - {fileID: 8180938920630407888}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 90
+  MaxDistance: 300
+  Length: 686
 --- !u!114 &966849951012903380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7023,7 +7825,7 @@ MonoBehaviour:
   Banks:
   - {fileID: -7635345785730971095}
   - {fileID: -7009625003562020218}
-  - {fileID: 2844364384607559161}
+  - {fileID: -1548181180266890663}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -7065,6 +7867,29 @@ MonoBehaviour:
   Max: 100
   Default: 100
   Exists: 0
+--- !u!114 &982752048613949591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/DA glitch/Ambiants/amb_zone_noire
+  m_EditorClassIdentifier: 
+  Path: event:/DA glitch/Ambiants/amb_zone_noire
+  guid: 8b3ecfec37df0d4ea2c455a4d581bd70
+  Banks:
+  - {fileID: 8180938920630407888}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 150
+  MaxDistance: 400
+  Length: 6602
 --- !u!114 &1014881611215057992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7528,6 +8353,23 @@ MonoBehaviour:
   Max: 2000
   Default: 0
   Exists: 1
+--- !u!114 &1579638356424729245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/joueur_acceleration/acceleration_player_flanger
+  m_EditorClassIdentifier: 
+  Name: acceleration_player_flanger
+  Min: 0
+  Max: 250
+  Default: 0
+  Exists: 1
 --- !u!114 &1645938945537419269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7681,13 +8523,13 @@ MonoBehaviour:
   Banks:
   - {fileID: -7635345785730971095}
   - {fileID: -7009625003562020218}
-  - {fileID: 2844364384607559161}
+  - {fileID: -1548181180266890663}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -3759673559764075549}
-  - {fileID: 5905410695335908771}
+  - {fileID: -1466021413111784745}
+  - {fileID: 6682615647494015021}
   MinDistance: 0
   MaxDistance: 0
   Length: 3410
@@ -7830,6 +8672,27 @@ MonoBehaviour:
   Max: 250
   Default: 0
   Exists: 0
+--- !u!114 &1887424287472377977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: D:/gitHub/ripository/ProtoStick/ProtoStick/Assets/sound design/Assemblage
+    FMOD/Build/Desktop/Master.strings.bank
+  SubDir: 
+  lastModified: 637261658202283021
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 2952
+  Exists: 1
 --- !u!114 &1918053491901691903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7881,6 +8744,29 @@ MonoBehaviour:
   Max: 100
   Default: 100
   Exists: 1
+--- !u!114 &1949619639974192421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/DA glitch/Bumper/instanciation_bumper
+  m_EditorClassIdentifier: 
+  Path: event:/DA glitch/Bumper/instanciation_bumper
+  guid: 458887dc405ef44bbc5b02b2a7670f2f
+  Banks:
+  - {fileID: 8180938920630407888}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 660
 --- !u!114 &2001812683050646309
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7964,7 +8850,7 @@ MonoBehaviour:
   Path: event:/DA glitch/Ambiants/amb_ralentisseur
   guid: 1f84f52c88adff4587f0fea30581a526
   Banks:
-  - {fileID: 2844364384607559161}
+  - {fileID: -1548181180266890663}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -8142,6 +9028,29 @@ MonoBehaviour:
   Max: 100
   Default: 100
   Exists: 1
+--- !u!114 &2562395288070966363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/DA glitch/Level Design/LD_Victoire_joueur_1
+  m_EditorClassIdentifier: 
+  Path: event:/DA glitch/Level Design/LD_Victoire_joueur_1
+  guid: c365ec1edb2359499bb0e4035d2e8b21
+  Banks:
+  - {fileID: 8180938920630407888}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2750
 --- !u!114 &2571997896605328044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8486,6 +9395,23 @@ MonoBehaviour:
   Max: 100
   Default: 100
   Exists: 1
+--- !u!114 &3029233100316378751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/joueur_acceleration_2/acceleration_player_flanger
+  m_EditorClassIdentifier: 
+  Name: acceleration_player_flanger
+  Min: 0
+  Max: 250
+  Default: 0
+  Exists: 1
 --- !u!114 &3029582788700486617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8667,6 +9593,52 @@ MonoBehaviour:
   Max: 100
   Default: 100
   Exists: 0
+--- !u!114 &3274915179053109663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/DA glitch/Musique/Msc_Dexterity_Ascent
+  m_EditorClassIdentifier: 
+  Path: event:/DA glitch/Musique/Msc_Dexterity_Ascent
+  guid: abcf1cab77c3eb4bbbffd757dd758a6b
+  Banks:
+  - {fileID: 8180938920630407888}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 51692
+--- !u!114 &3287415892395928075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/DA placeholder/personnage/saut_bumper
+  m_EditorClassIdentifier: 
+  Path: event:/DA placeholder/personnage/saut_bumper
+  guid: d0cc3a51db6dd341b4fafb53507f5d97
+  Banks:
+  - {fileID: 8180938920630407888}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1.8000001
+  MaxDistance: 20
+  Length: 564
 --- !u!114 &3290854344339256721
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8684,12 +9656,12 @@ MonoBehaviour:
   Banks:
   - {fileID: -7635345785730971095}
   - {fileID: -7009625003562020218}
-  - {fileID: 2844364384607559161}
+  - {fileID: -1548181180266890663}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 4587745365651163385}
+  - {fileID: -1070857108766551375}
   MinDistance: 0
   MaxDistance: 0
   Length: 8800
@@ -8914,6 +9886,29 @@ MonoBehaviour:
   Max: 250
   Default: 0
   Exists: 1
+--- !u!114 &3655330393879954745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/DA glitch/Level Design/LD_entree_zone_3_joueur_2
+  m_EditorClassIdentifier: 
+  Path: event:/DA glitch/Level Design/LD_entree_zone_3_joueur_2
+  guid: 7db1a8e05e20a14ea2788be4d8ff8499
+  Banks:
+  - {fileID: -1548181180266890663}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3692
 --- !u!114 &3655701971930784249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8931,6 +9926,29 @@ MonoBehaviour:
   Max: 200
   Default: 9.81
   Exists: 0
+--- !u!114 &3655839753356779309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/DA glitch/Bumper/bump_instanciation_V2
+  m_EditorClassIdentifier: 
+  Path: event:/DA glitch/Bumper/bump_instanciation_V2
+  guid: e5d2222755371a4ab828370a6dfd0eb3
+  Banks:
+  - {fileID: 8180938920630407888}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 30
+  MaxDistance: 250
+  Length: 555
 --- !u!114 &3658259411984170759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9118,7 +10136,7 @@ MonoBehaviour:
   Banks:
   - {fileID: -7635345785730971095}
   - {fileID: -7009625003562020218}
-  - {fileID: 2844364384607559161}
+  - {fileID: -1548181180266890663}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -9160,7 +10178,7 @@ MonoBehaviour:
   Banks:
   - {fileID: -7635345785730971095}
   - {fileID: -7009625003562020218}
-  - {fileID: 2844364384607559161}
+  - {fileID: -1548181180266890663}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -9253,6 +10271,31 @@ MonoBehaviour:
   Max: 100
   Default: 100
   Exists: 0
+--- !u!114 &3889434964566833749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/DA glitch/Personnage longiforme/joueur_acceleration
+  m_EditorClassIdentifier: 
+  Path: event:/DA glitch/Personnage longiforme/joueur_acceleration
+  guid: a85560e7fa357e4c9e27e23f76c4edcf
+  Banks:
+  - {fileID: 8180938920630407888}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -5566536278637876482}
+  - {fileID: 1579638356424729245}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3410
 --- !u!114 &3936178556734373529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9270,6 +10313,23 @@ MonoBehaviour:
   Max: 200
   Default: 9.81
   Exists: 1
+--- !u!114 &3946669109951178597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/joueur_acceleration_2/acceleration_player_flanger
+  m_EditorClassIdentifier: 
+  Name: acceleration_player_flanger
+  Min: 0
+  Max: 250
+  Default: 0
+  Exists: 0
 --- !u!114 &3954886037646127827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9291,6 +10351,29 @@ MonoBehaviour:
   - Name: Desktop
     Value: 51392
   Exists: 1
+--- !u!114 &3962546649389286493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/DA glitch/Level Design/LD_rocket_touch\xE9e_sur_joueur_2"
+  m_EditorClassIdentifier: 
+  Path: "event:/DA glitch/Level Design/LD_rocket_touch\xE9e_sur_joueur_2"
+  guid: 893755539bb7e44186cac04f77c25004
+  Banks:
+  - {fileID: 8180938920630407888}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2600
 --- !u!114 &3968754234521729234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9342,6 +10425,29 @@ MonoBehaviour:
   Max: 200
   Default: 9.81
   Exists: 1
+--- !u!114 &4011804578823843855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/DA glitch/Level Design/LD_entree_zone_3_joueur_1
+  m_EditorClassIdentifier: 
+  Path: event:/DA glitch/Level Design/LD_entree_zone_3_joueur_1
+  guid: 2e8d3fc120d8bc4d8544454a63b3f588
+  Banks:
+  - {fileID: -1548181180266890663}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3692
 --- !u!114 &4012646187554486124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9465,6 +10571,27 @@ MonoBehaviour:
   - Name: Desktop
     Value: 2712
   Exists: 0
+--- !u!114 &4156737503800583306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: D:/gitHub/ripository/ProtoStick/ProtoStick/Assets/sound design/Assemblage
+    FMOD/Build/Desktop/Master.strings.bank
+  SubDir: 
+  lastModified: 637262026563673471
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 2952
+  Exists: 1
 --- !u!114 &4199796679097816097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9610,7 +10737,7 @@ MonoBehaviour:
   - {fileID: 8008430209676961606}
   - {fileID: -7635345785730971095}
   - {fileID: -7009625003562020218}
-  - {fileID: 2844364384607559161}
+  - {fileID: -1548181180266890663}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -9685,6 +10812,23 @@ MonoBehaviour:
   Min: 0
   Max: 9
   Default: 0
+  Exists: 1
+--- !u!114 &4592086923846897035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: global_volume_music
+  m_EditorClassIdentifier: 
+  Name: global_volume_music
+  Min: 0
+  Max: 100
+  Default: 100
   Exists: 1
 --- !u!114 &4601996895018698762
 MonoBehaviour:
@@ -9860,6 +11004,29 @@ MonoBehaviour:
   Max: 100
   Default: 100
   Exists: 1
+--- !u!114 &4856477975692900760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/DA glitch/Level Design/LD_entree_zone_2_joueur_2
+  m_EditorClassIdentifier: 
+  Path: event:/DA glitch/Level Design/LD_entree_zone_2_joueur_2
+  guid: 24e0656dccdc834bb87e1549a44675d4
+  Banks:
+  - {fileID: -1548181180266890663}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3230
 --- !u!114 &4860665276227295206
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9881,7 +11048,41 @@ MonoBehaviour:
   - Name: Desktop
     Value: 51392
   Exists: 1
+--- !u!114 &4914692320158581535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: global_volume_music
+  m_EditorClassIdentifier: 
+  Name: global_volume_music
+  Min: 0
+  Max: 100
+  Default: 100
+  Exists: 1
 --- !u!114 &4923180842006382516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/chute_avatar/vitesseDeChute
+  m_EditorClassIdentifier: 
+  Name: vitesseDeChute
+  Min: 9.81
+  Max: 200
+  Default: 9.81
+  Exists: 0
+--- !u!114 &4929789745964612551
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9991,7 +11192,7 @@ MonoBehaviour:
   Banks:
   - {fileID: -7635345785730971095}
   - {fileID: -7009625003562020218}
-  - {fileID: 2844364384607559161}
+  - {fileID: -1548181180266890663}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -10171,13 +11372,13 @@ MonoBehaviour:
   Path: event:/DA glitch/Personnage longiforme/joueur_acceleration
   guid: a85560e7fa357e4c9e27e23f76c4edcf
   Banks:
-  - {fileID: 2844364384607559161}
+  - {fileID: -1548181180266890663}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 3871219937079846674}
-  - {fileID: 100951670099285326}
+  - {fileID: -6043298035612038288}
+  - {fileID: -7411812398521771861}
   MinDistance: 0
   MaxDistance: 0
   Length: 3410
@@ -10515,7 +11716,7 @@ MonoBehaviour:
   guid: 893755539bb7e44186cac04f77c25004
   Banks:
   - {fileID: -7009625003562020218}
-  - {fileID: 2844364384607559161}
+  - {fileID: -1548181180266890663}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -11100,6 +12301,23 @@ MonoBehaviour:
   Max: 9
   Default: 0
   Exists: 1
+--- !u!114 &6180979053927168904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/joueur_vitesse/acceleration_player_flanger
+  m_EditorClassIdentifier: 
+  Name: acceleration_player_flanger
+  Min: 0
+  Max: 250
+  Default: 0
+  Exists: 0
 --- !u!114 &6211887478089863048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11168,6 +12386,52 @@ MonoBehaviour:
   Max: 100
   Default: 100
   Exists: 1
+--- !u!114 &6253723228879795773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/DA glitch/Personnage longiforme/tir
+  m_EditorClassIdentifier: 
+  Path: event:/DA glitch/Personnage longiforme/tir
+  guid: ee91981e157d544499970122c358b40a
+  Banks:
+  - {fileID: 8180938920630407888}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 50
+  MaxDistance: 200
+  Length: 550
+--- !u!114 &6258620012248418714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/DA glitch/Level Design/LD_recoltables
+  m_EditorClassIdentifier: 
+  Path: event:/DA glitch/Level Design/LD_recoltables
+  guid: d317d3b79dd4d949b8415c14b0f7fc6a
+  Banks:
+  - {fileID: 8180938920630407888}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 40
+  MaxDistance: 200
+  Length: 950
 --- !u!114 &6262143904492926883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11241,7 +12505,7 @@ MonoBehaviour:
   - {fileID: 8008430209676961606}
   - {fileID: -7635345785730971095}
   - {fileID: -7009625003562020218}
-  - {fileID: 2844364384607559161}
+  - {fileID: -1548181180266890663}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -11508,6 +12772,23 @@ MonoBehaviour:
   Max: 250
   Default: 0
   Exists: 1
+--- !u!114 &6682615647494015021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/joueur_vitesse/acceleration_player_volume
+  m_EditorClassIdentifier: 
+  Name: acceleration_player_volume
+  Min: 0
+  Max: 250
+  Default: 0
+  Exists: 1
 --- !u!114 &6685160533410851958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11543,6 +12824,23 @@ MonoBehaviour:
   Default: 100
   Exists: 0
 --- !u!114 &6778235906078443625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/chute_avatar/vitesseDeChute
+  m_EditorClassIdentifier: 
+  Name: vitesseDeChute
+  Min: 9.81
+  Max: 200
+  Default: 9.81
+  Exists: 1
+--- !u!114 &6780133977663127585
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -11627,6 +12925,40 @@ MonoBehaviour:
   Max: 200
   Default: 9.81
   Exists: 0
+--- !u!114 &6994785579306393895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: global_volume_voice
+  m_EditorClassIdentifier: 
+  Name: global_volume_voice
+  Min: 0
+  Max: 100
+  Default: 100
+  Exists: 1
+--- !u!114 &7009259004229445794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: global_volume_ambiant
+  m_EditorClassIdentifier: 
+  Name: global_volume_ambiant
+  Min: 0
+  Max: 100
+  Default: 100
+  Exists: 1
 --- !u!114 &7024558808156221464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11839,6 +13171,29 @@ MonoBehaviour:
   Max: 250
   Default: 0
   Exists: 0
+--- !u!114 &7266885912649571987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/DA glitch/Bumper/ambiant_bumper
+  m_EditorClassIdentifier: 
+  Path: event:/DA glitch/Bumper/ambiant_bumper
+  guid: 9948fa2472a9e64599b2415d0811fcd8
+  Banks:
+  - {fileID: 8180938920630407888}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 30
+  MaxDistance: 90
+  Length: 1846
 --- !u!114 &7281982729611725704
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12030,7 +13385,7 @@ MonoBehaviour:
   Banks:
   - {fileID: -7635345785730971095}
   - {fileID: -7009625003562020218}
-  - {fileID: 2844364384607559161}
+  - {fileID: -1548181180266890663}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -12038,6 +13393,29 @@ MonoBehaviour:
   MinDistance: 40
   MaxDistance: 200
   Length: 950
+--- !u!114 &7680003951235518537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/DA glitch/Level Design/LD_entree_zone_2_joueur_1
+  m_EditorClassIdentifier: 
+  Path: event:/DA glitch/Level Design/LD_entree_zone_2_joueur_1
+  guid: 03fef0736324dc45966f8f64947f724c
+  Banks:
+  - {fileID: -1548181180266890663}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3692
 --- !u!114 &7700631435553719017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12055,6 +13433,29 @@ MonoBehaviour:
   Max: 9
   Default: 0
   Exists: 0
+--- !u!114 &7734687476366254425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/DA glitch/Level Design/LD_entree_zone_3_joueur_2
+  m_EditorClassIdentifier: 
+  Path: event:/DA glitch/Level Design/LD_entree_zone_3_joueur_2
+  guid: 7db1a8e05e20a14ea2788be4d8ff8499
+  Banks:
+  - {fileID: 8180938920630407888}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3692
 --- !u!114 &7767100936003017015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12070,6 +13471,23 @@ MonoBehaviour:
   Name: beginning_race
   Min: 0
   Max: 9
+  Default: 0
+  Exists: 1
+--- !u!114 &7777951446790104416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/joueur_vitesse/acceleration_player_volume
+  m_EditorClassIdentifier: 
+  Name: acceleration_player_volume
+  Min: 0
+  Max: 250
   Default: 0
   Exists: 1
 --- !u!114 &7806112810247854767
@@ -12124,7 +13542,7 @@ MonoBehaviour:
   - {fileID: 8008430209676961606}
   - {fileID: -7635345785730971095}
   - {fileID: -7009625003562020218}
-  - {fileID: 2844364384607559161}
+  - {fileID: -1548181180266890663}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -12217,6 +13635,29 @@ MonoBehaviour:
   Max: 250
   Default: 0
   Exists: 1
+--- !u!114 &7922069466724936821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/DA glitch/Musique/Msc_Pride_Ascent
+  m_EditorClassIdentifier: 
+  Path: event:/DA glitch/Musique/Msc_Pride_Ascent
+  guid: f7831fbdeff1a84596f7ed99a5ac5317
+  Banks:
+  - {fileID: 8180938920630407888}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 51692
 --- !u!114 &8008430209676961606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12289,7 +13730,7 @@ MonoBehaviour:
   Banks:
   - {fileID: -7635345785730971095}
   - {fileID: -7009625003562020218}
-  - {fileID: 2844364384607559161}
+  - {fileID: -1548181180266890663}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -12331,6 +13772,29 @@ MonoBehaviour:
   Max: 100
   Default: 100
   Exists: 0
+--- !u!114 &8130538315875877463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/DA glitch/Personnage longiforme/joueur_explosion_rocket
+  m_EditorClassIdentifier: 
+  Path: event:/DA glitch/Personnage longiforme/joueur_explosion_rocket
+  guid: 5f4190dd1bb62447b9d128d41f7e2acf
+  Banks:
+  - {fileID: 8180938920630407888}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 25
+  MaxDistance: 250
+  Length: 712
 --- !u!114 &8177443025888829954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12348,6 +13812,27 @@ MonoBehaviour:
   Max: 100
   Default: 100
   Exists: 0
+--- !u!114 &8180938920630407888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: D:/gitHub/ripository/ProtoStick/ProtoStick/Assets/sound design/Assemblage
+    FMOD/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637262026563573738
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 3378688
+  Exists: 1
 --- !u!114 &8192782749257264355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12381,7 +13866,7 @@ MonoBehaviour:
   guid: 2a71bb35bb0dc84c9454ce413862df6c
   Banks:
   - {fileID: -7009625003562020218}
-  - {fileID: 2844364384607559161}
+  - {fileID: -1548181180266890663}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -12389,6 +13874,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 3000
+--- !u!114 &8195956848714227889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/DA glitch/Level Design/LD_entree_zone_2_joueur_1
+  m_EditorClassIdentifier: 
+  Path: event:/DA glitch/Level Design/LD_entree_zone_2_joueur_1
+  guid: 03fef0736324dc45966f8f64947f724c
+  Banks:
+  - {fileID: 8180938920630407888}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3692
 --- !u!114 &8216017561397440450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12407,7 +13915,7 @@ MonoBehaviour:
   - {fileID: 8008430209676961606}
   - {fileID: -7635345785730971095}
   - {fileID: -7009625003562020218}
-  - {fileID: 2844364384607559161}
+  - {fileID: -1548181180266890663}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -12504,6 +14012,30 @@ MonoBehaviour:
   Max: 250
   Default: 0
   Exists: 0
+--- !u!114 &8360933503222258411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/DA glitch/Level Design/LD_D\xE9part_course"
+  m_EditorClassIdentifier: 
+  Path: "event:/DA glitch/Level Design/LD_D\xE9part_course"
+  guid: 3efe5eebb1fe2e4984fb7bd7eac04bf5
+  Banks:
+  - {fileID: 8180938920630407888}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -8451091844244213566}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 8800
 --- !u!114 &8423765386113973562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12519,7 +14051,7 @@ MonoBehaviour:
   Path: event:/DA glitch/Ambiants/amb_zone_noire
   guid: 8b3ecfec37df0d4ea2c455a4d581bd70
   Banks:
-  - {fileID: 2844364384607559161}
+  - {fileID: -1548181180266890663}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -12527,6 +14059,23 @@ MonoBehaviour:
   MinDistance: 150
   MaxDistance: 400
   Length: 6602
+--- !u!114 &8455963483496557397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: ChangementMusique
+  m_EditorClassIdentifier: 
+  Name: ChangementMusique
+  Min: -2000
+  Max: 2000
+  Default: 0
+  Exists: 1
 --- !u!114 &8474636079983054345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12665,7 +14214,7 @@ MonoBehaviour:
   Path: event:/DA glitch/Level Design/LD_Super_Recoltable
   guid: 57c08a9af4a18645aa472162e75df450
   Banks:
-  - {fileID: 2844364384607559161}
+  - {fileID: -1548181180266890663}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -12779,7 +14328,7 @@ MonoBehaviour:
   Banks:
   - {fileID: -7635345785730971095}
   - {fileID: -7009625003562020218}
-  - {fileID: 2844364384607559161}
+  - {fileID: -1548181180266890663}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -12821,6 +14370,29 @@ MonoBehaviour:
   Max: 250
   Default: 0
   Exists: 1
+--- !u!114 &8747065044712173277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/DA glitch/Bumper/propulsion_bumper
+  m_EditorClassIdentifier: 
+  Path: event:/DA glitch/Bumper/propulsion_bumper
+  guid: 84e5812035213e4cb0952963a1c5ba70
+  Banks:
+  - {fileID: 8180938920630407888}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 55
+  MaxDistance: 200
+  Length: 990
 --- !u!114 &8753564609543883560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12961,6 +14533,29 @@ MonoBehaviour:
   Max: 100
   Default: 100
   Exists: 0
+--- !u!114 &8886198666359369181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/DA glitch/Level Design/LD_Victoire_joueur_2
+  m_EditorClassIdentifier: 
+  Path: event:/DA glitch/Level Design/LD_Victoire_joueur_2
+  guid: 56d4bab5065adb42a7022247cec89540
+  Banks:
+  - {fileID: 8180938920630407888}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2700
 --- !u!114 &8917686038326413869
 MonoBehaviour:
   m_ObjectHideFlags: 0
