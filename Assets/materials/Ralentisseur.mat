@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Ralentisseur
-  m_Shader: {fileID: -6465566751694194690, guid: 25723df8e909120439bc3a21d53b92cb,
+  m_Shader: {fileID: -6465566751694194690, guid: 11b9b2431b56139428341ca647a16ec2,
     type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
