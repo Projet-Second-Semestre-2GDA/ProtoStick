@@ -48,7 +48,7 @@ public class RocketBehavior : MonoBehaviour
 
     private void Start()
     {
-        GetComponentInChildren<SphereCollider>().gameObject.layer =
+        GetComponentInChildren<SearchPlayerRocket>().gameObject.layer =
             LayerMask.NameToLayer("ColliderRocket" + ((playerNumberWhoThrowTheRocket == 1) ? 2 : 1));
     }
 

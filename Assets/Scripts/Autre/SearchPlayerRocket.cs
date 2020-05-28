@@ -8,7 +8,7 @@ public class SearchPlayerRocket : MonoBehaviour
 {
     private float speedMax;
     private Rigidbody rb;
-    [FormerlySerializedAs("toAddForce")] [SerializeField] private float multiplicator = 1f;
+    [SerializeField] private float multiplicator = 1f;
     private void Start()
     {
         speedMax = (rb = GetComponentInParent<Rigidbody>()).velocity.magnitude;
@@ -24,11 +24,12 @@ public class SearchPlayerRocket : MonoBehaviour
 
             var direction = playerPos - transform.position;
             var velocity = rb.velocity;
+            var trans = rb.transform;
             velocity += direction.normalized * (speedMax* multiplicator * Time.fixedDeltaTime);
             // rb.AddForce(direction.normalized*multiplicator,ForceMode.Force);
             
             rb.velocity = (velocity = velocity.normalized * speedMax);
-            rb.transform.LookAt(transform.position + velocity);
+            trans.LookAt(trans.position + velocity);
         }
     }
 }
