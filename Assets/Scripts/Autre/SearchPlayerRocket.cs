@@ -9,6 +9,7 @@ public class SearchPlayerRocket : MonoBehaviour
     private float speedMax;
     private Rigidbody rb;
     [SerializeField] private float multiplicator = 1f;
+    private bool canDetect = false;
     private void Start()
     {
         speedMax = (rb = GetComponentInParent<Rigidbody>()).velocity.magnitude;
@@ -16,7 +17,7 @@ public class SearchPlayerRocket : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && canDetect)
         {
             Debug.Log("I found " + other.attachedRigidbody.name + " and go to him !!");
             var playerPos = other.attachedRigidbody.transform.position;
@@ -27,9 +28,14 @@ public class SearchPlayerRocket : MonoBehaviour
             var trans = rb.transform;
             velocity += direction.normalized * (speedMax* multiplicator * Time.fixedDeltaTime);
             // rb.AddForce(direction.normalized*multiplicator,ForceMode.Force);
-            
-            rb.velocity = (velocity = velocity.normalized * speedMax);
+            velocity = velocity.normalized * speedMax;
+            rb.velocity = velocity;
             trans.LookAt(trans.position + velocity);
         }
+    }
+
+    private void LateUpdate()
+    {
+        canDetect = true;
     }
 }

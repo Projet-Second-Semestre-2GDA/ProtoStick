@@ -29,6 +29,7 @@ public class RocketBehavior : MonoBehaviour
     [Title("script de Timer Total")]
     public TimerTotal timerTotal;
 
+    [SerializeField] private GameObject aPutainDassignee;
     
     // For the code
     private float timer;
@@ -44,13 +45,17 @@ public class RocketBehavior : MonoBehaviour
         }
 
         timer = Time.time + defaultTimeBeforeDestroy;
+        
+        
     }
 
-    private void Start()
-    {
-        GetComponentInChildren<SearchPlayerRocket>().gameObject.layer =
-            LayerMask.NameToLayer("ColliderRocket" + ((playerNumberWhoThrowTheRocket == 1) ? 2 : 1));
-    }
+    // private void Start()
+    // {
+    //     aPutainDassignee.layer = LayerMask.NameToLayer("ColliderRocket" + ((playerNumberWhoThrowTheRocket == 1) ? 2 : 1));
+    //     Debug.Log("Assigné à " + aPutainDassignee.name);
+    //     Debug.Log("Celui qui a tiré est " + playerNumberWhoThrowTheRocket);
+    // }
+
 
     private void OnCollisionEnter(Collision other)
     {
