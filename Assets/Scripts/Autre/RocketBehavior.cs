@@ -46,6 +46,11 @@ public class RocketBehavior : MonoBehaviour
         timer = Time.time + defaultTimeBeforeDestroy;
     }
 
+    private void Start()
+    {
+        GetComponentInChildren<SphereCollider>().gameObject.layer =
+            LayerMask.NameToLayer("ColliderRocket" + ((playerNumberWhoThrowTheRocket == 1) ? 2 : 1));
+    }
 
     private void OnCollisionEnter(Collision other)
     {
