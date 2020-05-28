@@ -20,7 +20,7 @@ public class AccelerationFeedback : MonoBehaviour
     private void Awake()
     {
         speedNumber = 250;
-        Debug.Log("----------------------------------Game Begin----------------------------------");
+        //Debug.Log("----------------------------------Game Begin----------------------------------");
     }
 
     private void Start()
@@ -39,16 +39,16 @@ public class AccelerationFeedback : MonoBehaviour
     private void Update()
     {
 
-        Debug.Log(FindObjectsOfType<FMODUnity.RuntimeManager>().Length);
+        //Debug.Log(FindObjectsOfType<FMODUnity.RuntimeManager>().Length);
         // joueurVitesse.setVolume(2);
         speedNumber = uPS.actualsUPSPlayer;
         var result = joueurVitesse.setParameterByName("acceleration_player_flanger", speedNumber);
         var result2 = joueurVitesse.setParameterByName("acceleration_player_volume", speedNumber);
-        Debug.Log("player speed flanger : " + result);
-        Debug.Log("player speed volume : " + result2);
+        //Debug.Log("player speed flanger : " + result);
+        //Debug.Log("player speed volume : " + result2);
         PLAYBACK_STATE state;
         joueurVitesse.getPlaybackState(out state);
-        Debug.Log("State : " + state);
+        //Debug.Log("State : " + state);
 
         //GlobalParameterAcceleration();
 
@@ -91,7 +91,7 @@ public class AccelerationFeedback : MonoBehaviour
         FMODUnity.RuntimeManager.StudioSystem.getParameterByName("acceleration_player_flanger", out speed1);
         FMODUnity.RuntimeManager.StudioSystem.getParameterByName("acceleration_player_volume", out speed2);
 
-        Debug.Log("speed 1 : " + speed1);
-        Debug.Log("speed 2 : " + speed2);
+        //Debug.Log("speed 1 : " + speed1);
+        //Debug.Log("speed 2 : " + speed2);
     }
 }

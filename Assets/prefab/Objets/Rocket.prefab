@@ -131,12 +131,12 @@ MonoBehaviour:
   explosionVisualLifeTime: 0.551
   explosionRadius: 20
   defaultTimeBeforeDestroy: 5
-  reinitialiseAcceleration: 0
+  reinitialiseAcceleration: 1
   rocketExplodeAfterLifeTime: 1
   minMaxExplosionForce: {x: 10, y: 35}
   timerTotal: {fileID: 8508769729232166817, guid: ba22cf436d6a9b948bae3c722b590293,
     type: 3}
-  playerWhoThrowTheRocket: -1
+  playerNumberWhoThrowTheRocket: -1
 --- !u!54 &2914702739594896616
 Rigidbody:
   m_ObjectHideFlags: 0

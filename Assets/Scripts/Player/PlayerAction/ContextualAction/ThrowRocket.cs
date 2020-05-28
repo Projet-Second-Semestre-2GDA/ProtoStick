@@ -64,7 +64,7 @@ public class ThrowRocket : MonoBehaviour
         var playerNumber = GetComponent<PlayerNumber>().playerNumber;
         var shootedRocket = Instantiate(rocket, spawnPoint.position, spawnPoint.rotation);
         shootedRocket.layer = LayerMask.NameToLayer("RocketPlayer" + playerNumber);
-        shootedRocket.GetComponent<RocketBehavior>().playerWhoThrowTheRocket = playerNumber;
+        shootedRocket.GetComponent<RocketBehavior>().playerNumberWhoThrowTheRocket = playerNumber;
         //Feedback FMOD
         FMODUnity.RuntimeManager.PlayOneShot("event:/DA glitch/Personnage longiforme/tir", transform.position);
 

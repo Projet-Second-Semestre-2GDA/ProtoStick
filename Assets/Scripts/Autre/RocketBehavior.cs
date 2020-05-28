@@ -32,7 +32,7 @@ public class RocketBehavior : MonoBehaviour
     
     // For the code
     private float timer;
-    [HideInInspector] public int playerWhoThrowTheRocket = -1;
+    [HideInInspector] public int playerNumberWhoThrowTheRocket = -1;
 
     
 
@@ -70,11 +70,10 @@ public class RocketBehavior : MonoBehaviour
 
     private void Explode(Vector3 explosionPoint)
     {
-        Collider[] collidersInExplosion = Physics.OverlapSphere(explosionPoint, explosionRadius);
+        Collider[] collidersInExplosion = Physics.OverlapSphere(explosionPoint, explosionRadius, Physics.AllLayers);
 
         foreach (var col in collidersInExplosion)
         {
-            numeroCollisionJoueur = col.gameObject.layer;
 
             if (col.CompareTag("Bumper"))
             {
@@ -83,20 +82,22 @@ public class RocketBehavior : MonoBehaviour
             }
             else if (col.CompareTag("Player"))
             {
-                Vector3 direction = col.transform.position - explosionPoint;
-                float force = Mathf.Lerp(minMaxExplosionForce.x, minMaxExplosionForce.y, 1 - (direction.magnitude / explosionRadius));
-                Rigidbody rb = null;
-                (rb = col.attachedRigidbody).AddForce(direction.normalized * force,ForceMode.VelocityChange);
-                if (reinitialiseAcceleration)
+                Rigidbody rb = col.attachedRigidbody;
+                int playerNumberTouch = rb.GetComponent<PlayerNumber>().playerNumber;
+                Vector3 direction = ((playerNumberWhoThrowTheRocket == playerNumberTouch) ? (col.transform.position - explosionPoint) : (col.ClosestPoint(explosionPoint) - explosionPoint));
+                float force = Mathf.Lerp(minMaxExplosionForce.x, minMaxExplosionForce.y, 1 - Mathf.Clamp(direction.magnitude / explosionRadius,0,1));
+                rb.AddForce(direction.normalized * force,ForceMode.VelocityChange);
+                if (reinitialiseAcceleration && playerNumberTouch != playerNumberWhoThrowTheRocket)
                 {    
-                    col.GetComponent<Movement>().ResetUpgrade();
+                    rb.GetComponent<Movement>().ResetUpgrade();
                 }
                 
                 //Fmod :
-                int playerNumberTouch = rb.GetComponent<PlayerNumber>().playerNumber;
                 
-                if ( playerNumberTouch != playerWhoThrowTheRocket && TheGameHasBegin.theGameHasBegin)
+                
+                if ( playerNumberTouch != playerNumberWhoThrowTheRocket)
                 {
+                    Debug.Log("Là j'envoie un son");
                     VoiceLinePlaying.PlaySound("event:/DA glitch/Level Design/LD_Rocket_touchée_sur_joueur_" + playerNumberTouch);
                 }
             }
