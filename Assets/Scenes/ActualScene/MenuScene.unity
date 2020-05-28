@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -305,33 +305,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1009602027547690522, guid: 40b9671442ca05544bfe7f99dd024bbb,
         type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 1009602027547690522, guid: 40b9671442ca05544bfe7f99dd024bbb,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1009602027547690522, guid: 40b9671442ca05544bfe7f99dd024bbb,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1009602027547690522, guid: 40b9671442ca05544bfe7f99dd024bbb,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1009602027547690522, guid: 40b9671442ca05544bfe7f99dd024bbb,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1009602027547690522, guid: 40b9671442ca05544bfe7f99dd024bbb,
-        type: 3}
       propertyPath: m_text
-      value: 'Sensibility J1 :'
+      value: "sensibilit\xE9 j1 :"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40b9671442ca05544bfe7f99dd024bbb, type: 3}
@@ -1536,7 +1511,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Exit
+  m_text: 'quitter
+
+    le jeu'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d7207125af640604c917fd58c1a6e880, type: 2}
   m_sharedMaterial: {fileID: 6702836801745020556, guid: d7207125af640604c917fd58c1a6e880,
@@ -1606,12 +1583,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 280554269}
-    characterCount: 4
+    characterCount: 14
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 1
+    spaceCount: 2
+    wordCount: 3
     linkCount: 0
-    lineCount: 1
+    lineCount: 2
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -2004,7 +1981,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sound
+  m_text: sons
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d7207125af640604c917fd58c1a6e880, type: 2}
   m_sharedMaterial: {fileID: 6702836801745020556, guid: d7207125af640604c917fd58c1a6e880,
@@ -2408,7 +2385,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Delete All Times
+  m_text: "Suprrimer \ntout les temps"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d7207125af640604c917fd58c1a6e880, type: 2}
   m_sharedMaterial: {fileID: 6702836801745020556, guid: d7207125af640604c917fd58c1a6e880,
@@ -4418,7 +4395,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Two Players
+  m_text: 2 Joueurs
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d7207125af640604c917fd58c1a6e880, type: 2}
   m_sharedMaterial: {fileID: 6702836801745020556, guid: d7207125af640604c917fd58c1a6e880,
@@ -5216,7 +5193,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Option
+  m_text: Options
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d7207125af640604c917fd58c1a6e880, type: 2}
   m_sharedMaterial: {fileID: 6702836801745020556, guid: d7207125af640604c917fd58c1a6e880,
@@ -5286,7 +5263,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1021334294}
-    characterCount: 6
+    characterCount: 7
     spriteCount: 0
     spaceCount: 0
     wordCount: 1
@@ -5372,7 +5349,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sensibility
+  m_text: "sensibilit\xE9"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d7207125af640604c917fd58c1a6e880, type: 2}
   m_sharedMaterial: {fileID: 6702836801745020556, guid: d7207125af640604c917fd58c1a6e880,
@@ -5819,7 +5796,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Leadboard
+  m_text: Records
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d7207125af640604c917fd58c1a6e880, type: 2}
   m_sharedMaterial: {fileID: 6702836801745020556, guid: d7207125af640604c917fd58c1a6e880,
@@ -5889,7 +5866,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1236853236}
-    characterCount: 9
+    characterCount: 7
     spriteCount: 0
     spaceCount: 0
     wordCount: 1
@@ -6483,7 +6460,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Play
+  m_text: jouer
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d7207125af640604c917fd58c1a6e880, type: 2}
   m_sharedMaterial: {fileID: 6702836801745020556, guid: d7207125af640604c917fd58c1a6e880,
@@ -6553,7 +6530,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1377885491}
-    characterCount: 4
+    characterCount: 5
     spriteCount: 0
     spaceCount: 0
     wordCount: 1
@@ -7205,36 +7182,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Musique Sound
-      objectReference: {fileID: 0}
-    - target: {fileID: 1009602027547690522, guid: 40b9671442ca05544bfe7f99dd024bbb,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 1009602027547690522, guid: 40b9671442ca05544bfe7f99dd024bbb,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1009602027547690522, guid: 40b9671442ca05544bfe7f99dd024bbb,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1009602027547690522, guid: 40b9671442ca05544bfe7f99dd024bbb,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1009602027547690522, guid: 40b9671442ca05544bfe7f99dd024bbb,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1009602027547690522, guid: 40b9671442ca05544bfe7f99dd024bbb,
-        type: 3}
-      propertyPath: m_text
-      value: 'Musique Sound :'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40b9671442ca05544bfe7f99dd024bbb, type: 3}
@@ -8299,33 +8246,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1009602027547690522, guid: 40b9671442ca05544bfe7f99dd024bbb,
         type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 1009602027547690522, guid: 40b9671442ca05544bfe7f99dd024bbb,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1009602027547690522, guid: 40b9671442ca05544bfe7f99dd024bbb,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1009602027547690522, guid: 40b9671442ca05544bfe7f99dd024bbb,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1009602027547690522, guid: 40b9671442ca05544bfe7f99dd024bbb,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1009602027547690522, guid: 40b9671442ca05544bfe7f99dd024bbb,
-        type: 3}
       propertyPath: m_text
-      value: 'Effect Sound :'
+      value: 'sons d''effets :'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40b9671442ca05544bfe7f99dd024bbb, type: 3}
@@ -8531,33 +8453,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1009602027547690522, guid: 40b9671442ca05544bfe7f99dd024bbb,
         type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 1009602027547690522, guid: 40b9671442ca05544bfe7f99dd024bbb,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1009602027547690522, guid: 40b9671442ca05544bfe7f99dd024bbb,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1009602027547690522, guid: 40b9671442ca05544bfe7f99dd024bbb,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1009602027547690522, guid: 40b9671442ca05544bfe7f99dd024bbb,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1009602027547690522, guid: 40b9671442ca05544bfe7f99dd024bbb,
-        type: 3}
       propertyPath: m_text
-      value: 'Sensibility J2 :'
+      value: "sensibilit\xE9 j2 :"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40b9671442ca05544bfe7f99dd024bbb, type: 3}
@@ -9918,33 +9815,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1009602027547690522, guid: 40b9671442ca05544bfe7f99dd024bbb,
         type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 1009602027547690522, guid: 40b9671442ca05544bfe7f99dd024bbb,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1009602027547690522, guid: 40b9671442ca05544bfe7f99dd024bbb,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1009602027547690522, guid: 40b9671442ca05544bfe7f99dd024bbb,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1009602027547690522, guid: 40b9671442ca05544bfe7f99dd024bbb,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1009602027547690522, guid: 40b9671442ca05544bfe7f99dd024bbb,
-        type: 3}
       propertyPath: m_text
-      value: 'Ambiant Sound :'
+      value: 'sons ambiants :'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40b9671442ca05544bfe7f99dd024bbb, type: 3}
@@ -10021,7 +9893,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: One Player
+  m_text: 1 joueur
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d7207125af640604c917fd58c1a6e880, type: 2}
   m_sharedMaterial: {fileID: 6702836801745020556, guid: d7207125af640604c917fd58c1a6e880,
@@ -11003,17 +10875,7 @@ PrefabInstance:
     - target: {fileID: 1009602027547690522, guid: 40b9671442ca05544bfe7f99dd024bbb,
         type: 3}
       propertyPath: m_text
-      value: 'Voice Sound :'
-      objectReference: {fileID: 0}
-    - target: {fileID: 1009602027547690522, guid: 40b9671442ca05544bfe7f99dd024bbb,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 1009602027547690522, guid: 40b9671442ca05544bfe7f99dd024bbb,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 2
+      value: 'sons de voix :'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40b9671442ca05544bfe7f99dd024bbb, type: 3}
