@@ -272,7 +272,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: take your mark
+  m_Text: "Pr\xE9parez vous"
 --- !u!1 &6888272975581684514
 GameObject:
   m_ObjectHideFlags: 0
