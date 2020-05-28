@@ -289,7 +289,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rocket: {fileID: 6010378966878908122, guid: b9abe88efee7cf644a5542b86c3263c4, type: 3}
   spawnPoint: {fileID: 8494764143180782955}
-  rocketSpeed: 250
+  rocketSpeed: 800
   timeBeforeNextShot: 0.5
 --- !u!114 &-4326059621119322883
 MonoBehaviour:
