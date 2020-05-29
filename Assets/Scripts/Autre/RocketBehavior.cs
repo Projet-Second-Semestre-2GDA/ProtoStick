@@ -50,35 +50,40 @@ public class RocketBehavior : MonoBehaviour
         
     }
 
-    // private void Start()
-    // {
-    //     aPutainDassignee.layer = LayerMask.NameToLayer("ColliderRocket" + ((playerNumberWhoThrowTheRocket == 1) ? 2 : 1));
-    //     Debug.Log("Assigné à " + aPutainDassignee.name);
-    //     Debug.Log("Celui qui a tiré est " + playerNumberWhoThrowTheRocket);
-    // }
+    private void Start()
+    {
+        aPutainDassignee.layer = LayerMask.NameToLayer("ColliderRocket" + ((playerNumberWhoThrowTheRocket == 1) ? 2 : 1));
+        Debug.Log("Assigné à " + aPutainDassignee.name);
+        Debug.Log("Celui qui a tiré est " + playerNumberWhoThrowTheRocket);
+    }
 
 
     private void OnCollisionEnter(Collision other)
     {
         if (!alreadyExplode)
         {
-            alreadyExplode = true;
-            // feedback FMOD
-            FMODUnity.RuntimeManager.PlayOneShot("event:/DA glitch/Personnage longiforme/joueur_explosion_rocket",
-                transform.position);
+            // Debug.Log("Nombre de contacts = " + other.contacts.Length);
+            // Debug.Log("Contact : " + other.GetContact(0).thisCollider.name);
+            if (other.GetContact(0).thisCollider.name != aPutainDassignee.name)
+            {
+                alreadyExplode = true;
+                // feedback FMOD
+                FMODUnity.RuntimeManager.PlayOneShot("event:/DA glitch/Personnage longiforme/joueur_explosion_rocket",
+                    transform.position);
 
-            // //Debug.Log(name+ " a touché " + other.collider.name);
-            ContactPoint firstPoint = other.GetContact(0);
-            Vector3 explosionPoint = firstPoint.point;
-            Debug.DrawRay(explosionPoint, Vector3.left, Color.green);
-            ActiveVisual(explosionPoint);
-            Explode(explosionPoint);
+                // //Debug.Log(name+ " a touché " + other.collider.name);
+                ContactPoint firstPoint = other.GetContact(0);
+                Vector3 explosionPoint = firstPoint.point;
+                Debug.DrawRay(explosionPoint, Vector3.left, Color.green);
+                ActiveVisual(explosionPoint);
+                Explode(explosionPoint);
 
-            numeroCollisionJoueur = other.gameObject.layer;
+                numeroCollisionJoueur = other.gameObject.layer;
 
 
 
-            DestroySelf();
+                DestroySelf();
+            }
         }
 
     }
