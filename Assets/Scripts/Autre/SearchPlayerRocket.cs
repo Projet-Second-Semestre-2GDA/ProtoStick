@@ -23,9 +23,11 @@ public class SearchPlayerRocket : MonoBehaviour
             bool canWork = false;
             var playerPos = other.attachedRigidbody.transform.position;
             var trans = rb.transform;
+            
+            var heading = playerPos - trans.position;
+            var dot = Vector3.Dot(heading, trans.forward);
 
-            canWork = (Vector3.Distance(playerPos, trans.position + (trans.forward*2)) >=
-                       Vector3.Distance(playerPos, trans.position - (trans.forward*2)));
+            canWork = dot > 0;
 
             if (canWork)
             {

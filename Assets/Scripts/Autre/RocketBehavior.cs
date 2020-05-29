@@ -50,12 +50,12 @@ public class RocketBehavior : MonoBehaviour
         
     }
 
-    private void Start()
-    {
-        aPutainDassignee.layer = LayerMask.NameToLayer("ColliderRocket" + ((playerNumberWhoThrowTheRocket == 1) ? 2 : 1));
-        Debug.Log("Assigné à " + aPutainDassignee.name);
-        Debug.Log("Celui qui a tiré est " + playerNumberWhoThrowTheRocket);
-    }
+    // private void Start()
+    // {
+    //     aPutainDassignee.layer = LayerMask.NameToLayer("ColliderRocket" + ((playerNumberWhoThrowTheRocket == 1) ? 2 : 1));
+    //     Debug.Log("Assigné à " + aPutainDassignee.name);
+    //     Debug.Log("Celui qui a tiré est " + playerNumberWhoThrowTheRocket);
+    // }
 
 
     private void OnCollisionEnter(Collision other)
