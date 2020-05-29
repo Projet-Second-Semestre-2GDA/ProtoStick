@@ -35,10 +35,11 @@ public class RocketBehavior : MonoBehaviour
     private float timer;
     [HideInInspector] public int playerNumberWhoThrowTheRocket = -1;
 
-    
+    private bool alreadyExplode = false;
 
     private void Awake()
     {
+        alreadyExplode = false;
         if (explosionVisual == null)
         {
             throw new ArgumentNullException("explosionVisual");
@@ -49,37 +50,42 @@ public class RocketBehavior : MonoBehaviour
         
     }
 
-    // private void Start()
-    // {
-    //     aPutainDassignee.layer = LayerMask.NameToLayer("ColliderRocket" + ((playerNumberWhoThrowTheRocket == 1) ? 2 : 1));
-    //     Debug.Log("Assigné à " + aPutainDassignee.name);
-    //     Debug.Log("Celui qui a tiré est " + playerNumberWhoThrowTheRocket);
-    // }
+    private void Start()
+    {
+        aPutainDassignee.layer = LayerMask.NameToLayer("ColliderRocket" + ((playerNumberWhoThrowTheRocket == 1) ? 2 : 1));
+        Debug.Log("Assigné à " + aPutainDassignee.name);
+        Debug.Log("Celui qui a tiré est " + playerNumberWhoThrowTheRocket);
+    }
 
 
     private void OnCollisionEnter(Collision other)
     {
-        // feedback FMOD
-        FMODUnity.RuntimeManager.PlayOneShot("event:/DA glitch/Personnage longiforme/joueur_explosion_rocket", transform.position);
+        if (!alreadyExplode)
+        {
+            alreadyExplode = true;
+            // feedback FMOD
+            FMODUnity.RuntimeManager.PlayOneShot("event:/DA glitch/Personnage longiforme/joueur_explosion_rocket",
+                transform.position);
 
-        // //Debug.Log(name+ " a touché " + other.collider.name);
-        ContactPoint firstPoint = other.GetContact(0);
-        Vector3 explosionPoint = firstPoint.point;
-        Debug.DrawRay(explosionPoint,Vector3.left,Color.green);
-        ActiveVisual(explosionPoint);
-        Explode(explosionPoint);
+            // //Debug.Log(name+ " a touché " + other.collider.name);
+            ContactPoint firstPoint = other.GetContact(0);
+            Vector3 explosionPoint = firstPoint.point;
+            Debug.DrawRay(explosionPoint, Vector3.left, Color.green);
+            ActiveVisual(explosionPoint);
+            Explode(explosionPoint);
 
-        numeroCollisionJoueur = other.gameObject.layer;
+            numeroCollisionJoueur = other.gameObject.layer;
 
-        
-        
-        DestroySelf();
-        
-        
+
+
+            DestroySelf();
+        }
+
     }
 
     private void Explode(Vector3 explosionPoint)
     {
+        
         Collider[] collidersInExplosion = Physics.OverlapSphere(explosionPoint, explosionRadius, Physics.AllLayers);
 
         foreach (var col in collidersInExplosion)
@@ -94,21 +100,25 @@ public class RocketBehavior : MonoBehaviour
             {
                 Rigidbody rb = col.attachedRigidbody;
                 int playerNumberTouch = rb.GetComponent<PlayerNumber>().playerNumber;
-                Vector3 direction = ((playerNumberWhoThrowTheRocket == playerNumberTouch) ? (col.transform.position - explosionPoint) : (col.ClosestPoint(explosionPoint) - explosionPoint));
-                float force = Mathf.Lerp(minMaxExplosionForce.x, minMaxExplosionForce.y, 1 - Mathf.Clamp(direction.magnitude / explosionRadius,0,1));
-                rb.AddForce(direction.normalized * force,ForceMode.VelocityChange);
+                Vector3 direction = ((playerNumberWhoThrowTheRocket == playerNumberTouch)
+                    ? (col.transform.position - explosionPoint)
+                    : (col.ClosestPoint(explosionPoint) - explosionPoint));
+                float force = Mathf.Lerp(minMaxExplosionForce.x, minMaxExplosionForce.y,
+                    1 - Mathf.Clamp(direction.magnitude / explosionRadius, 0, 1));
+                rb.AddForce(direction.normalized * force, ForceMode.VelocityChange);
                 if (reinitialiseAcceleration && playerNumberTouch != playerNumberWhoThrowTheRocket)
-                {    
+                {
                     rb.GetComponent<Movement>().ResetUpgrade();
                 }
-                
+
                 //Fmod :
-                
-                
-                if ( playerNumberTouch != playerNumberWhoThrowTheRocket)
+
+
+                if (playerNumberTouch != playerNumberWhoThrowTheRocket)
                 {
                     Debug.Log("Là j'envoie un son");
-                    VoiceLinePlaying.PlaySound("event:/DA glitch/Level Design/LD_Rocket_touchée_sur_joueur_" + playerNumberTouch);
+                    VoiceLinePlaying.PlaySound("event:/DA glitch/Level Design/LD_Rocket_touchée_sur_joueur_" +
+                                               playerNumberTouch);
                 }
             }
             else
@@ -120,6 +130,7 @@ public class RocketBehavior : MonoBehaviour
                 }
             }
         }
+        
         
     }
 

@@ -17,20 +17,29 @@ public class SearchPlayerRocket : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
+        Debug.Log("I found " + other.name);
         if (other.CompareTag("Player") && canDetect)
         {
-            Debug.Log("I found " + other.attachedRigidbody.name + " and go to him !!");
+            bool canWork = false;
             var playerPos = other.attachedRigidbody.transform.position;
-            speedMax = rb.velocity.magnitude;
-
-            var direction = playerPos - transform.position;
-            var velocity = rb.velocity;
             var trans = rb.transform;
-            velocity += direction.normalized * (speedMax* multiplicator * Time.fixedDeltaTime);
-            // rb.AddForce(direction.normalized*multiplicator,ForceMode.Force);
-            velocity = velocity.normalized * speedMax;
-            rb.velocity = velocity;
-            trans.LookAt(trans.position + velocity);
+
+            canWork = (Vector3.Distance(playerPos, trans.position + (trans.forward*2)) >=
+                       Vector3.Distance(playerPos, trans.position - (trans.forward*2)));
+
+            if (canWork)
+            {
+                Debug.Log("I found " + other.attachedRigidbody.name + " and go to him !!");
+                speedMax = rb.velocity.magnitude;
+
+                var direction = playerPos - transform.position;
+                var velocity = rb.velocity;
+                velocity += direction.normalized * (speedMax* multiplicator * Time.fixedDeltaTime);
+                // rb.AddForce(direction.normalized*multiplicator,ForceMode.Force);
+                velocity = velocity.normalized * speedMax;
+                rb.velocity = velocity;
+            }
+            
         }
     }
 
