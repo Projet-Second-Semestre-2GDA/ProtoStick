@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -30,10 +31,11 @@ public class ModeUnPlayer : MonoBehaviour
     
     //Private !!
     private Camera cameraAModifier;
+    private PlayersTrackingSystem playersTrackingSystem;
     private void Start()
     {
         cameraAModifier = playerOne.GetComponentInChildren<Camera>();
-        
+        playersTrackingSystem = GetComponent<PlayersTrackingSystem>();
         SetMode(PlayerOptionChoose.ModeDeJoueur);
     }
 
@@ -41,6 +43,7 @@ public class ModeUnPlayer : MonoBehaviour
     {
         if (modeUnJoueur)//Mode un joueur
         {
+            playersTrackingSystem.twoPlayeMode = false;
             playerTwo.SetActive(false);
             
             cameraAModifier.rect = new Rect(0,0,1,1);
@@ -55,6 +58,7 @@ public class ModeUnPlayer : MonoBehaviour
         }
         else//Mode Deux Joueurs
         {
+            playersTrackingSystem.twoPlayeMode = true;
             playerTwo.SetActive(true);
             cameraAModifier.rect = new Rect(0,0.5f,1,0.5f);
             cameraAModifier.fieldOfView = 60;
@@ -84,6 +88,7 @@ public class ModeUnPlayer : MonoBehaviour
 
     public void SetMode(PlayerMode playerMode)
     {
+        playersTrackingSystem.twoPlayeMode = !modeUnJoueur;
         switch (playerMode)
         {
             case PlayerMode.OnePlayer:
