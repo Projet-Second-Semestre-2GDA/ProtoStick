@@ -121,7 +121,7 @@ public class RocketBehavior : MonoBehaviour
 
                 if (playerNumberTouch != playerNumberWhoThrowTheRocket)
                 {
-                    Debug.Log("Là j'envoie un son");
+                    // Debug.Log("Là j'envoie un son");
                     VoiceLinePlaying.PlaySound("event:/DA glitch/Level Design/LD_Rocket_touchée_sur_joueur_" +
                                                playerNumberTouch);
                 }
