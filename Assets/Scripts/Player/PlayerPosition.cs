@@ -25,11 +25,8 @@ public class PlayerPosition : MonoBehaviour
     public void SetScriptActive(bool activitee)
     {
         defaultActivities = activitee;
+        textPosition.enabled = activitee;
         if (activitee)
-        {
-            textPosition.text = "";
-        }
-        else
         {
             textPosition.text = lastPositionKnow.ToString();
         }

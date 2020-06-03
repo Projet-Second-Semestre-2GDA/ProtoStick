@@ -1,16 +1,23 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 public class PlayersTrackingSystem : MonoBehaviour
 {
+    [Title("Functionnement")]
     [SerializeField] private Transform waypointsContainer;
     [SerializeField] private List<GameObject> players;
+    [Title("Music Parameters")]
+    [SerializeField, MinMaxSlider(0,2000,true)]private Vector2 distanceMinMaxMusic = new Vector2(100,1000);  
     private List<PlayerPosition> scriptPlayerPositions = new List<PlayerPosition>();
     private List<List<Vector3>> playersPosition = new List<List<Vector3>>();
     private List<Vector3> waypointsPosition = new List<Vector3>();
+    private List<Vector3> waypointsForward = new List<Vector3>();
     private float minDistanceBetweenWaypoints = Mathf.Infinity;
+    
+    [HideInInspector] public float distanceBetweenPlayer = -1;
 
     [HideInInspector]public bool twoPlayeMode;
 
@@ -32,6 +39,7 @@ public class PlayersTrackingSystem : MonoBehaviour
             var pos = waypointsContainer.GetChild(i).position;
             pos.y = 0;
             waypointsPosition.Add(pos);
+            waypointsForward.Add(waypointsContainer.GetChild(i).TransformDirection(Vector3.forward));
         }
 
         for (int i = 1; i < waypointsPosition.Count; i++)
@@ -76,45 +84,61 @@ public class PlayersTrackingSystem : MonoBehaviour
                         distanceFromPlayer = dst;
                         waypointNumber[i] = j;
                     }
-
+                    else if (dst >= distanceFromPlayer)
+                    {
+                        //Vérifié que le waypoint de référence est toujours derrière le joueur
+                        if (Vector3.Dot(waypointsForward[waypointNumber[i]],player.transform.TransformDirection(Vector3.forward)) < 0 && waypointNumber[i] >0)
+                        {
+                            waypointNumber[i] = waypointNumber[i] - 1;
+                        }
+                        break;
+                    }
+                    
                     if (dst < minDistanceBetweenWaypoints / 2)
                     {
                         break;
                     }
                 }
 
-                for (int j = 1; j <= waypointNumber[i]; j++)
+                for (int j = 1; j <= waypointNumber[i]; j++)//Calculer la distance globale qui séparer le joueur du waypoints de départ
                 {
                     totalDistance[i] += Vector3.Distance(waypointsPosition[j - 1], waypointsPosition[j]);
                 }
-                totalDistance[i] += (waypointsPosition[waypointNumber[i]] - playerPos).magnitude;
+                totalDistance[i] += Vector3.Distance(waypointsPosition[waypointNumber[i]],playerPos);
             }
-
             for (int i = 0; i < players.Count; i++)
             {
                 Debug.Log("----------------Joueur" + i + "----------------");
                 Debug.Log("WaypointNumber " + waypointNumber[i]);
                 Debug.Log("totalDistance " + totalDistance[i]);
             }
+
+            int idWinner = -1;
             if (waypointNumber[0] > waypointNumber[1])
             {
-                SetWinner(0);
+                idWinner = 0;
             }
             else if (waypointNumber[0] < waypointNumber[1])
             {
-                SetWinner(1);
+                idWinner = 1;
             }
             else
             {
                 if (totalDistance[0] > totalDistance[1])
                 {
-                    SetWinner(0);
+                    idWinner = 0;
                 }
                 else
                 {
-                    SetWinner(1);
+                    idWinner = 1;
                 }
             }
+            var idLooser = (idWinner + 1 > 1) ? 0 : 1;
+            //Grâce a une simple soustraction, calculer la distance séparant les deux joueurs.
+            distanceBetweenPlayer = Mathf.Clamp(totalDistance[idWinner] - totalDistance[idLooser],distanceMinMaxMusic.x,distanceMinMaxMusic.y);
+            Debug.Log("distanceBetweenPlayer : " + distanceBetweenPlayer);
+            //return the distance to FMOD
+            SetWinner(idWinner);
         }
     }
 

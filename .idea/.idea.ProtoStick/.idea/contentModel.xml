@@ -250,6 +250,7 @@
                 <e p="ReloadScene.cs" t="Include" />
               </e>
             </e>
+            <e p="PlayerPosition.cs" t="Include" />
           </e>
           <e p="Ralentisseur" t="Include">
             <e p="Ralentisseur.cs" t="Include" />
@@ -262,6 +263,7 @@
             <e p="ModeUnPlayer.cs" t="Include" />
             <e p="PlayerNumber.cs" t="Include" />
             <e p="PlayerOptionChoose.cs" t="Include" />
+            <e p="PlayersTrackingSystem.cs" t="Include" />
             <e p="Shader" t="Include">
               <e p="RandomRecoltable.cs" t="Include" />
             </e>
