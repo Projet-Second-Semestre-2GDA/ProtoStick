@@ -57,10 +57,10 @@ public class Ending : MonoBehaviour
     private void SetWin(string name,int winnerIndex)
     {
         //Debug.LogWarning("The winner est " + name);
-        canvas.SetActive(true);
         // text.text = "The Winner is\n" + name;
-        winners[winnerIndex].SetActive(true);
         VoiceLinePlaying.PlaySound("event:/DA glitch/Level Design/LD_Victoire_joueur_" + (winnerIndex + 1), VoiceLinePriority.gigantic);
+        canvas.SetActive(true);
+        winners[winnerIndex].SetActive(true);
         
     }
     
