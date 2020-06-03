@@ -13,9 +13,10 @@ public class ReloadScene : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.M))
+        if (Input.GetButtonDown("Reload"))
         {
-             Scene scene = SceneManager.GetActiveScene(); SceneManager.LoadScene(scene.name);
+             Scene scene = SceneManager.GetActiveScene(); 
+             SceneManager.LoadScene(scene.name);
         }
     }
 
