@@ -204,10 +204,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  speedDeplacement: 30
-  reducteurTerrestre: 0.5
-  reducteurAerien: 0.2
+  speedDeplacement: 50
+  speedMaxBase: 50
+  directionChangementSpeed: 2
+  reducteurTerrestre: 0.05
+  reducteurAerien: 0.02
   timeToSpeedMax: 1
+  sameDirection: 0.85
   diviseurAcceleration: {x: 0.5, y: 1}
   upgradeMax: 5
   hasTheMultiplicatorReset: 0
@@ -7446,7 +7449,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7524777083988542036}
-  m_Material: {fileID: 13400000, guid: 3b969fd7776109a4492c683add350266, type: 2}
+  m_Material: {fileID: 13400000, guid: 7f8e7a754f3c9f64ca5719a810a4f720, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2

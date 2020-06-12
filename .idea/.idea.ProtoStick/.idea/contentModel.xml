@@ -8,8 +8,6 @@
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="LineTracer.cs" t="Include" />
-        <e p="ParticleOrientation.cs" t="Include" />
         <e p="Plugins" t="Include">
           <e p="FMOD" t="Include">
             <e p="addons" t="Include">
@@ -223,6 +221,8 @@
             <e p="PlayerEffect.cs" t="Include" />
             <e p="RotateBumper.cs" t="Include" />
           </e>
+          <e p="LineTracer.cs" t="Include" />
+          <e p="ParticleOrientation.cs" t="Include" />
           <e p="Player" t="Include">
             <e p="InteractionBall" t="Include">
               <e p="ControlObject.cs" t="Include" />
@@ -255,6 +255,8 @@
           <e p="Ralentisseur" t="Include">
             <e p="Ralentisseur.cs" t="Include" />
           </e>
+          <e p="SpamMovement.cs" t="Include" />
+          <e p="SuperRecoltable.cs" t="Include" />
           <e p="system" t="Include">
             <e p="CheatSoundSoutenance.cs" t="Include" />
             <e p="GestionMenu.cs" t="Include" />
@@ -280,6 +282,7 @@
             </e>
             <e p="UniversalRecoltObject.cs" t="Include" />
           </e>
+          <e p="VoiceTriggerZone.cs" t="Include" />
         </e>
         <e p="sound design" t="Include">
           <e p="Assemblage FMOD" t="Include">
@@ -458,9 +461,6 @@
             </e>
           </e>
         </e>
-        <e p="SpamMovement.cs" t="Include" />
-        <e p="SuperRecoltable.cs" t="Include" />
-        <e p="VoiceTriggerZone.cs" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />

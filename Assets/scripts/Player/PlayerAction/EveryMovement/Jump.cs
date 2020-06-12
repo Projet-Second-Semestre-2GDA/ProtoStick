@@ -124,7 +124,7 @@ public class Jump : MonoBehaviour
         // actualHeight = transform.position.y;
         // heightPreviousCheck = actualHeight;
         // futurHeight = actualHeight + height;
-        
+        playerAnimation.SetTrigger("Jump");
         SetVelocityY(jumpVelocity);
         forceJump = true;
         SetNextCheck(timeBetweenCheck);
@@ -154,9 +154,9 @@ public class Jump : MonoBehaviour
 
     private void SetVelocityY(float y)
     {
-        playerAnimation.SetTrigger("Jump");
-        var velocity = rb.velocity; 
-        velocity.y = y;
+        
+        var velocity = rb.velocity;
+        velocity.y = (velocity.y < 0) ? y : velocity.y + y;
         rb.velocity = velocity;
     }
     

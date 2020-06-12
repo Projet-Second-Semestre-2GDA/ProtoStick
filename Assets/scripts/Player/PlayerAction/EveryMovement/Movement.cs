@@ -16,11 +16,15 @@ public class Movement : MonoBehaviour
     [Title("Variable de vitesse")] [SerializeField]
     private AnimationCurve speedBehavior;
     public float speedDeplacement = 30;
+    [SerializeField] private float speedMaxBase = 50;
+    [SerializeField] private float directionChangementSpeed = 2f;
 
     [Title("Variable liée au mécanique de vitesse")] 
     [SerializeField, Range(0, 1)] private float reducteurTerrestre;
     [SerializeField, Range(0, 1)] private float  reducteurAerien; 
     [SerializeField, Range(0, 5)] private float timeToSpeedMax;
+    [SerializeField, Range(-1, 1)] private float sameDirection = 0.85f;
+
 
     [SerializeField, MinMaxSlider(0f, 1f, true)]
     private Vector2 diviseurAcceleration;
@@ -103,7 +107,7 @@ public class Movement : MonoBehaviour
         hasTheMultiplicatorReset = false;
     }
 
-    private void Moove(float v, float h, float deltaTime, float oldV,float oldH)
+    private void Moove(float v, float h, float dt, float oldV,float oldH)
     {
         //Animation
         playerAnimation.SetFloat("Walk",Mathf.Abs(v));
@@ -115,55 +119,71 @@ public class Movement : MonoBehaviour
         var velocity = rb.velocity;
         float y = velocity.y;
         
-        timePass += deltaTime;
-        accelerator = Mathf.Lerp(diviseurAcceleration.x, diviseurAcceleration.y, Mathf.Clamp(timePass / timeToSpeedMax, 0, 1));
+        timePass += dt;
+        accelerator = Mathf.Lerp(diviseurAcceleration.x, diviseurAcceleration.y, 
+            Mathf.Clamp(timePass / timeToSpeedMax, 0, 1));
         
         velocity.y = 0;
         
         if (Mathf.Abs(oldV) > 0.01f || Mathf.Abs(oldH) > 0.01f)
         {
-            var trans = transform;
-            
-            var realSpeed = speedDeplacement * globalUpgradeMultiplicator;
-            
-            //Debug.Log("reduc = " + reduc);
-            //Debug.Log("SpeedDeplacement = " + speedDeplacement);
-            //Debug.Log("realSpeed = " + realSpeed);
-            var temp = trans.forward * (v * (realSpeed) * accelerator);
-            temp += trans.right * (h * (realSpeed) * accelerator);
-            temp = (temp.magnitude > (realSpeed) * accelerator)
-                ? temp.normalized * realSpeed
-                : temp;
-            
-            
-            velocity += temp;
-            if ((velocity.magnitude > realSpeed))
+           
+            //Vérifié que l'on ne dépasse pas le maximum voulu
+            //Bonus : On a déjà indiquer la direction
+
+            var direction = v * transform.forward;
+            direction += h * transform.right;
+
+            if (direction.magnitude > 1)
             {
-                velocity -= velocity.normalized * ((velocity.magnitude - (realSpeed) > realSpeed)
-                    ? realSpeed
-                    : realSpeed - (velocity.magnitude - realSpeed));
+                direction = direction.normalized;
+            }
+            
+            bool sameDirection = (Vector3.Dot(velocity.normalized, direction.normalized) >= this.sameDirection) 
+                                 || velocity.magnitude <= 1;
+            bool speedIsntMax = velocity.magnitude < speedMaxBase * globalUpgradeMultiplicator;
+
+            
+            if (sameDirection)
+            {
+                if (speedIsntMax)
+                {
+                    //On indique la forcé à appliquer au joueur
+                    rb.AddForce(direction * (speedDeplacement), ForceMode.Acceleration);
+                }
+            }
+            else 
+            {
+                var speed = velocity.magnitude;
+                velocity = velocity.normalized;
+                velocity += direction * (directionChangementSpeed * dt);
+                velocity = velocity.normalized * speed;
+                velocity.y = y;
+                rb.velocity = velocity;
             }
         }else
         {
             timePass = 0;
-        }
-        /*if (jump.IsPlayerOnJump() && Physics.OverlapSphere(transform.position, 0.7f).Length < 2)*/
-        
-        bool overlapSomething = false;
-        var test = Physics.OverlapSphere(transform.position, 0.7f);
-        for (int i = 0; i < test.Length; i++)
-        {
-            if (!test[i].CompareTag("Player"))
+            //Réducteur de vitesse en fonction de si l'on est en l'air ou au sol
+            
+            bool overlapSomething = false;
+            var test = Physics.OverlapSphere(transform.position + (Vector3.down), 0.2f);
+            for (int i = 0; i < test.Length; i++)
             {
-                overlapSomething = true;
-                break;
+                if (!test[i].CompareTag("Player"))
+                {
+                    overlapSomething = true;
+                    break;
+                }
             }
+
+            Debug.Log("On utilise " + ((overlapSomething) ? "un reducteur terrestre" : "un reducteur aerien"));
+            velocity = Vector3.MoveTowards(velocity, Vector3.zero,
+                ((overlapSomething) ? reducteurTerrestre : reducteurAerien) * (velocity.magnitude));
+            
+            velocity.y = y;
+            rb.velocity = velocity;
         }
-
-        velocity = Vector3.MoveTowards(velocity, Vector3.zero, ((overlapSomething)?reducteurTerrestre:reducteurAerien) * speedDeplacement);
-
-        velocity.y = y;
-        rb.velocity = velocity;
     }
 
 

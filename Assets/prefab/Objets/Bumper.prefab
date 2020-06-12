@@ -1,5 +1,49 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3318039302687183696
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1866810856094551495}
+  - component: {fileID: 1513614085169973868}
+  m_Layer: 0
+  m_Name: Cube
+  m_TagString: Bumper
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1866810856094551495
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3318039302687183696}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6287753611849498506}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1513614085169973868
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3318039302687183696}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.7362124, y: 1.7362095, z: 0.021493671}
+  m_Center: {x: 0.0093190195, y: 0.037275985, z: 0.011649134}
 --- !u!1 &3818499470033779928
 GameObject:
   m_ObjectHideFlags: 0
@@ -36,6 +80,7 @@ Transform:
   - {fileID: 5175073434767076343}
   - {fileID: 3352178842889582367}
   - {fileID: 4666872785817393591}
+  - {fileID: 1866810856094551495}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: 0}
@@ -51,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8daa6210d54e4148a0e9320f952de24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bumpForce: 20.8
+  bumpForce: 75
   multiplicationPriority: 1.5
   speedMultiplicator: 0.8
 --- !u!114 &-5519447773436580886
@@ -86,7 +131,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3818499470033779928}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 1
