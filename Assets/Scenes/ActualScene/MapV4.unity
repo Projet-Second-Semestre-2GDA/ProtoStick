@@ -21599,6 +21599,11 @@ PrefabInstance:
       propertyPath: players.Array.data[1]
       value: 
       objectReference: {fileID: 1506392825}
+    - target: {fileID: 2692571995353182079, guid: ba22cf436d6a9b948bae3c722b590293,
+        type: 3}
+      propertyPath: distanceMinMaxMusic.y
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 3289001071545339349, guid: ba22cf436d6a9b948bae3c722b590293,
         type: 3}
       propertyPath: gameObjectsADesactiver.Array.size
@@ -21809,6 +21814,18 @@ MonoBehaviour:
   FirstDoor: {fileID: 48438807}
   SecondDoor: {fileID: 1480014189}
   FirstDoorIsOpen: 0
+--- !u!114 &707577887 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2692571995353182079, guid: ba22cf436d6a9b948bae3c722b590293,
+    type: 3}
+  m_PrefabInstance: {fileID: 707577880}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 707577882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f58bd38d95cf2cc4b902d60b10ba8b99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &707577888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53623,6 +53640,11 @@ PrefabInstance:
       propertyPath: debutCourse
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: -6235846041701915304, guid: 6bc831fa2b1f460479f1157aabf0e237,
+        type: 3}
+      propertyPath: playersTrackingSystem
+      value: 
+      objectReference: {fileID: 707577887}
     - target: {fileID: 6888272976029738481, guid: 6bc831fa2b1f460479f1157aabf0e237,
         type: 3}
       propertyPath: Over.Array.size

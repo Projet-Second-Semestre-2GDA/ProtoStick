@@ -22,8 +22,10 @@ public class BeginningMusic : MonoBehaviour
 
     public ModeUnPlayer modeUnPlayer;
 
-    public float debutCourse;
+    public PlayersTrackingSystem playersTrackingSystem;
 
+    public float debutCourse;
+    private List<FMOD.Studio.EventInstance> listeInstance;
     private bool isPause;
 
     private void Start()
@@ -50,7 +52,8 @@ public class BeginningMusic : MonoBehaviour
 
         FMODUnity.RuntimeManager.PauseAllEvents(false);
 
-
+        listeInstance.Add(prideAscent); //Correspond à "listeInstance[0]" et donc la musique du joueur 1
+        listeInstance.Add(dexterityAscent); //Correspond à "listeInstance[1]" et donc la musique du joueur 2
     }
 
     private void Update()
@@ -60,6 +63,20 @@ public class BeginningMusic : MonoBehaviour
         if (modeUnPlayer.modeUnJoueur)
         {
             dexterityAscent.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        }
+        else
+        {
+            var ranking = playersTrackingSystem.GetRanking(); //Liste des IDs des joueurs en fonction de leurs position
+            var value = playersTrackingSystem.GetPercent(); //Taux de retard du joueur en seconde position par rapport au premier
+            
+            //Supposons Joueur 2 en première position
+            //Alors ranking[0] qui est le joueur en première position sera égale à 1
+            //Donc, listeInstance[ ranking[0] ] correspond à listeInstance[1]
+            //Et donc, à l'instance du second joueur.
+            //Et inversement.
+
+            listeInstance[ ranking[0] ].setParameterByName("retard_du_joueur", 0); //Set du volume du joueur en première position
+            listeInstance[ ranking[1] ].setParameterByName("retard_du_joueur", value); //Set du volume du joueur en seconde position
         }
 
         if (!isPause)

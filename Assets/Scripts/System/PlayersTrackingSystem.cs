@@ -10,7 +10,7 @@ public class PlayersTrackingSystem : MonoBehaviour
     [SerializeField] private Transform waypointsContainer;
     [SerializeField] private List<GameObject> players;
     [Title("Music Parameters")]
-    [SerializeField, MinMaxSlider(0,2000,true)]private Vector2 distanceMinMaxMusic = new Vector2(100,1000);  
+    [SerializeField, MinMaxSlider(0,5000,true)]private Vector2 distanceMinMaxMusic = new Vector2(100,1000);  
     private List<PlayerPosition> scriptPlayerPositions = new List<PlayerPosition>();
     private List<List<Vector3>> playersPosition = new List<List<Vector3>>();
     private List<Vector3> waypointsPosition = new List<Vector3>();
@@ -21,6 +21,8 @@ public class PlayersTrackingSystem : MonoBehaviour
 
     [HideInInspector]public bool twoPlayeMode;
 
+    private int playerNumber = -1;
+    
     private void Awake()
     {
         if (waypointsContainer == null || players == null) throw new NullReferenceException();
@@ -133,6 +135,7 @@ public class PlayersTrackingSystem : MonoBehaviour
                     idWinner = 1;
                 }
             }
+            
             var idLooser = (idWinner + 1 > 1) ? 0 : 1;
             //Grâce a une simple soustraction, calculer la distance séparant les deux joueurs.
             distanceBetweenPlayer = Mathf.Clamp(totalDistance[idWinner] - totalDistance[idLooser],distanceMinMaxMusic.x,distanceMinMaxMusic.y);
@@ -140,10 +143,15 @@ public class PlayersTrackingSystem : MonoBehaviour
             //return the distance to FMOD
             SetWinner(idWinner);
         }
+        else
+        {
+            playerNumber = -1;
+        }
     }
 
     void SetWinner(int idWinnder)
     {
+        playerNumber = idWinnder + 1;
         if (idWinnder == 0)
         {
             scriptPlayerPositions[0].SetPlayerClassement(1);
@@ -154,5 +162,27 @@ public class PlayersTrackingSystem : MonoBehaviour
             scriptPlayerPositions[1].SetPlayerClassement(1);
             scriptPlayerPositions[0].SetPlayerClassement(2);
         }
+    }
+
+    public int GetWinner()
+    {
+        if (playerNumber < 0) throw new ArgumentOutOfRangeException("playerNumber", playerNumber, "The player number is not an actual Player");
+        else return playerNumber;
+    }
+    public int[] GetRanking()
+    {
+        var otherNumber = (playerNumber + 1 > players.Count) ? 1 : playerNumber + 1;
+        int[] ranking = new [] { playerNumber-1, otherNumber-1 };
+        return ranking;
+    }
+
+    public float GetPercent()
+    {
+        var t = (distanceBetweenPlayer - distanceMinMaxMusic.x) / (distanceMinMaxMusic.y - distanceMinMaxMusic.x);
+        var lerp = Mathf.Lerp(0, -1,t);
+        //Lerp :
+        //+000 ---------> +001
+        //-127 ---------> 2pi/2
+        return lerp;
     }
 }
