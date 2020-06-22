@@ -21602,7 +21602,7 @@ PrefabInstance:
     - target: {fileID: 2692571995353182079, guid: ba22cf436d6a9b948bae3c722b590293,
         type: 3}
       propertyPath: distanceMinMaxMusic.y
-      value: 1000
+      value: 2000
       objectReference: {fileID: 0}
     - target: {fileID: 3289001071545339349, guid: ba22cf436d6a9b948bae3c722b590293,
         type: 3}
@@ -21632,7 +21632,7 @@ PrefabInstance:
     - target: {fileID: 3289001071545339349, guid: ba22cf436d6a9b948bae3c722b590293,
         type: 3}
       propertyPath: modeUnJoueur
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3289001071545339349, guid: ba22cf436d6a9b948bae3c722b590293,
         type: 3}
