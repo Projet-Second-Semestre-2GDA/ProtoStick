@@ -52,6 +52,7 @@ public class BeginningMusic : MonoBehaviour
 
         FMODUnity.RuntimeManager.PauseAllEvents(false);
 
+        listeInstance = new List<FMOD.Studio.EventInstance>();
         listeInstance.Add(prideAscent); //Correspond à "listeInstance[0]" et donc la musique du joueur 1
         listeInstance.Add(dexterityAscent); //Correspond à "listeInstance[1]" et donc la musique du joueur 2
     }
