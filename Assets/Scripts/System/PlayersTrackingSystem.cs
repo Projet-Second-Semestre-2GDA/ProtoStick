@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class PlayersTrackingSystem : MonoBehaviour
 {
@@ -21,7 +22,7 @@ public class PlayersTrackingSystem : MonoBehaviour
 
     [HideInInspector]public bool twoPlayeMode;
 
-    private int playerNumber = -1;
+    private int winnerNumber = -1;
     
     private void Awake()
     {
@@ -31,11 +32,16 @@ public class PlayersTrackingSystem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Je vais stocker et créer mets listes pour plus tard
         for (int i = 0; i < players.Count; i++)
         {
             scriptPlayerPositions.Add(players[i].GetComponent<PlayerPosition>());
             playersPosition.Add(new List<Vector3>());
         }
+        //Ici, pour des raisons de performances, étant donné que mes waypoints
+        //ne sont aucunement suseptible de bouger durant la partie,
+        //je stock leurs positions et leurs orientation pour les réutiliser plus tard
+        //Sans avoir d'appelle et de recherche à faire
         for (int i = 0; i < waypointsContainer.childCount; i++)
         {
             var pos = waypointsContainer.GetChild(i).position;
@@ -43,7 +49,8 @@ public class PlayersTrackingSystem : MonoBehaviour
             waypointsPosition.Add(pos);
             waypointsForward.Add(waypointsContainer.GetChild(i).TransformDirection(Vector3.forward));
         }
-
+        //Ici, pour des raisons de comparaison, je récupère la distance la plus courte
+        //qu'il existeentre deux waypoints
         for (int i = 1; i < waypointsPosition.Count; i++)
         {
             var distance = Vector3.Distance(waypointsPosition[i - 1], waypointsPosition[i]);
@@ -57,30 +64,40 @@ public class PlayersTrackingSystem : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        //J'active les scripts si on est en deux joueurs
         foreach (var player in scriptPlayerPositions)
         {
             player.SetScriptActive(twoPlayeMode);
         }
         if (twoPlayeMode)
         {
+            //Je créer des listes pour stocker et comparer plus tard
+            //Le waypoint sur lequel les joueurs sont associé
+            //Et la distance total qu'ils ont parcouru.
+            //Sachant que le waypoint se situera toujours derrière eux.
             List<int> waypointNumber = new List<int>();
             List<float> totalDistance = new List<float>();
             for (int i = 0; i < players.Count; i++)
             {
+                //Je récupère la position et vu que je ne veux pas comparer dans la hauteur, je la mets à 0
                 var player = players[i];
                 var playerPos = player.transform.position;
                 playersPosition[i].Add(playerPos);
                 playerPos.y = 0;
-
+                //Je set les valeurs de bases à des notions qui seront en théorie forcément changer
                 waypointNumber.Add(-1);
                 totalDistance.Add(0);
-
+                
+                //Ici, je créer une variable qui correspond à la distance entre le waypoint actuelles et le joueurs.
+                //Elle corresponds surtout a cette distance lors de l'itération précédente
                 float distanceFromPlayer = Mathf.Infinity;
-
-
                 for (int j = 0; j < waypointsPosition.Count; j++)
                 {
+                    //dst est la distance à cette itération 
                     var dst = Vector3.Distance(playerPos, waypointsPosition[j]);
+                    //Je compare les deux distance, étant donné que l'on se rapproche du joueur,
+                    //la distance est censé toujours diminuer, si elle remonte, c'est que l'on s'éloigne du joueur
+                    //Et que par conséquent on a déjà trouver la waypoint de référence du joueur.
                     if (dst < distanceFromPlayer)
                     {
                         distanceFromPlayer = dst;
@@ -88,7 +105,9 @@ public class PlayersTrackingSystem : MonoBehaviour
                     }
                     else if (dst >= distanceFromPlayer)
                     {
-                        //Vérifié que le waypoint de référence est toujours derrière le joueur
+                        //Vérifié que le waypoint de référence est toujours derrière le joueurs
+                        //Si le waypoints est devant, alors on prends le précédents
+                        //Ainsi, le waypoint de référence est toujours le dernier.
                         if (Vector3.Dot(waypointsForward[waypointNumber[i]],player.transform.TransformDirection(Vector3.forward)) < 0 && waypointNumber[i] >0)
                         {
                             waypointNumber[i] = waypointNumber[i] - 1;
@@ -96,26 +115,36 @@ public class PlayersTrackingSystem : MonoBehaviour
                         break;
                     }
                     
-                    if (dst < minDistanceBetweenWaypoints / 2)
-                    {
-                        break;
-                    }
+                    // if (dst < minDistanceBetweenWaypoints / 2)
+                    // {
+                    //     break;
+                    // }
                 }
-
-                for (int j = 1; j <= waypointNumber[i]; j++)//Calculer la distance globale qui séparer le joueur du waypoints de départ
+                //On calcule la distance globale qui sépare le joueur du waypoints de départ
+                //Pour cela on calcul d'abord la distance entre chaque waypoint jusqu'au waypoint de référence.
+                for (int j = 1; j <= waypointNumber[i]; j++)
                 {
                     totalDistance[i] += Vector3.Distance(waypointsPosition[j - 1], waypointsPosition[j]);
                 }
+                //Puis, le joueur étant forécement devant sont waypoint de référence,
+                //On rajoute là distance entre le waypoint de ref et le joueur
                 totalDistance[i] += Vector3.Distance(waypointsPosition[waypointNumber[i]],playerPos);
             }
+            
+            //Simple débug pour vérifier que tout est en ordre
             for (int i = 0; i < players.Count; i++)
             {
                 Debug.Log("----------------Joueur" + i + "----------------");
                 Debug.Log("WaypointNumber " + waypointNumber[i]);
                 Debug.Log("totalDistance " + totalDistance[i]);
             }
-
+            Debug.Log("----------------End----------------");
+            
+            //Ici, on vérifie qui gagne
             int idWinner = -1;
+            //Tout d'abords, on vérifie l'ID du waypoint
+            //Si les waypoints de référence sont différentes, alors nécéssairement,
+            //il y en a un devant l'autre
             if (waypointNumber[0] > waypointNumber[1])
             {
                 idWinner = 0;
@@ -126,17 +155,26 @@ public class PlayersTrackingSystem : MonoBehaviour
             }
             else
             {
+                //S'il sont sur le même waypoint, 
+                //On compare leurs distance totale parcouru, celui qui en a le plus gagne
                 if (totalDistance[0] > totalDistance[1])
                 {
                     idWinner = 0;
                 }
-                else
+                else if (totalDistance[0] < totalDistance[1])
                 {
                     idWinner = 1;
                 }
+                else
+                {
+                    //S'ils sont à équi distance, on en choisi un au hasard
+                    idWinner = Random.Range(0, 2);
+                }
             }
             
+            //De ce fait, étant une course à deux joueurs, le perdant est nécéssairement l'autre joueur.
             var idLooser = (idWinner + 1 > 1) ? 0 : 1;
+            
             //Grâce a une simple soustraction, calculer la distance séparant les deux joueurs.
             distanceBetweenPlayer = Mathf.Clamp(totalDistance[idWinner] - totalDistance[idLooser],distanceMinMaxMusic.x,distanceMinMaxMusic.y);
             Debug.Log("distanceBetweenPlayer : " + distanceBetweenPlayer);
@@ -145,34 +183,36 @@ public class PlayersTrackingSystem : MonoBehaviour
         }
         else
         {
-            playerNumber = -1;
+            winnerNumber = -1;
         }
     }
 
-    void SetWinner(int idWinnder)
+    void SetWinner(int idWinner)
     {
-        playerNumber = idWinnder + 1;
-        if (idWinnder == 0)
-        {
-            scriptPlayerPositions[0].SetPlayerClassement(1);
-            scriptPlayerPositions[1].SetPlayerClassement(2);
-        }
-        else
-        {
-            scriptPlayerPositions[1].SetPlayerClassement(1);
-            scriptPlayerPositions[0].SetPlayerClassement(2);
-        }
+        //Ici on va donc mettre le numéro et non pas son ID dans l'integer
+        //winnerNumber, par une simple addition.
+        winnerNumber = idWinner + 1;
+        Debug.Log("Le WinnerNumber est " + winnerNumber);
+        var idLooser = (idWinner + 1 > 1) ? 0 : 1;
+        //Ici on va donc grâcec à leurs "ID" mettre leurs classement à jours.
+        scriptPlayerPositions[idWinner].SetPlayerClassement(1);
+        scriptPlayerPositions[idLooser].SetPlayerClassement(2);
+        
     }
 
     public int GetWinner()
     {
-        if (playerNumber < 0) throw new ArgumentOutOfRangeException("playerNumber", playerNumber, "The player number is not an actual Player");
-        else return playerNumber;
+        if (winnerNumber < 0) throw new ArgumentOutOfRangeException("playerNumber", winnerNumber, "The player number is not an actual Player");
+        else return winnerNumber;
     }
     public int[] GetRanking()
     {
-        var otherNumber = (playerNumber + 1 > players.Count) ? 1 : playerNumber + 1;
-        int[] ranking = new [] { playerNumber-1, otherNumber-1 };
+        var idWinner = winnerNumber - 1;
+        var looserNumber = (idWinner + 1 > 1) ? 0 : 1;
+        ++looserNumber;
+        Debug.Log("Ici, le WinnerNumber est " + winnerNumber);
+        Debug.Log("OtherNumber : " + looserNumber);
+        int[] ranking = new [] { winnerNumber-1, looserNumber-1 };
         return ranking;
     }
 
