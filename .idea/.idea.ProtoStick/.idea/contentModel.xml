@@ -223,6 +223,7 @@
             <e p="PlayerEffect.cs" t="Include" />
             <e p="RotateBumper.cs" t="Include" />
           </e>
+          <e p="CustomSlider.cs" t="Include" />
           <e p="Player" t="Include">
             <e p="InteractionBall" t="Include">
               <e p="ControlObject.cs" t="Include" />
@@ -431,6 +432,7 @@
               <e p="Master.xml" t="Include" />
               <e p="Mixer.xml" t="Include" />
               <e p="ParameterPreset" t="Include">
+                <e p="{0d5bd049-30f4-4569-be5d-d7fa493e5e3f}.xml" t="Include" />
                 <e p="{24d3f2ee-8bc5-4470-8269-6606af36ec61}.xml" t="Include" />
                 <e p="{4b1def93-89b0-41e5-8937-2648f69a8744}.xml" t="Include" />
                 <e p="{4fa1bb1c-5b06-4498-84dc-35e87a956a2b}.xml" t="Include" />
