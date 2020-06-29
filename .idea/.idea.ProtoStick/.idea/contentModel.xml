@@ -5,6 +5,7 @@
     <e p="C:\Users\ianpo\AppData\local\JetBrains\Rider2020.1\resharper-host\local\Transient\ReSharperHost\v201\SolutionCaches\_ProtoStick.-1813663269.00" t="ExcludeRecursive" />
     <e p="C:\Users\ianpo\Documents\GitHub\ProtoStick" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
@@ -270,13 +271,21 @@
             </e>
             <e p="UI" t="Include">
               <e p="ButtonColor.cs" t="Include" />
-              <e p="CustomButton.cs" t="Include" />
-              <e p="CustomInputModule.cs" t="Include" />
-              <e p="Leadboard.cs" t="Include" />
-              <e p="LeadboardSetter.cs" t="Include" />
+              <e p="Custom Module" t="Include">
+                <e p="CustomButton.cs" t="Include" />
+                <e p="CustomInputModule.cs" t="Include" />
+                <e p="MyButton.cs" t="Include" />
+              </e>
+              <e p="Leadboard" t="Include">
+                <e p="Leadboard.cs" t="Include" />
+                <e p="LeadboardSetter.cs" t="Include" />
+              </e>
               <e p="MoveScrollRect.cs" t="Include" />
-              <e p="MyButton.cs" t="Include" />
               <e p="SetButtonColor.cs" t="Include" />
+              <e p="TabSystem" t="Include">
+                <e p="TabButton.cs" t="Include" />
+                <e p="TabGroup.cs" t="Include" />
+              </e>
               <e p="Testeur.cs" t="Include" />
             </e>
             <e p="UniversalRecoltObject.cs" t="Include" />
@@ -462,6 +471,20 @@
         </e>
         <e p="SpamMovement.cs" t="Include" />
         <e p="SuperRecoltable.cs" t="Include" />
+        <e p="UI Folder" t="Include">
+          <e p="Language" t="Include">
+            <e p="Editor" t="Include">
+              <e p="LocalisedStringDrawer.cs" t="Include" />
+              <e p="TextLocaliserEditor.cs" t="Include" />
+            </e>
+            <e p="LanguageModule" t="Include">
+              <e p="CSVLoader.cs" t="Include" />
+              <e p="LocalisationSystem.cs" t="Include" />
+              <e p="LocalisedString.cs" t="Include" />
+              <e p="TextLocaliserUI.cs" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="VoiceTriggerZone.cs" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive" />
