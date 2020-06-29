@@ -50,7 +50,7 @@ public class CSVLoader : MonoBehaviour
             for (int f = 0; f < fields.Length; f++)
             {
                 fields[f] = fields[f].TrimStart(' ', surround);
-                fields[f] = fields[f].TrimEnd(surround);
+                fields[f] = fields[f].TrimEnd((char)13,surround);
             }
 
             if (fields.Length > attributeIndex)
@@ -61,6 +61,7 @@ public class CSVLoader : MonoBehaviour
 
                 var value = fields[attributeIndex];
                 
+                // Debug.Log(attributeId + " : " + value);
                 dictionary.Add(key, value);
             }
         }

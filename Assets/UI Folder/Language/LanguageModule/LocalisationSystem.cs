@@ -10,7 +10,7 @@ public class LocalisationSystem
         French
     }
 
-    public static Language language = Language.English;
+    public static Language language = Language.French;
     private static Dictionary<Language, Dictionary<string, string>> localisedDictionaries = new Dictionary<Language, Dictionary<string, string>>();
 
     public static bool isInit;
@@ -39,7 +39,7 @@ public class LocalisationSystem
     public static Dictionary<string, string> GetDictionaryForEditor()
     {
         if (!isInit) Init();
-        return localisedDictionaries[Language.English];
+        return localisedDictionaries[Language.French];
     }
     
     public static string GetLocalisedValue(string key)
