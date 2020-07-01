@@ -133,7 +133,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.458, g: 0.458, b: 0.458, a: 1}
+  m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -160,6 +160,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3665fca62199fe4bb0e681ebeff6641, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 0.4, g: 0.4, b: 0.4, a: 1}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_SelectedColor: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 363523191127486763}
   tabGroup: {fileID: 363523192595470852}
   background: {fileID: 363523191127486763}
   isAQuitButton: 0
@@ -304,7 +332,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.458, g: 0.458, b: 0.458, a: 1}
+  m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -331,6 +359,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3665fca62199fe4bb0e681ebeff6641, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 0.4, g: 0.4, b: 0.4, a: 1}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_SelectedColor: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 363523192286788205}
   tabGroup: {fileID: 363523192595470852}
   background: {fileID: 363523192286788205}
   isAQuitButton: 0
@@ -504,13 +560,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19367d0d0b8b7324ea53e7c42dda6248, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tabButtons: []
+  tabButtons:
+  - {fileID: 363523191127486762}
+  - {fileID: 363523192286788204}
   pages: []
-  tabIdle: {r: 0.24982281, g: 0.10239409, b: 0.3679245, a: 1}
-  tabHover: {r: 0.30210856, g: 0.26931292, b: 0.6415094, a: 1}
-  tabActive: {r: 0.8490566, g: 0.13216448, b: 0.622408, a: 1}
+  tabIdle: {fileID: 21300000, guid: da0e4ecbb5baba847b52b9d58738f694, type: 3}
+  tabHover: {fileID: 21300000, guid: da0e4ecbb5baba847b52b9d58738f694, type: 3}
+  tabActive: {fileID: 21300000, guid: 3f69daa007e43774b87bbe7e4704fe80, type: 3}
   pagesHolder: {fileID: 363523192308016725}
   thereIsAFirstSelected: 0
+  activeTab: {fileID: 0}
   selectedTab: {fileID: 0}
 --- !u!114 &363523192595470853
 MonoBehaviour:

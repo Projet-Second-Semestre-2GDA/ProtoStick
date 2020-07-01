@@ -14,10 +14,10 @@ public class TabGroup : MonoBehaviour
     [ReadOnly ,ListDrawerSettings(Expanded = true)]public List<TabButton> tabButtons;
     [ReadOnly ,ListDrawerSettings(Expanded = true)]public List<GameObject> pages;
     
-    [Title("Color Parameters")]
-    public Color tabIdle;
-    public Color tabHover;
-    public Color tabActive;
+    [Title("Sprite Parameters")]
+    public Sprite tabIdle;
+    public Sprite tabHover;
+    public Sprite tabActive;
     
     [Title("Parameters")] 
     [SerializeField] private Transform pagesHolder;
@@ -26,6 +26,7 @@ public class TabGroup : MonoBehaviour
     
     
 
+    [HideInInspector] public TabButton activeTab;
     [HideInInspector] public TabButton selectedTab;
 
     public void Subscribe(TabButton button)
@@ -38,10 +39,12 @@ public class TabGroup : MonoBehaviour
     public void OnTabEnter(TabButton button)
     {
         ResetTabs();
-        if (selectedTab == null || button != selectedTab)
+        if (activeTab == null || button != activeTab)
         {
-            button.background.color = tabHover;
+            button.background.sprite = tabHover;
         }
+
+        selectedTab = button;
     }
 
     public void OnTabExit(TabButton button)
@@ -51,14 +54,15 @@ public class TabGroup : MonoBehaviour
 
     public void OnTabSelected(TabButton button)
     {
-        if (selectedTab != null) selectedTab.Deselect();
+        if (activeTab != null) activeTab.Deselect();
         
-        selectedTab = button;
+        activeTab = button;
         
-        selectedTab.Select();
+        activeTab.Select();
         
         ResetTabs();
-        button.background.color = tabActive;
+        button.background.sprite = tabActive;
+        button.background.color = Color.HSVToRGB(0, 0, 3,true);
 
         int index = button.transform.GetSiblingIndex();
         for (int i = 0; i < pages.Count; i++)
@@ -71,8 +75,9 @@ public class TabGroup : MonoBehaviour
     {
         foreach (TabButton button in tabButtons)
         {
-            if(selectedTab!= null && button == selectedTab) continue;
-            button.background.color = tabIdle;
+            if(activeTab!= null && button == activeTab) continue;
+            button.background.color = Color.HSVToRGB(0, 0, 0.8f, false);
+            button.background.sprite = tabIdle;
         }
     }
 
@@ -82,7 +87,7 @@ public class TabGroup : MonoBehaviour
         {
             pages[i].SetActive(false);
         }
-        selectedTab = null;
+        activeTab = null;
         ResetTabs();
     }
 

@@ -8,9 +8,10 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 [RequireComponent(typeof(Image))]
 public class TabButton : 
-    MonoBehaviour, 
+    Selectable,
     // ISelectHandler, ISubmitHandler,IDeselectHandler,
-    IPointerEnterHandler, IPointerClickHandler,IPointerExitHandler
+    IPointerEnterHandler, IPointerClickHandler,IPointerExitHandler,ISubmitHandler
+    
 {
     [Title("Parameters")]
     public TabGroup tabGroup;
@@ -54,27 +55,72 @@ public class TabButton :
     //A la sourie
     public void OnPointerEnter(PointerEventData eventData)
     {
-        tabGroup.OnTabEnter(this);
+        Selecting();
     }
+
+    
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        tabGroup.OnTabSelected(this);
-        if (isAQuitButton) Application.Quit();
+        Using();
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        tabGroup.OnTabExit(this);
+        Deselecting();
     }
     
+    //Call by tabGroup
     public void Select()
     {
+        
         onTabSelected.Invoke();
     }
 
     public void Deselect()
     {
         onTabDeselected.Invoke();
+    }
+    
+    //Selectable override function
+    public override void OnSelect(BaseEventData eventData)
+    {
+        base.OnSelect(eventData);
+        Selecting();
+        
+    }
+
+    public override void OnDeselect(BaseEventData eventData)
+    {
+        base.OnDeselect(eventData);
+        Deselecting();
+    }
+
+    public void OnSubmit(BaseEventData eventData)
+    {
+        Using();
+    }
+    
+    //Private function I use
+    
+    private void Selecting()
+    {
+        tabGroup.OnTabEnter(this);
+        DoStateTransition(SelectionState.Selected, false);
+    }
+
+    private void Using()
+    {
+        // if (!IsActive() || !IsInteractable()) return;
+        
+        tabGroup.OnTabSelected(this);
+        DoStateTransition(SelectionState.Pressed, false);
+        if (isAQuitButton) Application.Quit();
+    }
+
+    private void Deselecting()
+    {
+        tabGroup.OnTabExit(this);
+        DoStateTransition(SelectionState.Normal, false);
     }
 }
