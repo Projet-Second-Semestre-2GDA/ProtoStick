@@ -10,10 +10,19 @@ public class TextLocaliserUI : MonoBehaviour
     private TextMeshProUGUI textField;
 
     public LocalisedString LocalisedString;
+    public string toAddBefore;
+    public string toAddAfter;
+    
 
     private void Start()
     {
         textField = GetComponent<TextMeshProUGUI>();
-        textField.text = LocalisedString.value;
+        LanguageUpdate();
+        GameObject.FindGameObjectWithTag("Gestionnaire").GetComponent<LanguageSelection>().LanguageSubscribe(this);
+    }
+
+    public void LanguageUpdate()
+    {
+        textField.text = toAddBefore + LocalisedString.value + toAddAfter;
     }
 }

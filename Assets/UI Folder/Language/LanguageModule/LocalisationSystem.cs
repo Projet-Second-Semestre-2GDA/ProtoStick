@@ -4,11 +4,7 @@ using UnityEngine;
 
 public class LocalisationSystem
 {
-    public enum Language
-    {
-        English,
-        French
-    }
+    
 
     public static Language language = Language.French;
     private static Dictionary<Language, Dictionary<string, string>> localisedDictionaries = new Dictionary<Language, Dictionary<string, string>>();
@@ -104,4 +100,15 @@ public class LocalisationSystem
         
         UpdateDictionnaries();
     }
+
+    public static void SetMainLanguage(Language actualLanguage)
+    {
+        language = actualLanguage;
+    }
+}
+
+public enum Language
+{
+    English,
+    French
 }

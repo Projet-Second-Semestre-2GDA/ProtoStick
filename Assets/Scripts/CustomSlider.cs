@@ -30,7 +30,7 @@ public class CustomSlider : MonoBehaviour
     public void FillImage(float quantitie)
     {
         var amount = (quantitie - minMax.x) / (minMax.y - minMax.x);
-        Debug.Log("Filling of " + amount);
+        // Debug.Log("Filling of " + amount);
         image.fillAmount = amount;
         sliderAmount = amount;
     }
