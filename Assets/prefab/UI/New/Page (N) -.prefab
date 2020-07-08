@@ -138,9 +138,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: ccafd0c596612a24e9d04917648817d9, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -337,9 +337,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: ccafd0c596612a24e9d04917648817d9, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -564,13 +564,13 @@ MonoBehaviour:
   - {fileID: 363523191127486762}
   - {fileID: 363523192286788204}
   pages: []
-  tabIdle: {fileID: 21300000, guid: da0e4ecbb5baba847b52b9d58738f694, type: 3}
-  tabHover: {fileID: 21300000, guid: da0e4ecbb5baba847b52b9d58738f694, type: 3}
+  tabIdle: {fileID: 21300000, guid: ccafd0c596612a24e9d04917648817d9, type: 3}
+  tabHover: {fileID: 21300000, guid: ccafd0c596612a24e9d04917648817d9, type: 3}
   tabActive: {fileID: 21300000, guid: 3f69daa007e43774b87bbe7e4704fe80, type: 3}
   pagesHolder: {fileID: 363523192308016725}
   thereIsAFirstSelected: 0
   activeTab: {fileID: 0}
-  selectedTab: {fileID: 0}
+  selectedTab: {fileID: 363523191127486762}
 --- !u!114 &363523192595470853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -839,6 +839,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LocalisedString:
     key: 
+  toAddBefore: 
+  toAddAfter: 
 --- !u!1 &3435063619836853821
 GameObject:
   m_ObjectHideFlags: 0
@@ -1009,3 +1011,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LocalisedString:
     key: 
+  toAddBefore: 
+  toAddAfter: 

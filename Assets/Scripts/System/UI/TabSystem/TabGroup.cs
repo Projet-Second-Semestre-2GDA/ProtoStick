@@ -62,7 +62,7 @@ public class TabGroup : MonoBehaviour
         
         ResetTabs();
         button.background.sprite = tabActive;
-        button.background.color = Color.HSVToRGB(0, 0, 3,true);
+        // button.background.color = Color.HSVToRGB(0, 0, 3,true);
 
         int index = button.transform.GetSiblingIndex();
         for (int i = 0; i < pages.Count; i++)
@@ -76,7 +76,7 @@ public class TabGroup : MonoBehaviour
         foreach (TabButton button in tabButtons)
         {
             if(activeTab!= null && button == activeTab) continue;
-            button.background.color = Color.HSVToRGB(0, 0, 0.8f, false);
+            // button.background.color = Color.HSVToRGB(0, 0, 0.8f, false);
             button.background.sprite = tabIdle;
         }
     }
